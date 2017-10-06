@@ -13,6 +13,8 @@ global_info.SUITS.D = {'Diamond','Red'};
 global_info.SUITS.C = {'Clubs','Black'};
 global_info.SUITS.H = {'Hearts','Red'};
 global_info.SUITS.S = {'Spades','Black'};
+global_info.CARDVALUE_MAP = {'A': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6', '7': 7, ...
+    '8': 8, '9': 9, 'X': 10, 'J': 11, 'Q': 12, 'K': 13}
 
 %%%% COMPOSE STATIC GRAPH %%%%%%%
 pns = pnstruct({'game_stack_pdf'});
