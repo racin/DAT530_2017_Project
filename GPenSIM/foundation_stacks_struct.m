@@ -1,6 +1,6 @@
-function [png] = client_pdf() 
+function [png] = foundation_stacks() 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% File: client_pdf.m : Definition of client
+% File: foundation_stacks.m : Definition of the foundation stacks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 png.PN_name = 'Client';

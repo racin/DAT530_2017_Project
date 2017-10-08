@@ -1,5 +1,5 @@
-function [png] = game_stack_pdf() 
-png.PN_name = 'Game stack';
+function [png] = foundation_stack_spades_pdf() 
+png.PN_name = 'Foundation stack - spades';
 
 png.set_of_Ps = {'pGSi_GameStack','pGSi_Move','pGSi_Dealer'};
 png.set_of_Ts = {'tGSi_Dealer','tGSe_Out','tGSe_Turn','tGSe_Move'}; 

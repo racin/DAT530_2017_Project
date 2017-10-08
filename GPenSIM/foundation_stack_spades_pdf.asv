@@ -1,4 +1,4 @@
-function [png] = game_stack_pdf() 
+function [png] = foundation_stack_spades() 
 png.PN_name = 'Game stack';
 
 png.set_of_Ps = {'pGSi_GameStack','pGSi_Move','pGSi_Dealer'};
