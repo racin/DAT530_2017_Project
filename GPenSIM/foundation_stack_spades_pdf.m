@@ -1,7 +1,9 @@
 function [png] = foundation_stack_spades_pdf() 
-png.PN_name = 'Foundation stack - spades';
+modname = 'spades' 
+png.PN_name = strcat('Foundation stack - ',modname);
 
-png.set_of_Ps = {'pGSi_GameStack','pGSi_Move','pGSi_Dealer'};
+
+png.set_of_Ps = {strcat('pFS_',modname,'_Add'),'pGSi_Move','pGSi_Dealer'};
 png.set_of_Ts = {'tGSi_Dealer','tGSe_Out','tGSe_Turn','tGSe_Move'}; 
 png.set_of_As = {
     'tGSi_Dealer','pGSi_GameStack',1, ...
