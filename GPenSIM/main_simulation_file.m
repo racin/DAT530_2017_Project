@@ -13,11 +13,15 @@ global_info.SUITS.D = {'Diamond','Red'};
 global_info.SUITS.C = {'Clubs','Black'};
 global_info.SUITS.H = {'Hearts','Red'};
 global_info.SUITS.S = {'Spades','Black'};
-global_info.CARDVALUE_MAP = {'A': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6', '7': 7, ...
-    '8': 8, '9': 9, 'X': 10, 'J': 11, 'Q': 12, 'K': 13}
+global_info.CARDVALUE_MAP = containers.Map({'A','2','3','4','5','6','7','8','9','X','J','Q','K'}, ...
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
 %%%% COMPOSE STATIC GRAPH %%%%%%%
-pns = pnstruct({'game_stack_pdf'});
+pns = pnstruct({
+    'game_stack_pdf'; % Game stack ...
+    'foundation_stack_spades_pdf'; % Foundation stack: Spades ...
+    'foundation_stack_clubs_pdf' % Foundation stack: Clubs ...
+    });
 
 %%%% DYNAMIC DETAILS %%%%
 dyn.m0 = {};
