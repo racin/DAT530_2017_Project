@@ -1,0 +1,28 @@
+function [png] = module_connector_pdf() 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: module_connector_pdf.m : Handles the connections of the modules.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+png.PN_name = 'Module connector';
+
+png.set_of_Ps = {'pMC_DP_Out', 'pMC_TP_Out', 'pMC_FP_Out'};
+png.set_of_Ts = {}; 
+png.set_of_As = {
+    'tDPe_Out', 'pMC_DP_Out', 1, ...
+    };
+% Add connections to all 7 tableau piles %
+for c = 1:7
+    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',c,'_Add_Face_Down'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_FP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_TP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}]; % Moving cards from one TP to another
+    png.set_of_As = [png.set_of_As, {strcat('tTPe_',c,'_Out'),'pMC_TP_Out', 1}];
+end
+
+% Add connections to all 4 foundation piles %
+foundationpiles = {'spades','hearts','diamonds','clubs'};
+for c = 1:4
+    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tFPe_',foundationpiles(c),'_Add'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_TP_Out',strcat('tFPe_',foundationpiles(c),'_Add'), 1}];
+    png.set_of_As = [png.set_of_As, {strcat('tFPe_',foundationpiles(c),'_Out'),'pMC_FP_Out', 1}];
+end
