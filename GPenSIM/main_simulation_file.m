@@ -5,6 +5,7 @@ global global_info;
 global_info.LOOP_NUMBER = 1;
 global_info.STOP_AT = 110000;
 global_info.DELTA_TIME = 100;
+
 global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X','D_J','D_Q','D_K', ...
     'C_A','C_2','C_3','C_4','C_5','C_6','C_7','C_8','C_9','C_X','C_J','C_Q','C_K', ...
     'H_A','H_2','H_3','H_4','H_5','H_6','H_7','H_8','H_9','H_X','H_J','H_Q','H_K', ...
@@ -19,18 +20,28 @@ global_info.CARDVALUE_MAP = containers.Map({'A','2','3','4','5','6','7','8','9',
 %%%% COMPOSE STATIC GRAPH %%%%%%%
 pns = pnstruct({
     'draw_pile_pdf'; % Game pile ...
-    'foundation_pile_spades_pdf'; % Foundation pile: Spades ...
-    'foundation_pile_clubs_pdf' % Foundation pile: Clubs ...
+    'player_pdf'; % Player
+   % 'foundation_pile_spades_pdf'; % Foundation pile: Spades ...
+   % 'foundation_pile_clubs_pdf' % Foundation pile: Clubs ...
     });
 
 %%%% DYNAMIC DETAILS %%%%
-dyn.m0 = {};
-dyn.ft = {'allothers',1}; 
+dyn.m0 = {'pDP_Dealer',52};
+dyn.ft = {'allothers',100}; 
 
+
+
+%%%% TESTING %%%%
+global_info.REAL_TIME = 1; % For testing
+global_info.STOP_AT = current_clock(3)+[0 0 30];
+
+
+%%%% SIMULATE %%%%%
+player_GUI;
 pni = initialdynamics(pns, dyn); 
-
-%%%% SUIMULATE %%%%%
 sim = gpensim(pni);
+
 %prnss(sim);
-prnfinalcolors(sim)
+%prnfinalcolors(sim)
+
 

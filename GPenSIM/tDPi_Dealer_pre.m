@@ -1,7 +1,6 @@
-function [fire, transition] = tDealer_pre(transition)
+function [fire, transition] = tDPi_Dealer_pre(transition)
 
 global global_info;
-
 
 if ~isempty(global_info.DECK),
     card = randi([1,length(global_info.DECK)]);
