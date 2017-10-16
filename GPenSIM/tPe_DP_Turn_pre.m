@@ -6,8 +6,8 @@ global global_info;
 if global_info.DP_Turn_Btn ~= false,
     disp('DP Turn clicked!');
     global_info.DP_Turn_Btn = false;
+    fire = 1;
 else
-    %disp(global_info.DP_Turn_Btn)
-end
+    fire = 0;
+end;
 
-fire = 0;

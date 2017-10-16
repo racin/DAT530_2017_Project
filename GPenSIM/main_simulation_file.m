@@ -27,13 +27,13 @@ pns = pnstruct({
 
 %%%% DYNAMIC DETAILS %%%%
 dyn.m0 = {'pDP_Dealer',52};
-dyn.ft = {'allothers',100}; 
+dyn.ft = {'allothers',1}; 
 
 
 
 %%%% TESTING %%%%
 global_info.REAL_TIME = 1; % For testing
-global_info.STOP_AT = current_clock(3)+[0 0 30];
+global_info.STOP_AT = current_clock(3)+[0 0 20];
 
 
 %%%% SIMULATE %%%%%
