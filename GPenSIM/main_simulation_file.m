@@ -1,4 +1,4 @@
-% Example-20-01: Modular Model Building
+% Solitaire main simulation file
 clear all; clc;
 
 global global_info;
@@ -19,21 +19,25 @@ global_info.CARDVALUE_MAP = containers.Map({'A','2','3','4','5','6','7','8','9',
 
 %%%% COMPOSE STATIC GRAPH %%%%%%%
 pns = pnstruct({
+    'module_connector_pdf'; % Module connector ...
     'draw_pile_pdf'; % Game pile ...
     'player_pdf'; % Player
-   % 'foundation_pile_spades_pdf'; % Foundation pile: Spades ...
-   % 'foundation_pile_clubs_pdf' % Foundation pile: Clubs ...
+    'foundation_pile_clubs_pdf'; % Foundation pile: Clubs ...
+    'foundation_pile_diamonds_pdf' % Foundation pile: Diamonds ...
+    'foundation_pile_hearts_pdf' % Foundation pile: Hearts ...
+    'foundation_pile_spades_pdf' % Foundation pile: Spades ...
+    'tableau_pile_1_pdf' % Tableau pile 1 ...
     });
 
 %%%% DYNAMIC DETAILS %%%%
-dyn.m0 = {'pDP_Dealer',52};
-dyn.ft = {'allothers',1}; 
+dyn.m0 = {'pDP_Dealer',5};
+dyn.ft = {'allothers',0.01}; 
 
 
 
 %%%% TESTING %%%%
-global_info.REAL_TIME = 1; % For testing
-global_info.STOP_AT = current_clock(3)+[0 0 20];
+global_info.REAL_TIME = 1; % For testing  
+global_info.STOP_AT = current_clock(3)+[0 0 30];
 
 
 %%%% SIMULATE %%%%%

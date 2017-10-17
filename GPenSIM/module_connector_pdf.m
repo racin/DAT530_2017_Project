@@ -19,12 +19,13 @@ png.set_of_As = {
     'pMC_DP_Move', 'tDPe_Move', 1, ...
     };
 % Add connections to all 7 tableau piles %
-for c = 1:7
-    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',c,'_Add_Face_Down'), 1}];
-    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}];
-    png.set_of_As = [png.set_of_As, {'pMC_FP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}];
-    png.set_of_As = [png.set_of_As, {'pMC_TP_Out',strcat('tTPe_',c,'_Add_Face_Up'), 1}]; % Moving cards from one TP to another
-    png.set_of_As = [png.set_of_As, {strcat('tTPe_',c,'_Out'),'pMC_TP_Out', 1}];
+for c = 1:1
+    num = num2str(c);
+    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',num,'_Add_Face_Down'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tTPe_',num,'_Add_Face_Up'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_FP_Out',strcat('tTPe_',num,'_Add_Face_Up'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_TP_Out',strcat('tTPe_',num,'_Add_Face_Up'), 1}]; % Moving cards from one TP to another
+    png.set_of_As = [png.set_of_As, {strcat('tTPe_',num,'_Out'),'pMC_TP_Out', 1}];
 end
 
 % Add connections to all 4 foundation piles %
