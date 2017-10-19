@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="DAT530_Solitaire" version="121">
+  <gspn name="CPN" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="P0" x="7.0" y="6.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="17.55" y="6.0"/>
+      <place name="P1" x="30.0" y="6.0"/>
+      <place name="P2" x="17.0" y="11.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" mult-k="0.854998779296875" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" mult-k="0.8461669921875" tail="T0"/>
+      <arc head="P2" kind="OUTPUT" mult-k="1.0262695312499996" tail="T0">
+        <point x="19.5" y="9.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" mult-k="1.42099609375" tail="P2">
+        <point x="16.492382812499997" y="9.638330078125001"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="CPN" name="Measures">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

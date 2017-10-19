@@ -30,14 +30,16 @@ pns = pnstruct({
     });
 
 %%%% DYNAMIC DETAILS %%%%
-dyn.m0 = {'pDP_Dealer',5};
-dyn.ft = {'allothers',0.01}; 
+dyn.m0 = {'pDP_Dealer', 5};
+% Need to have some time to be able to fetch tokens based on time. (Which
+% arrived earliest or latest).
+dyn.ft = {'allothers', 0.1}; 
 
 
 
 %%%% TESTING %%%%
 global_info.REAL_TIME = 1; % For testing  
-global_info.STOP_AT = current_clock(3)+[0 0 30];
+global_info.STOP_AT = current_clock(3)+[0 1 30];
 
 
 %%%% SIMULATE %%%%%
