@@ -29,7 +29,7 @@ for c = 1:1
 end
 
 % Add connections to all 4 foundation piles %
-foundationpiles = {'spades','hearts','diamonds','clubs'};
+foundationpiles = {'Spades','Hearts','Diamonds','Clubs'};
 for c = 1:4
     png.set_of_As = [png.set_of_As, {'pMC_DP_Out',strcat('tFPe_',foundationpiles(c),'_Add'), 1}];
     png.set_of_As = [png.set_of_As, {'pMC_TP_Out',strcat('tFPe_',foundationpiles(c),'_Add'), 1}];

@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 20-Oct-2017 01:10:42
+% Last Modified by GUIDE v2.5 22-Oct-2017 13:40:50
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -139,26 +139,26 @@ global global_info;
 global_info.STOP_SIMULATION = 1;
 
 
-% --- Executes on button press in pushbutton12.
-function pushbutton12_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton12 (see GCBO)
+% --- Executes on button press in FP_D_Move_Btn.
+function FP_D_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_D_Move_Btn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
 
-function edit3_Callback(hObject, eventdata, handles)
-% hObject    handle to edit3 (see GCBO)
+function FP_D_Move_Location_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_D_Move_Location (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit3 as text
-%        str2double(get(hObject,'String')) returns contents of edit3 as a double
+% Hints: get(hObject,'String') returns contents of FP_D_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of FP_D_Move_Location as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit3_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit3 (see GCBO)
+function FP_D_Move_Location_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FP_D_Move_Location (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -167,3 +167,10 @@ function edit3_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --------------------------------------------------------------------
+function uipanel2_ButtonDownFcn(hObject, eventdata, handles)
+% hObject    handle to uipanel2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
