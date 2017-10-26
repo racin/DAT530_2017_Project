@@ -36,7 +36,7 @@ dyn.ft = {'allothers', 0.01};
 
 
 %%%% TESTING %%%%
-global_info.REAL_TIME = 1; % For testing  
+%global_info.REAL_TIME = 1; % For testing  
 global_info.STOP_AT = current_clock(3)+[1 1 30];
 
 

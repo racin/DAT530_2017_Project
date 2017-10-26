@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 22-Oct-2017 13:40:50
+% Last Modified by GUIDE v2.5 25-Oct-2017 00:02:20
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -167,10 +167,3 @@ function FP_D_Move_Location_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-
-
-% --------------------------------------------------------------------
-function uipanel2_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to uipanel2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)

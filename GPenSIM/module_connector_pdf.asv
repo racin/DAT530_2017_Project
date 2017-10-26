@@ -14,6 +14,7 @@ png.set_of_As = {
     'tPe_DP_Move', 'pMC_DP_Move', 1, ...
     'tPe_TP_Turn', 'pMC_TP_Turn', 1, ...
     'tPe_TP_Move', 'pMC_TP_Move', 1, ...
+    'tPe_FP_Move', 'pMC_FP_Move', 1, ...
     'pMC_DP_Turn', 'tDPe_Turn', 1, ...
     'pMC_DP_Move', 'tDPe_Move', 1, ...
     };
@@ -29,8 +30,9 @@ end;
 foundationpiles = {'Spades','Hearts','Diamonds','Clubs'};
 for c = 1:4
     fp = foundationpiles(c);
-    png.set_of_As = [png.set_of_As, {strcat('tFPe_',fp{1},'_Move'),'pMC_FP_Move', 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tFPe_',fp{1},'_Add'), 1}];
     png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tFPe_',fp{1},'_Add'), 1}];
     png.set_of_As = [png.set_of_As, {strcat('tFPe_',fp{1},'_Out'),'pMC_Out_Buffer', 1}];
-    png.set_of_As = [png.set_of_As, {'pMC_FP_Move',strcat('tFPe_',fp{1},'_Move'), 1}];
 end
+
+disp(png.set_of_As);
