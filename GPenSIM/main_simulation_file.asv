@@ -28,7 +28,7 @@ pns = pnstruct({
     });
 
 %%%% DYNAMIC DETAILS %%%%
-dyn.re = {'playerAction', 1, inf};
+dyn.re = {'
 dyn.m0 = {'pDP_Dealer', 52};
 % Need to have some time to be able to fetch tokens based on time. (Which
 % arrived earliest or latest).

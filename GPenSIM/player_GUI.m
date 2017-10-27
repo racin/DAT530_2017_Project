@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 25-Oct-2017 00:02:20
+% Last Modified by GUIDE v2.5 27-Oct-2017 03:32:40
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -57,6 +57,14 @@ function player_GUI_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 global global_info;
 global_info.handles = handles;
+
+% Define default states for all click buttons
+global_info.DP_Turn_Btn = false;
+global_info.DP_Move_Btn = false;
+global_info.FP_C_Move_Btn = false;
+global_info.FP_D_Move_Btn = false;
+global_info.FP_H_Move_Btn = false;
+global_info.FP_S_Move_Btn = false;
 
 % Update handles structure
 guidata(hObject, handles);
@@ -139,26 +147,182 @@ global global_info;
 global_info.STOP_SIMULATION = 1;
 
 
+% --- Executes on button press in FP_C_Move_Btn.
+function FP_C_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+global global_info;
+if global_info.FP_C_Move_Btn == false,
+    global_info.FP_C_Move_Btn = true;
+end
+
+
+function FP_C_Move_Location_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of FP_C_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of FP_C_Move_Location as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function FP_C_Move_Location_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in FP_S_Move_Btn.
+function FP_S_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_S_Move_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+global global_info;
+if global_info.FP_S_Move_Btn == false,
+    global_info.FP_S_Move_Btn = true;
+end
+
+
+function FP_S_Move_Location_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_S_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of FP_S_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of FP_S_Move_Location as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function FP_S_Move_Location_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FP_S_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in FP_H_Move_Btn.
+function FP_H_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_H_Move_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+global global_info;
+if global_info.FP_H_Move_Btn == false,
+    global_info.FP_H_Move_Btn = true;
+end
+
+
+function FP_H_Move_Location_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_H_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of FP_H_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of FP_H_Move_Location as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function FP_H_Move_Location_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FP_H_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in FP_C_Move_Btn.
+function pushbutton15_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+
+function edit6_Callback(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of FP_C_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of FP_C_Move_Location as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit6_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to FP_C_Move_Location (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
 % --- Executes on button press in FP_D_Move_Btn.
 function FP_D_Move_Btn_Callback(hObject, eventdata, handles)
 % hObject    handle to FP_D_Move_Btn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+global global_info;
+if global_info.FP_D_Move_Btn == false,
+    global_info.FP_D_Move_Btn = true;
+end
 
 
 
-function FP_D_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to FP_D_Move_Location (see GCBO)
+function edit9_Callback(hObject, eventdata, handles)
+% hObject    handle to edit9 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of FP_D_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of FP_D_Move_Location as a double
+% Hints: get(hObject,'String') returns contents of edit9 as text
+%        str2double(get(hObject,'String')) returns contents of edit9 as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function FP_D_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to FP_D_Move_Location (see GCBO)
+function edit9_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit9 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit10_Callback(hObject, eventdata, handles)
+% hObject    handle to edit10 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit10 as text
+%        str2double(get(hObject,'String')) returns contents of edit10 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit10_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit10 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 

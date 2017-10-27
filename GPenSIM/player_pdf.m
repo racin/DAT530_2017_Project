@@ -3,10 +3,6 @@ function [png] = player_pdf()
 % File: module_connector_pdf.m : Handles the connections of the modules.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-global global_info;
-global_info.DP_Turn_Btn = false;
-global_info.DP_Move_Btn = false;
-
 png.PN_name = 'Player module';
 
 png.set_of_Ps = {};
