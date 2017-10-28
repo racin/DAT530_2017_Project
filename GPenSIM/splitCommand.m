@@ -1,14 +1,11 @@
 function [command, card] = splitCommand( tokenColors )
 
-command = 0;
-card = 0;
-if length(tokenColors) ~= 2,
-    return;
-end;
-global global_info;
-global_info.racin = tokenColors;
 color_1 = tokenColors{1};
-color_2 = tokenColors{2};
+if length(tokenColors) == 2,
+    color_2 = tokenColors{2};
+else,
+    color_2 = '0';
+end;
 if ~isempty(strfind(color_1,'Move:')),
     command = strsplit(color_1,':');
     card = color_2;

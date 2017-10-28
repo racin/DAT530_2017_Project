@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 27-Oct-2017 03:32:40
+% Last Modified by GUIDE v2.5 28-Oct-2017 18:41:24
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -65,6 +65,7 @@ global_info.FP_C_Move_Btn = false;
 global_info.FP_D_Move_Btn = false;
 global_info.FP_H_Move_Btn = false;
 global_info.FP_S_Move_Btn = false;
+global_info.Initial_Deal_Btn = false;
 
 % Update handles structure
 guidata(hObject, handles);
@@ -331,3 +332,11 @@ function edit10_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in DEALCARDS.
+function DEALCARDS_Callback(hObject, eventdata, handles)
+% hObject    handle to DEALCARDS (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+initialdealing();

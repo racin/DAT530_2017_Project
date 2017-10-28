@@ -4,7 +4,8 @@ global global_info;
 
 % Release playerAction resource to allow for another player action.
 if ismember(transition.name, {'tFPe_Clubs_Add','tFPe_Diamonds_Add', ...
-        'tFPe_Hearts_Add','tFPe_Spades_Add'}),
+        'tFPe_Hearts_Add','tFPe_Spades_Add', 'tTPe_1_Add_FaceDown', ...
+        'tTPe_1_Add_FaceUp'}),
     release(global_info.last_command_source);
 end;
 
