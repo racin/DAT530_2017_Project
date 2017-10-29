@@ -3,7 +3,10 @@ clear all; clc;
 
 global global_info;
 global_info.DELTA_TIME = 1;
-global_info.initialDealTurns = 0;
+global_info.INITIAL_DEAL_TURNS = 0;
+global_info.INITIAL_DEAL_MOVES = 0;
+global_info.INITIAL_DEAL_MOVE = {'1', '1', '1', '1', ...
+    '1', '1', '1', '1', '1', '1'};
 
 global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X','D_J','D_Q','D_K', ...
     'C_A','C_2','C_3','C_4','C_5','C_6','C_7','C_8','C_9','C_X','C_J','C_Q','C_K', ...

@@ -47,10 +47,9 @@ numtokens = length(tokIDs('pTP_1_FaceUp_Pile'));
 vistoken = tokenArrivedLate('pTP_1_FaceUp_Pile',numtokens);
 statusmsg = 'Face Up:';
 if vistoken,
-    tokencolors = get_color('pTP_1_FaceUp_Pile',vistoken);
-    for i = 1:numtokens,
-        %statusmsg = strcat(statusmsg,'\r\n',tokencolors{i});
-        statusmsg = sprintf('%s\n%s',statusmsg,tokencolors{i});
+    for i = numtokens:-1:1,
+        tokencolors = get_color('pTP_1_FaceUp_Pile',vistoken(i));
+        statusmsg = sprintf('%s\n%s',statusmsg,tokencolors{1});
     end
 end;
 set(global_info.handles.TP_1_FaceUpMsg,'String',statusmsg);
