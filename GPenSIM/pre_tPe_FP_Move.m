@@ -1,5 +1,4 @@
-function [fire, transition] = tPe_FP_Clubs_Move_pre(transition)
-
+function [fire, transition] = pre_tPe_FP_Move(transition)
 
 global global_info;
 fire = 0;

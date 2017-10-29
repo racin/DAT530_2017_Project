@@ -5,8 +5,9 @@ global global_info;
 fire = 0;
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.FP_D_Move_Btn ~= false && playerAction,
+    global_info.FP_D_Move_Btn = false;
     disp('Diamonds move btn');
-    dest = get(global_info.handles.FP_D_Move_Location,'String');
+    dest = get_handle(global_info.handles.FP_D_Move_Location,'String');
     command = strcat('Move:',dest,':FPD');    
     vistoken = tokenArrivedLate('pFP_Diamonds_Pile',1);
     if vistoken,
@@ -18,5 +19,3 @@ if global_info.FP_D_Move_Btn ~= false && playerAction,
         end;
     end;
 end
-global_info.FP_D_Move_Btn = false;
-

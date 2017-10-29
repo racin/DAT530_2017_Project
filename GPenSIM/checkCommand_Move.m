@@ -1,16 +1,16 @@
-function [ doCommand, moveCmd, card ] = checkCommand_Move( command, destination, source, errhandle)
+function [ doCommand, moveCmd, card ] = checkCommand_Move( command, destination, source, handle_err)
 
+global global_info;
 [moveCmd, card] = splitCommand(command);
 moveCmd = moveCmd{2};
-global global_info;
 doCommand = false;
-if(isempty(strfind(moveCmd,'FP')) && isempty(strfind(moveCmd,'TP'))),
-    set(errhandle,'String','INVALID MOVE COMMAND!');
+if(~contains(moveCmd,'FP') && ~contains(moveCmd,'TP')),
+    set_handle(handle_err,'String','INVALID MOVE COMMAND!');
     return;
 end
 
 % Foundation Piles
-if ~isempty(strfind(moveCmd,'FP')),
+if contains(moveCmd,'FP'),
     if ~isempty(destination) && destination(1) ~= moveCmd(3),
         return;
     end;
@@ -18,11 +18,11 @@ if ~isempty(strfind(moveCmd,'FP')),
     moved_suit = movedCard_split(1);
     moved_rank = movedCard_split(2);
     if(~isfield(global_info.SUITS,moveCmd(3))),
-        set(errhandle,'String','INVALID SUIT');
+        set_handle(handle_err,'String','INVALID SUIT');
         return;
     end;
     if moved_suit{1} ~= moveCmd(3),
-        set(errhandle,'String','INVALID LOCATION');
+        set_handle(handle_err,'String','INVALID LOCATION');
         return;
     end;
     %if isempty(destination),
@@ -44,20 +44,20 @@ if ~isempty(strfind(moveCmd,'FP')),
         dest_topCard_Rank = dest_topCard_split(2);
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
         if(diffRank ~= 1), % Added card must be 1 value higher than the current card.
-            set(errhandle,'String','INVALID CARD VALUE');
+            set_handle(handle_err,'String','INVALID CARD VALUE');
             return;
         end;
     elseif moved_rank_value ~= 1,
-        set(errhandle,'String','FIRST CARD MUST BE ACE');
+        set_handle(handle_err,'String','FIRST CARD MUST BE ACE');
         return;
     end;
 end;
 
 % Tableau Piles
-if ~isempty(strfind(moveCmd,'TP')),
+if contains(moveCmd,'TP'),
     pile = moveCmd(3);
     if ~ismember(pile, {'1','2','3','4','5','6','7'}),
-        set(errhandle,'String','INVALID PILE');
+        set_handle(handle_err,'String','INVALID PILE');
         return
     end;
     if ~isempty(destination) == 1 && destination(1) ~= pile,
@@ -87,15 +87,15 @@ if ~isempty(strfind(moveCmd,'TP')),
         
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
         if(diffRank ~= -1),  % Added card must be 1 value lower than the current card.
-            set(errhandle,'String','INVALID CARD VALUE');
+            set_handle(handle_err,'String','INVALID CARD VALUE');
             return;
         end;
-        if(moved_global_suit{2} == dest_global_suit{2}), % Moved and current suit color must be different (red/black).
-            set(errhandle,'String','SUIT COLOR MUST BE ALTERNATING');
+        if(strcmp(moved_global_suit{2},dest_global_suit{2})), % Moved and current suit color must be different (red/black).
+            set_handle(handle_err,'String','SUIT COLOR MUST BE ALTERNATING');
             return;
         end;
     elseif moved_rank_value ~= 13,
-        set(errhandle,'String','FIRST CARD MUST BE KING');
+        set_handle(handle_err,'String','FIRST CARD MUST BE KING');
         return;
     end;
 end;
@@ -104,7 +104,7 @@ end;
 if ~isempty(source),
     global_info.last_command_source = source;
 end;
-set(errhandle,'String','');
+set_handle(handle_err,'String','');
 doCommand = true;
 return;
 

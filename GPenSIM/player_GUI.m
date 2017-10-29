@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 28-Oct-2017 18:41:24
+% Last Modified by GUIDE v2.5 29-Oct-2017 22:46:40
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -61,6 +61,10 @@ global_info.handles = handles;
 % Define default states for all click buttons
 global_info.DP_Turn_Btn = false;
 global_info.DP_Move_Btn = false;
+
+global_info.TP_1_Turn_Btn = false;
+global_info.TP_1_Move_Btn = false;
+
 global_info.FP_C_Move_Btn = false;
 global_info.FP_D_Move_Btn = false;
 global_info.FP_H_Move_Btn = false;
@@ -105,19 +109,25 @@ if global_info.DP_Move_Btn == false,
     global_info.DP_Move_Btn = true;
 end
 
-% --- Executes on button press in pushbutton2.
-function pushbutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
+% --- Executes on button press in TP_1_Turn_Btn.
+function TP_1_Turn_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_1_Turn_Btn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+global global_info;
+if global_info.TP_1_Turn_Btn == false,
+    global_info.TP_1_Turn_Btn = true;
+end
 
-
-% --- Executes on button press in pushbutton3.
-function pushbutton3_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton3 (see GCBO)
+% --- Executes on button press in TP_1_Move_Btn.
+function TP_1_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_1_Move_Btn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+global global_info;
+if global_info.TP_1_Move_Btn == false,
+    global_info.TP_1_Move_Btn = true;
+end
 
 % --- Executes on button press in pushbutton4.
 function pushbutton4_Callback(hObject, eventdata, handles)
@@ -289,18 +299,18 @@ end
 
 
 
-function edit9_Callback(hObject, eventdata, handles)
-% hObject    handle to edit9 (see GCBO)
+function TP_1_Move_Location_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_1_Move_Location (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit9 as text
-%        str2double(get(hObject,'String')) returns contents of edit9 as a double
+% Hints: get(hObject,'String') returns contents of TP_1_Move_Location as text
+%        str2double(get(hObject,'String')) returns contents of TP_1_Move_Location as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit9_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit9 (see GCBO)
+function TP_1_Move_Location_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to TP_1_Move_Location (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -312,18 +322,18 @@ end
 
 
 
-function edit10_Callback(hObject, eventdata, handles)
-% hObject    handle to edit10 (see GCBO)
+function TP_1_Move_Amount_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_1_Move_Amount (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit10 as text
-%        str2double(get(hObject,'String')) returns contents of edit10 as a double
+% Hints: get(hObject,'String') returns contents of TP_1_Move_Amount as text
+%        str2double(get(hObject,'String')) returns contents of TP_1_Move_Amount as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit10_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit10 (see GCBO)
+function TP_1_Move_Amount_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to TP_1_Move_Amount (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -340,3 +350,17 @@ function DEALCARDS_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 initialdealing();
+
+
+% --- Executes on button press in TP_2_Turn_Btn.
+function TP_2_Turn_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_2_Turn_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in TP_2_Move_Btn.
+function TP_2_Move_Btn_Callback(hObject, eventdata, handles)
+% hObject    handle to TP_2_Move_Btn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)

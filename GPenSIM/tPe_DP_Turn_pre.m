@@ -6,8 +6,7 @@ fire = 0;
 global global_info;
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.DP_Turn_Btn ~= false && playerAction,
+    global_info.DP_Turn_Btn = false;
     disp('DP Turn clicked!');
     fire = 1;
 end;
-global_info.DP_Turn_Btn = false;
-

@@ -1,5 +1,5 @@
 function [png] = tableau_pile_1_pdf() 
-modname = '1';
+modname = '2';
 png.PN_name = strcat('Tableau Pile - ',modname);
 
 

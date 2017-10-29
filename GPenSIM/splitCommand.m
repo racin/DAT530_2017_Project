@@ -6,7 +6,7 @@ if length(tokenColors) == 2,
 else,
     color_2 = '0';
 end;
-if ~isempty(strfind(color_1,'Move:')),
+if contains(color_1,'Move:'),
     command = strsplit(color_1,':');
     card = color_2;
 else,

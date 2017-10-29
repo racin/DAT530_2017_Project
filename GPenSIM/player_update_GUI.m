@@ -10,6 +10,8 @@ end;
 set(global_info.handles.DP_StatusMsg,'String',strcat('#FD: ',num2str(length(tokIDs('pDP_Draw_FaceDown_Pile'))), ...
     ', #FU: ',num2str(length(tokIDs('pDP_Draw_FaceUp_Pile'))),', FU Top:',{' '},topcard));
 
+
+% TODO: Clean up this with loops for FP and TP
 %% Foundation Pile - Clubs
 vistoken = tokenArrivedLate('pFP_Clubs_Pile',1);
 topcard = '';
