@@ -25,13 +25,8 @@ end
         set_handle(handle_err,'String','INVALID LOCATION');
         return;
     end;
-    %if isempty(destination),
-        global_suit = getfield(global_info.SUITS,moveCmd(3));
-        fp_Pile = strcat('pFP_',global_suit(1),'_Pile');
-%     else,
-%         global_suit = getfield(global_info.SUITS,destination(1));
-%         fp_Pile = strcat('pFP_',destination,'_Pile');
-%     end
+    global_suit = global_info.SUITS.(moveCmd(3));
+    fp_Pile = strcat('pFP_',global_suit(1),'_Pile');
     if(iscell(fp_Pile)),
         fp_Pile = fp_Pile{1};
     end;
@@ -82,8 +77,8 @@ end;
         dest_topCard_Suit = dest_topCard_split(1);
         dest_topCard_Rank = dest_topCard_split(2);
         
-        moved_global_suit = getfield(global_info.SUITS,moved_suit{1});
-        dest_global_suit = getfield(global_info.SUITS,dest_topCard_Suit{1});
+        moved_global_suit = global_info.SUITS.(moved_suit{1});
+        dest_global_suit = global_info.SUITS.(dest_topCard_Suit{1});
         
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
         if(diffRank ~= -1),  % Added card must be 1 value lower than the current card.
