@@ -4,13 +4,13 @@ global global_info;
 [moveCmd, card] = splitCommand(command);
 moveCmd = moveCmd{2};
 doCommand = false;
-if(~contains(moveCmd,'FP') && ~contains(moveCmd,'TP')),
+if(isempty(strfind(moveCmd,'FP')) && isempty(strfind(moveCmd,'TP'))),
     set_handle(handle_err,'String','INVALID MOVE COMMAND!');
     return;
 end
 
 % Foundation Piles
-if contains(moveCmd,'FP'),
+ if ~isempty(strfind(moveCmd,'FP')),
     if ~isempty(destination) && destination(1) ~= moveCmd(3),
         return;
     end;
@@ -54,7 +54,7 @@ if contains(moveCmd,'FP'),
 end;
 
 % Tableau Piles
-if contains(moveCmd,'TP'),
+ if ~isempty(strfind(moveCmd,'TP')),
     pile = moveCmd(3);
     if ~ismember(pile, {'1','2','3','4','5','6','7'}),
         set_handle(handle_err,'String','INVALID PILE');

@@ -10,11 +10,11 @@ if ismember(transition.name, {'tFPe_Clubs_Move', 'tFPe_Diamonds_Move', ...
     [fire, transition] = pre_tFPe_Move(transition);
     return;
 end
-if ismember(transition.name, {'tPe_FP_Clubs_Move', 'tPe_FP_Diamonds_Move', ...
-        'tPe_FP_Hearts_Move', 'tPe_FP_Spades_Move'}),
-    [fire, transition] = pre_tPe_FP_Move(transition);
-    return;
-end
+% if ismember(transition.name, {'tPe_FP_Clubs_Move', 'tPe_FP_Diamonds_Move', ...
+%         'tPe_FP_Hearts_Move', 'tPe_FP_Spades_Move'}),
+%     [fire, transition] = pre_tPe_FP_Move(transition);
+%     return;
+% end
 
 fire = 1;
 end
