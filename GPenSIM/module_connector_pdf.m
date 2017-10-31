@@ -14,7 +14,7 @@ png.set_of_As = {
     'pMC_DP_Move', 'tDPe_Move', 1, ...
     };
 % Add connections to all 7 tableau piles %
-for i = 1:1
+for i = 1:2
     num = num2str(i);
     png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tTPe_',num,'_Add_FaceDown'), 1}];
     png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tTPe_',num,'_Add_FaceUp'), 1}]; % Moving cards from one TP to another
