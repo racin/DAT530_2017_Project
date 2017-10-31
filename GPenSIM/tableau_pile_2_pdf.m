@@ -1,6 +1,6 @@
-function [png] = tableau_pile_1_pdf() 
+function [png] = tableau_pile_2_pdf() 
 modname = '2';
-png.PN_name = strcat('Tableau Pile - ',modname);
+png.PN_name = strcat('Tableau Pile -',{' '},modname);
 
 
 png.set_of_Ps = {strcat('pTP_',modname,'_FaceUp_Pile'),strcat('pTP_',modname,'_FaceDown_Pile'),strcat('pTP_',modname,'_Move')};
