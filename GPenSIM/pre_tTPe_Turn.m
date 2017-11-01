@@ -1,4 +1,4 @@
-function [fire, transition] = tTPe_1_Turn_pre(transition)
+function [fire, transition] = pre_tTPe_Turn(transition)
 
 [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] = get_tableau_num_from_transname(transition.name);
 fire = 0;

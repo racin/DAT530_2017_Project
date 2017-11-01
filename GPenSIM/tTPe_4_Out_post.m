@@ -1,4 +1,4 @@
-function [] = tTPe_1_Out_post(transition)
+function [] = tTPe_4_Out_post(transition)
 
 
-disp('tTPe_1_Out_post FIRED');
+disp('tTPe_4_Out_post FIRED');

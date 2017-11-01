@@ -172,302 +172,72 @@ if global_info.TP_2_Move_Btn == false,
     global_info.TP_2_Move_Btn = true;
 end
 
-
-% --- Executes on button press in TP_4_Turn_Btn.
-function TP_4_Turn_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_4_Turn_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in TP_4_Move_Btn.
-function TP_4_Move_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_4_Move_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function TP_4_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_4_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_4_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of TP_4_Move_Location as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_4_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_4_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-
-
-function TP_4_Move_Amount_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_4_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_4_Move_Amount as text
-%        str2double(get(hObject,'String')) returns contents of TP_4_Move_Amount as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_4_Move_Amount_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_4_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-
 % --- Executes on button press in TP_3_Turn_Btn.
 function TP_3_Turn_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_3_Turn_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+global global_info;
+if global_info.TP_3_Turn_Btn == false,
+    global_info.TP_3_Turn_Btn = true;
+end
 
 % --- Executes on button press in TP_3_Move_Btn.
 function TP_3_Move_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_3_Move_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function TP_3_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_3_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_3_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of TP_3_Move_Location as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_3_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_3_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
+global global_info;
+if global_info.TP_3_Move_Btn == false,
+    global_info.TP_3_Move_Btn = true;
 end
 
-
-
-function TP_3_Move_Amount_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_3_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_3_Move_Amount as text
-%        str2double(get(hObject,'String')) returns contents of TP_3_Move_Amount as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_3_Move_Amount_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_3_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
+% --- Executes on button press in TP_4_Turn_Btn.
+function TP_4_Turn_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_4_Turn_Btn == false,
+    global_info.TP_4_Turn_Btn = true;
 end
 
-
-% --- Executes on button press in TP_7_Turn_Btn.
-function TP_7_Turn_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_7_Turn_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in TP_7_Move_Btn.
-function TP_7_Move_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_7_Move_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function TP_7_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_7_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_7_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of TP_7_Move_Location as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_7_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_7_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
+% --- Executes on button press in TP_4_Move_Btn.
+function TP_4_Move_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_4_Move_Btn == false,
+    global_info.TP_4_Move_Btn = true;
 end
-
-
-
-function TP_7_Move_Amount_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_7_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_7_Move_Amount as text
-%        str2double(get(hObject,'String')) returns contents of TP_7_Move_Amount as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_7_Move_Amount_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_7_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-
-% --- Executes on button press in TP_6_Turn_Btn.
-function TP_6_Turn_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_6_Turn_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in TP_6_Move_Btn.
-function TP_6_Move_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_6_Move_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function TP_6_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_6_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_6_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of TP_6_Move_Location as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_6_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_6_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
-
-
-function TP_6_Move_Amount_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_6_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_6_Move_Amount as text
-%        str2double(get(hObject,'String')) returns contents of TP_6_Move_Amount as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_6_Move_Amount_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_6_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
-end
-
 
 % --- Executes on button press in TP_5_Turn_Btn.
 function TP_5_Turn_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_5_Turn_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+global global_info;
+if global_info.TP_5_Turn_Btn == false,
+    global_info.TP_5_Turn_Btn = true;
+end
 
 % --- Executes on button press in TP_5_Move_Btn.
 function TP_5_Move_Btn_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_5_Move_Btn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function TP_5_Move_Location_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_5_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of TP_5_Move_Location as text
-%        str2double(get(hObject,'String')) returns contents of TP_5_Move_Location as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_5_Move_Location_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_5_Move_Location (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
+global global_info;
+if global_info.TP_5_Move_Btn == false,
+    global_info.TP_5_Move_Btn = true;
 end
 
+% --- Executes on button press in TP_6_Turn_Btn.
+function TP_6_Turn_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_6_Turn_Btn == false,
+    global_info.TP_6_Turn_Btn = true;
+end
 
+% --- Executes on button press in TP_6_Move_Btn.
+function TP_6_Move_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_6_Move_Btn == false,
+    global_info.TP_6_Move_Btn = true;
+end
 
-function TP_5_Move_Amount_Callback(hObject, eventdata, handles)
-% hObject    handle to TP_5_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in TP_7_Turn_Btn.
+function TP_7_Turn_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_7_Turn_Btn == false,
+    global_info.TP_7_Turn_Btn = true;
+end
 
-% Hints: get(hObject,'String') returns contents of TP_5_Move_Amount as text
-%        str2double(get(hObject,'String')) returns contents of TP_5_Move_Amount as a double
-
-
-% --- Executes during object creation, after setting all properties.
-function TP_5_Move_Amount_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TP_5_Move_Amount (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    empty - handles not created until after all CreateFcns called
-
-% Hint: edit controls usually have a white background on Windows.
-%       See ISPC and COMPUTER.
-if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
-    set(hObject,'BackgroundColor','white');
+% --- Executes on button press in TP_7_Move_Btn.
+function TP_7_Move_Btn_Callback(hObject, eventdata, handles)
+global global_info;
+if global_info.TP_7_Move_Btn == false,
+    global_info.TP_7_Move_Btn = true;
 end

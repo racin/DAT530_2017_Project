@@ -9,6 +9,9 @@ if global_info.(turn_btn) ~= false && playerAction,
     if ~isempty(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile'))),
         set_handle(handle_err,'String','FaceUp Pile must be empty');
         return;
+    elseif isempty(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))),
+        set_handle(handle_err,'String','FaceDown Pile is empty');
+        return;
     end;
     set_handle(handle_err,'String','');
     global_info.last_command_source = transition.name;

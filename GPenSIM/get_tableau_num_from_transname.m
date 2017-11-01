@@ -16,7 +16,7 @@ function [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_
         tableau = '4';
     elseif ~isempty(strfind(transitionname,'5')),
         tableau = '5';
-    elseif ~isempty(strfind(transitionname,'7')),
+    elseif ~isempty(strfind(transitionname,'6')),
         tableau = '6';
     else,
         tableau = '7';

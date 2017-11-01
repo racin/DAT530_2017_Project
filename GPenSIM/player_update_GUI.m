@@ -26,7 +26,7 @@ for i = 1:4
 end;
 
 %% Tableau Piles
-for i = 1:2
+for i = 1:7
     num = num2str(i);
     numtokens = length(tokIDs(strcat('pTP_',num,'_FaceUp_Pile')));
     vistoken = tokenArrivedLate(strcat('pTP_',num,'_FaceUp_Pile'),numtokens);

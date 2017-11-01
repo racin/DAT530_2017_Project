@@ -17,7 +17,7 @@ png.set_of_As = {
     };
 
 % Add connections to all 7 tableau piles %
-for i = 1:2
+for i = 1:7
     num = num2str(i);
     png.set_of_As = [png.set_of_As, {strcat('tPe_TP_',num,'_Turn'),'pMC_TP_Turn', 1}];
     png.set_of_As = [png.set_of_As, {strcat('tPe_TP_',num,'_Move'),'pMC_TP_Move', 1}];
