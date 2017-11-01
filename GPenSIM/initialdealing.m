@@ -60,7 +60,7 @@ function initMoveCards(obj, event)
         disp(moveTo);
         
         disp(strcat('Trying to move to',{' '},moveTo));
-        set_handle(global_info.handles.DP_Move_Location,'String',strcat('TP',moveTo));
+        set_handle('DP_Move_Location','String',strcat('TP',moveTo));
         global_info.DP_Move_Btn = true;
     end;
 end

@@ -1,5 +1,8 @@
 function [fire, transition] = pre_tTPe_Move(transition)
 
+% TODO: If fire = 1, then set variable equal to amount and de-increment it
+% in the post_fire file! Want to keep logic outside of player.
+disp(strcat(transition.name,{' '},' move trigger!'));
 fire = 0;
 % moveToken = tokenArrivedLate('pMC_TP_Turn',1);
 % if moveToken,

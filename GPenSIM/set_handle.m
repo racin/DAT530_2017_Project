@@ -3,6 +3,6 @@ function [] = set_handle(Handle, PropertyName, PropertyValue)
     % SET(H,'PropertyName',PropertyValue)
     global global_info;
     if global_info.GUI_ENABLED,
-        set(Handle,PropertyName,PropertyValue);
+        set(global_info.handles.(Handle),PropertyName,PropertyValue);
     end;
 end

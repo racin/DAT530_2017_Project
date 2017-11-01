@@ -16,16 +16,18 @@ png.set_of_As = {
 % Add connections to all 7 tableau piles %
 for i = 1:7
     num = num2str(i);
+    png.set_of_As = [png.set_of_As, {strcat('tTPe_',num,'_Out'),'pMC_Out_Buffer', 1}];
     png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tTPe_',num,'_Add_FaceDown'), 1}];
     png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tTPe_',num,'_Add_FaceUp'), 1}]; % Moving cards from one TP to another
-    png.set_of_As = [png.set_of_As, {strcat('tTPe_',num,'_Out'),'pMC_Out_Buffer', 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_TP_Move',strcat('tTPe_',num,'_Move'), 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_TP_Turn',strcat('tTPe_',num,'_Turn'), 1}];
 end;
 
 % Add connections to all 4 foundation piles %
 foundationpiles = {'Spades','Hearts','Diamonds','Clubs'};
 for i = 1:4
     fp = foundationpiles(i);
-    png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tFPe_',fp{1},'_Add'), 1}];
     png.set_of_As = [png.set_of_As, {strcat('tFPe_',fp{1},'_Out'),'pMC_Out_Buffer', 1}];
+    png.set_of_As = [png.set_of_As, {'pMC_Out_Buffer',strcat('tFPe_',fp{1},'_Add'), 1}];
     png.set_of_As = [png.set_of_As, {'pMC_FP_Move',strcat('tFPe_',fp{1},'_Move'), 1}];
 end;

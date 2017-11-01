@@ -22,10 +22,10 @@ function [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_
         tableau = '7';
     end
     if global_info.GUI_ENABLED,
-        handle_err = global_info.handles.(strcat('TP_',tableau,'_ErrorMsg'));
+        handle_err = strcat('TP_',tableau,'_ErrorMsg');
         move_btn = strcat('TP_',tableau,'_Move_Btn');
         turn_btn = strcat('TP_',tableau,'_Turn_Btn');
-        handle_move_loc = global_info.handles.(strcat('TP_',tableau,'_Move_Location'));
-        handle_move_amount = global_info.handles.(strcat('TP_',tableau,'_Move_Amount'));
+        handle_move_loc = strcat('TP_',tableau,'_Move_Location');
+        handle_move_amount = strcat('TP_',tableau,'_Move_Amount');
     end
 end
