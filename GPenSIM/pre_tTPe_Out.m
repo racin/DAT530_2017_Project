@@ -1,6 +1,5 @@
 function [fire, transition] = pre_tTPe_Out(transition)
 
-
 global global_info;
 
 [tableau, ~, ~, ~, ~, ~]  = get_tableau_num_from_transname(transition.name)

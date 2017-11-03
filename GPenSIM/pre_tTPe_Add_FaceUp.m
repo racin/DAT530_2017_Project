@@ -1,11 +1,12 @@
 function [fire, transition] = pre_tTPe_Add_FaceUp(transition)
 
 global global_info;
-[tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] = get_tableau_num_from_transname(transition.name);
+[tableau, handle_err, ~, ~, ~, ~] = get_tableau_num_from_transname(transition.name);
 fire = 0;
 % Can only add FaceUp cards once the initial dealing is complete.
 isFDFull = length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 == str2double(tableau);
-isDealingInProgress = length(tokIDs('pDP_Draw_FaceDown_Pile')+length(tokIDs('pDP_Draw_FaceUp_Pile'))) > 24;
+isDealingInProgress = length(tokIDs('pDP_Draw_FaceDown_Pile'))+length(tokIDs('pDP_Draw_FaceUp_Pile')) ...
+    + length(tokIDs('pMC_Out_Buffer')) > 24;
 if isDealingInProgress && ~isFDFull,
     disp('Face UP return');
     return;
