@@ -12,8 +12,11 @@ if global_info.(move_btn) ~= false && playerAction,
         amount = 1;
     else,
         amount = str2double(get_handle(handle_move_amount,'String'));
+        if isnan(amount) || amount < 1,
+            amount = 1;
+        end;
         disp(strcat('Amount:',num2str(amount)));
-        if amount > length(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile'))) || amount < 1,
+        if amount > length(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile'))),
             set_handle(handle_err,'String','INVALID AMOUNT');
             return;
         end;

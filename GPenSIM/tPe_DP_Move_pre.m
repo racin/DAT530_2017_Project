@@ -18,6 +18,7 @@ if global_info.DP_Move_Btn ~= false && playerAction,
         % still doing initial dealing.
         % TODO: Check if this is neccesary!
         if length(tokIDs('pDP_Draw_FaceDown_Pile')) > 24  || checkCommand_Move({command;color},'',transition.name,'DP_ErrorMsg'),
+            global_info.last_command_source = 'tPe_DP_Move';
             transition.new_color = command;
             fire = 1;
         end;

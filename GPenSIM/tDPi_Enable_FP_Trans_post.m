@@ -1,5 +1,11 @@
 function [] = tDPi_Enable_FP_Trans_post(transition)
 
-disp('Enabling Flip Pile!');
 global global_info;
-global_info.DP_Flip_Pile_Running = true;
+
+if length(tokIDs('pDP_Draw_FaceUp_Pile')) > 0,
+    disp('Enabling Flip Pile!');
+    global_info.DP_Flip_Pile_Running = true;
+else,
+    % Release playerAction resource to allow for another player action.
+    release('tPe_DP_Turn');
+end;

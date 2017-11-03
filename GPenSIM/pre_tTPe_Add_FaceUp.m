@@ -14,6 +14,8 @@ moveToken = tokenArrivedLate('pMC_Out_Buffer',1);
 if moveToken,
     tokenColor = get_color('pMC_Out_Buffer',moveToken);
     if(length(tokenColor) ~= 2),
+        disp(strcat('Length of color was: ', num2str(length(tokenColor))));
+        disp(strcat('Color: ', tokenColor));
         return;
     end;
     if isDealingInProgress && isFDFull,

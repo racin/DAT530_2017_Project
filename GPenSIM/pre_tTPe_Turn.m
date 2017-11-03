@@ -1,9 +1,9 @@
 function [fire, transition] = pre_tTPe_Turn(transition)
 
-[tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] = get_tableau_num_from_transname(transition.name);
 fire = 0;
 moveToken = tokenArrivedLate('pMC_TP_Turn',1);
 if moveToken,
+    [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] = get_tableau_num_from_transname(transition.name);
     disp(strcat('TP ',tableau,' Turn trigger'));
     moveCmd = get_color('pMC_TP_Turn',moveToken);
     disp(length(moveCmd));

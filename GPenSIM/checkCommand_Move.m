@@ -5,10 +5,14 @@ global global_info;
 cmdDest = moveCmd{2};
 
 doCommand = false;
-if(isempty(strfind(cmdDest,'FP')) && isempty(strfind(cmdDest,'TP'))),
-    set_handle(handle_err,'String','INVALID MOVE COMMAND!');
+if length(cmdDest) < 3,
+    set_handle(handle_err,'String','INCOMPLETE COMMAND');
+    return;
+elseif isempty(strfind(cmdDest,'FP')) && isempty(strfind(cmdDest,'TP')),
+    set_handle(handle_err,'String','INVALID MOVE COMMAND');
     return;
 end
+
 
 % Foundation Piles
  if ~isempty(strfind(cmdDest,'FP')),
@@ -73,8 +77,9 @@ end;
         tp_Pile_Dest = tp_Pile_Dest{1};
     end;
     disp(moveCmd);
-    if length(moveCmd) >= 4,
-        if length(moveCmd) >= 3 && ~isempty(strfind(moveCmd{3},'TP')),
+    % Do not check amount once the command has reached it's destination.
+    if length(moveCmd) >= 4 && ~isempty(source),
+        if ~isempty(strfind(moveCmd{3},'TP')),
             tableau_src = moveCmd{3};
             tableau_src = tableau_src(3);
             tp_Pile_Src = strcat('pTP_',tableau_src,'_FaceUp_Pile');
