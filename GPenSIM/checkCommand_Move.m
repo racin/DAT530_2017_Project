@@ -70,11 +70,21 @@ end;
 
     disp('TABLEAU PILE');
     disp(moved_suit);
-    tp_Pile_Dest = strcat('pTP_',tableau_dest,'_FaceUp_Pile');
+    
+    tp_FU_Pile_Dest = strcat('pTP_',tableau_dest,'_FaceUp_Pile');
+    
+    % Can not add to tableau piles where face up is empty and there exist
+    % cards in face down pile.
+    if length(tokIDs(strcat('pTP_',tableau_dest,'_FaceDown_Pile'))) > 0 && ...
+            length(tokIDs(tp_FU_Pile_Dest)) == 0,
+        set_handle(handle_err,'String','FACE DOWN PILE MUST BE EMPTY');
+        return;
+    end
     
     
-    if(iscell(tp_Pile_Dest)),
-        tp_Pile_Dest = tp_Pile_Dest{1};
+    
+    if(iscell(tp_FU_Pile_Dest)),
+        tp_FU_Pile_Dest = tp_FU_Pile_Dest{1};
     end;
     disp(moveCmd);
     % Do not check amount once the command has reached it's destination.
@@ -101,11 +111,10 @@ end;
     else,
         amount = 1;
     end
-    dest_topCard_Id = tokenArrivedLate(tp_Pile_Dest,amount);
-    dest_topCard_Id = dest_topCard_Id(amount);
+    dest_topCard_Id = tokenArrivedLate(tp_FU_Pile_Dest,1);
     moved_rank_value = global_info.CARDVALUE_MAP(moved_rank{1});
     if dest_topCard_Id,
-        dest_topCard_Color = get_color(tp_Pile_Dest,dest_topCard_Id);
+        dest_topCard_Color = get_color(tp_FU_Pile_Dest,dest_topCard_Id);
         dest_topCard_split = strsplit(dest_topCard_Color{1},'_');
         dest_topCard_Suit = dest_topCard_split(1);
         dest_topCard_Rank = dest_topCard_split(2);

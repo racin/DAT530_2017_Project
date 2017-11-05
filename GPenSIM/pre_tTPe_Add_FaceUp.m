@@ -5,13 +5,18 @@ global global_info;
 fire = 0;
 % Can only add FaceUp cards once the initial dealing is complete.
 isFDFull = length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 == str2double(tableau);
-isDealingInProgress = length(tokIDs('pDP_Draw_FaceDown_Pile'))+length(tokIDs('pDP_Draw_FaceUp_Pile')) ...
-    + length(tokIDs('pMC_Out_Buffer')) > 24;
+isDealingInProgress = global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH;
+disp('isDealingInProgress');
+disp(isDealingInProgress);
+disp('cardsDealt');
+disp(global_info.CARDS_DEALT);
+disp('INITIAL_DEAL_MOVE_LENGTH');
+disp(global_info.INITIAL_DEAL_MOVE_LENGTH);
 if isDealingInProgress && ~isFDFull,
     disp('Face UP return');
     return;
 end;
-moveToken = tokenArrivedLate('pMC_Out_Buffer',1);
+moveToken = tokenArrivedEarly('pMC_Out_Buffer',1);
 if moveToken,
     tokenColor = get_color('pMC_Out_Buffer',moveToken);
     if(length(tokenColor) ~= 2),

@@ -9,7 +9,11 @@ if moveToken,
     disp(length(moveCmd));
     if(length(moveCmd) >= 1 && strcmp(moveCmd{1},strcat('Turn:TP',tableau))),
         disp('Turn trigger. Woop');
-        transition.selected_tokens = tokenArrivedLate(strcat('pTP_',tableau,'_FaceDown_Pile'),1);
+        topCard = tokenArrivedLate(strcat('pTP_',tableau,'_FaceDown_Pile'),1);
+        transition.selected_tokens = topCard;
+        color = get_color(strcat('pTP_',tableau,'_FaceDown_Pile'), topCard);
+        transition.new_color = color{1};
+        transition.override = 1;
         fire = 1;
     end
 end
