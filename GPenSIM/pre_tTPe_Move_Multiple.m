@@ -13,11 +13,11 @@ fire = 0;
 % probably more elegant ways to do this, such as checking the times_fires
 % of the add-face-up transitions.
 if global_info.TP_Move_Multiple ~= 0,
-    if ~isempty(strfind(transition.name,num2str(global_info.TP_Move_Multiple))),
-        disp('Move multiple trigger.');
-        global_info.TP_Move_Multiple = 0;
+    if ~isempty(strfind(transition.name,num2str(global_info.TP_Move_Multiple))),   
         transition.new_color = global_info.TP_Move_LastCmd;
         transition.override = 1;
         fire = 1;
+        global_info.TP_Move_Multiple = 0;
+        disp('Move multiple trigger.');
     end;
 end;

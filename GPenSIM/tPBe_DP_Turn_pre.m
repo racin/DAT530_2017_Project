@@ -18,5 +18,4 @@ if strcmp(moveColor,'DP_Turn') && playerAction,
     transition.selected_tokens = moveToken;
     transition.override = 1;
     fire = 1;
-    global_info.BOT_ACTIONS_NEW_CMD = 1;
 end;

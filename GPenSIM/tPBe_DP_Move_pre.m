@@ -37,7 +37,6 @@ if strcmp(moveColor,'DP_Move') && playerAction,
         transition.new_color = command;
         transition.override = 1;
         fire = 1;
-        global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end;
     global_info.BOT_DP_MOVES(moveTo) = [];

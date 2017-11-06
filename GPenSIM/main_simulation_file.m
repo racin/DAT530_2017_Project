@@ -8,7 +8,7 @@ global_info.BOT_ENABLED = 1;
 global_info.DELTA_TIME = 1;
 %global_info.REAL_TIME = 0; % For testing (For stopat to work.)
 global_info.MAX_LOOP = 20000;
-global_info.STOP_AT = 1500;
+global_info.STOP_AT = 15000;
 
 %%%% GAME SETTINGS %%%%
 % The bot generates a number from 1-100, this is number is used with the
@@ -16,7 +16,7 @@ global_info.STOP_AT = 1500;
 % DP_Turn, DP_Move, FP_Move, TP_Turn, TP_Move. Given array [20, 50, 70,
 % 80], a number between 1-20 would attempt a DP_Turn action, 21-50 DP_Move,
 % and so on.
-global_info.BOT_ACTIONS = [10, 30, 60, 80];
+global_info.BOT_ACTIONS = [10, 10, 10, 10];
 global_info.RANDOM_DECK = 0;
 % First entry is bottom of the stack. Last entry is top of the stack.
 % global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X','D_J','D_Q','D_K', ...
@@ -66,6 +66,7 @@ global_info.INITIAL_DEAL_MOVE_LENGTH = length(global_info.INITIAL_DEAL_MOVE);
 global_info.INITIAL_DECK_LENGTH = length(global_info.DECK);
 global_info.BOT_ACTIONS_NEW_CMD = 1;
 global_info.BOT_LAST_CMD = '';
+global_info.BOT_NEXT_CMD = '';
 
 %%%% COMPOSE STATIC GRAPH %%%%%%%
 pn_struct = {
@@ -110,7 +111,7 @@ dyn.ip = {'tDPe_Out', 10};
 dyn.ft = {'allothers', 0.01}; 
 if global_info.BOT_ENABLED,
     dyn.m0 = [dyn.m0, 'pPB_Gen', 1];
-    dyn.ft = [dyn.ft, 'tPBi_Gen', 1];
+    dyn.ft = [dyn.ft, 'tPBi_Gen', 20];
 end;
 
 if global_info.GUI_ENABLED,

@@ -10,9 +10,7 @@ if isempty(moveToken),
     return;
 end;
 moveColor = get_color('pPB_Cmd', moveToken);
-disp(moveColor);
 moveColor = moveColor{1};
-disp(moveColor);
 [playerAction] = request(transition.name, {'playerAction', 1});
 if ~isempty(strfind(moveColor,'FP_Move')) && playerAction,
     movesLeft = length(global_info.BOT_FP_MOVES);
@@ -41,7 +39,6 @@ if ~isempty(strfind(moveColor,'FP_Move')) && playerAction,
         transition.selected_tokens = moveToken;
         transition.new_color = command;
         transition.override = 1;
-        global_info.BOT_ACTIONS_NEW_CMD = 1;
         fire = 1;
         return;
     end;

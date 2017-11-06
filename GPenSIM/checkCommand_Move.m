@@ -40,7 +40,6 @@ end
     if dest_topCard_Id,
         dest_topCard_Color = get_color(fp_Pile,dest_topCard_Id);
         dest_topCard_split = strsplit(dest_topCard_Color{1},'_');
-        dest_topCard_Suit = dest_topCard_split(1);
         dest_topCard_Rank = dest_topCard_split(2);
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
         if(diffRank ~= 1), % Added card must be 1 value higher than the current card.
@@ -75,8 +74,8 @@ end;
     
     % Can not add to tableau piles where face up is empty and there exist
     % cards in face down pile.
-    if length(tokIDs(strcat('pTP_',tableau_dest,'_FaceDown_Pile'))) > 0 && ...
-            length(tokIDs(tp_FU_Pile_Dest)) == 0,
+    if ~isempty(tokIDs(strcat('pTP_',tableau_dest,'_FaceDown_Pile'))) && ...
+            isempty(tokIDs(tp_FU_Pile_Dest)),
         set_handle(handle_err,'String','FACE DOWN PILE MUST BE EMPTY');
         return;
     end
@@ -108,9 +107,8 @@ end;
             set_handle(handle_err,'String','INVALID AMOUNT');
             return;
         end;
-    else,
-        amount = 1;
     end
+    % Check against the latest (lowest) card at destination.
     dest_topCard_Id = tokenArrivedLate(tp_FU_Pile_Dest,1);
     moved_rank_value = global_info.CARDVALUE_MAP(moved_rank{1});
     if dest_topCard_Id,

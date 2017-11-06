@@ -35,7 +35,7 @@ if global_info.(move_btn) ~= false && playerAction,
     command = strcat('Move:',dest,':TP',tableau,':',num2str(amount));
     disp(command);
     % TODO: Finish tableau move.
-    vistoken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'),num2str(amount));
+    vistoken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'),amount);
     vistoken = vistoken(amount);
     if vistoken,
         color = get_color(strcat('pTP_',tableau,'_FaceUp_Pile'),vistoken);

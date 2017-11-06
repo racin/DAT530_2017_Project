@@ -7,19 +7,15 @@ return;
 if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
     return;
 end;
-moveToken = tokenArrivedEarly('pPB_Cmd', 1);
+moveToken = tokenArrivedLate('pPB_Cmd', 1);
 if ~moveToken,
     return;
 end;
 moveColor = get_color('pPB_Cmd', moveToken);
 
 [playerAction] = request(transition.name, {'playerAction', 1});
-if strcmp(moveColor,'DP_Move') && playerAction,
-    movesLeft = length(global_info.BOT_DP_MOVES);
-    if movesLeft == 0,
-        global_info.BOT_ACTIONS_NEW_CMD = 1;
-        return;
-    end
+if ~isempty(strfind(moveColor,'TP_Turn')) && playerAction,
+    
     vistoken = tokenArrivedLate('pDP_Draw_FaceUp_Pile',1);
     if ~vistoken,
         global_info.BOT_ACTIONS_NEW_CMD = 1;
@@ -37,7 +33,6 @@ if strcmp(moveColor,'DP_Move') && playerAction,
         transition.new_color = command;
         transition.override = 1;
         fire = 1;
-        global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end;
     global_info.BOT_DP_MOVES(moveTo) = [];
