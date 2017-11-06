@@ -7,13 +7,15 @@ if ismember(transition.name, {'tTPe_1_Add_FaceDown', 'tTPe_2_Add_FaceDown', ...
         'tTPe_3_Add_FaceDown', 'tTPe_4_Add_FaceDown', 'tTPe_5_Add_FaceDown', ...
         'tTPe_6_Add_FaceDown', 'tTPe_7_Add_FaceDown'}),
     global_info.CARDS_DEALT = global_info.CARDS_DEALT + 1;
-    release('tPe_DP_Move');
 elseif ismember(transition.name, {'tTPe_1_Add_FaceUp', 'tTPe_2_Add_FaceUp', ...
         'tTPe_3_Add_FaceUp', 'tTPe_4_Add_FaceUp', 'tTPe_5_Add_FaceUp', ...
         'tTPe_6_Add_FaceUp', 'tTPe_7_Add_FaceUp'}),
     global_info.CARDS_DEALT = global_info.CARDS_DEALT + 1;
     if global_info.TP_Move_Multiple_Count <= 1,
-        release(global_info.last_command_source);
+        if isfield(global_info,'last_command_source'),
+            disp(global_info.last_command_source);
+            release(global_info.last_command_source);
+        end
     else,
         global_info.TP_Move_Multiple_Count = global_info.TP_Move_Multiple_Count - 1;
         [tableau, ~, ~, ~, ~, ~] = get_tableau_num_from_transname(global_info.last_command_source);

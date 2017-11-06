@@ -1,7 +1,11 @@
 function [fire, transition] = pre_tPe_TP_Turn(transition)
 
-fire = 0;
 global global_info;
+fire = 0;
+if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
+    return;
+end;
+
 [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] = get_tableau_num_from_transname(transition.name);
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.(turn_btn) ~= false && playerAction,

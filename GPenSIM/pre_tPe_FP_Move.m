@@ -2,6 +2,10 @@ function [fire, transition] = pre_tPe_FP_Move(transition)
 
 global global_info;
 fire = 0;
+if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
+    return;
+end;
+
 [suit_abbr, suit, handle_err, move_btn, handle_move_loc] = get_suit_from_transname(transition.name);
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.(move_btn) ~= false && playerAction,
