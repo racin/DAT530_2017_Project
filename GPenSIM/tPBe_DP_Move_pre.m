@@ -15,23 +15,22 @@ moveColor = get_color('pPB_Cmd', moveToken);
 if strcmp(moveColor,'DP_Move') && playerAction,
     movesLeft = length(global_info.BOT_DP_MOVES);
     if movesLeft == 0,
-        disp('NEED NEW CMD');
         global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end
+    
     vistoken = tokenArrivedLate('pDP_Draw_FaceUp_Pile',1);
     if ~vistoken,
-        disp('NO CARDS IN DRAWPILE');
         global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end;
     moveTo = randi(movesLeft);
     dest = global_info.BOT_DP_MOVES{moveTo};
-    disp('AI DP MOVE clicked!');
     command = strcat('Move:',dest,':DP');
     disp(command);
     color = get_color('pDP_Draw_FaceUp_Pile',vistoken);
     color = color{1};
+    disp(color);
     if checkCommand_Move({command;color},'',transition.name,'DP_ErrorMsg'),
         transition.selected_tokens = moveToken;
         transition.new_color = command;

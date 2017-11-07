@@ -12,12 +12,10 @@ fire = 0;
 % state of the PN, which would become illegal just moments later. There is
 % probably more elegant ways to do this, such as checking the times_fires
 % of the add-face-up transitions.
-if global_info.TP_Move_Multiple ~= 0,
-    if ~isempty(strfind(transition.name,num2str(global_info.TP_Move_Multiple))),   
-        transition.new_color = global_info.TP_Move_LastCmd;
-        transition.override = 1;
-        fire = 1;
-        global_info.TP_Move_Multiple = 0;
-        disp('Move multiple trigger.');
-    end;
+
+if global_info.TP_Move_Multi_Gen_Tokens > 0,
+    transition.new_color = global_info.TP_Move_LastCmd;
+    transition.override = 1;
+    fire = 1;
+    disp('Move multiple trigger.');
 end;

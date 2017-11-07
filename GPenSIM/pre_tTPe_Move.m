@@ -8,7 +8,9 @@ moveColor = get_color('pMC_TP_Move',moveToken);
 [moveCmd, ~] = splitCommand(moveColor);
 disp(strcat('pre_tTPe_Move cmd:',{' '},moveCmd));
 if(length(moveCmd) >= 4 && strcmp(moveCmd{3},strcat('TP',tableau))),
-    global_info.TP_Move_Multiple_Count = str2double(moveCmd{4});
+    amount = str2double(moveCmd{4});
+    global_info.TP_Move_Multiple_Count = amount;
+    global_info.TP_Move_Multi_Gen_Tokens = amount - 1;
     global_info.TP_Move_LastCmd = moveColor;
     disp(strcat(tableau,'x move trigger'));
     disp(moveCmd);

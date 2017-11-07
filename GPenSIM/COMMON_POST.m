@@ -10,20 +10,7 @@ if ismember(transition.name, {'tTPe_1_Add_FaceDown', 'tTPe_2_Add_FaceDown', ...
 elseif ismember(transition.name, {'tTPe_1_Add_FaceUp', 'tTPe_2_Add_FaceUp', ...
         'tTPe_3_Add_FaceUp', 'tTPe_4_Add_FaceUp', 'tTPe_5_Add_FaceUp', ...
         'tTPe_6_Add_FaceUp', 'tTPe_7_Add_FaceUp'}),
-    global_info.CARDS_DEALT = global_info.CARDS_DEALT + 1;
-    if global_info.TP_Move_Multiple_Count <= 1,
-        if isfield(global_info,'last_command_source'),
-            disp('RELEASING RESOURCE');
-            disp(global_info.last_command_source);
-            release(global_info.last_command_source);
-        end
-    else,
-        disp('MOVING MULTIPLE');
-        disp(global_info.last_command_source);
-        global_info.TP_Move_Multiple_Count = global_info.TP_Move_Multiple_Count - 1;
-        [tableau, ~, ~, ~, ~, ~] = get_tableau_num_from_transname(global_info.last_command_source);
-        global_info.TP_Move_Multiple = tableau;
-    end;
+    post_tTPe_Add_FaceUp(transition);
 elseif ismember(transition.name, {
         'tFPe_Clubs_Add','tFPe_Diamonds_Add', ...
         'tFPe_Hearts_Add','tFPe_Spades_Add', ...
@@ -36,6 +23,10 @@ elseif ismember(transition.name, {
         'tPBe_DP_Move','tPBe_DP_Turn', 'tPBe_FP_Move','tPBe_TP_Move', ...
         'tPBe_TP_Turn',}),
     global_info.BOT_ACTIONS_NEW_CMD = 1;
+elseif ismember(transition.name, {'tTPe_1_Move_Multiple', 'tTPe_2_Move_Multiple', ...
+        'tTPe_3_Move_Multiple', 'tTPe_4_Move_Multiple', 'tTPe_5_Move_Multiple', ...
+        'tTPe_6_Move_Multiple', 'tTPe_7_Move_Multiple'}),
+    global_info.TP_Move_Multi_Gen_Tokens = global_info.TP_Move_Multi_Gen_Tokens - 1;
 end;
 
 % Check if game is won. Win condition: 13 tokens on each of the foundation
@@ -43,12 +34,14 @@ end;
 if(length(tokIDs('pFP_Clubs_Pile')) == 13 && length(tokIDs('pFP_Diamonds_Pile')) == 13 ...
         && length(tokIDs('pFP_Hearts_Pile')) == 13 && length(tokIDs('pFP_Spades_Pile')) == 13),
     disp('GAME WON!');
+    set_handle('EndGame', 'String', 'GAME WON!');
     global_info.STOP_SIMULATION = 1;
 end;
 
-% if length(tokIDs('pDP_Draw_FaceDown_Pile')+length(tokIDs('pDP_Draw_FaceUp_Pile')))) <= 24,
+if global_info.CARDS_DEALT >= global_info.INITIAL_DEAL_MOVE_LENGTH,
     if global_info.GUI_ENABLED,
+        set_handle('GameStatus', 'String', '');
         player_update_GUI();
     end
-% end
+end
 

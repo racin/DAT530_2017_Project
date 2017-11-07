@@ -66,9 +66,6 @@ end;
     movedCard_split = strsplit(card,'_');
     moved_suit = movedCard_split(1);
     moved_rank = movedCard_split(2);
-
-    disp('TABLEAU PILE');
-    disp(moved_suit);
     
     tp_FU_Pile_Dest = strcat('pTP_',tableau_dest,'_FaceUp_Pile');
     
@@ -100,9 +97,6 @@ end;
             return;
         end
         amount = str2double(moveCmd{4});
-        disp(strcat('AMOUNT:',{' '},num2str(amount)));
-        disp(strcat('LenTokIds:',{' '},num2str(length(tokIDs(tp_Pile_Src)))));
-        disp(strcat('SRCtoken: ',tp_Pile_Src));
         if amount > length(tokIDs(tp_Pile_Src)) || amount < 1,
             set_handle(handle_err,'String','INVALID AMOUNT');
             return;

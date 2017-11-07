@@ -49,5 +49,4 @@ if global_info.BOT_ENABLED && global_info.BOT_ACTIONS_NEW_CMD && ...
     
     transition.override = 1;
     fire = 1;
-    disp('Token generated');
 end;

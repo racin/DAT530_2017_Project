@@ -6,7 +6,7 @@ if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
     return;
 end;
 moveToken = tokenArrivedLate('pPB_Cmd', 1);
-if ~moveToken,
+if isempty(moveToken),
     return;
 end;
 moveColor = get_color('pPB_Cmd', moveToken);
@@ -15,7 +15,6 @@ moveColor = moveColor{1};
 if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     movesLeft = length(global_info.BOT_TP_MOVES);
     if movesLeft == 0,
-        disp('TP NEED NEW MOVES');
         global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end
@@ -24,7 +23,6 @@ if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     lenTokens = length(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile')));
     
     if lenTokens == 0,
-        disp('Should turn first');
         if length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) > 0,
             global_info.BOT_NEXT_CMD = strcat('TP_Turn:',tableau);
         end;
@@ -54,7 +52,7 @@ if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     end;
     disp('AI TP MOVE clicked!');
     command = strcat('Move:',dest,':TP',tableau,':',num2str(amount));
-    disp(command);
+    
     % The top card to be moved is used to check validity of the command.
     vistoken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'), amount);
     vistoken = vistoken(amount);

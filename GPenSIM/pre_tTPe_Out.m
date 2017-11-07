@@ -1,11 +1,18 @@
 function [fire, transition] = pre_tTPe_Out(transition)
 
 global global_info;
-disp(strcat(transition.name,{' '},'enabled!'));
-[tableau, ~, ~, ~, ~, ~]  = get_tableau_num_from_transname(transition.name)
-moveToken = tokenArrivedLate(strcat('pTP_',tableau,'_Move'),1);
-cardToken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'), global_info.TP_Move_Multiple_Count);
-cardToken = cardToken(global_info.TP_Move_Multiple_Count);
+fire = 0;
+disp(strcat(transition.name,{' '},'CHECKING!'));
 
-transition.selected_tokens = [moveToken cardToken];
-fire = 1;
+if global_info.TP_Move_Multi_Gen_Tokens == 0,
+    [tableau, ~, ~, ~, ~, ~]  = get_tableau_num_from_transname(transition.name);
+    disp(strcat(transition.name,{' '},'enabled!'));
+    moveToken = tokenArrivedLate(strcat('pTP_',tableau,'_Move'),1);
+    lenMoveTokens = length(tokIDs(strcat('pTP_',tableau,'_Move')));
+    cardToken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'), ...
+        lenMoveTokens);
+    cardToken = cardToken(lenMoveTokens);
+    disp(get_color(strcat('pTP_',tableau,'_FaceUp_Pile'), cardToken));
+    transition.selected_tokens = [moveToken cardToken];
+    fire = 1;
+end;

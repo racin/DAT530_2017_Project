@@ -11,6 +11,5 @@ end;
 if global_info.DP_Turn_Btn ~= false && playerAction,
     global_info.DP_Turn_Btn = false;
     global_info.last_command_source = transition.name;
-    disp('DP Turn clicked!');
     fire = 1;
 end;

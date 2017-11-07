@@ -15,7 +15,6 @@ moveColor = moveColor{1};
 if ~isempty(strfind(moveColor,'FP_Move')) && playerAction,
     movesLeft = length(global_info.BOT_FP_MOVES);
     if movesLeft == 0,
-        disp('NEED NEW MOVES!');
         global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end
@@ -24,15 +23,14 @@ if ~isempty(strfind(moveColor,'FP_Move')) && playerAction,
     global_suit = global_info.SUITS.(suit_abbr);
     vistoken = tokenArrivedLate(strcat('pFP_',global_suit{1},'_Pile'),1);
     if ~vistoken,
-        disp('NO CARDS IN PILE!');
         global_info.BOT_ACTIONS_NEW_CMD = 1;
         return;
     end;
     moveTo = randi(movesLeft);
     dest = global_info.BOT_FP_MOVES{moveTo};
-    disp('AI FP MOVE clicked!');
+    
     command = strcat('Move:',dest,strcat(':FP',suit_abbr));
-    disp(command);
+    
     color = get_color(strcat('pFP_',global_suit{1},'_Pile'),vistoken);
     color = color{1};
     if checkCommand_Move({command;color},'',transition.name,strcat('FP_',suit_abbr,'_ErrorMsg')),
