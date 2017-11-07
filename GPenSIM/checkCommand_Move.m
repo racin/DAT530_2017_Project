@@ -8,14 +8,13 @@ doCommand = false;
 if length(cmdDest) < 3,
     set_handle(handle_err,'String','INCOMPLETE COMMAND');
     return;
-elseif isempty(strfind(cmdDest,'FP')) && isempty(strfind(cmdDest,'TP')),
+elseif ~ismember(cmdDest, global_info.FP_TP_PILES),
     set_handle(handle_err,'String','INVALID MOVE COMMAND');
     return;
 end
 
-
 % Foundation Piles
- if ~isempty(strfind(cmdDest,'FP')),
+if ismember(cmdDest, global_info.FP_PILES),
     if ~isempty(destination) && destination(1) ~= cmdDest(3),
         return;
     end;
@@ -50,25 +49,18 @@ end
         set_handle(handle_err,'String','FIRST CARD MUST BE ACE');
         return;
     end;
-end;
-
-% Tableau Piles
- if ~isempty(strfind(cmdDest,'TP')),
+elseif ismember(cmdDest, global_info.TP_PILES),
     tableau_dest = cmdDest(3);
-    
-    if ~ismember(tableau_dest, {'1','2','3','4','5','6','7'}),
-        set_handle(handle_err,'String','INVALID PILE');
-        return
-    end;
+
     if ~isempty(destination) == 1 && destination(1) ~= tableau_dest,
         return;
     end;
     movedCard_split = strsplit(card,'_');
     moved_suit = movedCard_split(1);
     moved_rank = movedCard_split(2);
-    
+
     tp_FU_Pile_Dest = strcat('pTP_',tableau_dest,'_FaceUp_Pile');
-    
+
     % Can not add to tableau piles where face up is empty and there exist
     % cards in face down pile.
     if ~isempty(tokIDs(strcat('pTP_',tableau_dest,'_FaceDown_Pile'))) && ...
@@ -76,16 +68,16 @@ end;
         set_handle(handle_err,'String','FACE DOWN PILE MUST BE EMPTY');
         return;
     end
-    
-    
-    
+
+
+
     if(iscell(tp_FU_Pile_Dest)),
         tp_FU_Pile_Dest = tp_FU_Pile_Dest{1};
     end;
     disp(moveCmd);
     % Do not check amount once the command has reached it's destination.
     if length(moveCmd) >= 4 && ~isempty(source),
-        if ~isempty(strfind(moveCmd{3},'TP')),
+        if ismember(moveCmd{3}, global_info.TP_PILES),
             tableau_src = moveCmd{3};
             tableau_src = tableau_src(3);
             tp_Pile_Src = strcat('pTP_',tableau_src,'_FaceUp_Pile');
@@ -110,10 +102,10 @@ end;
         dest_topCard_split = strsplit(dest_topCard_Color{1},'_');
         dest_topCard_Suit = dest_topCard_split(1);
         dest_topCard_Rank = dest_topCard_split(2);
-        
+
         moved_global_suit = global_info.SUITS.(moved_suit{1});
         dest_global_suit = global_info.SUITS.(dest_topCard_Suit{1});
-        
+
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
         if(diffRank ~= -1),  % Added card must be 1 value lower than the current card.
             set_handle(handle_err,'String','INVALID CARD VALUE');
@@ -127,12 +119,15 @@ end;
         set_handle(handle_err,'String','FIRST CARD MUST BE KING');
         return;
     end;
+else,
+    set_handle(handle_err,'String','INVALID PILE');
+    return
 end;
-% strcmp(source,'DP') && 
-% Foundation Pile - Diamonds
+
 if ~isempty(source),
     global_info.last_command_source = source;
 end;
+
 set_handle(handle_err,'String','');
 doCommand = true;
 return;

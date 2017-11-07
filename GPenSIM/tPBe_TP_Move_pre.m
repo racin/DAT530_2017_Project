@@ -40,13 +40,12 @@ if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     
     % 20% of the time the bot will attempt to move partial amount of cards.
     % 80% of the time it will attempt to move all.
-    if lenTokens > 1 && isempty(strfind(dest,'FP')),
-        amount = randi(10);
-        if amount > 8,
-            amount = randi(lenTokens-1);
-        else,
+    if lenTokens > 1 && ismember(dest, global_info.TP_PILES),
+        if randi(100) <= global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE,
             amount = lenTokens;
-        end;
+        else,
+            amount = randi(lenTokens-1);
+        end
     else,
         amount = 1;
     end;

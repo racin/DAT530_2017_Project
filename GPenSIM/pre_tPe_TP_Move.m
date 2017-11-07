@@ -12,7 +12,7 @@ if global_info.(move_btn) ~= false && playerAction,
     global_info.(move_btn) = false;
     disp(strcat('TP ',tableau,' move btn'));
     dest = get_handle(handle_move_loc,'String');
-    if ~isempty(strfind(dest,'FP')),
+    if ismember(dest, global_info.FP_PILES),
         amount = 1;
     else,
         amount = str2double(get_handle(handle_move_amount,'String'));

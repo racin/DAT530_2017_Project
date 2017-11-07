@@ -23,7 +23,7 @@ function varargout = player_GUI(varargin)
 
 % Edit the above text to modify the response to help player_GUI
 
-% Last Modified by GUIDE v2.5 06-Nov-2017 00:30:51
+% Last Modified by GUIDE v2.5 07-Nov-2017 18:47:57
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -98,10 +98,10 @@ function STOPSIM_Callback(hObject, eventdata, handles)
 global global_info;
 global_info.STOP_SIMULATION = 1;
 
-% --- Executes on button press in STOPBOT.
-function STOPBOT_Callback(hObject, eventdata, handles)
+% --- Executes on button press in TOGGLEBOT.
+function TOGGLEBOT_Callback(hObject, eventdata, handles)
 global global_info;
-global_info.BOT_ENABLED = 0;
+global_info.BOT_ENABLED = ~global_info.BOT_ENABLED;
 
 % --- Executes on button press in DP_Turn_Btn.
 function DP_Turn_Btn_Callback(hObject, eventdata, handles)

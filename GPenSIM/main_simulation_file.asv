@@ -15,12 +15,10 @@ global_info.STOP_AT = 10000;
 % DP_Turn, DP_Move, FP_Move, TP_Turn, TP_Move. Given array [20, 50, 70,
 % 80], a number between 1-20 would attempt a DP_Turn action, 21-50 DP_Move,
 % and so on.
-global_info.BOT_ACTIONS = [10, 26, 28, 60];
+global_info.BOT_ACTIONS = [10, 26, 26, 60];
 % The probability of moving to a tableau pile versus a foundation pile.
-global_info.BOT_ACTIONS_TP_FP = 30;
-% The probability that the bot will attempt to move the full stack versus a
-% part of it.
-global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE = 65;
+global_info.BOT_ACTIONS_TP_FP = 50;
+global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE = 0.7;
 
 global_info.RANDOM_DECK = 0;
 % First entry is bottom of the stack. Last entry is top of the stack.
@@ -39,6 +37,8 @@ global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X',
 %     'D_2','C_3','D_4','C_5','D_6','C_7','D_8','C_9','D_X','C_J','D_Q','C_K','D_A','C_A', ...
 %     };
 
+global_info.INITIAL_DEAL_TURNS = 0;
+global_info.INITIAL_DEAL_MOVES = 0;
 global_info.INITIAL_DEAL_MOVE = {
     '1', '2', '3', '4', '5', '6', '7', ...
     '2', '3', '4', '5', '6', '7', ...
@@ -59,9 +59,6 @@ global_info.SUITS.H = {'Hearts','Red'};
 global_info.SUITS.S = {'Spades','Black'};
 global_info.CARDVALUE_MAP = containers.Map({'A','2','3','4','5','6','7','8','9','X','J','Q','K'}, ...
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-global_info.FP_PILES = {'FPC','FPD','FPH','FPS'};
-global_info.TP_PILES = {'TP1','TP2','TP3','TP4','TP5','TP6','TP7'};
-global_info.FP_TP_PILES = [global_info.FP_PILES, global_info.TP_PILES];
 
 %%%% GLOBAL PARAMETERS %%%%
 global_info.TP_Move_Multiple = 0;
@@ -116,6 +113,7 @@ dyn.ip = {'tDPe_Out', 10};
 % arrived earliest or latest).
 dyn.ft = {'allothers', 0.01}; 
 if global_info.BOT_ENABLED,
+    dyn.m0 = [dyn.m0, 'pPB_Gen', 1];
     %dyn.ft = [dyn.ft, 'tPBi_Gen', 1];
 end;
 

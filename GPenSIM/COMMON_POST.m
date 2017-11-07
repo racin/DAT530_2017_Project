@@ -34,7 +34,7 @@ end;
 if(length(tokIDs('pFP_Clubs_Pile')) == 13 && length(tokIDs('pFP_Diamonds_Pile')) == 13 ...
         && length(tokIDs('pFP_Hearts_Pile')) == 13 && length(tokIDs('pFP_Spades_Pile')) == 13),
     disp('GAME WON!');
-    set_handle('EndGame', 'String', 'GAME WON!');
+    set_handle('GameStatus', 'String', 'GAME WON!');
     global_info.STOP_SIMULATION = 1;
 end;
 

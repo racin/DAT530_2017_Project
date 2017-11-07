@@ -30,7 +30,6 @@ if global_info.BOT_ENABLED && global_info.BOT_ACTIONS_NEW_CMD && ...
             action = 'FP_Move';
             suits = {':C', ':D', ':H', ':S'};
             source = suits(randi(length(suits)));
-            global_info.BOT_FP_MOVES = global_info.TP_PILES;
         elseif rndNum <= global_info.BOT_ACTIONS(4) && ...
                 ~strcmp(global_info.BOT_LAST_CMD,'TP_Turn'),
             action = 'TP_Turn';
@@ -38,11 +37,6 @@ if global_info.BOT_ENABLED && global_info.BOT_ACTIONS_NEW_CMD && ...
         else
             action = 'TP_Move';
             source = strcat(':',num2str(randi(7)));
-            if randi(100) <= global_info.BOT_ACTIONS_TP_FP,
-                global_info.BOT_TP_MOVES = global_info.TP_PILES;
-            else,
-                global_info.BOT_TP_MOVES = global_info.FP_PILES;
-            end
         end;
         transition.new_color = strcat(action,source);
     else,
@@ -50,6 +44,12 @@ if global_info.BOT_ENABLED && global_info.BOT_ACTIONS_NEW_CMD && ...
     end;
     
      % Reset ongoing commands.
+     = {'FPC','FPD','FPH','FPS','TP1','TP2',...
+        'TP3','TP4','TP5','TP6','TP7'};
+    global_info.BOT_FP_MOVES = {'TP1','TP2','TP3','TP4','TP5','TP6',...
+        'TP7'};
+    global_info.BOT_TP_MOVES = {'FPC','FPD','FPH','FPS','TP1','TP2',...
+        'TP3','TP4','TP5','TP6','TP7'};
     global_info.BOT_ACTIONS_NEW_CMD = 0;
     global_info.BOT_NEXT_CMD = '';
     
