@@ -18,8 +18,10 @@ function [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_
         tableau = '5';
     elseif ~isempty(strfind(transitionname,'6')),
         tableau = '6';
-    else,
+    elseif ~isempty(strfind(transitionname,'7')),
         tableau = '7';
+    else,
+        tableau = 0; % Invalid tableau.
     end
     if global_info.GUI_ENABLED,
         handle_err = strcat('TP_',tableau,'_ErrorMsg');

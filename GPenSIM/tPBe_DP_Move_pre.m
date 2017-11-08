@@ -27,10 +27,10 @@ if strcmp(moveColor,'DP_Move') && playerAction,
     moveTo = randi(movesLeft);
     dest = global_info.BOT_DP_MOVES{moveTo};
     command = strcat('Move:',dest,':DP');
-    disp(command);
+    
     color = get_color('pDP_Draw_FaceUp_Pile',vistoken);
     color = color{1};
-    disp(color);
+    
     if checkCommand_Move({command;color},'',transition.name,'DP_ErrorMsg'),
         transition.selected_tokens = moveToken;
         transition.new_color = command;

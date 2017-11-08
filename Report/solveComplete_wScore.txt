@@ -1,0 +1,492 @@
+    'Moved card S_K from DP to TP1 (FU)'
+
+    'Moved card S_Q from DP to TP2 (FD)'
+
+    'Moved card S_J from DP to TP3 (FD)'
+
+    'Moved card S_X from DP to TP4 (FD)'
+
+    'Moved card S_9 from DP to TP5 (FD)'
+
+    'Moved card S_8 from DP to TP6 (FD)'
+
+    'Moved card S_7 from DP to TP7 (FD)'
+
+    'Moved card S_6 from DP to TP2 (FU)'
+
+    'Moved card S_5 from DP to TP3 (FD)'
+
+    'Moved card S_4 from DP to TP4 (FD)'
+
+    'Moved card S_3 from DP to TP5 (FD)'
+
+    'Moved card S_2 from DP to TP6 (FD)'
+
+    'Moved card S_A from DP to TP7 (FD)'
+
+    'Moved card H_K from DP to TP3 (FU)'
+
+    'Moved card H_Q from DP to TP4 (FD)'
+
+    'Moved card H_J from DP to TP5 (FD)'
+
+    'Moved card H_X from DP to TP6 (FD)'
+
+    'Moved card H_9 from DP to TP7 (FD)'
+
+    'Moved card H_8 from DP to TP4 (FU)'
+
+    'Moved card H_7 from DP to TP5 (FD)'
+
+    'Moved card H_6 from DP to TP6 (FD)'
+
+    'Moved card H_5 from DP to TP7 (FD)'
+
+    'Moved card H_4 from DP to TP5 (FU)'
+
+    'Moved card H_3 from DP to TP6 (FD)'
+
+    'Moved card H_2 from DP to TP7 (FD)'
+
+    'Moved card H_A from DP to TP6 (FU)'
+
+    'Moved card C_K from DP to TP7 (FD)'
+
+    'Moved card C_Q from DP to TP7 (FU)'
+
+    'Moved card H_A from TP6 to FPH'
+
+    'Turned card H_3 at TP6'
+
+    'Turned card C_J at DP'
+
+    'Turned card C_X at DP'
+
+    'Moved card C_Q from TP7 to TP3 (FU)'
+
+    'Turned card C_9 at DP'
+
+    'Turned card C_8 at DP'
+
+    'Turned card C_K at TP7'
+
+    'Turned card C_7 at DP'
+
+    'Moved card C_7 from DP to TP4 (FU)'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Turned card C_4 at DP'
+
+    'Turned card C_3 at DP'
+
+    'Moved card C_3 from DP to TP5 (FU)'
+
+    'Turned card C_2 at DP'
+
+    'Turned card C_A at DP'
+
+    'Moved card C_A from DP to FPC'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_Q at DP'
+
+    'Turned card D_J at DP'
+
+    'Turned card D_X at DP'
+
+    'Turned card D_9 at DP'
+
+    'Turned card D_8 at DP'
+
+    'Turned card D_7 at DP'
+
+    'Turned card D_6 at DP'
+
+    'Turned card D_5 at DP'
+
+    'Turned card D_4 at DP'
+
+    'Turned card D_3 at DP'
+
+    'Turned card D_2 at DP'
+
+    'Moved card D_2 from DP to TP5 (FU)'
+
+    'Turned card D_A at DP'
+
+    'Turned card C_J at DP'
+
+    'Turned card C_X at DP'
+
+    'Turned card C_9 at DP'
+
+    'Turned card C_8 at DP'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Turned card C_4 at DP'
+
+    'Turned card C_2 at DP'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_Q at DP'
+
+    'Turned card D_J at DP'
+
+    'Moved card D_J from DP to TP3 (FU)'
+
+    'Turned card D_X at DP'
+
+    'Turned card D_9 at DP'
+
+    'Turned card D_8 at DP'
+
+    'Turned card D_7 at DP'
+
+    'Turned card D_6 at DP'
+
+    'Turned card D_5 at DP'
+
+    'Turned card D_4 at DP'
+
+    'Turned card D_3 at DP'
+
+    'Turned card D_A at DP'
+
+    'Moved card C_A from FPC to TP5 (FU)'
+
+    'Moved card D_A from DP to FPD'
+
+    'Turned card C_J at DP'
+
+    'Turned card C_X at DP'
+
+    'Turned card C_9 at DP'
+
+    'Moved card C_A from TP5 to FPC'
+
+    'Turned card C_8 at DP'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Turned card C_4 at DP'
+
+    'Turned card C_2 at DP'
+
+    'Moved card D_2 from TP5 to FPD'
+
+    'Moved card C_2 from DP to TP6 (FU)'
+
+    'Moved card C_2 from TP6 to FPC'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_Q at DP'
+
+    'Turned card D_X at DP'
+
+    'Moved card C_3 from TP5 to FPC'
+
+    'Turned card D_9 at DP'
+
+    'Turned card D_8 at DP'
+
+    'Turned card D_7 at DP'
+
+    'Turned card D_6 at DP'
+
+    'Turned card D_5 at DP'
+
+    'Turned card D_4 at DP'
+
+    'Turned card D_3 at DP'
+
+    'Turned card C_J at DP'
+
+    'Turned card C_X at DP'
+
+    'Turned card C_9 at DP'
+
+    'Turned card C_8 at DP'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Turned card C_4 at DP'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_Q at DP'
+
+    'Turned card D_X at DP'
+
+    'Turned card D_9 at DP'
+
+    'Turned card D_8 at DP'
+
+    'Turned card D_7 at DP'
+
+    'Turned card D_6 at DP'
+
+    'Moved card D_6 from DP to TP4 (FU)'
+
+    'Turned card D_5 at DP'
+
+    'Moved card D_5 from DP to TP2 (FU)'
+
+    'Turned card D_4 at DP'
+
+    'Turned card D_3 at DP'
+
+    'Moved card D_3 from DP to FPD'
+
+    'Moved card D_4 from DP to FPD'
+
+    'Turned card C_J at DP'
+
+    'Moved card D_5 from TP2 to FPD'
+
+    'Turned card C_X at DP'
+
+    'Turned card C_9 at DP'
+
+    'Turned card C_8 at DP'
+
+    'Moved card D_6 from TP4 to FPD'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Turned card C_4 at DP'
+
+    'Moved card C_4 from DP to FPC'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_Q at DP'
+
+    'Turned card D_X at DP'
+
+    'Turned card D_9 at DP'
+
+    'Turned card D_8 at DP'
+
+    'Turned card D_7 at DP'
+
+    'Moved card D_7 from DP to FPD'
+
+    'Moved card D_8 from DP to FPD'
+
+    'Moved card D_9 from DP to FPD'
+
+    'Moved card D_X from DP to FPD'
+
+    'Moved card D_Q from DP to TP7 (FU)'
+
+    'Turned card C_J at DP'
+
+    'Turned card C_X at DP'
+
+    'Turned card C_9 at DP'
+
+    'Turned card C_8 at DP'
+
+    'Moved card D_Q from TP7 to TP1 (FU)'
+
+    'Turned card C_6 at DP'
+
+    'Turned card C_5 at DP'
+
+    'Moved card C_5 from DP to FPC'
+
+    'Moved card C_6 from DP to FPC'
+
+    'Moved card C_7 from TP4 to FPC'
+
+    'Moved card C_8 from DP to FPC'
+
+    'Moved card C_9 from DP to FPC'
+
+    'Moved card C_X from DP to FPC'
+
+    'Moved card C_J from DP to FPC'
+
+    'Moved card D_J from TP3 to FPD'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_K at DP'
+
+    'Turned card D_K at DP'
+
+    'Moved card C_Q from TP3 to FPC'
+
+    'Moved card C_K from TP7 to FPC'
+
+    'Moved card D_Q from TP1 to FPD'
+
+    'Turned card H_2 at TP7'
+
+    'Moved card H_2 from TP7 to FPH'
+
+    'Turned card D_K at DP'
+
+    'Turned card H_5 at TP7'
+
+    'Moved card D_K from DP to FPD'
+
+    'Moved card H_3 from TP6 to FPH'
+
+    'Turned card H_6 at TP6'
+
+    'Moved card H_4 from TP5 to FPH'
+
+    'Turned card H_7 at TP5'
+
+    'Moved card H_5 from TP7 to TP2 (FU)'
+
+    'Turned card H_9 at TP7'
+
+    'Moved card H_5 from TP2 to FPH'
+
+    'Moved card H_6 from TP6 to FPH'
+
+    'Turned card H_X at TP6'
+
+    'Moved card H_7 from TP5 to FPH'
+
+    'Turned card H_J at TP5'
+
+    'Moved card H_8 from TP4 to FPH'
+
+    'Turned card H_Q at TP4'
+
+    'Moved card H_Q from TP4 to TP1 (FU)'
+
+    'Turned card S_4 at TP4'
+
+    'Moved card H_9 from TP7 to FPH'
+
+    'Moved card H_X from TP6 to FPH'
+
+    'Turned card S_A at TP7'
+
+    'Moved card S_A from TP7 to FPS'
+
+    'Turned card S_7 at TP7'
+
+    'Turned card S_2 at TP6'
+
+    'Moved card H_J from TP5 to FPH'
+
+    'Moved card S_2 from TP6 to FPS'
+
+    'Moved card H_Q from TP1 to FPH'
+
+    'Turned card S_8 at TP6'
+
+    'Turned card S_3 at TP5'
+
+    'Moved card S_3 from TP5 to FPS'
+
+    'Turned card S_9 at TP5'
+
+    'Moved card H_K from TP3 to FPH'
+
+    'Turned card S_5 at TP3'
+
+    'Moved card S_4 from TP4 to FPS'
+
+    'Turned card S_X at TP4'
+
+    'Moved card S_5 from TP3 to FPS'
+
+    'Turned card S_J at TP3'
+
+    'Moved card S_6 from TP2 to FPS'
+
+    'Turned card S_Q at TP2'
+
+    'Moved card S_7 from TP7 to FPS'
+
+    'Moved card S_8 from TP6 to FPS'
+
+    'Moved card S_9 from TP5 to FPS'
+
+    'Moved card S_X from TP4 to FPS'
+
+    'Moved card S_J from TP3 to FPS'
+
+    'Moved card S_Q from TP2 to FPS'
+
+    'Moved card S_K from TP1 to FPS'
+
+GAME WON!
+ 
+ 
+Colors of Final Tokens:
+Time: 1369    Place: pFP_Clubs_Pile    Colors:   C_A
+Time: 1505    Place: pFP_Clubs_Pile    Colors:   C_2
+Time: 1562    Place: pFP_Clubs_Pile    Colors:   C_3
+Time: 2565    Place: pFP_Clubs_Pile    Colors:   C_4
+Time: 2820    Place: pFP_Clubs_Pile    Colors:   C_5
+Time: 2830    Place: pFP_Clubs_Pile    Colors:   C_6
+Time: 2842    Place: pFP_Clubs_Pile    Colors:   C_7
+Time: 2847    Place: pFP_Clubs_Pile    Colors:   C_8
+Time: 2857    Place: pFP_Clubs_Pile    Colors:   C_9
+Time: 2861    Place: pFP_Clubs_Pile    Colors:   C_X
+Time: 2880    Place: pFP_Clubs_Pile    Colors:   C_J
+Time: 2948    Place: pFP_Clubs_Pile    Colors:   C_Q
+Time: 2967    Place: pFP_Clubs_Pile    Colors:   C_K
+Time: 1243    Place: pFP_Diamonds_Pile    Colors:   D_A
+Time: 1480    Place: pFP_Diamonds_Pile    Colors:   D_2
+Time: 2349    Place: pFP_Diamonds_Pile    Colors:   D_3
+Time: 2355    Place: pFP_Diamonds_Pile    Colors:   D_4
+Time: 2391    Place: pFP_Diamonds_Pile    Colors:   D_5
+Time: 2428    Place: pFP_Diamonds_Pile    Colors:   D_6
+Time: 2641    Place: pFP_Diamonds_Pile    Colors:   D_7
+Time: 2645    Place: pFP_Diamonds_Pile    Colors:   D_8
+Time: 2664    Place: pFP_Diamonds_Pile    Colors:   D_9
+Time: 2671    Place: pFP_Diamonds_Pile    Colors:   D_X
+Time: 2885    Place: pFP_Diamonds_Pile    Colors:   D_J
+Time: 3000    Place: pFP_Diamonds_Pile    Colors:   D_Q
+Time: 3030    Place: pFP_Diamonds_Pile    Colors:   D_K
+Time: 98    Place: pFP_Hearts_Pile    Colors:   H_A
+Time: 3014    Place: pFP_Hearts_Pile    Colors:   H_2
+Time: 3061    Place: pFP_Hearts_Pile    Colors:   H_3
+Time: 3142    Place: pFP_Hearts_Pile    Colors:   H_4
+Time: 3294    Place: pFP_Hearts_Pile    Colors:   H_5
+Time: 3418    Place: pFP_Hearts_Pile    Colors:   H_6
+Time: 3437    Place: pFP_Hearts_Pile    Colors:   H_7
+Time: 3465    Place: pFP_Hearts_Pile    Colors:   H_8
+Time: 3699    Place: pFP_Hearts_Pile    Colors:   H_9
+Time: 3709    Place: pFP_Hearts_Pile    Colors:   H_X
+Time: 3789    Place: pFP_Hearts_Pile    Colors:   H_J
+Time: 3830    Place: pFP_Hearts_Pile    Colors:   H_Q
+Time: 3956    Place: pFP_Hearts_Pile    Colors:   H_K
+Time: 3725    Place: pFP_Spades_Pile    Colors:   S_A
+Time: 3824    Place: pFP_Spades_Pile    Colors:   S_2
+Time: 3884    Place: pFP_Spades_Pile    Colors:   S_3
+Time: 4048    Place: pFP_Spades_Pile    Colors:   S_4
+Time: 4096    Place: pFP_Spades_Pile    Colors:   S_5
+Time: 4167    Place: pFP_Spades_Pile    Colors:   S_6
+Time: 4183    Place: pFP_Spades_Pile    Colors:   S_7
+Time: 4215    Place: pFP_Spades_Pile    Colors:   S_8
+Time: 4232    Place: pFP_Spades_Pile    Colors:   S_9
+Time: 4241    Place: pFP_Spades_Pile    Colors:   S_X
+Time: 4250    Place: pFP_Spades_Pile    Colors:   S_J
+Time: 4276    Place: pFP_Spades_Pile    Colors:   S_Q
+Time: 4289    Place: pFP_Spades_Pile    Colors:   S_K
+Time: 4284    Place: pPB_Cmd    Colors:   DP_Move
+>> 

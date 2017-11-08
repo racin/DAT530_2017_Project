@@ -5,9 +5,9 @@ global global_info;
 %%%% SIMULATION SETTINGS %%%%
 global_info.GUI_ENABLED = 1;
 global_info.BOT_ENABLED = 1;
+global_info.DISP_CHANGES = 1;
 global_info.DELTA_TIME = 1;
 global_info.MAX_LOOP = 10000;
-global_info.STOP_AT = 10000;
 
 %%%% GAME SETTINGS %%%%
 % The bot generates a number from 1-100, this is number is used with the
@@ -15,30 +15,22 @@ global_info.STOP_AT = 10000;
 % DP_Turn, DP_Move, FP_Move, TP_Turn, TP_Move. Given array [20, 50, 70,
 % 80], a number between 1-20 would attempt a DP_Turn action, 21-50 DP_Move,
 % and so on.
-global_info.BOT_ACTIONS = [10, 26, 28, 60];
+global_info.BOT_ACTIONS = [10, 42, 44, 60];
 % The probability of moving to a tableau pile versus a foundation pile.
-global_info.BOT_ACTIONS_TP_FP = 30;
+global_info.BOT_ACTIONS_TP_FP = 15;
 % The probability that the bot will attempt to move the full stack versus a
 % part of it.
-global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE = 65;
+global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE = 35;
 
 global_info.RANDOM_DECK = 0;
-% First entry is bottom of the stack. Last entry is top of the stack.
+% First entry is bottom of the deck. Last entry is top of the deck.
 global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X','D_J','D_Q','D_K', ...
-     'C_A','C_2','C_3','C_4','C_5','C_6','C_7','C_8','C_9','C_X','C_J','C_Q','C_K', ...
+    'C_A','C_2','C_3','C_4','C_5','C_6','C_7','C_8','C_9','C_X','C_J','C_Q','C_K', ...
     'H_A','H_2','H_3','H_4','H_5','H_6','H_7','H_8','H_9','H_X','H_J','H_Q','H_K', ...
     'S_A','S_2','S_3','S_4','S_5','S_6','S_7','S_8','S_9','S_X','S_J','S_Q','S_K'
     };
-% global_info.DECK = {'D_A','D_2','D_3','D_4','D_5','D_6','D_7','D_8','D_9','D_X','D_J','D_Q','D_K', ...
-%      'C_A','C_2','C_3','C_4','C_5','C_6','C_7','C_8','C_9','C_X','C_J','C_Q','C_K', ...
-%     'H_A','H_2','H_3','H_4','H_5','H_6','H_7','H_9','S_9','H_X','S_J','H_Q','S_X', ...
-%     'S_A','S_2','S_3','S_4','S_5','H_J','S_7','S_8','H_8','S_K','S_6','S_Q','H_K'
-%     };
-
-% global_info.DECK = {'C_2','D_3','C_4','D_5','C_6','D_7','C_8','D_9','C_X','D_J','C_Q','D_K', ...
-%     'D_2','C_3','D_4','C_5','D_6','C_7','D_8','C_9','D_X','C_J','D_Q','C_K','D_A','C_A', ...
-%     };
-
+% To which Tableau pile the cards will be dealt. The first entry is to top
+% of the deck (See global_info.DECK).
 global_info.INITIAL_DEAL_MOVE = {
     '1', '2', '3', '4', '5', '6', '7', ...
     '2', '3', '4', '5', '6', '7', ...
@@ -47,11 +39,6 @@ global_info.INITIAL_DEAL_MOVE = {
     '5', '6', '7', ...
     '6', '7', ...
     '7'};
-% global_info.INITIAL_DEAL_MOVE = {'1', '2', '3'
-%     };
-
-
-
 
 global_info.SUITS.D = {'Diamonds','Red'};
 global_info.SUITS.C = {'Clubs','Black'};
@@ -64,6 +51,7 @@ global_info.TP_PILES = {'TP1','TP2','TP3','TP4','TP5','TP6','TP7'};
 global_info.FP_TP_PILES = [global_info.FP_PILES, global_info.TP_PILES];
 
 %%%% GLOBAL PARAMETERS %%%%
+global_info.SCORE = 0;
 global_info.TP_Move_Multiple = 0;
 global_info.TP_Move_Multiple_Count = 0;
 global_info.DP_Flip_Pile_Running = false;

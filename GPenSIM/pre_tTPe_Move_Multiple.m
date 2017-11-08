@@ -3,6 +3,7 @@ function [fire, transition] = pre_tTPe_Move_Multiple(transition)
 global global_info;
 fire = 0;
 
+% TODO: THIS COMMENT IS OUTDATED.
 % TP_Move_Multiple is set to the tableau number which triggered it.
 % Reasoning why this is done this way: We want to make sure that the last
 % moved card has reached its destination (Some tableau pile) before
@@ -17,5 +18,4 @@ if global_info.TP_Move_Multi_Gen_Tokens > 0,
     transition.new_color = global_info.TP_Move_LastCmd;
     transition.override = 1;
     fire = 1;
-    disp('Move multiple trigger.');
 end;

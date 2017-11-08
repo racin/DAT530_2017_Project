@@ -19,7 +19,6 @@ if global_info.(turn_btn) ~= false && playerAction,
     end;
     set_handle(handle_err,'String','');
     global_info.last_command_source = transition.name;
-    disp(strcat('TP ',tableau,' Turn clicked!'));
     transition.new_color = strcat('Turn:TP',tableau);
     fire = 1;
 end;

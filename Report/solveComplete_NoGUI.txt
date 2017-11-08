@@ -1,0 +1,5072 @@
+Move:FPC:DP
+D_9
+Move:FPS:DP
+D_9
+AI DP Turn clicked!
+Is enabled dealer:0
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPD:DP
+D_7
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_6
+Move:FPC:DP
+D_6
+Move:FPH:DP
+D_6
+Move:FPS:DP
+D_6
+AI DP Turn clicked!
+Is enabled dealer:0
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPD:DP
+D_4
+Move:FPC:DP
+D_4
+Move:FPH:DP
+D_4
+Move:FPS:DP
+D_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_3
+Move:FPC:DP
+D_3
+Move:FPD:DP
+D_3
+Move:FPH:DP
+D_3
+Move:FPD:DP
+D_3
+Move:FPH:DP
+D_3
+Move:FPS:DP
+D_3
+Move:FPC:DP
+D_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_3
+Move:FPD:DP
+D_3
+Move:FPS:DP
+D_3
+Move:FPH:DP
+D_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_3
+Move:FPS:DP
+D_3
+Move:FPD:DP
+D_3
+Move:FPH:DP
+D_3
+Move:FPH:DP
+D_3
+Move:FPC:DP
+D_3
+Move:FPD:DP
+D_3
+Move:FPS:DP
+D_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP1'    '1'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Enabling Flip Pile!
+Ending Reverse Pile.
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP6'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_J
+Move:FPS:DP
+C_J
+Move:FPC:DP
+C_J
+Move:FPD:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_J
+Move:FPH:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_J
+Move:FPH:DP
+C_J
+Move:FPS:DP
+C_J
+Move:FPC:DP
+C_J
+Move:TP5:DP
+C_J
+    'Move'    'TP5'    'DP'
+
+Move:TP1:DP
+C_J
+    'Move'    'TP1'    'DP'
+
+Move:TP6:DP
+C_J
+    'Move'    'TP6'    'DP'
+
+Move:TP2:DP
+C_J
+    'Move'    'TP2'    'DP'
+
+Move:TP4:DP
+C_J
+    'Move'    'TP4'    'DP'
+
+Move:TP3:DP
+C_J
+    'Move'    'TP3'    'DP'
+
+Move:TP7:DP
+C_J
+    'Move'    'TP7'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_J
+Move:FPC:DP
+C_J
+Move:FPD:DP
+C_J
+Move:FPS:DP
+C_J
+Move:FPC:DP
+C_J
+Move:FPH:DP
+C_J
+Move:FPD:DP
+C_J
+Move:FPS:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+C_X
+Move:FPC:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_X
+Move:FPH:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_9
+Move:FPS:DP
+C_9
+Move:FPD:DP
+C_9
+Move:FPH:DP
+C_9
+Move:FPC:DP
+C_9
+Move:FPD:DP
+C_9
+Move:FPH:DP
+C_9
+Move:FPS:DP
+C_9
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP2'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'FPH'
+
+    'Move'    'TP2'    'FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_8
+Move:FPC:DP
+C_8
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+C_7
+Move:FPC:DP
+C_7
+Move:FPD:DP
+C_7
+Move:FPH:DP
+C_7
+Move:FPS:DP
+C_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_7
+Move:FPS:DP
+C_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_7
+Move:FPD:DP
+C_7
+Move:FPC:DP
+C_7
+Move:FPH:DP
+C_7
+Move:FPS:DP
+C_7
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPD:DP
+C_6
+Move:FPH:DP
+C_6
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPS:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPS:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPS:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPS:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPS:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPD:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPC:DP
+C_6
+Move:FPS:DP
+C_6
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+C_5
+Move:FPC:DP
+C_5
+Move:FPH:DP
+C_5
+Move:FPD:DP
+C_5
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_4
+Move:FPD:DP
+C_4
+Move:TP7:DP
+C_4
+    'Move'    'TP7'    'DP'
+
+Move:FPD:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_4
+Move:FPC:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPC:DP
+C_3
+Move:FPD:DP
+C_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_3
+Move:FPS:DP
+C_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_3
+Move:FPS:DP
+C_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP2:DP
+C_3
+    'Move'    'TP2'    'DP'
+
+Move:TP3:DP
+C_3
+    'Move'    'TP3'    'DP'
+
+Move:TP4:DP
+C_3
+    'Move'    'TP4'    'DP'
+
+Move:TP1:DP
+C_3
+    'Move'    'TP1'    'DP'
+
+Move:TP7:DP
+C_3
+    'Move'    'TP7'    'DP'
+
+Move:TP5:DP
+C_3
+    'Move'    'TP5'    'DP'
+
+    'sMove token color:Move:TP5:DP'
+
+Move Color
+    'Move:TP5:DP'
+
+Card Color
+    'C_3'
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    29
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    29
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    29
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    29
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    29
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP5'    'DP'
+
+Move:TP5:DP
+C_4
+    'Move'    'TP5'    'DP'
+
+Move:TP1:DP
+C_4
+    'Move'    'TP1'    'DP'
+
+Move:TP4:DP
+C_4
+    'Move'    'TP4'    'DP'
+
+Move:TP7:DP
+C_4
+    'Move'    'TP7'    'DP'
+
+Move:TP2:DP
+C_4
+    'Move'    'TP2'    'DP'
+
+Move:TP6:DP
+C_4
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+C_4
+    'Move'    'TP3'    'DP'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP5'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPH:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPD:DP
+C_4
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP5'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPH:DP
+C_4
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP1'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPC:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP2'    '1'
+
+Move:FPD:DP
+C_4
+Move:FPH:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPD:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPC:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPD:DP
+C_4
+Move:TP6:DP
+C_4
+    'Move'    'TP6'    'DP'
+
+Move:TP7:DP
+C_4
+    'Move'    'TP7'    'DP'
+
+Move:TP3:DP
+C_4
+    'Move'    'TP3'    'DP'
+
+Move:TP1:DP
+C_4
+    'Move'    'TP1'    'DP'
+
+Move:TP2:DP
+C_4
+    'Move'    'TP2'    'DP'
+
+Move:TP5:DP
+C_4
+    'Move'    'TP5'    'DP'
+
+Move:TP4:DP
+C_4
+    'Move'    'TP4'    'DP'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+C_2
+Move:FPC:DP
+C_2
+Move:FPS:DP
+C_2
+Move:FPD:DP
+C_2
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+C_A
+Move:FPS:DP
+C_A
+Move:FPD:DP
+C_A
+Move:FPC:DP
+C_A
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_A'
+
+    'Clubsx add token color: C_A'
+
+    'Clubsx command: FPC'
+
+Move:FPH:DP
+C_2
+Move:FPD:DP
+C_2
+Move:FPS:DP
+C_2
+Move:FPC:DP
+C_2
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_2'
+
+    'Clubsx add token color: C_2'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPD:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPS:DP
+C_4
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+Move:FPH:DP
+C_4
+Move:FPD:DP
+C_4
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPC'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'C_3'
+
+    'Clubsx add token color: C_3'
+
+    'Clubsx command: FPC'
+
+Move:FPD:DP
+C_4
+Move:FPS:DP
+C_4
+Move:FPC:DP
+C_4
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_4'
+
+    'Clubsx add token color: C_4'
+
+    'Clubsx command: FPC'
+
+Move:FPS:DP
+C_5
+Move:FPD:DP
+C_5
+Move:FPH:DP
+C_5
+Move:FPC:DP
+C_5
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_5'
+
+    'Clubsx add token color: C_5'
+
+    'Clubsx command: FPC'
+
+Move:FPD:DP
+C_6
+Move:FPH:DP
+C_6
+Move:FPC:DP
+C_6
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_6'
+
+    'Clubsx add token color: C_6'
+
+    'Clubsx command: FPC'
+
+Move:FPS:DP
+C_7
+Move:FPD:DP
+C_7
+Move:FPH:DP
+C_7
+Move:FPC:DP
+C_7
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_7'
+
+    'Clubsx add token color: C_7'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP3'    '2'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP6:DP
+D_K
+    'Move'    'TP6'    'DP'
+
+Move:FPD:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPS:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPD:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPD:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP5:DP
+D_K
+    'Move'    'TP5'    'DP'
+
+Move:FPH:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPC:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_Q
+Move:FPD:DP
+D_Q
+Move:FPC:DP
+D_Q
+Move:FPD:DP
+D_Q
+Move:FPC:DP
+D_Q
+Move:FPH:DP
+D_Q
+Move:FPS:DP
+D_Q
+Move:FPC:DP
+D_Q
+Move:FPS:DP
+D_Q
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_Q
+Move:FPS:DP
+D_Q
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_Q
+Move:FPC:DP
+D_Q
+Move:FPH:DP
+D_Q
+Move:FPD:DP
+D_Q
+Move:FPC:DP
+D_Q
+Move:FPH:DP
+D_Q
+Move:FPS:DP
+D_Q
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_J
+Move:FPC:DP
+D_J
+Move:FPD:DP
+D_J
+Move:FPS:DP
+D_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+Move:TP4:DP
+D_X
+    'Move'    'TP4'    'DP'
+
+Move:FPC:DP
+D_X
+Move:FPH:DP
+D_X
+Move:FPD:DP
+D_X
+Move:FPS:DP
+D_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_X
+Move:FPD:DP
+D_X
+Move:FPC:DP
+D_X
+Move:FPH:DP
+D_X
+Move:FPS:DP
+D_X
+Move:FPC:DP
+D_X
+Move:FPH:DP
+D_X
+Move:FPD:DP
+D_X
+Move:FPS:DP
+D_X
+Move:FPC:DP
+D_X
+Move:FPS:DP
+D_X
+Move:FPH:DP
+D_X
+Move:FPD:DP
+D_X
+Move:FPC:DP
+D_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP1:DP
+D_X
+    'Move'    'TP1'    'DP'
+
+Move:TP4:DP
+D_X
+    'Move'    'TP4'    'DP'
+
+Move:TP7:DP
+D_X
+    'Move'    'TP7'    'DP'
+
+Move:TP5:DP
+D_X
+    'Move'    'TP5'    'DP'
+
+Move:TP2:DP
+D_X
+    'Move'    'TP2'    'DP'
+
+Move:TP6:DP
+D_X
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+D_X
+    'Move'    'TP3'    'DP'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP2'    '1'
+
+Move:FPC:DP
+D_X
+Move:FPS:DP
+D_X
+Move:FPH:DP
+D_X
+Move:FPD:DP
+D_X
+Move:TP7:DP
+D_X
+    'Move'    'TP7'    'DP'
+
+Move:TP1:DP
+D_X
+    'Move'    'TP1'    'DP'
+
+Move:TP3:DP
+D_X
+    'Move'    'TP3'    'DP'
+
+Move:TP5:DP
+D_X
+    'Move'    'TP5'    'DP'
+
+Move:TP4:DP
+D_X
+    'Move'    'TP4'    'DP'
+
+Move:TP6:DP
+D_X
+    'Move'    'TP6'    'DP'
+
+Move:TP2:DP
+D_X
+    'Move'    'TP2'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:TP5:DP
+D_9
+    'Move'    'TP5'    'DP'
+
+Move:TP2:DP
+D_9
+    'Move'    'TP2'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP5'    '1'
+
+Move:FPS:DP
+D_8
+Move:FPD:DP
+D_8
+Move:FPS:DP
+D_8
+Move:FPH:DP
+D_8
+Move:FPC:DP
+D_8
+Move:TP1:DP
+D_8
+    'Move'    'TP1'    'DP'
+
+Move:TP5:DP
+D_8
+    'Move'    'TP5'    'DP'
+
+Move:TP3:DP
+D_8
+    'Move'    'TP3'    'DP'
+
+Move:TP7:DP
+D_8
+    'Move'    'TP7'    'DP'
+
+Move:TP2:DP
+D_8
+    'Move'    'TP2'    'DP'
+
+Move:TP6:DP
+D_8
+    'Move'    'TP6'    'DP'
+
+Move:TP4:DP
+D_8
+    'Move'    'TP4'    'DP'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPS:DP
+D_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_6
+Move:FPS:DP
+D_6
+Move:FPC:DP
+D_6
+Move:FPD:DP
+D_6
+Move:TP7:DP
+D_6
+    'Move'    'TP7'    'DP'
+
+Move:TP1:DP
+D_6
+    'Move'    'TP1'    'DP'
+
+Move:TP5:DP
+D_6
+    'Move'    'TP5'    'DP'
+
+Move:TP6:DP
+D_6
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+D_6
+    'Move'    'TP3'    'DP'
+
+Move:TP2:DP
+D_6
+    'Move'    'TP2'    'DP'
+
+Move:TP4:DP
+D_6
+    'Move'    'TP4'    'DP'
+
+Move:FPS:DP
+D_6
+Move:FPD:DP
+D_6
+Move:FPC:DP
+D_6
+Move:FPH:DP
+D_6
+Move:FPD:DP
+D_6
+Move:FPS:DP
+D_6
+Move:FPH:DP
+D_6
+Move:FPC:DP
+D_6
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_6
+Move:FPS:DP
+D_6
+    'Move'    'TP3'    'FPH'
+
+    'Move'    'TP2'    'FPH'
+
+    'Move'    'TP4'    'FPH'
+
+    'Move'    'TP7'    'FPH'
+
+    'Move'    'TP6'    'FPH'
+
+    'Move'    'TP1'    'FPH'
+
+    'Move'    'TP5'    'FPH'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_5
+Move:FPC:DP
+D_5
+Move:FPD:DP
+D_5
+Move:FPS:DP
+D_5
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+D_4
+Move:FPD:DP
+D_4
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+D_3
+Move:FPC:DP
+D_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_3
+Move:FPH:DP
+D_3
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_3
+Move:TP1:DP
+D_3
+    'Move'    'TP1'    'DP'
+
+Move:TP6:DP
+D_3
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+D_3
+    'Move'    'TP3'    'DP'
+
+Move:TP4:DP
+D_3
+    'Move'    'TP4'    'DP'
+
+Move:TP7:DP
+D_3
+    'Move'    'TP7'    'DP'
+
+Move:TP5:DP
+D_3
+    'Move'    'TP5'    'DP'
+
+Move:TP2:DP
+D_3
+    'Move'    'TP2'    'DP'
+
+Move:TP5:DP
+D_3
+    'Move'    'TP5'    'DP'
+
+Move:TP3:DP
+D_3
+    'Move'    'TP3'    'DP'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:TP7:DP
+D_2
+    'Move'    'TP7'    'DP'
+
+Move:TP4:DP
+D_2
+    'Move'    'TP4'    'DP'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:TP6:DP
+D_A
+    'Move'    'TP6'    'DP'
+
+Move:TP2:DP
+D_A
+    'Move'    'TP2'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_A
+Move:FPH:DP
+D_A
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_A
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_A'
+
+    'Diamondsx add token color: D_A'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_2
+Move:FPD:DP
+D_2
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_2'
+
+    'Diamondsx add token color: D_2'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP7:DP
+D_3
+    'Move'    'TP7'    'DP'
+
+Move:TP1:DP
+D_3
+    'Move'    'TP1'    'DP'
+
+Move:TP6:DP
+D_3
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+D_3
+    'Move'    'TP3'    'DP'
+
+Move:TP2:DP
+D_3
+    'Move'    'TP2'    'DP'
+
+Move:TP5:DP
+D_3
+    'Move'    'TP5'    'DP'
+
+Move:TP4:DP
+D_3
+    'Move'    'TP4'    'DP'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP1'    '1'
+
+Move:FPD:DP
+D_3
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_3'
+
+    'Diamondsx add token color: D_3'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP1'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_4
+Move:FPD:DP
+D_4
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_4'
+
+    'Diamondsx add token color: D_4'
+
+    'Diamondsx command: FPD'
+
+Move:FPH:DP
+D_5
+Move:FPS:DP
+D_5
+Move:FPC:DP
+D_5
+Move:FPD:DP
+D_5
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_5'
+
+    'Diamondsx add token color: D_5'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Enabling Flip Pile!
+Ending Reverse Pile.
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+C_J
+Move:FPC:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_X
+Move:FPS:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+C_9
+Move:FPD:DP
+C_9
+Move:FPH:DP
+C_9
+Move:FPC:DP
+C_9
+Move:FPS:DP
+C_9
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+D_K
+Move:FPH:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPS:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+D_Q
+Move:FPS:DP
+D_Q
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP4'    '1'
+
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+D_J
+Move:FPC:DP
+D_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP3'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP6'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPS:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPS:DP
+D_7
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPC:DP
+D_7
+Move:FPD:DP
+D_7
+Move:FPS:DP
+D_7
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+D_6
+Move:FPH:DP
+D_6
+Move:FPC:DP
+D_6
+Move:FPD:DP
+D_6
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_6'
+
+    'Diamondsx add token color: D_6'
+
+    'Diamondsx command: FPD'
+
+Move:FPC:DP
+D_7
+Move:FPH:DP
+D_7
+Move:FPD:DP
+D_7
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_7'
+
+    'Diamondsx add token color: D_7'
+
+    'Diamondsx command: FPD'
+
+Move:FPC:DP
+D_8
+Move:FPS:DP
+D_8
+Move:FPD:DP
+D_8
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_8'
+
+    'Diamondsx add token color: D_8'
+
+    'Diamondsx command: FPD'
+
+Move:FPH:DP
+D_9
+Move:FPC:DP
+D_9
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_9
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_9'
+
+    'Diamondsx add token color: D_9'
+
+    'Diamondsx command: FPD'
+
+Move:FPS:DP
+D_X
+Move:FPD:DP
+D_X
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_X'
+
+    'Diamondsx add token color: D_X'
+
+    'Diamondsx command: FPD'
+
+Move:FPH:DP
+D_J
+Move:FPD:DP
+D_J
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_J'
+
+    'Diamondsx add token color: D_J'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Enabling Flip Pile!
+Ending Reverse Pile.
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPS:DP
+C_J
+Move:FPD:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_J
+Move:FPS:DP
+C_J
+Move:FPC:DP
+C_J
+Move:FPH:DP
+C_J
+Move:FPD:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_J
+Move:FPD:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:TP6:DP
+C_J
+    'Move'    'TP6'    'DP'
+
+Move:TP7:DP
+C_J
+    'Move'    'TP7'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'FPH'
+
+    'Move'    'TP1'    'FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_J
+Move:FPD:DP
+C_J
+Move:FPH:DP
+C_J
+Move:FPS:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_X
+Move:FPS:DP
+C_X
+Move:FPH:DP
+C_X
+Move:FPC:DP
+C_X
+    'Move'    'TP3'    'FPH'
+
+    'Move'    'TP5'    'FPH'
+
+Move:FPD:DP
+C_X
+Move:FPC:DP
+C_X
+Move:FPH:DP
+C_X
+Move:FPS:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_X
+Move:FPH:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_X
+Move:FPH:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_X
+Move:FPD:DP
+C_X
+Move:FPC:DP
+C_X
+Move:FPH:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'FPD'
+
+    'Move'    'TP5'    'FPD'
+
+Move:FPC:DP
+C_X
+Move:FPS:DP
+C_X
+Move:FPD:DP
+C_X
+Move:FPH:DP
+C_X
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_9
+Move:FPD:DP
+C_9
+Move:FPC:DP
+C_9
+Move:FPS:DP
+C_9
+Move:FPH:DP
+C_9
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_8
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_8'
+
+    'Clubsx add token color: C_8'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+C_9
+Move:FPH:DP
+C_9
+Move:FPS:DP
+C_9
+Move:FPC:DP
+C_9
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_9'
+
+    'Clubsx add token color: C_9'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'FPH'
+
+    'Move'    'TP2'    'FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPC:DP
+C_X
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_X'
+
+    'Clubsx add token color: C_X'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+C_J
+Move:FPS:DP
+C_J
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPS:DP
+C_J
+Move:FPH:DP
+C_J
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+    'Move'    'TP5'    'FPC'
+
+    'Move'    'TP7'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+Move:FPH:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPH:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_K
+Move:FPC:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPS:DP
+D_K
+Move:FPD:DP
+D_K
+Move:FPH:DP
+D_K
+Move:FPC:DP
+D_K
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+Is enabled dealer:0
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPD:DP
+D_Q
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_Q'
+
+    'Diamondsx add token color: D_Q'
+
+    'Diamondsx command: FPD'
+
+Move:TP6:DP
+D_K
+    'Move'    'TP6'    'DP'
+
+Move:TP3:DP
+D_K
+    'Move'    'TP3'    'DP'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+Move:FPH:DP
+D_K
+Move:FPD:DP
+D_K
+    'sMove token color:Move:FPD:DP'
+
+Move Color
+    'Move:FPD:DP'
+
+Card Color
+    'D_K'
+
+    'Diamondsx add token color: D_K'
+
+    'Diamondsx command: FPD'
+
+Move:FPC:DP
+C_J
+    'sMove token color:Move:FPC:DP'
+
+Move Color
+    'Move:FPC:DP'
+
+Card Color
+    'C_J'
+
+    'Clubsx add token color: C_J'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'FPC'
+
+    'Move'    'TP1'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+3x move trigger
+    'Move'    'FPC'    'TP3'    '1'
+
+    'tTPe_3_Out CHECKING!'
+
+    'tTPe_3_Out enabled!'
+
+    'C_Q'
+
+    'Clubsx add token color: C_Q'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP3'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPC'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPC'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'C_K'
+
+    'Clubsx add token color: C_K'
+
+    'Clubsx command: FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP7 Turn trigger
+     1
+
+Turn:TP7
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPH'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'H_2'
+
+    'Heartsx add token color: H_2'
+
+    'Heartsx command: FPH'
+
+TP7 Turn trigger
+     1
+
+Turn:TP7
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPH'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'H_3'
+
+    'Heartsx add token color: H_3'
+
+    'Heartsx command: FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP6 Turn trigger
+     1
+
+Turn:TP6
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPH'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'H_4'
+
+    'Heartsx add token color: H_4'
+
+    'Heartsx command: FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+TP5 Turn trigger
+     1
+
+Turn:TP5
+Turn trigger. Woop
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPH'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'H_5'
+
+    'Heartsx add token color: H_5'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'FPD'
+
+    'Move'    'TP1'    'FPD'
+
+    'Move'    'TP2'    'FPC'
+
+    'Move'    'TP3'    'FPC'
+
+TP7 Turn trigger
+     1
+
+Turn:TP7
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPH'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'H_6'
+
+    'Heartsx add token color: H_6'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP6 Turn trigger
+     1
+
+Turn:TP6
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP5'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP1'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+    'Move'    'TP2'    'FPC'
+
+    'Move'    'TP6'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPH'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'H_7'
+
+    'Heartsx add token color: H_7'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP6'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP6'    '1'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP3'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP5 Turn trigger
+     1
+
+Turn:TP5
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP5'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP7'    '1'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP7'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+    'Move'    'TP4'    'FPC'
+
+    'Move'    'TP3'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP3'    'FPC'
+
+    'Move'    'TP7'    'FPC'
+
+    'Move'    'TP6'    'FPC'
+
+    'Move'    'TP1'    'FPC'
+
+    'Move'    'TP5'    'FPC'
+
+    'Move'    'TP4'    'FPC'
+
+    'Move'    'TP2'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+4x move trigger
+    'Move'    'FPH'    'TP4'    '1'
+
+    'tTPe_4_Out CHECKING!'
+
+    'tTPe_4_Out enabled!'
+
+    'H_8'
+
+    'Heartsx add token color: H_8'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPH'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'H_9'
+
+    'Heartsx add token color: H_9'
+
+    'Heartsx command: FPH'
+
+TP4 Turn trigger
+     1
+
+Turn:TP7
+TP7 Turn trigger
+     1
+
+Turn:TP7
+Turn trigger. Woop
+TP4 Turn trigger
+     1
+
+Turn:TP4
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPS'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'S_A'
+
+    'Spadesx add token color: S_A'
+
+    'Spadesx command: FPS'
+
+TP7 Turn trigger
+     1
+
+Turn:TP7
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPH'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'H_X'
+
+    'Heartsx add token color: H_X'
+
+    'Heartsx command: FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP3'    '1'
+
+AI TP MOVE clicked!
+TP6 Turn trigger
+     1
+
+Turn:TP6
+Turn trigger. Woop
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPS'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'S_2'
+
+    'Spadesx add token color: S_2'
+
+    'Spadesx command: FPS'
+
+TP6 Turn trigger
+     1
+
+Turn:TP6
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+4x move trigger
+    'Move'    'TP1'    'TP4'    '1'
+
+    'tTPe_4_Out CHECKING!'
+
+    'tTPe_4_Out enabled!'
+
+    'H_Q'
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    30
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP1'    '2'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP1'    '1'
+
+    'Move'    'TP7'    'FPS'
+
+    'Move'    'TP2'    'FPS'
+
+    'Move'    'TP6'    'FPS'
+
+    'Move'    'TP5'    'FPS'
+
+    'Move'    'TP1'    'FPS'
+
+    'Move'    'TP3'    'FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPH'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'H_J'
+
+    'Heartsx add token color: H_J'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP4 Turn trigger
+     1
+
+Turn:TP5
+TP5 Turn trigger
+     1
+
+Turn:TP5
+Turn trigger. Woop
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP2'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP4 Turn trigger
+     1
+
+Turn:TP4
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP2'    'FPC'
+
+    'Move'    'TP7'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPS'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'S_3'
+
+    'Spadesx add token color: S_3'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP5 Turn trigger
+     1
+
+Turn:TP5
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: 1'
+
+1x move trigger
+    'Move'    'FPH'    'TP1'    '1'
+
+    'tTPe_1_Out CHECKING!'
+
+    'tTPe_1_Out enabled!'
+
+    'H_Q'
+
+    'Heartsx add token color: H_Q'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP2'    '1'
+
+    'Move'    'TP2'    'FPD'
+
+    'Move'    'TP6'    'FPD'
+
+    'Move'    'TP5'    'FPD'
+
+    'Move'    'TP7'    'FPD'
+
+    'Move'    'TP3'    'FPD'
+
+    'Move'    'TP1'    'FPD'
+
+    'Move'    'TP4'    'FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+3x move trigger
+    'Move'    'FPH'    'TP3'    '1'
+
+    'tTPe_3_Out CHECKING!'
+
+    'tTPe_3_Out enabled!'
+
+    'H_K'
+
+    'Heartsx add token color: H_K'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+TP3 Turn trigger
+     1
+
+Turn:TP3
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP3'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP3'    '1'
+
+    'Move'    'TP3'    'FPS'
+
+    'Move'    'TP2'    'FPS'
+
+    'Move'    'TP7'    'FPS'
+
+    'Move'    'TP5'    'FPS'
+
+    'Move'    'TP6'    'FPS'
+
+    'Move'    'TP4'    'FPS'
+
+    'Move'    'TP1'    'FPS'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+4x move trigger
+    'Move'    'FPS'    'TP4'    '1'
+
+    'tTPe_4_Out CHECKING!'
+
+    'tTPe_4_Out enabled!'
+
+    'S_4'
+
+    'Spadesx add token color: S_4'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+3x move trigger
+    'Move'    'FPS'    'TP3'    '1'
+
+    'tTPe_3_Out CHECKING!'
+
+    'tTPe_3_Out enabled!'
+
+    'S_5'
+
+    'Spadesx add token color: S_5'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'FPC'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP5'    'FPH'
+
+    'Move'    'TP5'    'FPH'
+
+    'Move'    'TP1'    'FPD'
+
+    'Move'    'TP2'    'FPD'
+
+    'Move'    'TP6'    'FPD'
+
+    'Move'    'TP7'    'FPD'
+
+TP3 Turn trigger
+     1
+
+Turn:TP3
+Turn trigger. Woop
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP2'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP2'    'pre_tTPe_Move cmd: 1'
+
+2x move trigger
+    'Move'    'FPS'    'TP2'    '1'
+
+    'tTPe_2_Out CHECKING!'
+
+    'tTPe_2_Out enabled!'
+
+    'S_6'
+
+    'Spadesx add token color: S_6'
+
+    'Spadesx command: FPS'
+
+TP2 Turn trigger
+     1
+
+Turn:TP4
+TP4 Turn trigger
+     1
+
+Turn:TP4
+Turn trigger. Woop
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPS'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'S_7'
+
+    'Spadesx add token color: S_7'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP3'    'FPH'
+
+    'Move'    'TP1'    'FPH'
+
+    'Move'    'TP6'    'FPH'
+
+    'Move'    'TP5'    'FPH'
+
+    'Move'    'TP7'    'FPH'
+
+Heartsx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    31
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP7'    'FPH'
+
+    'Move'    'TP6'    'FPD'
+
+    'Move'    'TP4'    'FPD'
+
+    'Move'    'TP7'    'FPH'
+
+    'Move'    'TP6'    'FPH'
+
+    'Move'    'TP5'    'FPH'
+
+    'Move'    'TP1'    'FPH'
+
+Heartsx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    32
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP1'    'FPH'
+
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: 1'
+
+1x move trigger
+    'Move'    'FPH'    'TP1'    '1'
+
+    'tTPe_1_Out CHECKING!'
+
+    'tTPe_1_Out enabled!'
+
+    'H_Q'
+
+    'Heartsx add token color: H_Q'
+
+    'Heartsx command: FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPH'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'H_K'
+
+    'Heartsx add token color: H_K'
+
+    'Heartsx command: FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+    'Move'    'TP3'    'FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+TP2 Turn trigger
+     1
+
+Turn:TP2
+Turn trigger. Woop
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP2'    '1'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPS'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'S_8'
+
+    'Spadesx add token color: S_8'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP2'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+    'Move'    'TP4'    'FPD'
+
+    'Move'    'TP2'    'FPD'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP1'    'TP1'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP5'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP4'    '1'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP4'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP2'    'TP4'    '1'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP3'    'FPH'
+
+    'Move'    'TP6'    'FPH'
+
+Heartsx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    33
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP6'    'FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPS'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'S_9'
+
+    'Spadesx add token color: S_9'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP6'    '1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'TP7'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'H_K'
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    34
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP7'    'TP6'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP4'    'TP2'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP3'    'TP2'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP4'    'pre_tTPe_Move cmd: 1'
+
+4x move trigger
+    'Move'    'FPS'    'TP4'    '1'
+
+    'tTPe_4_Out CHECKING!'
+
+    'tTPe_4_Out enabled!'
+
+    'S_X'
+
+    'Spadesx add token color: S_X'
+
+    'Spadesx command: FPS'
+
+    'Move'    'TP5'    'FPD'
+
+Diamondsx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    35
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    35
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    35
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    35
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    35
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP5'    'FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP5'    'pre_tTPe_Move cmd: 1'
+
+5x move trigger
+    'Move'    'FPD'    'TP5'    '1'
+
+    'tTPe_5_Out CHECKING!'
+
+    'tTPe_5_Out enabled!'
+
+    'D_K'
+
+    'Diamondsx add token color: D_K'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+3x move trigger
+    'Move'    'FPS'    'TP3'    '1'
+
+    'tTPe_3_Out CHECKING!'
+
+    'tTPe_3_Out enabled!'
+
+    'S_J'
+
+    'Spadesx add token color: S_J'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP2'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP2'    'pre_tTPe_Move cmd: 1'
+
+2x move trigger
+    'Move'    'FPS'    'TP2'    '1'
+
+    'tTPe_2_Out CHECKING!'
+
+    'tTPe_2_Out enabled!'
+
+    'S_Q'
+
+    'Spadesx add token color: S_Q'
+
+    'Spadesx command: FPS'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP7'    '1'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'Move'    'TP7'    'TP7'    '1'
+
+AI TP MOVE clicked!
+    'Move'    'TP6'    'TP7'    '1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'TP6'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'H_K'
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    36
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP6'    'TP7'    '1'
+
+    'Move'    'TP3'    'FPH'
+
+    'Move'    'TP4'    'FPH'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP1'    'pre_tTPe_Move cmd: 1'
+
+1x move trigger
+    'Move'    'FPS'    'TP1'    '1'
+
+    'tTPe_1_Out CHECKING!'
+
+    'tTPe_1_Out enabled!'
+
+    'S_K'
+
+    'Spadesx add token color: S_K'
+
+    'Spadesx command: FPS'
+
+    'Move'    'TP4'    'FPH'
+
+    'Move'    'TP1'    'FPH'
+
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+AI DP Turn clicked!
+    'Move'    'TP7'    'FPS'
+
+Spadesx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    37
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP7'    'FPS'
+
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPS'    'pre_tTPe_Move cmd: TP7'    'pre_tTPe_Move cmd: 1'
+
+7x move trigger
+    'Move'    'FPS'    'TP7'    '1'
+
+    'tTPe_7_Out CHECKING!'
+
+    'tTPe_7_Out enabled!'
+
+    'S_K'
+
+    'Spadesx add token color: S_K'
+
+    'Spadesx command: FPS'
+
+    'Move'    'TP3'    'FPD'
+
+Diamondsx move trigger
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    38
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    38
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+Face down return
+isDealingInProgress
+     0
+
+cardsDealt
+    38
+
+INITIAL_DEAL_MOVE_LENGTH
+    28
+
+    'Move'    'TP3'    'FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPD'    'pre_tTPe_Move cmd: TP3'    'pre_tTPe_Move cmd: 1'
+
+3x move trigger
+    'Move'    'FPD'    'TP3'    '1'
+
+    'tTPe_3_Out CHECKING!'
+
+    'tTPe_3_Out enabled!'
+
+    'D_K'
+
+    'Diamondsx add token color: D_K'
+
+    'Diamondsx command: FPD'
+
+AI TP MOVE clicked!
+AI TP MOVE clicked!
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+    'pre_tTPe_Move cmd: Move'    'pre_tTPe_Move cmd: FPH'    'pre_tTPe_Move cmd: TP6'    'pre_tTPe_Move cmd: 1'
+
+6x move trigger
+    'Move'    'FPH'    'TP6'    '1'
+
+    'tTPe_6_Out CHECKING!'
+
+    'tTPe_6_Out enabled!'
+
+    'H_K'
+
+    'Heartsx add token color: H_K'
+
+    'Heartsx command: FPH'
+
+GAME WON!
+ 
+ 
+Colors of Final Tokens:
+Time: 911    Place: pFP_Clubs_Pile    Colors:   C_A
+Time: 919    Place: pFP_Clubs_Pile    Colors:   C_2
+Time: 938    Place: pFP_Clubs_Pile    Colors:   C_3
+Time: 944    Place: pFP_Clubs_Pile    Colors:   C_4
+Time: 952    Place: pFP_Clubs_Pile    Colors:   C_5
+Time: 959    Place: pFP_Clubs_Pile    Colors:   C_6
+Time: 967    Place: pFP_Clubs_Pile    Colors:   C_7
+Time: 1707    Place: pFP_Clubs_Pile    Colors:   C_8
+Time: 1720    Place: pFP_Clubs_Pile    Colors:   C_9
+Time: 1747    Place: pFP_Clubs_Pile    Colors:   C_X
+Time: 1815    Place: pFP_Clubs_Pile    Colors:   C_J
+Time: 1842    Place: pFP_Clubs_Pile    Colors:   C_Q
+Time: 1852    Place: pFP_Clubs_Pile    Colors:   C_K
+Time: 1283    Place: pFP_Diamonds_Pile    Colors:   D_A
+Time: 1295    Place: pFP_Diamonds_Pile    Colors:   D_2
+Time: 1308    Place: pFP_Diamonds_Pile    Colors:   D_3
+Time: 1316    Place: pFP_Diamonds_Pile    Colors:   D_4
+Time: 1324    Place: pFP_Diamonds_Pile    Colors:   D_5
+Time: 1518    Place: pFP_Diamonds_Pile    Colors:   D_6
+Time: 1525    Place: pFP_Diamonds_Pile    Colors:   D_7
+Time: 1532    Place: pFP_Diamonds_Pile    Colors:   D_8
+Time: 1544    Place: pFP_Diamonds_Pile    Colors:   D_9
+Time: 1550    Place: pFP_Diamonds_Pile    Colors:   D_X
+Time: 1555    Place: pFP_Diamonds_Pile    Colors:   D_J
+Time: 1801    Place: pFP_Diamonds_Pile    Colors:   D_Q
+Time: 2905    Place: pFP_Diamonds_Pile    Colors:   D_K
+Time: 95    Place: pFP_Hearts_Pile    Colors:   H_A
+Time: 1886    Place: pFP_Hearts_Pile    Colors:   H_2
+Time: 1895    Place: pFP_Hearts_Pile    Colors:   H_3
+Time: 1929    Place: pFP_Hearts_Pile    Colors:   H_4
+Time: 1942    Place: pFP_Hearts_Pile    Colors:   H_5
+Time: 1976    Place: pFP_Hearts_Pile    Colors:   H_6
+Time: 2045    Place: pFP_Hearts_Pile    Colors:   H_7
+Time: 2183    Place: pFP_Hearts_Pile    Colors:   H_8
+Time: 2190    Place: pFP_Hearts_Pile    Colors:   H_9
+Time: 2274    Place: pFP_Hearts_Pile    Colors:   H_X
+Time: 2325    Place: pFP_Hearts_Pile    Colors:   H_J
+Time: 2587    Place: pFP_Hearts_Pile    Colors:   H_Q
+Time: 2912    Place: pFP_Hearts_Pile    Colors:   H_K
+Time: 2209    Place: pFP_Spades_Pile    Colors:   S_A
+Time: 2298    Place: pFP_Spades_Pile    Colors:   S_2
+Time: 2378    Place: pFP_Spades_Pile    Colors:   S_3
+Time: 2490    Place: pFP_Spades_Pile    Colors:   S_4
+Time: 2504    Place: pFP_Spades_Pile    Colors:   S_5
+Time: 2545    Place: pFP_Spades_Pile    Colors:   S_6
+Time: 2560    Place: pFP_Spades_Pile    Colors:   S_7
+Time: 2636    Place: pFP_Spades_Pile    Colors:   S_8
+Time: 2724    Place: pFP_Spades_Pile    Colors:   S_9
+Time: 2752    Place: pFP_Spades_Pile    Colors:   S_X
+Time: 2787    Place: pFP_Spades_Pile    Colors:   S_J
+Time: 2792    Place: pFP_Spades_Pile    Colors:   S_Q
+Time: 2883    Place: pFP_Spades_Pile    Colors:   S_K
+Time: 2908    Place: pPB_Cmd    Colors:   DP_Move
+>> 

@@ -1,6 +1,14 @@
 function [] = player_update_GUI()
 global global_info;
 
+%% Clear initial game status.
+if global_info.CARDS_DEALT == global_info.INITIAL_DEAL_MOVE_LENGTH,
+    set_handle('GameStatus', 'String', '');
+end;
+
+%% Update Score
+set_handle('Score', 'String', strcat('Score:',{' '},num2str(global_info.SCORE)));
+
 %% Draw Pile
 vistoken = tokenArrivedLate('pDP_Draw_FaceUp_Pile',1);
 topcard = '';

@@ -23,7 +23,7 @@ if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     lenTokens = length(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile')));
     
     if lenTokens == 0,
-        if length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) > 0,
+        if ~isempty(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))),
             global_info.BOT_NEXT_CMD = strcat('TP_Turn:',tableau);
         end;
         global_info.BOT_ACTIONS_NEW_CMD = 1;
@@ -49,7 +49,6 @@ if ~isempty(strfind(moveColor,'TP_Move')) && playerAction,
     else,
         amount = 1;
     end;
-    disp('AI TP MOVE clicked!');
     command = strcat('Move:',dest,':TP',tableau,':',num2str(amount));
     
     % The top card to be moved is used to check validity of the command.

@@ -1,8 +1,9 @@
-function [ doCommand, cmdDest, card ] = checkCommand_Move( command, destination, source, handle_err)
+function [ doCommand, cmdDest, card, cmdSource ] = checkCommand_Move( command, destination, source, handle_err)
 
 global global_info;
 [moveCmd, card] = splitCommand(command);
 cmdDest = moveCmd{2};
+cmdSource = moveCmd{3};
 
 doCommand = false;
 if length(cmdDest) < 3,
@@ -74,7 +75,7 @@ elseif ismember(cmdDest, global_info.TP_PILES),
     if(iscell(tp_FU_Pile_Dest)),
         tp_FU_Pile_Dest = tp_FU_Pile_Dest{1};
     end;
-    disp(moveCmd);
+    
     % Do not check amount once the command has reached it's destination.
     if length(moveCmd) >= 4 && ~isempty(source),
         if ismember(moveCmd{3}, global_info.TP_PILES),

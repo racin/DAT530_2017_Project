@@ -9,13 +9,16 @@ if moveToken,
         return;
     end;
     [~, suit, handle_err] = get_suit_from_transname(transition.name);
-    [doCommand, moveCmd, card] = checkCommand_Move(tokenColor,suit,'',handle_err);
+    [doCommand, cmdDest, card, cmdSource] = checkCommand_Move(tokenColor,suit,'',handle_err);
     if(doCommand),
-        disp(strcat(suit,'x add token color:',{' '}, card));  
-        disp(strcat(suit,'x command:',{' '}, moveCmd));
         transition.selected_tokens = moveToken;
         transition.new_color = card;
         transition.override = 1;
         fire = 1;
+        global_info.SCORE = global_info.SCORE + 10;
+        if(global_info.DISP_CHANGES),
+            disp(strcat('Moved card',{' '},card,{' '},'from',{' '},cmdSource,...
+                {' '},'to',{' '},cmdDest));
+        end;
     end
 end

@@ -10,8 +10,9 @@ end;
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.(move_btn) ~= false && playerAction,
     global_info.(move_btn) = false;
-    disp(strcat('TP ',tableau,' move btn'));
     dest = get_handle(handle_move_loc,'String');
+    
+    % Is amount numeric and equal or less that current cards in FaceUp?
     if ismember(dest, global_info.FP_PILES),
         amount = 1;
     else,
@@ -19,28 +20,19 @@ if global_info.(move_btn) ~= false && playerAction,
         if isnan(amount) || amount < 1,
             amount = 1;
         end;
-        disp(strcat('Amount:',num2str(amount)));
         if amount > length(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile'))),
             set_handle(handle_err,'String','INVALID AMOUNT');
             return;
         end;
     end;
-%     
-%     doCommand = check_tPe_TP_Turn(transition.name, dest, amount);
-%     % Does destiation exist?
-%     
-%     % Is amount numeric and equal or less that current cards in FaceUp?
-%     
-%     lenFaceUpTokens = tokIDs(strcat('pTP_',modname,'_FaceUp_Pile'));
+
     command = strcat('Move:',dest,':TP',tableau,':',num2str(amount));
-    disp(command);
-    % TODO: Finish tableau move.
+
     vistoken = tokenArrivedLate(strcat('pTP_',tableau,'_FaceUp_Pile'),amount);
     vistoken = vistoken(amount);
     if vistoken,
         color = get_color(strcat('pTP_',tableau,'_FaceUp_Pile'),vistoken);
         color = color{1};
-        disp(strcat('Color of',{' '}, num2str(amount), 'th card: ', color));
         if checkCommand_Move({command;color},'',transition.name,handle_err),
             % Need some sort of perpetual fireing.
             transition.new_color = command;

@@ -10,8 +10,10 @@ function [suit_abbr, suit, handle_err, move_btn, handle_move_loc] ...
         suit = 'Diamonds';
     elseif ~isempty(strfind(transitionname,'Hearts')),
         suit = 'Hearts';
-    else,
+    elseif ~isempty(strfind(transitionname,'Spades')),
         suit = 'Spades';
+    else,
+        suit = 0; % Invalid suit.
     end
     
     suit_abbr = suit(1);
