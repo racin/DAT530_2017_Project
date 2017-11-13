@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="DAT530_Solitaire" version="121">
-  <gspn name="CPN" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+  <gspn name="Draw Pile" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes>
-      <place name="P0" x="7.0" y="6.0"/>
-      <transition name="T0" nservers-x="0.5" type="EXP" x="17.55" y="6.0"/>
-      <place name="P1" x="30.0" y="6.0"/>
-      <place name="P2" x="17.0" y="11.0"/>
+      <place label-y="-2.0" name="pDP_Draw_FaceUp_Pile" x="36.0" y="7.0"/>
+      <place label-y="-1.8125" name="pDP_Draw_FaceDown_Pile" x="22.0" y="7.0"/>
+      <place label-x="2.5" label-y="2.0" name="pDP_Move_Out" x="47.0" y="16.0"/>
+      <place marking="52" name="pDP_Dealer" x="4.0" y="7.0"/>
+      <place label-x="4.0" label-y="0.0" marking="28" name="pDP_Turn" x="29.0" y="25.0"/>
+      <place marking="28" name="pDP_Move_Init" x="35.0" y="16.0"/>
+      <transition label-x="0.5" label-y="1.5" name="tDPi_Dealer" nservers-x="0.5" type="EXP" x="11.55" y="7.0"/>
+      <transition name="tDPe_Out" nservers-x="0.5" type="EXP" x="49.55" y="7.0"/>
+      <transition label-y="1.5" name="tDPe_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="29.55" y="32.0"/>
+      <transition label-x="3.5" label-y="0.0" name="tDPi_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="29.55" y="21.0"/>
+      <transition label-x="0.5" label-y="1.5" name="tDPe_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="40.55" y="32.0"/>
+      <transition label-y="1.5" name="tDPi_Enable_FP_Trans" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="17.55" y="25.0"/>
+      <transition label-y="2.0" name="tDPi_Flip_Pile" nservers-x="0.5" type="EXP" x="29.55" y="7.0"/>
+      <transition name="tDPi_Move_Init" nservers-x="0.5" type="EXP" x="41.55" y="16.0"/>
     </nodes>
     <edges>
-      <arc head="T0" kind="INPUT" mult-k="0.854998779296875" tail="P0"/>
-      <arc head="P1" kind="OUTPUT" mult-k="0.8461669921875" tail="T0"/>
-      <arc head="P2" kind="OUTPUT" mult-k="1.0262695312499996" tail="T0">
-        <point x="19.5" y="9.5"/>
+      <arc head="pDP_Draw_FaceDown_Pile" kind="OUTPUT" mult-k="0.99970703125" tail="tDPi_Dealer">
+        <point x="15.5" y="8.0"/>
       </arc>
-      <arc head="T0" kind="INPUT" mult-k="1.42099609375" tail="P2">
-        <point x="16.492382812499997" y="9.638330078125001"/>
+      <arc head="tDPe_Out" kind="INPUT" tail="pDP_Draw_FaceUp_Pile"/>
+      <arc head="tDPi_Dealer" kind="INPUT" tail="pDP_Dealer"/>
+      <arc head="tDPi_Turn" kind="INPUT" tail="pDP_Draw_FaceDown_Pile"/>
+      <arc head="pDP_Draw_FaceUp_Pile" kind="OUTPUT" tail="tDPi_Turn"/>
+      <arc head="tDPe_Out" kind="INPUT" tail="pDP_Move_Out"/>
+      <arc head="pDP_Move_Out" kind="OUTPUT" mult-k="0.7836914062500001" tail="tDPe_Move">
+        <point x="46.5" y="20.5"/>
+      </arc>
+      <arc head="tDPi_Flip_Pile" kind="INPUT" tail="pDP_Draw_FaceUp_Pile"/>
+      <arc head="pDP_Draw_FaceDown_Pile" kind="OUTPUT" tail="tDPi_Flip_Pile"/>
+      <arc head="tDPi_Enable_FP_Trans" kind="INPUT" tail="pDP_Turn"/>
+      <arc head="tDPi_Turn" kind="INPUT" tail="pDP_Turn"/>
+      <arc head="pDP_Turn" kind="OUTPUT" tail="tDPe_Turn"/>
+      <arc head="tDPi_Move_Init" kind="INPUT" tail="pDP_Move_Init"/>
+      <arc head="pDP_Move_Out" kind="OUTPUT" tail="tDPi_Move_Init"/>
+      <arc head="tDPe_Move" kind="INHIBITOR" mult-k="1.0124023437499998" tail="pDP_Dealer">
+        <point x="5.0" y="29.0"/>
+        <point x="40.0" y="29.0"/>
+        <point x="40.0" y="33.0"/>
+      </arc>
+      <arc head="tDPe_Turn" kind="INHIBITOR" mult-k="0.49990234375" tail="pDP_Dealer">
+        <point x="5.0" y="29.5"/>
+        <point x="29.0" y="29.5"/>
+        <point x="29.0" y="33.0"/>
+      </arc>
+      <arc head="tDPi_Enable_FP_Trans" kind="INHIBITOR" tail="pDP_Dealer">
+        <point x="5.0" y="26.0"/>
+      </arc>
+      <arc head="tDPi_Turn" kind="INHIBITOR" tail="pDP_Dealer">
+        <point x="5.0" y="22.0"/>
+      </arc>
+      <arc head="tDPi_Enable_FP_Trans" kind="INHIBITOR" mult-k="1.40341796875" tail="pDP_Draw_FaceDown_Pile">
+        <point x="18.0" y="8.0"/>
       </arc>
     </edges>
   </gspn>
-  <measures gspn-name="CPN" name="Measures">
+  <gspn name="Tableau Pile 1" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes/>
+    <edges/>
+  </gspn>
+  <measures gspn-name="Draw Pile" name="Measures">
     <assignments/>
     <greatspn/>
     <formulas>
