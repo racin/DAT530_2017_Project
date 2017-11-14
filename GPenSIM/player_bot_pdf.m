@@ -1,6 +1,6 @@
-function [png] = player_pdf() 
+function [png] = player_bot_pdf() 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% File: module_connector_pdf.m : Handles the connections of the modules.
+% File: player_bot_pdf.m : Bot for simulating user actions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 png.PN_name = 'Player Bot module';

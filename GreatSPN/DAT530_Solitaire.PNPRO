@@ -4,12 +4,12 @@
     <nodes>
       <place label-y="-2.0" name="pDP_Draw_FaceUp_Pile" x="36.0" y="7.0"/>
       <place label-y="-1.8125" name="pDP_Draw_FaceDown_Pile" x="22.0" y="7.0"/>
-      <place label-x="2.5" label-y="2.0" name="pDP_Move_Out" x="47.0" y="16.0"/>
+      <place label-x="4.0" label-y="2.0" name="pDP_Move_Out" x="47.0" y="16.0"/>
       <place marking="52" name="pDP_Dealer" x="4.0" y="7.0"/>
       <place label-x="4.0" label-y="0.0" marking="28" name="pDP_Turn" x="29.0" y="25.0"/>
       <place marking="28" name="pDP_Move_Init" x="35.0" y="16.0"/>
       <transition label-x="0.5" label-y="1.5" name="tDPi_Dealer" nservers-x="0.5" type="EXP" x="11.55" y="7.0"/>
-      <transition name="tDPe_Out" nservers-x="0.5" type="EXP" x="49.55" y="7.0"/>
+      <transition name="tDPe_Out" nservers-x="0.5" type="EXP" x="50.55" y="7.0"/>
       <transition label-y="1.5" name="tDPe_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="29.55" y="32.0"/>
       <transition label-x="3.5" label-y="0.0" name="tDPi_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="29.55" y="21.0"/>
       <transition label-x="0.5" label-y="1.5" name="tDPe_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="40.55" y="32.0"/>
@@ -25,9 +25,13 @@
       <arc head="tDPi_Dealer" kind="INPUT" tail="pDP_Dealer"/>
       <arc head="tDPi_Turn" kind="INPUT" tail="pDP_Draw_FaceDown_Pile"/>
       <arc head="pDP_Draw_FaceUp_Pile" kind="OUTPUT" tail="tDPi_Turn"/>
-      <arc head="tDPe_Out" kind="INPUT" tail="pDP_Move_Out"/>
-      <arc head="pDP_Move_Out" kind="OUTPUT" mult-k="0.7836914062500001" tail="tDPe_Move">
-        <point x="46.5" y="20.5"/>
+      <arc head="tDPe_Out" kind="INPUT" mult-k="0.96728515625" tail="pDP_Move_Out">
+        <point x="48.0" y="8.0"/>
+      </arc>
+      <arc head="pDP_Move_Out" kind="OUTPUT" mult-k="2.30654296875" tail="tDPe_Move">
+        <point x="41.0" y="31.0"/>
+        <point x="48.0" y="31.0"/>
+        <point x="48.0" y="20.5"/>
       </arc>
       <arc head="tDPi_Flip_Pile" kind="INPUT" tail="pDP_Draw_FaceUp_Pile"/>
       <arc head="pDP_Draw_FaceDown_Pile" kind="OUTPUT" tail="tDPi_Flip_Pile"/>
@@ -57,9 +61,64 @@
       </arc>
     </edges>
   </gspn>
-  <gspn name="Tableau Pile 1" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
-    <nodes/>
-    <edges/>
+  <gspn name="Foundation Pile - Clubs" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="pFP_Clubs_Pile" x="16.0" y="4.0"/>
+      <place name="pFP_Clubs_Move" x="16.0" y="12.0"/>
+      <transition name="tFPe_Clubs_Add" nservers-x="0.5" type="EXP" x="5.55" y="4.0"/>
+      <transition name="tFPe_Clubs_Move" nservers-x="0.5" type="EXP" x="5.55" y="12.0"/>
+      <transition name="tFPe_Clubs_Out" nservers-x="0.5" type="EXP" x="27.55" y="4.0"/>
+    </nodes>
+    <edges>
+      <arc head="pFP_Clubs_Pile" kind="OUTPUT" tail="tFPe_Clubs_Add"/>
+      <arc head="tFPe_Clubs_Out" kind="INPUT" tail="pFP_Clubs_Pile"/>
+      <arc head="pFP_Clubs_Move" kind="OUTPUT" tail="tFPe_Clubs_Move"/>
+      <arc head="tFPe_Clubs_Out" kind="INPUT" mult-k="0.8948242187500001" tail="pFP_Clubs_Move">
+        <point x="21.0" y="13.0"/>
+        <point x="21.0" y="5.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="Tableau Pile - 1" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place alt-name-fn="PLAIN" label-x="3.0" label-y="-2.5" name="pTP_1_FaceUp_Pile" x="22.0" y="5.0"/>
+      <place alt-name-fn="PLAIN" label-y="-2.0" name="pTP_1_FaceDown_Pile" x="15.0" y="14.0"/>
+      <place alt-name-fn="PLAIN" label-x="4.5" label-y="0.5" name="pTP_1_Move" x="37.0" y="13.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_1_Add_FaceUp" nservers-x="0.5" type="EXP" x="5.55" y="5.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_1_Add_FaceDown" nservers-x="0.5" type="EXP" x="5.55" y="14.0"/>
+      <transition alt-name-fn="PLAIN" label-x="2.5" label-y="1.0" name="tTPe_1_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="37.55" y="21.0"/>
+      <transition alt-name-fn="PLAIN" label-x="3.0" label-y="1.5" name="tTPe_1_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="22.55" y="21.0"/>
+      <transition alt-name-fn="PLAIN" label-x="1.0" label-y="-2.5" name="tTPi_1_Move_Multiple" nservers-x="0.5" type="EXP" x="29.55" y="13.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="-2.5" name="tTPe_1_Out" nservers-x="0.5" type="EXP" x="41.55" y="5.0"/>
+    </nodes>
+    <edges>
+      <arc head="pTP_1_FaceUp_Pile" kind="OUTPUT" tail="tTPe_1_Add_FaceUp"/>
+      <arc head="pTP_1_FaceDown_Pile" kind="OUTPUT" tail="tTPe_1_Add_FaceDown"/>
+      <arc head="pTP_1_FaceUp_Pile" kind="OUTPUT" mult-k="1.4499023437499998" tail="tTPe_1_Turn">
+        <point x="24.0" y="14.5"/>
+        <point x="24.0" y="12.0"/>
+      </arc>
+      <arc head="tTPe_1_Turn" kind="INPUT" mult-k="0.5706054687500001" tail="pTP_1_FaceDown_Pile">
+        <point x="16.0" y="22.0"/>
+      </arc>
+      <arc head="pTP_1_Move" kind="OUTPUT" tail="tTPe_1_Move"/>
+      <arc head="tTPe_1_Out" kind="INPUT" mult-k="0.99365234375" tail="pTP_1_Move">
+        <point x="38.0" y="6.0"/>
+      </arc>
+      <arc head="pTP_1_Move" kind="OUTPUT" mult="2" mult-k="1.46083984375" mult-x="0.0" mult-y="1.5" tail="tTPi_1_Move_Multiple">
+        <point x="32.5" y="15.0"/>
+        <point x="35.0" y="15.0"/>
+      </arc>
+      <arc head="tTPi_1_Move_Multiple" kind="INPUT" mult-k="1.2291992187500003" tail="pTP_1_Move">
+        <point x="35.0" y="13.0"/>
+        <point x="33.0" y="13.0"/>
+      </arc>
+      <arc head="tTPe_1_Out" kind="INPUT" tail="pTP_1_FaceUp_Pile"/>
+      <arc head="tTPe_1_Turn" kind="INHIBITOR" mult-k="1.50009765625" tail="pTP_1_FaceUp_Pile">
+        <point x="22.0" y="12.0"/>
+        <point x="22.0" y="14.0"/>
+      </arc>
+    </edges>
   </gspn>
   <measures gspn-name="Draw Pile" name="Measures">
     <assignments/>
@@ -68,4 +127,454 @@
       <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
     </formulas>
   </measures>
+  <gspn name="Player" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes/>
+    <edges/>
+  </gspn>
+  <gspn name="Module Connector" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-5.0" label-y="-1.0" name="pMC_Out_Buffer" x="31.0" y="4.0"/>
+      <place label-x="-3.5" label-y="-2.0" name="pMC_DP_Turn" x="6.0" y="14.0"/>
+      <place label-x="-3.5" label-y="-2.0" name="pMC_DP_Move" x="15.0" y="14.0"/>
+      <place label-x="-3.5" label-y="-1.5" name="pMC_TP_Turn" x="46.0" y="51.0"/>
+      <place label-x="-3.5" label-y="-1.5" name="pMC_TP_Move" x="65.0" y="51.0"/>
+      <place label-x="-5.0" label-y="-1.0" name="pMC_FP_Move" x="73.0" y="24.0"/>
+      <transition label-x="6.5" label-y="0.0" name="tMC_Out_Buffer_Siphon" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="31.55" y="1.0"/>
+      <transition name="tMC_DP_Move_Siphon" nservers-x="0.5" type="EXP" x="21.55" y="14.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="tMC_TP_Turn_Siphon" nservers-x="0.5" type="EXP" x="53.55" y="51.0"/>
+      <transition label-x="-0.5" label-y="-2.0" name="tMC_TP_Move_Siphon" nservers-x="0.5" type="EXP" x="71.55" y="51.0"/>
+      <transition name="tMC_FP_Move_Siphon" nservers-x="0.5" type="EXP" x="79.55" y="24.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="6.75" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" width="16.1875" x="2.3125" y="2.625">Draw Pile</text-box>
+      <transition name="tDPe_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="6.55" y="8.0"/>
+      <transition name="tDPe_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="15.55" y="8.0"/>
+      <transition name="tDPe_Out" nservers-x="0.5" type="EXP" x="17.55" y="4.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="8.75" name="__textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="38.0" y="8.75">Foundation Pile - Clubs</text-box>
+      <transition name="tFPe_Clubs_Add" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="41.55" y="16.0"/>
+      <transition name="tFPe_Clubs_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="49.55" y="16.0"/>
+      <transition label-x="-0.5" label-y="1.5" name="tFPe_Clubs_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="45.55" y="8.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="56.0" y="8.75">Foundation Pile - Diamonds</text-box>
+      <transition name="tFPe_Diamonds_Add" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="59.55" y="16.0"/>
+      <transition name="tFPe_Diamonds_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="68.55" y="16.0"/>
+      <transition label-x="-0.5" label-y="1.5" name="tFPe_Diamonds_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="64.55" y="8.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="74.0" y="8.75">Foundation Pile - Hearts</text-box>
+      <transition name="tFPe_Hearts_Add" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="77.55" y="16.0"/>
+      <transition name="tFPe_Hearts_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="86.55" y="16.0"/>
+      <transition label-x="-0.5" label-y="1.5" name="tFPe_Hearts_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="82.55" y="8.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy_copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="92.0" y="8.75">Foundation Pile - Spades</text-box>
+      <transition name="tFPe_Spades_Add" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="95.55" y="16.0"/>
+      <transition name="tFPe_Spades_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="104.55" y="16.0"/>
+      <transition label-x="-0.5" label-y="1.5" name="tFPe_Spades_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="100.55" y="8.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="__textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="2.125" y="33.625">Tableau Pile - 1</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_1_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="14.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_1_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="6.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_1_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="4.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_1_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="16.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_1_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="10.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="20.125" y="33.625">Tableau Pile -2</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_2_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="32.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_2_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="24.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_2_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="22.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_2_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="34.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_2_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="28.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="38.125" y="33.625">Tableau Pile - 3</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_3_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="50.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_3_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="42.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_3_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="40.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_3_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="52.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_3_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="46.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy_copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="56.125" y="33.625">Tableau Pile - 4</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_4_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="68.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_4_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="60.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_4_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="58.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_4_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="70.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_4_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="64.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy_copy_copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="74.125" y="33.625">Tableau Pile - 5</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_5_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="86.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_5_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="78.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_5_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="76.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_5_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="88.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_5_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="82.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy_copy_copy_copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="92.125" y="33.625">Tableau Pile - 6</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_6_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="104.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_6_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="96.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_6_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="94.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_6_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="106.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_6_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="100.55" y="41.0"/>
+      <text-box alt-name-fn="PLAIN" bold="true" border-color="#000000" fill-color="none" height="8.75" name="copy_copy_copy_copy_copy_copy___textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="VERY_LARGE" vert-pos="0" width="18.0" x="110.125" y="33.625">Tableau Pile - 7</text-box>
+      <transition alt-name-fn="PLAIN" label-x="0.5" label-y="1.5" name="tTPe_7_Add_FaceDown" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="122.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-0.5" label-y="1.5" name="tTPe_7_Add_FaceUp" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="114.55" y="33.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_7_Out" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="112.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_7_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="124.55" y="41.0"/>
+      <transition alt-name-fn="PLAIN" name="tTPe_7_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="118.55" y="41.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="6.25" name="__textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="HEADER1" vert-pos="3" width="35.0" x="41.5" y="77.75">Player Bot</text-box>
+      <transition label-y="1.5" name="tPBe_DP_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="44.55" y="77.0"/>
+      <transition label-y="1.5" name="tPBe_DP_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="51.55" y="77.0"/>
+      <transition label-y="1.5" name="tPBe_TP_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="58.55" y="77.0"/>
+      <transition label-y="1.5" name="tPBe_TP_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="65.55" y="77.0"/>
+      <transition label-y="1.5" name="tPBe_FP_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="72.55" y="77.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="26.8125" name="copy___textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="HEADER1" vert-pos="0" width="29.0" x="5.5" y="57.6875">Player</text-box>
+      <transition label-y="1.5" name="tPe_DP_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="16.55" y="57.0"/>
+      <transition label-y="1.5" name="tPe_DP_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="22.55" y="57.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_1_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="58.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_1_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="61.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_2_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="64.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_2_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="67.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_3_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="70.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_3_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="73.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_4_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="76.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_4_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="79.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_5_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="5.55" y="82.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_6_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="61.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_6_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="64.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_7_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="67.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_7_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="70.0"/>
+      <transition label-x="-5.0" label-y="0.0" name="tPe_FP_Clubs_Move" nservers-x="0.5" type="EXP" x="33.55" y="73.0"/>
+      <transition label-x="-6.0" label-y="0.0" name="tPe_FP_Diamonds_Move" nservers-x="0.5" type="EXP" x="33.55" y="76.0"/>
+      <transition label-x="-5.5" label-y="0.0" name="tPe_FP_Spades_Move" nservers-x="0.5" type="EXP" x="33.55" y="82.0"/>
+      <transition label-x="-5.5" label-y="0.0" name="tPe_FP_Hearts_Move" nservers-x="0.5" type="EXP" x="33.55" y="79.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_5_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="58.0"/>
+    </nodes>
+    <edges>
+      <arc head="tMC_Out_Buffer_Siphon" kind="INPUT" tail="pMC_Out_Buffer"/>
+      <arc head="tMC_DP_Move_Siphon" kind="INPUT" tail="pMC_DP_Move"/>
+      <arc head="tMC_TP_Turn_Siphon" kind="INPUT" tail="pMC_TP_Turn"/>
+      <arc head="tMC_TP_Move_Siphon" kind="INPUT" tail="pMC_TP_Move"/>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" tail="tDPe_Out"/>
+      <arc head="tDPe_Turn" kind="INPUT" tail="pMC_DP_Turn"/>
+      <arc head="tDPe_Move" kind="INPUT" tail="pMC_DP_Move"/>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.1584960937499997" tail="tFPe_Clubs_Out">
+        <point x="46.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.30087890625" tail="tFPe_Diamonds_Out">
+        <point x="65.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.0569335937499997" tail="tFPe_Hearts_Out">
+        <point x="83.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.2116210937499998" tail="tFPe_Spades_Out">
+        <point x="101.0" y="5.0"/>
+      </arc>
+      <arc head="tMC_FP_Move_Siphon" kind="INPUT" tail="pMC_FP_Move"/>
+      <arc head="tFPe_Clubs_Move" kind="INPUT" mult-k="2.2719726562499996" tail="pMC_FP_Move">
+        <point x="74.0" y="22.0"/>
+        <point x="50.0" y="22.0"/>
+      </arc>
+      <arc head="tFPe_Diamonds_Move" kind="INPUT" mult-k="1.92763671875" tail="pMC_FP_Move">
+        <point x="74.0" y="22.0"/>
+        <point x="69.0" y="22.0"/>
+      </arc>
+      <arc head="tFPe_Hearts_Move" kind="INPUT" mult-k="1.48388671875" tail="pMC_FP_Move">
+        <point x="74.0" y="22.0"/>
+        <point x="87.0" y="22.0"/>
+      </arc>
+      <arc head="tFPe_Clubs_Add" kind="INPUT" mult-k="1.07080078125" tail="pMC_Out_Buffer">
+        <point x="32.0" y="19.5"/>
+        <point x="42.0" y="19.5"/>
+      </arc>
+      <arc head="tFPe_Diamonds_Add" kind="INPUT" mult-k="1.46591796875" tail="pMC_Out_Buffer">
+        <point x="32.0" y="19.5"/>
+        <point x="60.0" y="19.5"/>
+      </arc>
+      <arc head="tFPe_Hearts_Add" kind="INPUT" mult-k="1.50400390625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="19.5"/>
+        <point x="78.0" y="19.5"/>
+      </arc>
+      <arc head="tFPe_Spades_Add" kind="INPUT" mult-k="1.51806640625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="19.5"/>
+        <point x="96.0" y="19.5"/>
+      </arc>
+      <arc head="tFPe_Spades_Move" kind="INPUT" mult-k="2.1122070312499996" tail="pMC_FP_Move">
+        <point x="74.0" y="22.0"/>
+        <point x="105.0" y="22.0"/>
+      </arc>
+      <arc head="tTPe_1_Add_FaceUp" kind="INPUT" mult-k="0.9610351562499999" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="7.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_1_Add_FaceDown" kind="INPUT" mult-k="1.27978515625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="15.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_2_Add_FaceUp" kind="INPUT" mult-k="0.7467773437499999" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="25.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_2_Add_FaceDown" kind="INPUT" mult-k="0.55478515625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="33.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_3_Add_FaceUp" kind="INPUT" mult-k="0.6401367187500002" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="43.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_3_Add_FaceDown" kind="INPUT" mult-k="0.7143554687500001" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="51.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_4_Add_FaceUp" kind="INPUT" mult-k="0.7624023437499999" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="61.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_4_Add_FaceDown" kind="INPUT" mult-k="0.69150390625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="69.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_5_Add_FaceUp" kind="INPUT" mult-k="0.7875976562500001" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="79.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_5_Add_FaceDown" kind="INPUT" mult-k="0.6301757812500001" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="87.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_6_Add_FaceUp" kind="INPUT" mult-k="0.6725585937499999" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="97.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_6_Add_FaceDown" kind="INPUT" mult-k="0.59775390625" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="105.0" y="31.0"/>
+      </arc>
+      <arc head="tTPe_7_Add_FaceUp" kind="INPUT" mult-k="0.6422851562500002" tail="pMC_Out_Buffer">
+        <point x="32.0" y="29.5"/>
+        <point x="115.0" y="29.5"/>
+      </arc>
+      <arc head="tTPe_7_Add_FaceDown" kind="INPUT" mult-k="0.6225585937500001" tail="pMC_Out_Buffer">
+        <point x="32.0" y="31.0"/>
+        <point x="123.0" y="31.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.7708007812499997" tail="tTPe_1_Out">
+        <point x="5.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.25673828125" tail="tTPe_2_Out">
+        <point x="23.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.2102539062499997" tail="tTPe_3_Out">
+        <point x="41.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.3684570312499997" tail="tTPe_4_Out">
+        <point x="59.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.3319335937499996" tail="tTPe_5_Out">
+        <point x="77.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.31357421875" tail="tTPe_6_Out">
+        <point x="95.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.32529296875" tail="tTPe_7_Out">
+        <point x="113.0" y="45.0"/>
+        <point x="1.5" y="45.0"/>
+        <point x="1.5" y="27.0"/>
+        <point x="29.0" y="27.0"/>
+        <point x="29.0" y="5.0"/>
+      </arc>
+      <arc head="tTPe_1_Turn" kind="INPUT" mult-k="1.4805664062500004" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="11.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_2_Turn" kind="INPUT" mult-k="1.9500976562499996" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="29.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_3_Turn" kind="INPUT" tail="pMC_TP_Turn"/>
+      <arc head="tTPe_4_Turn" kind="INPUT" mult-k="1.2438476562499998" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="65.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_5_Turn" kind="INPUT" mult-k="1.18603515625" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="83.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_6_Turn" kind="INPUT" mult-k="1.0217773437499997" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="101.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_7_Turn" kind="INPUT" mult-k="1.1198242187499998" tail="pMC_TP_Turn">
+        <point x="47.0" y="46.0"/>
+        <point x="119.0" y="46.0"/>
+      </arc>
+      <arc head="tTPe_1_Move" kind="INPUT" mult-k="1.84521484375" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="17.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_2_Move" kind="INPUT" mult-k="2.18056640625" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="35.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_3_Move" kind="INPUT" mult-k="2.1268554687499996" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="53.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_4_Move" kind="INPUT" mult-k="1.3094726562499996" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="71.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_5_Move" kind="INPUT" mult-k="1.36337890625" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="89.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_6_Move" kind="INPUT" mult-k="1.0999023437500002" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="107.0" y="47.0"/>
+      </arc>
+      <arc head="tTPe_7_Move" kind="INPUT" mult-k="1.1506835937499997" tail="pMC_TP_Move">
+        <point x="66.0" y="47.0"/>
+        <point x="125.0" y="47.0"/>
+      </arc>
+      <arc head="pMC_DP_Turn" kind="OUTPUT" mult-k="2.9784179687500005" tail="tPe_DP_Turn">
+        <point x="17.0" y="51.0"/>
+        <point x="0.5" y="51.0"/>
+        <point x="0.5" y="25.0"/>
+        <point x="7.0" y="25.0"/>
+      </arc>
+      <arc head="pMC_DP_Move" kind="OUTPUT" mult-k="2.7002929687500004" tail="tPe_DP_Move">
+        <point x="23.0" y="50.0"/>
+        <point x="1.0" y="50.0"/>
+        <point x="1.0" y="26.0"/>
+        <point x="16.0" y="26.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.4231445312499997" tail="tPe_TP_1_Turn">
+        <point x="3.5" y="59.0"/>
+        <point x="3.5" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.4012695312499996" tail="tPe_TP_2_Turn">
+        <point x="3.5" y="65.0"/>
+        <point x="3.5" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.51748046875" tail="tPe_TP_3_Turn">
+        <point x="3.5" y="71.0"/>
+        <point x="3.5" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="2.12900390625" tail="tPe_TP_4_Turn">
+        <point x="3.5" y="77.0"/>
+        <point x="3.5" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.29208984375" tail="tPe_TP_5_Turn">
+        <point x="3.5" y="83.0"/>
+        <point x="3.5" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.07626953125" tail="tPe_TP_6_Turn">
+        <point x="37.0" y="62.0"/>
+        <point x="37.0" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="1.29052734375" tail="tPe_TP_7_Turn">
+        <point x="37.0" y="68.0"/>
+        <point x="37.0" y="52.0"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="3.3659179687500007" tail="tPe_TP_1_Move">
+        <point x="4.5" y="62.0"/>
+        <point x="4.5" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.864355468750001" tail="tPe_TP_2_Move">
+        <point x="4.5" y="68.0"/>
+        <point x="4.5" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.1545898437499997" tail="tPe_TP_3_Move">
+        <point x="4.5" y="74.0"/>
+        <point x="4.5" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.36279296875" tail="tPe_TP_4_Move">
+        <point x="4.5" y="80.0"/>
+        <point x="4.5" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.3737304687500003" tail="tPe_TP_5_Move">
+        <point x="36.0" y="59.0"/>
+        <point x="36.0" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.5670898437500003" tail="tPe_TP_6_Move">
+        <point x="36.0" y="65.0"/>
+        <point x="36.0" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" mult-k="2.655371093750001" tail="tPe_TP_7_Move">
+        <point x="36.0" y="71.0"/>
+        <point x="36.0" y="55.5"/>
+        <point x="66.0" y="55.5"/>
+      </arc>
+      <arc head="pMC_DP_Turn" kind="OUTPUT" mult-k="3.688183593750001" tail="tPBe_DP_Turn">
+        <point x="45.0" y="76.0"/>
+        <point x="39.5" y="76.0"/>
+        <point x="39.5" y="51.0"/>
+        <point x="0.5" y="51.0"/>
+        <point x="0.5" y="25.0"/>
+        <point x="7.0" y="25.0"/>
+      </arc>
+      <arc head="pMC_DP_Move" kind="OUTPUT" mult-k="3.575488281250001" tail="tPBe_DP_Move">
+        <point x="52.0" y="75.5"/>
+        <point x="40.0" y="75.5"/>
+        <point x="40.0" y="50.0"/>
+        <point x="1.0" y="50.0"/>
+        <point x="1.0" y="26.0"/>
+        <point x="16.0" y="26.0"/>
+      </arc>
+      <arc head="pMC_TP_Turn" kind="OUTPUT" mult-k="2.3543945312499996" tail="tPBe_TP_Turn">
+        <point x="59.0" y="54.5"/>
+        <point x="47.0" y="54.5"/>
+      </arc>
+      <arc head="pMC_TP_Move" kind="OUTPUT" tail="tPBe_TP_Move"/>
+      <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="0.90009765625" tail="tPBe_FP_Move">
+        <point x="73.0" y="48.0"/>
+        <point x="130.5" y="48.0"/>
+        <point x="130.5" y="28.5"/>
+        <point x="74.0" y="28.5"/>
+      </arc>
+      <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.48486328125" tail="tPe_FP_Clubs_Move">
+        <point x="38.0" y="74.0"/>
+        <point x="38.0" y="48.0"/>
+        <point x="130.5" y="48.0"/>
+        <point x="130.5" y="28.5"/>
+        <point x="74.0" y="28.5"/>
+      </arc>
+      <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.61904296875" tail="tPe_FP_Diamonds_Move">
+        <point x="38.0" y="77.0"/>
+        <point x="38.0" y="48.0"/>
+        <point x="130.5" y="48.0"/>
+        <point x="130.5" y="28.5"/>
+        <point x="74.0" y="28.5"/>
+      </arc>
+      <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="4.820605468750001" tail="tPe_FP_Hearts_Move">
+        <point x="38.0" y="80.0"/>
+        <point x="38.0" y="48.0"/>
+        <point x="130.5" y="48.0"/>
+        <point x="130.5" y="28.5"/>
+        <point x="74.0" y="28.5"/>
+      </arc>
+      <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.39326171875" tail="tPe_FP_Spades_Move">
+        <point x="38.0" y="83.0"/>
+        <point x="38.0" y="48.0"/>
+        <point x="130.5" y="48.0"/>
+        <point x="130.5" y="28.5"/>
+        <point x="74.0" y="28.5"/>
+      </arc>
+    </edges>
+  </gspn>
 </project>

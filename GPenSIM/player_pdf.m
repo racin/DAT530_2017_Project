@@ -1,6 +1,6 @@
 function [png] = player_pdf() 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% File: module_connector_pdf.m : Handles the connections of the modules.
+% File: player_pdf.m : Handles inputs from the player.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 png.PN_name = 'Player module';

@@ -94,6 +94,7 @@ pns = pnstruct(pn_struct);
 dyn.re = {'playerAction', 1, inf};
 
 % Initial tokens.
+disp(length(global_info.INITIAL_DEAL_MOVE))
 dyn.m0 = {'pDP_Dealer', global_info.INITIAL_DECK_LENGTH, 'pDP_Turn', ...
     length(global_info.INITIAL_DEAL_MOVE), 'pDP_Move_Init', length(global_info.INITIAL_DEAL_MOVE)};
 
