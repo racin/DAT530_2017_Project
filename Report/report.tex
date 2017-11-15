@@ -67,16 +67,26 @@ SKRIV DETTE TIL SLUTT!
 
 
 \section{Introduction}
+This project aims to study the popular card game, Solitaire[Site]. Solitaire is bundled with most Windows[Site] installations, as well as being available for free on several sources. It is also easy to play the game with a physical card deck. A detailed explaination of the games rules can be found in the next chapter, Solitaire Rules[REF]
+\newline
+Since the game utilizes all 52 cards of the deck, the number of possible initial game states is 52!, which is a very high number. A large number of these inital game states can be merged, as they offer no difference in the difficulty to solve. Some of these intial states are unsolvable, but even given a solvable game state, one often find oneself in an unsolvable game state, due to certain actions in the game are non-reversible,. There has been attempts to find the distribution of solvable and unsolvable initial game states [ref]. This is roughly 75 percent are solvable, however the study also shows that only 35 percent of the games are won by an experienced player.
+\newline
+This project contains a complete model of the game, a GUI to play the game, and a basic bot to simulate user actions. 
+
+\subsection{Solitaire Rules}
+
 Finite State Machine ?
 
 
 \section{Method and Design}
 \label{sec:2_method_and_design}
 \subsection{Overall Design}
+The model developed is pretty large, and contains 99 transition and 88 places. It is developed using the modualar approach, and encompasses 6 different modules. Some of the modules are duplicated, with the only difference being the names of the transitions and places.
 \begin{center}
 	\includegraphics[width=\textwidth]{images/test}
 \end{center}
 \subsection{Draw Pile Module}
+The Draw Pile module has several key responsibilities. When first running the model, it will use the initial tokens of [Place] and give each of them a color according to [LIST]. If the [RANDOM_OPTION] is set, the cards are randomly dealt.
 \subsection{Foundation Pile Module}
 \subsection{Tableau Pile Module}
 \subsection{Module Connector Module}
