@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.15)  15 NOV 2017 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.15)  16 NOV 2017 00:00
 entering extended mode
 **./report.tex
 (report.tex
@@ -163,6 +163,24 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip45
+\LTright=\skip46
+\LTpre=\skip47
+\LTpost=\skip48
+\LTchunksize=\count116
+\LTcapwidth=\dimen127
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@cols=\count117
+\LT@rows=\count118
+\c@LT@tables=\count119
+\c@LT@chunks=\count120
+\LT@p@ftn=\toks20
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -200,7 +218,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))))
-\c@section@level=\count116
+\c@section@level=\count121
 LaTeX Info: Redefining \ref on input line 355.
 LaTeX Info: Redefining \pageref on input line 355.
 )
@@ -225,17 +243,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen127
-\scratchbox=\box54
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen128
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count122
+\scratchdimen=\dimen128
+\scratchbox=\box58
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen129
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -275,47 +293,105 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 60.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-pdfTeX warning: pdflatex.exe (file ./images/test.pdf): PDF inclusion: found PDF
- version <1.7>, but at most version <1.5> allowed
-<images/test.pdf, id=1, pagebox=cropbox, 597.55246pt x 845.07724pt>
-File: images/test.pdf Graphic file (type pdf)
-<use images/test.pdf>
-Package pdftex.def Info: images/test.pdf  used on input line 85. on input line 
-85.
-Package pdftex.def Info: Requested size: 347.12354pt x 490.91884pt on input lin
-e 85.
+pdfTeX warning: pdflatex.exe (file ./images/overallViewPdf.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<images/overallViewPdf.pdf, id=1, pagebox=cropbox, 597.55246pt x 845.07724pt>
+File: images/overallViewPdf.pdf Graphic file (type pdf)
+<use images/overallViewPdf.pdf>
+Package pdftex.def Info: images/overallViewPdf.pdf  used on input line 224. on 
+input line 224.
+Package pdftex.def Info: Requested size: 256.276pt x 323.12518pt on input line 
+224.
 
 Underfull \vbox (badness 4621) has occurred while \output is active []
 
  [1
 
 
-{C:/Users/racin.nygaard/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 
-<./images/test.pdf>]
-Overfull \hbox (135.87225pt too wide) in paragraph at lines 110--110
+{C:/Users/racin.nygaard/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 \newline
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: images/overallViewPdf.pdf Graphic file (type pdf)
+<use images/overallViewPdf.pdf>
+Package pdftex.def Info: images/overallViewPdf.pdf  used on input line 228. on 
+input line 228.
+Package pdftex.def Info: Requested size: 426.9135pt x 493.76268pt on input line
+ 228.
+
+Overfull \hbox (294.76945pt too wide) in paragraph at lines 228--229
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./images/overallViewPdf.pdf>]
+Overfull \vbox (16.85057pt too high) has occurred while \output is active []
+
+
+[3]
+<images/drawPile.png, id=27, 492.8814pt x 332.442pt>
+File: images/drawPile.png Graphic file (type png)
+<use images/drawPile.png>
+Package pdftex.def Info: images/drawPile.png  used on input line 233. on input 
+line 233.
+Package pdftex.def Info: Requested size: 347.12354pt x 234.12814pt on input lin
+e 233.
+<images/foundationPile.png, id=28, 355.20705pt x 163.69154pt>
+File: images/foundationPile.png Graphic file (type png)
+<use images/foundationPile.png>
+Package pdftex.def Info: images/foundationPile.png  used on input line 268. on 
+input line 268.
+Package pdftex.def Info: Requested size: 347.12354pt x 159.9745pt on input line
+ 268.
+ [4 <./images/drawPile.png (PNG copy)>]
+<images/tableauPile.png, id=33, 493.6041pt x 240.6591pt>
+File: images/tableauPile.png Graphic file (type png)
+<use images/tableauPile.png>
+Package pdftex.def Info: images/tableauPile.png  used on input line 272. on inp
+ut line 272.
+Package pdftex.def Info: Requested size: 347.12354pt x 169.24239pt on input lin
+e 272.
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+ [5 <./images/foundationPile.png (PNG copy)> <./images/tableauPile.png (PNG cop
+y)>]
+Overfull \hbox (135.87225pt too wide) in paragraph at lines 293--293
 []        \OT1/cmtt/m/n/10 if 'to' in email.keys() and 'from' in email.keys() a
 nd 'body_count' in email.keys():[] 
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 132--133
+Underfull \hbox (badness 6001) in paragraph at lines 315--316
 []\OT1/cmr/m/n/9 Kaggle. The En-ron Email Dataset. $\OT1/cmtt/m/n/9 https : / /
  www . kaggle . com / wcukierski /
  []
 
-[3] (report.aux)
+[6] (report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2438 strings out of 493312
- 33039 string characters out of 3138874
- 95592 words of memory out of 3000000
- 5946 multiletter control sequences out of 15000+200000
+ 2542 strings out of 493312
+ 34462 string characters out of 3138874
+ 99278 words of memory out of 3000000
+ 6043 multiletter control sequences out of 15000+200000
  10947 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,5n,26p,690b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,26p,690b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -324,9 +400,9 @@ ts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmtt9.pfb>
-Output written on report.pdf (3 pages, 219162 bytes).
+Output written on report.pdf (6 pages, 1163668 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
