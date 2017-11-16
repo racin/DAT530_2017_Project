@@ -545,36 +545,36 @@
       <arc head="pMC_TP_Move" kind="OUTPUT" tail="tPBe_TP_Move"/>
       <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="0.90009765625" tail="tPBe_FP_Move">
         <point x="73.0" y="48.0"/>
-        <point x="130.5" y="48.0"/>
-        <point x="130.5" y="28.5"/>
+        <point x="129.0" y="48.0"/>
+        <point x="129.0" y="28.5"/>
         <point x="74.0" y="28.5"/>
       </arc>
       <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.48486328125" tail="tPe_FP_Clubs_Move">
         <point x="38.0" y="74.0"/>
         <point x="38.0" y="48.0"/>
-        <point x="130.5" y="48.0"/>
-        <point x="130.5" y="28.5"/>
+        <point x="129.0" y="48.0"/>
+        <point x="129.0" y="28.5"/>
         <point x="74.0" y="28.5"/>
       </arc>
       <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.61904296875" tail="tPe_FP_Diamonds_Move">
         <point x="38.0" y="77.0"/>
         <point x="38.0" y="48.0"/>
-        <point x="130.5" y="48.0"/>
-        <point x="130.5" y="28.5"/>
+        <point x="129.0" y="48.0"/>
+        <point x="129.0" y="28.5"/>
         <point x="74.0" y="28.5"/>
       </arc>
       <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="4.820605468750001" tail="tPe_FP_Hearts_Move">
         <point x="38.0" y="80.0"/>
         <point x="38.0" y="48.0"/>
-        <point x="130.5" y="48.0"/>
-        <point x="130.5" y="28.5"/>
+        <point x="129.0" y="48.0"/>
+        <point x="129.0" y="28.5"/>
         <point x="74.0" y="28.5"/>
       </arc>
       <arc head="pMC_FP_Move" kind="OUTPUT" mult-k="2.39326171875" tail="tPe_FP_Spades_Move">
         <point x="38.0" y="83.0"/>
         <point x="38.0" y="48.0"/>
-        <point x="130.5" y="48.0"/>
-        <point x="130.5" y="28.5"/>
+        <point x="129.0" y="48.0"/>
+        <point x="129.0" y="28.5"/>
         <point x="74.0" y="28.5"/>
       </arc>
     </edges>
