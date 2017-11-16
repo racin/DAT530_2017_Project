@@ -28,44 +28,31 @@
 
 \usepackage{nameref}
 \begin{document}
-
 \mainmatter  % start of an individual contribution
-
 % first the title is needed
 \title{DAT530\\Discrete Simulation and Performance Analysis\\Final Project\\Solitaire game strategy}
-
 % a short form should be given in case it is too long for the running head
 \titlerunning{DAT530 - Final Project}
-
-
-\author{Racin W. Nygaard}%
-
-%
+\author{Racin W. Nygaard}
 \authorrunning{DAT530 - Final Project - Solitaire game strategy}
 % (feature abused for this document to repeat the title also on left hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
 \institute{Universitetet i Stavanger}
 
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
-%
-
-\toctitle{Solitaire game strategy}
-\tocauthor{Report}
+\toctitle{Abstract}
+\tocauthor{ }
 \maketitle
+	
 
 
 \begin{abstract}
-SKRIV DETTE TIL SLUTT!
+This project is such and such... +++
 
 \end{abstract}
 
-
+\setcounter{tocdepth}{2}
+\tableofcontents
+\listoffigures
+\listoftables
 \section{Introduction}
 This project aims to study the popular card game, Solitaire[Site]. Solitaire is bundled with most Windows[Site] installations, as well as being available for free on several sources. It is also easy to play the game with a physical card deck. A detailed explaination of the games rules can be found in the next chapter, Solitaire Rules[REF]
 \newline
@@ -74,6 +61,8 @@ Since the game utilizes all 52 cards of the deck, the number of possible initial
 This project contains a complete model of the game, a GUI to play the game, and a basic bot to simulate user actions. 
 
 \subsection{Solitaire Rules}
+
+\subsection{Abbreviations}
 
 Finite State Machine ?
 
@@ -143,7 +132,7 @@ Finite State Machine ?
 
 \begin{figure}
 	\begin{center} % Left, Bottom, Right, Top
-		\includegraphics[trim=250 260 230 340,scale=1.1]{images/overallViewPdf}
+		\includegraphics[trim=250 260 230 330,scale=1.1]{images/overallViewPdf}
 	\end{center}
 	\caption{The complete model - Without the internal components of the modules.}
 \end{figure}
@@ -165,7 +154,14 @@ The model developed is pretty large, and contains 94 transition and 42 places. I
 		\caption{Draw Pile Module}
 	\end{center}
 \end{figure}
-The Draw Pile module has several key responsibilities. When first running the model, it will use the initial tokens of \verb!pDP_Dealer! and give each of them a color according to the variable \verb!global_info.DECK!. If the \verb!global_info.RANDOM_DECK! is set, the cards are randomly dealt. 
+The Draw Pile module has several key responsibilities. When first running the model, the initial tokens of \verb!pDP_Dealer! will be sent to \verb!tDPi_Dealer!. This transition will give each token a color which represents a card in the deck. Possible colors are initially stored in the cell \verb!global_info.DECK!. If \verb!global_info.RANDOM_DECK! is set, a random permutation of the colors will be given to the tokens. By having \verb!global_info.RANDOM_DECK! set to false, it is possible to run analytics which require that the cards are dealt equally each time.
+\newline
+
+After all tokens are given a color, \verb!tDPi_Turn! will be enabled. This transition will move cards from the pile which represents face-down cards, \verb!pDP_Draw_FaceDown_Pile! to the one representing face-up cards, \verb!pDP_Draw_FaceUp_Pile!. This transition will fire as many times as the length of \verb!global_info.INITIAL_DEAL_MOVE!, which is 28 in a normal game. This is not something that would be done if the game where played with physical cards, as they would just be dealt without turning them. In this model however, this is required so that existing logic could be re-used.
+\newline
+
+Concurrently to the firing of \verb!tDPi_Turn!, the transition \verb!tDPi_Move_Init! will fire an equal amount of times. The transition will give each of the tokens in \verb!pDP_Move_Init! a color which represents to which tableau pile the card should be moved to. The color given to each token is augmented by the cell, \verb!global_info.INITIAL_DEAL_MOVE!. An example of a color given is \emph{Move:TP1:DP} which means; \textit{Moving a card from source DP to destination TP1}.
+
 \begin{table}
 	\caption{Transitions used in Draw Pile}
 	\begin{tabular}{|l|l|l|}
