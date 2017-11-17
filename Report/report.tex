@@ -63,6 +63,7 @@
 	numbers=left
 }
 
+
 \begin{document}
 \mainmatter  % start of an individual contribution
 % first the title is needed
@@ -85,17 +86,18 @@ This project is such and such... +++
 
 \end{abstract}
 
-\setcounter{tocdepth}{2}
-\tableofcontents
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
+\tableofcontents
 \listoffigures
 \listoftables
 \printacronyms[name=Abbreviations,include-classes=abbrev]
 \printacronyms[name=Nomenclature,include-classes=nomencl]
 \section{Introduction}
-This project aims to study the popular card game, Solitaire[Site]. Solitaire is bundled with most Windows[Site] installations, as well as being available for free on several sources. It is also easy to play the game with a physical card deck. A detailed explaination of the games rules can be found in the next chapter, Solitaire Rules[REF]
+This project aims to study the popular card game, Solitaire[Site]. Solitaire is bundled with most Windows[Site] installations, as well as being available for free on several sources. It is also easy to play the game with a physical card deck. A detailed explanation of the games rules can be found in the next chapter, Solitaire Rules[REF]
 \newline
-Since the game utilizes all 52 cards of the deck, the number of possible initial game states is 52!, which is a very high number. A large number of these inital game states can be merged, as they offer no difference in the difficulty to solve. Some of these intial states are unsolvable, but even given a solvable game state, one often find oneself in an unsolvable game state, due to certain actions in the game are non-reversible,. There has been attempts to find the distribution of solvable and unsolvable initial game states [ref]. This is roughly 75 percent are solvable, however the study also shows that only 35 percent of the games are won by an experienced player.
+Since the game utilizes all 52 cards of the deck, the number of possible initial game states is 52!, which is a very high number. A large number of these inital game states can be merged, as they offer no difference in the difficulty to solve. Some of these initial states are unsolvable, but even given a solvable game state, one often find oneself in an unsolvable game state, due to certain actions in the game are non-reversible,. There has been attempts to find the distribution of solvable and unsolvable initial game states [ref]. This is roughly 75 percent are solvable, however the study also shows that only 35 percent of the games are won by an experienced player.
 \newline
 This project contains a complete model of the game, a GUI to play the game, and a basic bot to simulate user actions. 
 
@@ -108,6 +110,15 @@ Finite State Machine ?
 \section{Method and Design}
 \label{sec:2_method_and_design}
 \subsection{Naming Policy}
+\subsection{File structure}
+To reduce the number of files, most of the pre- and post-processor files of the \ac{fp} and \ac{tp} modules have been combined in one single file. An example of this can be shown in listing \ref{lst:COMMON_PRE}, which shows parts of \verb!COMMON_PRE!
+\lstinputlisting[style=matlabcode,caption=COMMON\_PRE.m lines 1-5,label=lst:COMMON_PRE,lastline=5]{\GPenSIM/COMMON_PRE.m}
+
+By doing this it is possible to reduce the number of files required without overloading the \verb!COMMON_PRE! and \verb!COMMON_POST! files. It also makes it much easier to work and maintain the code as the logic is only located in one place, as opposed to four or seven places if each transition had their own file.
+\newline
+
+With this approach it is no longer possible to hard-code the names of the related transitions and places, so two additional functions; \verb!get_tableau_from_transname! and \verb!get_suit_from_transname! were developed. These functions take the name of the transition as input, and then return the unique identifier for which module it belongs to. The actual code is pretty simple, and parts of \verb!get_suit_from_transname! is shown in listing \ref{lst:get_suit_from_transname}. The reasoning behind not using the Matlab command \verb!contains! is simply that it is not supported in older versions.
+\lstinputlisting[style=matlabcode,caption=get\_suit\_from\_transname.m lines 7-17,label=lst:get_suit_from_transname,firstline=7,lastline=17]{\GPenSIM/get_suit_from_transname.m}
 %\begin{table}
 %	\caption{Places}
 %	\begin{tabular}{|l|l|l|l|}
@@ -253,10 +264,11 @@ Lastly, there is the \verb!tDPe_Out! transition. This is the only external outpu
 		\includegraphics[width=\textwidth]{images/foundationPile}
 		\caption{Foundation Pile Module}
 	\end{center}
-
-bla bla bla
 \end{figure}
+The Foundation Pile module is duplicated four times, once for every suit, clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared with other suits.
+\newline
 
+This module is inactive during the initial phase, and only becomes interactable once the normal phase starts. It has two external inputs, the first of which is \verb!tFPe_Clubs_Add!. This transition has a shared pre-processor file, . More about in the move command can be read in chapter \ref{sec:3_move_command}.
 \begin{table}
 	\caption{Transitions used in Foundation Piles}
 	\begin{tabular}{|l|l|l|}
@@ -393,7 +405,13 @@ bla bla bla
 \subsection{Algorithms}
 \subsubsection{Atomicity}
 \subsection{Commands}
-In order to preventdd
+\subsubsection{Move Command}~\\~\\
+\label{sec:3_move_command}
+The move command is contains four parts; the command, destination, source and amount. Each part is concatenated together, with colon as a separator. An example of a move command would be: \textit{Move:\ac{tp}1:\ac{tp}5:3}, which means \textit{Move 3 cards from \ac{tp}1 to \ac{tp}5}. If amount is not given, it will assume one card to be moved.
+\newline
+
+In order to make sure that only valid commands are issued, the function \verb!checkCommand_Move! has been developed. 
+\lstinputlisting[style=matlabcode,caption=checkCommand\_Move.m,label=lst:checkCommand_Move]{\GPenSIM/checkCommand_Move.m}
 \subsection{Initial Dealing}
 \subsection{Resources}
 \label{sec:3_Resources}

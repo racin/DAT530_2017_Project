@@ -9,7 +9,8 @@ if moveToken,
         return;
     end;
     [~, suit, handle_err] = get_suit_from_transname(transition.name);
-    [doCommand, cmdDest, card, cmdSource] = checkCommand_Move(tokenColor,suit,'',handle_err);
+    [doCommand, cmdDest, card, cmdSource] = ...
+        checkCommand_Move(tokenColor,suit,'',handle_err);
     if(doCommand),
         transition.selected_tokens = moveToken;
         transition.new_color = card;

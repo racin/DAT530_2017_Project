@@ -3,7 +3,7 @@ function [fire, transition] = pre_tTPe_Turn(transition)
 global global_info;
 fire = 0;
 moveToken = tokenArrivedLate('pMC_TP_Turn',1);
-[tableau, ~, ~, ~, ~, ~] = get_tableau_num_from_transname(transition.name);
+[tableau, ~, ~, ~, ~, ~] = get_tableau_from_transname(transition.name);
 moveCmd = get_color('pMC_TP_Turn',moveToken);
 
 if(length(moveCmd) >= 1 && strcmp(moveCmd{1},strcat('Turn:TP',tableau))),

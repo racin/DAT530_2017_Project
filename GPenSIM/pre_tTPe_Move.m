@@ -3,7 +3,7 @@ function [fire, transition] = pre_tTPe_Move(transition)
 global global_info;
 fire = 0;
 moveToken = tokenArrivedLate('pMC_TP_Move',1);
-[tableau, ~, ~, ~, ~, ~]  = get_tableau_num_from_transname(transition.name);
+[tableau, ~, ~, ~, ~, ~]  = get_tableau_from_transname(transition.name);
 
 moveColor = get_color('pMC_TP_Move',moveToken);
 [moveCmd, ~] = splitCommand(moveColor);

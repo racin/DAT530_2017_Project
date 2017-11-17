@@ -1,5 +1,5 @@
 function [tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount] ...
-    = get_tableau_num_from_transname(transitionname)
+    = get_tableau_from_transname(transitionname)
     global global_info;
     handle_err = 0;
     move_btn = 0;

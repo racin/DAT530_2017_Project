@@ -1,4 +1,5 @@
-function [ doCommand, cmdDest, card, cmdSource ] = checkCommand_Move( command, destination, source, handle_err)
+function [ doCommand, cmdDest, card, cmdSource ] = ...
+    checkCommand_Move( command, destination, source, handle_err)
 
 global global_info;
 [moveCmd, card] = splitCommand(command);
@@ -70,8 +71,6 @@ elseif ismember(cmdDest, global_info.TP_PILES),
         return;
     end
 
-
-
     if(iscell(tp_FU_Pile_Dest)),
         tp_FU_Pile_Dest = tp_FU_Pile_Dest{1};
     end;
@@ -108,11 +107,13 @@ elseif ismember(cmdDest, global_info.TP_PILES),
         dest_global_suit = global_info.SUITS.(dest_topCard_Suit{1});
 
         diffRank = moved_rank_value - global_info.CARDVALUE_MAP(dest_topCard_Rank{1});
-        if(diffRank ~= -1),  % Added card must be 1 value lower than the current card.
+        % Added card must be 1 value lower than the current card.
+        if(diffRank ~= -1),  
             set_handle(handle_err,'String','INVALID CARD VALUE');
             return;
         end;
-        if(strcmp(moved_global_suit{2},dest_global_suit{2})), % Moved and current suit color must be different (red/black).
+        % Moved and current suit color must be different (red/black).
+        if(strcmp(moved_global_suit{2},dest_global_suit{2})), 
             set_handle(handle_err,'String','SUIT COLOR MUST BE ALTERNATING');
             return;
         end;
@@ -131,5 +132,3 @@ end;
 
 set_handle(handle_err,'String','');
 doCommand = true;
-return;
-

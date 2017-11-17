@@ -2,30 +2,32 @@
 \authcount {1}
 \contentsline {author}{ }{1}
 \contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.1}Solitaire Rules}{3}
+\contentsline {subsection}{\numberline {1.1}Solitaire Rules}{4}
 \contentsline {section}{\numberline {2}Method and Design}{4}
 \contentsline {subsection}{\numberline {2.1}Naming Policy}{4}
-\contentsline {subsection}{\numberline {2.2}Overall Design}{4}
-\contentsline {subsection}{\numberline {2.3}Draw Pile Module}{4}
-\contentsline {subsection}{\numberline {2.4}Foundation Pile Module}{9}
-\contentsline {subsection}{\numberline {2.5}Tableau Pile Module}{9}
-\contentsline {subsection}{\numberline {2.6}Module Connector Module}{9}
-\contentsline {subsection}{\numberline {2.7}Player Module}{9}
-\contentsline {subsection}{\numberline {2.8}Player Bot Module}{9}
-\contentsline {section}{\numberline {3}Implementation}{9}
-\contentsline {subsection}{\numberline {3.1}\ac {gui}}{9}
-\contentsline {subsection}{\numberline {3.2}Algorithms}{9}
-\contentsline {subsubsection}{Atomicity}{9}
-\contentsline {subsection}{\numberline {3.3}Commands}{12}
-\contentsline {subsection}{\numberline {3.4}Initial Dealing}{12}
-\contentsline {subsection}{\numberline {3.5}Resources}{12}
-\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{12}
-\contentsline {subsection}{\numberline {3.7}Scoring}{12}
-\contentsline {subsection}{\numberline {3.8}Possible improvments}{12}
-\contentsline {section}{\numberline {4}Testing, Analysis and Results}{13}
-\contentsline {subsection}{\numberline {4.1}Algorithms}{13}
-\contentsline {subsubsection}{Atomicity}{13}
-\contentsline {subsection}{\numberline {4.2}Initial Dealing}{13}
-\contentsline {subsection}{\numberline {4.3}Resources}{13}
-\contentsline {subsection}{\numberline {4.4}Moving Multiple Cards}{13}
-\contentsline {section}{\numberline {5}Discussion}{13}
+\contentsline {subsection}{\numberline {2.2}File structure}{4}
+\contentsline {subsection}{\numberline {2.3}Overall Design}{4}
+\contentsline {subsection}{\numberline {2.4}Draw Pile Module}{7}
+\contentsline {subsection}{\numberline {2.5}Foundation Pile Module}{9}
+\contentsline {subsection}{\numberline {2.6}Tableau Pile Module}{14}
+\contentsline {subsection}{\numberline {2.7}Module Connector Module}{14}
+\contentsline {subsection}{\numberline {2.8}Player Module}{14}
+\contentsline {subsection}{\numberline {2.9}Player Bot Module}{14}
+\contentsline {section}{\numberline {3}Implementation}{14}
+\contentsline {subsection}{\numberline {3.1}\ac {gui}}{14}
+\contentsline {subsection}{\numberline {3.2}Algorithms}{14}
+\contentsline {subsubsection}{\numberline {3.2.1}Atomicity}{14}
+\contentsline {subsection}{\numberline {3.3}Commands}{14}
+\contentsline {subsubsection}{\numberline {3.3.1}Move Command}{14}
+\contentsline {subsection}{\numberline {3.4}Initial Dealing}{16}
+\contentsline {subsection}{\numberline {3.5}Resources}{16}
+\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{16}
+\contentsline {subsection}{\numberline {3.7}Scoring}{16}
+\contentsline {subsection}{\numberline {3.8}Possible improvments}{16}
+\contentsline {section}{\numberline {4}Testing, Analysis and Results}{17}
+\contentsline {subsection}{\numberline {4.1}Algorithms}{17}
+\contentsline {subsubsection}{\numberline {4.1.1}Atomicity}{17}
+\contentsline {subsection}{\numberline {4.2}Initial Dealing}{17}
+\contentsline {subsection}{\numberline {4.3}Resources}{17}
+\contentsline {subsection}{\numberline {4.4}Moving Multiple Cards}{17}
+\contentsline {section}{\numberline {5}Discussion}{17}

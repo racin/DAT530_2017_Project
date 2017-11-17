@@ -2,7 +2,7 @@ function [fire, transition] = pre_tTPe_Add_FaceDown(transition)
 
 global global_info;
 fire = 0;
-[tableau, ~, ~, ~, ~, ~] = get_tableau_num_from_transname(transition.name);
+[tableau, ~, ~, ~, ~, ~] = get_tableau_from_transname(transition.name);
 % Can only add FaceDown cards during the initial dealing.
 if global_info.CARDS_DEALT >= global_info.INITIAL_DEAL_MOVE_LENGTH ...
     || length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 == str2double(tableau),
