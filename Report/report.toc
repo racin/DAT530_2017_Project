@@ -19,15 +19,17 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Atomicity}{14}
 \contentsline {subsection}{\numberline {3.3}Commands}{14}
 \contentsline {subsubsection}{\numberline {3.3.1}Move Command}{14}
-\contentsline {subsection}{\numberline {3.4}Initial Dealing}{16}
-\contentsline {subsection}{\numberline {3.5}Resources}{16}
-\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{16}
-\contentsline {subsection}{\numberline {3.7}Scoring}{16}
-\contentsline {subsection}{\numberline {3.8}Possible improvments}{16}
-\contentsline {section}{\numberline {4}Testing, Analysis and Results}{17}
-\contentsline {subsection}{\numberline {4.1}Algorithms}{17}
-\contentsline {subsubsection}{\numberline {4.1.1}Atomicity}{17}
-\contentsline {subsection}{\numberline {4.2}Initial Dealing}{17}
-\contentsline {subsection}{\numberline {4.3}Resources}{17}
-\contentsline {subsection}{\numberline {4.4}Moving Multiple Cards}{17}
-\contentsline {section}{\numberline {5}Discussion}{17}
+\contentsline {subsection}{\numberline {3.4}Initial Dealing}{15}
+\contentsline {subsection}{\numberline {3.5}Resources}{15}
+\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{15}
+\contentsline {subsection}{\numberline {3.7}Scoring}{15}
+\contentsline {subsection}{\numberline {3.8}Possible improvments}{15}
+\contentsline {section}{\numberline {4}Testing, Analysis and Results}{15}
+\contentsline {subsection}{\numberline {4.1}Algorithms}{15}
+\contentsline {subsubsection}{\numberline {4.1.1}Atomicity}{15}
+\contentsline {subsection}{\numberline {4.2}Initial Dealing}{15}
+\contentsline {subsection}{\numberline {4.3}Resources}{15}
+\contentsline {subsection}{\numberline {4.4}Moving Multiple Cards}{15}
+\contentsline {section}{\numberline {5}Discussion}{15}
+\contentsline {section}{\numberline {A}Matlab code}{16}
+\contentsline {subsection}{\numberline {A.1}checkCommand\_Move.m}{16}

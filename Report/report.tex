@@ -53,8 +53,7 @@
 \lstdefinestyle{matlabcode}{
 	language=Matlab,
 	frame=single,
-	%caption={\protect\filename@parse{\lstname}\protect\filename@base},
-	caption=\lstname,
+	%caption=\lstname,
 	stringstyle=\color{matlabstring},
 	keywordstyle=\color{matlabkeyword},
 	commentstyle=\color{matlabcomment},
@@ -410,8 +409,11 @@ This module is inactive during the initial phase, and only becomes interactable 
 The move command is contains four parts; the command, destination, source and amount. Each part is concatenated together, with colon as a separator. An example of a move command would be: \textit{Move:\ac{tp}1:\ac{tp}5:3}, which means \textit{Move 3 cards from \ac{tp}1 to \ac{tp}5}. If amount is not given, it will assume one card to be moved.
 \newline
 
-In order to make sure that only valid commands are issued, the function \verb!checkCommand_Move! has been developed. 
-\lstinputlisting[style=matlabcode,caption=checkCommand\_Move.m,label=lst:checkCommand_Move]{\GPenSIM/checkCommand_Move.m}
+In order to make sure that only validity of the move-commands, the function \verb!checkCommand_Move! has been developed. It is used both for validation before sending a command, and validation after receiving a command. The function takes the input parameters; \verb!command!, \verb!destination!, \verb!source!, and \verb!handle_err!. 
+\newline
+
+The input parameter \verb!command! contains the actual command, \verb!destination! contains the unique identifiers of the \ac{fp} or \ac{tp} modules. Valid input for \verb!destination! would be \textit{C, D, H, S, 1, 2, 3, 4, 5, 6 or 7}, and is used to ensure that the command is received by the destined module. Parameter \verb!source! is only used when sending a command, and contains the actual name of the transition which issued the game. This is mainly used to set the variable \verb!global_info.last_command_source! which will be the name of the transition holding the \verb!playerAction! resource. Resources are discussed in more detail in chapter \ref{sec:3_Resources}. Lastly, the parameter \verb!handle_err! holds the GUI-component where error mesasges will be written. Full code for the function can be found in the appendix, at chapter \ref{app:checkCommand_Move.m}.
+
 \subsection{Initial Dealing}
 \subsection{Resources}
 \label{sec:3_Resources}
@@ -453,4 +455,10 @@ In order to preventdd
 
 \end{thebibliography}
 
+\appendix
+\section{Matlab code}	
+\subsection{checkCommand\_Move.m}
+\label{app:checkCommand_Move.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/checkCommand_Move.m}
+%\end{appendices}
 \end{document}
