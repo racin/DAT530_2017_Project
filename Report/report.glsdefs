@@ -1,0 +1,120 @@
+\ifglsentryexists{dp}{}%
+{%
+\gls@defglossaryentry{dp}%
+{%
+name={DP},%
+sort={DP},%
+type={acronym},%
+first={Draw Pile\glsspace (DP)},%
+firstplural={Draw Pile\acrpluralsuffix \glsspace (DP\acrpluralsuffix )},%
+text={DP},%
+plural={DP\acrpluralsuffix },%
+description={Draw Pile},%
+descriptionplural={Draw Pile\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Draw Pile},%
+longplural={Draw Piles},%
+short={DP},%
+shortplural={DPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ap}{}%
+{%
+\gls@defglossaryentry{ap}%
+{%
+name={AP},%
+sort={AP},%
+type={acronym},%
+first={Draw Pile\glsspace (AP)},%
+firstplural={Draw Pile\acrpluralsuffix \glsspace (AP\acrpluralsuffix )},%
+text={AP},%
+plural={AP\acrpluralsuffix },%
+description={Draw Pile},%
+descriptionplural={Draw Pile\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Draw Pile},%
+longplural={Draw Piles},%
+short={AP},%
+shortplural={APs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bp}{}%
+{%
+\gls@defglossaryentry{bp}%
+{%
+name={BP},%
+sort={BP},%
+type={acronym},%
+first={Draw Pile\glsspace (BP)},%
+firstplural={Draw Pile\acrpluralsuffix \glsspace (BP\acrpluralsuffix )},%
+text={BP},%
+plural={BP\acrpluralsuffix },%
+description={Draw Pile},%
+descriptionplural={Draw Pile\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Draw Pile},%
+longplural={Draw Piles},%
+short={BP},%
+shortplural={BPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{tp}{}%
+{%
+\gls@defglossaryentry{tp}%
+{%
+name={TP},%
+sort={TP},%
+type={acronym},%
+first={Tableau Pile\glsspace (TP)},%
+firstplural={Tableau Pile\acrpluralsuffix \glsspace (TP\acrpluralsuffix )},%
+text={TP},%
+plural={TP\acrpluralsuffix },%
+description={Tableau Pile},%
+descriptionplural={Tableau Pile\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Tableau Pile},%
+longplural={Tableau Piles},%
+short={TP},%
+shortplural={TPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

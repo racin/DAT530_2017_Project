@@ -1,4 +1,5 @@
 function [] = tDPi_Flip_Pile_post(transition)
+
 global global_info;
 if isempty(tokIDs('pDP_Draw_FaceUp_Pile')),
     global_info.DP_Flip_Pile_Running = false;
