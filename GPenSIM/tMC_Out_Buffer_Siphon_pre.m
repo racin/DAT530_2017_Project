@@ -11,12 +11,11 @@ if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
 end;
 
 moveToken = tokenArrivedEarly('pMC_Out_Buffer',1);
-if moveToken,
-    tokenColor = get_color('pMC_Out_Buffer',moveToken);
-    [command, ~] = splitCommand(tokenColor);
-    if length(tokenColor) ~= 2 || ~ismember(command{2}, global_info.FP_TP_PILES),
-        transition.selected_tokens = moveToken;
-        fire = 1;
-        return;
-    end;
+tokenColor = get_color('pMC_Out_Buffer',moveToken);
+[command, ~] = splitCommand(tokenColor);
+
+if length(tokenColor) ~= 2 || ~ismember(command{2}, global_info.FP_TP_PILES),
+    transition.selected_tokens = moveToken;
+    fire = 1;
+    return;
 end;

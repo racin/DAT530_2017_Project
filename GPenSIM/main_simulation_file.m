@@ -4,10 +4,10 @@ global global_info;
 
 %%%% SIMULATION SETTINGS %%%%
 global_info.GUI_ENABLED = 1;
-global_info.BOT_ENABLED = 0;
+global_info.BOT_ENABLED = 1;
 global_info.DISP_CHANGES = 1;
 global_info.DELTA_TIME = 1;
-global_info.MAX_LOOP = 10000;
+global_info.MAX_LOOP = 15000;
 
 %%%% GAME SETTINGS %%%%
 % The bot generates a number from 1-100, this is number is used with the

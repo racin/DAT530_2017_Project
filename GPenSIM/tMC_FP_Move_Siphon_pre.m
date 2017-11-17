@@ -7,11 +7,9 @@ global global_info;
 
 fire = 0;
 moveToken = tokenArrivedLate('pMC_FP_Move',1);
+[moveCmd, ~] = splitCommand(get_color('pMC_FP_Move',moveToken));
 
-if moveToken,
-    [moveCmd, ~] = splitCommand(get_color('pMC_FP_Move',moveToken));
-    if(length(moveCmd) < 3 || ~ismember(moveCmd{3}, global_info.FP_PILES)),
-        transition.selected_tokens = moveToken;
-        fire = 1;
-    end
+if(length(moveCmd) < 3 || ~ismember(moveCmd{3}, global_info.FP_PILES)),
+    transition.selected_tokens = moveToken;
+    fire = 1;
 end

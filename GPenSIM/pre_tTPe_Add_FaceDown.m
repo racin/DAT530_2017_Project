@@ -9,16 +9,14 @@ if global_info.CARDS_DEALT >= global_info.INITIAL_DEAL_MOVE_LENGTH ...
     return;
 end;
 moveToken = tokenArrivedEarly('pMC_Out_Buffer',1);
-if moveToken,
-    [moveCmd, card] = splitCommand(get_color('pMC_Out_Buffer',moveToken));
-    if length(moveCmd) >= 2 && strcmp(moveCmd{2},strcat('TP',tableau)),
-        transition.selected_tokens = moveToken;
-        transition.new_color = card;
-        transition.override = 1;
-        fire = 1;
-        if(global_info.DISP_CHANGES),
-            disp(strcat('Moved card',{' '},card,{' '},'from DP',{' '},...
-                'to',{' '},moveCmd{2},{' '},'(FD)'));
-        end;
-    end
+[moveCmd, card] = splitCommand(get_color('pMC_Out_Buffer',moveToken));
+if length(moveCmd) >= 2 && strcmp(moveCmd{2},strcat('TP',tableau)),
+    transition.selected_tokens = moveToken;
+    transition.new_color = card;
+    transition.override = 1;
+    fire = 1;
+    if(global_info.DISP_CHANGES),
+        disp(strcat('Moved card',{' '},card,{' '},'from DP',{' '},...
+            'to',{' '},moveCmd{2},{' '},'(FD)'));
+    end;
 end

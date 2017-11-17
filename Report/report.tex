@@ -110,6 +110,7 @@ Finite State Machine ?
 \label{sec:2_method_and_design}
 \subsection{Naming Policy}
 \subsection{File structure}
+\label{sec:2_file_structure}
 To reduce the number of files, most of the pre- and post-processor files of the \ac{fp} and \ac{tp} modules have been combined in one single file. An example of this can be shown in listing \ref{lst:COMMON_PRE}, which shows parts of \verb!COMMON_PRE!
 \lstinputlisting[style=matlabcode,caption=COMMON\_PRE.m lines 1-5,label=lst:COMMON_PRE,lastline=5]{\GPenSIM/COMMON_PRE.m}
 
@@ -267,7 +268,17 @@ Lastly, there is the \verb!tDPe_Out! transition. This is the only external outpu
 The Foundation Pile module is duplicated four times, once for every suit, clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared with other suits.
 \newline
 
-This module is inactive during the initial phase, and only becomes interactable once the normal phase starts. It has two external inputs, the first of which is \verb!tFPe_Clubs_Add!. This transition has a shared pre-processor file, . More about in the move command can be read in chapter \ref{sec:3_move_command}.
+This module is inactive during the initial phase, and only becomes interact-able once the normal phase starts. It has two external inputs, the first of which is \verb!tFPe_Clubs_Add!. This transition has a shared pre-processor file, \verb!pre_tFPe_Add!. Listing \ref{lst:pre_tFPe_Add} shows parts of the logic, the full file can be found in \ref{app:pre_tFPe_Add.m}. The pre-processor fetches the token arrived earliest at \verb!pMC_Out_Buffer!. This is an important step, but is not strictly required because of the limitations the resource \verb!playerAction! enforces on the transitions of the Player and Player Bot modules. Still, it makes sense to fetch the earliest token in \ac{fifo} style to make sure that the first moved card reaches its destination first. 
+\newline
+
+Given that the colors of the token have the correct length, the \verb!get_suit_from_transname! function will be run to determine which \ac{fp} the executing transition belongs to. More information about this step can be found in \ref{sec:2_file_structure}. Lastly, the \verb!checkCommand_Move! function is ran to determine the validity of the command in the context of this particular transition. The \verb!checkCommand_Move! function is quite involved, and is discussed in detail in chapter \ref{sec:3_move_command}.
+\lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Add.m lines 5-17,label=lst:pre_tFPe_Add,firstline=5,lastline=17]{\GPenSIM/pre_tFPe_Add.m}
+
+The second external-input is \verb!tFPe_Clubs_Move!. Its used for moving cards to other modules, and works similarly to how movement in handle in the Draw Pile, with the additional caveat that all four Foundation Piles becomes enabled at the time from \verb!pMC_FP_Move!. Due to this its necessary to introduce additional logic to ensure that the issued move-command from the Player or Player Bot modules are meant for this particular module. As with the other modules, the actual validity of the move-command are handles by the \ac{p} and \ac{pb} modules.
+\lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Move.m lines 4-10,label=lst:pre_tFPe_Move,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Move.m}
+
+The only external-output of the {fp} is \verb!tFPe_Clubs_Out!. I
+\lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Out.m lines 4-10,label=lst:pre_tFPe_Out,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Out.m}
 \begin{table}
 	\caption{Transitions used in Foundation Piles}
 	\begin{tabular}{|l|l|l|}
@@ -460,5 +471,45 @@ In order to preventdd
 \subsection{checkCommand\_Move.m}
 \label{app:checkCommand_Move.m}
 \lstinputlisting[style=matlabcode]{\GPenSIM/checkCommand_Move.m}
-%\end{appendices}
+
+\subsection{COMMON\_POST.m}
+\label{app:COMMON_POST.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/COMMON_POST.m}
+
+\subsection{COMMON\_PRE.m}
+\label{app:COMMON_PRE.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/COMMON_PRE.m}
+
+\subsection{draw\_pile\_pdf.m}
+\label{app:draw_pile_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/draw_pile_pdf.m}
+
+\subsection{foundation\_pile\_clubs\_pdf.m}
+\label{app:foundation_pile_clubs_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/foundation_pile_clubs_pdf.m}
+
+\subsection{foundation\_pile\_diamonds\_pdf.m}
+\label{app:foundation_pile_diamonds_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/foundation_pile_diamonds_pdf.m}
+
+\subsection{foundation\_pile\_hearts\_pdf.m}
+\label{app:foundation_pile_hearts_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/foundation_pile_hearts_pdf.m}
+
+\subsection{foundation\_pile\_spades\_pdf.m}
+\label{app:foundation_pile_spades_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/foundation_pile_spades_pdf.m}
+
+\subsection{pre\_tFPe\_Add.m}
+\label{app:pre_tFPe_Add.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tFPe_Add.m}
+
+\subsection{pre\_tFPe\_Move.m}
+\label{app:pre_tFPe_Move.m}
+\lstinputlisting[style=matlabcode,]{\GPenSIM/pre_tFPe_Move.m}
+
+\subsection{pre\_tFPe\_Out.m}
+\label{app:pre_tFPe_Out.m}
+\lstinputlisting[style=matlabcode,]{\GPenSIM/pre_tFPe_Out.m}
+
 \end{document}
