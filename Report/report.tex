@@ -31,12 +31,20 @@
 \noindent\keywordname\enspace\ignorespaces#1}
 \usepackage{nameref}
 \acsetup{first-style=short}
-\DeclareAcronym{dp}{short = DP, long = Draw Pile, class = abbrev}
-\DeclareAcronym{fp}{short = FP, long = Foundation Pile, class = abbrev}
-\DeclareAcronym{tp}{short = TP, long = Tableau Pile, class = abbrev}
+
+% Abbreviations
+\DeclareAcronym{dp}{short = DP, long = Draw Pile Module, class = abbrev}
+\DeclareAcronym{fp}{short = FP, long = Foundation Pile Module, class = abbrev}
+\DeclareAcronym{tp}{short = TP, long = Tableau Pile Module, class = abbrev}
+\DeclareAcronym{p}{short = P, long = Player Module, class = abbrev}
+\DeclareAcronym{pb}{short = PB, long = Player Bot Module, class = abbrev}
 \DeclareAcronym{fifo}{short = FIFO, long = First In First Out (Queue), class = abbrev}
 \DeclareAcronym{lifo}{short = LIFO, long = Last In First Out (Stack), class = abbrev}
 \DeclareAcronym{gui}{short = GUI, long = Graphical User Interface, class = abbrev}
+
+% Nomenclature
+\DeclareAcronym{card}{short = card, long = (In the Petri Net context) A token with a color which represents a card in the deck., class = nomencl}
+\DeclareAcronym{command}{short = command, long = A token with a color which represents a turn or movement command., class = nomencl}
 
 \newcommand{\GPenSIM}{../GPenSIM}
 \definecolor{matlabcomment}{RGB}{34,139,34}
@@ -82,7 +90,8 @@ This project is such and such... +++
 
 \listoffigures
 \listoftables
-\printacronyms[name=Abbreviations]
+\printacronyms[name=Abbreviations,include-classes=abbrev]
+\printacronyms[name=Nomenclature,include-classes=nomencl]
 \section{Introduction}
 This project aims to study the popular card game, Solitaire[Site]. Solitaire is bundled with most Windows[Site] installations, as well as being available for free on several sources. It is also easy to play the game with a physical card deck. A detailed explaination of the games rules can be found in the next chapter, Solitaire Rules[REF]
 \newline
@@ -92,7 +101,6 @@ This project contains a complete model of the game, a GUI to play the game, and 
 
 \subsection{Solitaire Rules}
 
-\subsection{Abbreviations}
 
 Finite State Machine ?
 
@@ -187,39 +195,42 @@ The model developed is pretty large, and contains 94 transition and 42 places. I
 		\label{fig:draw_pile}
 	\end{center}
 \end{figure}
-The Draw Pile module is depicted in figure \ref{fig:draw_pile}, and has several key responsibilities, once of which is to do the initial dealing of cards. In order to preserve the correctness of the gameplay, external input is not allowed during this phase. When first running the model, all the initial tokens of \verb!pDP_Dealer! will be sent to \verb!tDPi_Dealer!. This transition will give each token a color which represents a card in the deck. Possible colors are initially stored in the cell \verb!global_info.DECK!. If \verb!global_info.RANDOM_DECK! is set, a random permutation of the colors will be given to the tokens. By having \verb!global_info.RANDOM_DECK! set to false, it is possible to run analytics which require that the cards are dealt equally each time.
+The Draw Pile module is depicted in figure \ref{fig:draw_pile}, and has several key responsibilities, once of which is to do the initial dealing of cards. In order to preserve the correctness of the gameplay, external input is not allowed during this phase. When first running the model, all the initial tokens of \verb!pDP_Dealer! will be sent to \verb!tDPi_Dealer!. This transition will give each token a color which represents a \ac{card} in the deck. Possible colors are initially stored in the cell \verb!global_info.DECK!. If \verb!global_info.RANDOM_DECK! is set, a random permutation of the colors will be given to the tokens. By having \verb!global_info.RANDOM_DECK! set to false, it is possible to run analytics which require that the cards are dealt equally each time.
 \newline
 
 After all tokens are given a color, \verb!tDPi_Turn! will be enabled. This transition will move cards from the pile which represents face-down cards, \verb!pDP_Draw_FaceDown_Pile! to the one representing face-up cards, \verb!pDP_Draw_FaceUp_Pile!. This transition will fire as many times as the length of \verb!global_info.INITIAL_DEAL_MOVE!, which is 28 in a normal game. This is not something that would be done if the game where played with physical cards, as they would just be dealt without turning them. In this model however, this is required so that existing logic could be re-used.
 \newline
 
-Concurrently to the firing of \verb!tDPi_Turn!, the transition \verb!tDPi_Move_Init! will fire an equal amount of times. The transition will give each of the tokens in \verb!pDP_Move_Init! a color which represents to which tableau pile the card should be moved to. The color given to each token is augmented by the cell, \verb!global_info.INITIAL_DEAL_MOVE!. An example of a color given is \emph{Move:\ac{tp}1:\ac{dp}} which means; \textit{Moving a card from source DP to destination \ac{tp}1}. Every time a card reaches its destined tableau pile, the variable \verb!global_info.CARDS_DEALT! will be incremented by one in \verb!COMMON_POST!. Once it becomes equal to the length of \verb!global_info.INITIAL_DEAL_MOVE!, the initial dealing phase is over, and the normal phase starts.
+Concurrently to the firing of \verb!tDPi_Turn!, the transition \verb!tDPi_Move_Init! will fire an equal amount of times. The transition will give each of the tokens in \verb!pDP_Move_Init! a color which represents to which tableau pile the \ac{card} should be moved to. The color given to each token is augmented by the cell, \verb!global_info.INITIAL_DEAL_MOVE!. An example of a color given is \emph{Move:\ac{tp}1:\ac{dp}} which means; \textit{Moving a card from source DP to destination \ac{tp}1}. Every time a \ac{card} reaches its destined tableau pile, the variable \verb!global_info.CARDS_DEALT! will be incremented by one in \verb!COMMON_POST!. Once it becomes equal to the length of \verb!global_info.INITIAL_DEAL_MOVE!, the initial dealing phase is over, and the normal phase starts.
 \newline
 
 During the normal phase, external input is allowed. The first input of the Draw Pile Module is \verb!tDPe_Move!. This transition has an pre-processor file, which makes it only fire if there are tokens in \verb!pDP_Draw_FaceUp_Pile!. Additionally, the Player and Player Bot modules ensures that the enabling token has color on the format \textit{Move:(destination):\ac{dp}}.
 \lstinputlisting[style=matlabcode,caption=tDPe\_Move\_pre.m,label=lst:tDPe_Move_pre]{\GPenSIM/tDPe_Move_pre.m}
 
-The second input, \verb!tDPe_Turn! is used to used to simply move cards from the face-down pile to the face-up pile during the normal phase. An interesting thing about this is that once all the cards are in the face-up pile, the next time one attempts to turn a card, all cards should be moved back to the face-down pile in \ac{lifo} style, just as they would if you simply flip the deck of cards around in real-life. 
+The second input, \verb!tDPe_Turn! is used to used to simply move cards from the face-down pile to the face-up pile during the normal phase. An interesting thing about this is that once all the cards are in the face-up pile, the next time one attempts to turn a \ac{card}, all cards should be moved back to the face-down pile in \ac{lifo} style, just as they would if you simply flip the deck of cards around in real-life. 
 \newline
-This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually an siphon, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a siphon, so the card would be removed from the game if it fired.
+This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually an siphon, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a siphon, so the \ac{card} would be removed from the game if it fired.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Enable\_FP\_Trans\_post.m,label=lst:tDPi_Enable_FP_Trans_post]{\GPenSIM/tDPi_Enable_FP_Trans_post.m}
-Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived card from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards have been successfully turned around.
+Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived \ac{card} from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards have been successfully turned around.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_pre.m,label=lst:tDPi_Flip_Pile_pre]{\GPenSIM/tDPi_Flip_Pile_pre.m}
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_post.m,label=lst:tDPi_Flip_Pile_post]{\GPenSIM/tDPi_Flip_Pile_post.m}
+
+Lastly, there is the \verb!tDPe_Out! transition. This is the only external output of the module. When enabled, its pre-processor will take the lastest card arrived at \verb!pDP_Draw_FaceUp_Pile!, but the earliest command arrived at \verb!pDP_Move_Out! when firing. By taking the earliest command arrived in a \ac{fifo} manner, we ensure that the inital dealing will be correct. If we were to take the latest command, we would have to add additional logic such as alternating firing to make certain the ordering of cards would be correct. The code is shown in lising \ref{lst:tDPe_Out_pre}
+\lstinputlisting[style=matlabcode,caption=tDPe\_Out\_pre.m,label=lst:tDPe_Out_pre]{\GPenSIM/tDPe_Out_pre.m}
 \begin{table}
 	\caption{Transitions used in Draw Pile}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		1  & tDPe\_Move               &    \\ \hline
-		2  & tDPe\_Out                &    \\ \hline
-		3  & tDPe\_Turn               &    \\ \hline
-		4  & tDPi\_Dealer             &    \\ \hline
-		5  & tDPi\_Enable\_FP\_Trans  &    \\ \hline
-		6  & tDPi\_Flip\_Pile         &    \\ \hline
-		7  & tDPi\_Move\_Init         &    \\ \hline
-		8  & tDPi\_Turn               &    \\ \hline
+		1  & tDPe\_Move               &   External input for the move-\ac{command} \\ \hline
+		2  & tDPe\_Out                &   External output \\ \hline
+		3  & tDPe\_Turn               &   External input for the turn-\ac{command} \\ \hline
+		4  & tDPi\_Dealer             &   Gives every token a color to represent a card in the deck. \\ \hline
+		5  & tDPi\_Enable\_FP\_Trans  &   Used to facilitate the flipping of the face-up pile. \\ \hline
+		6  & tDPi\_Flip\_Pile         &   Moves cards from face-up pile to face-down pile in a \ac{lifo} manner. \\ \hline
+		7  & tDPi\_Move\_Init         &   Generates initial move-commands to facilitate initial dealing of the cards. \\ \hline
+		8  & tDPi\_Turn               &   Moves a card from the face-down pile to the face-up pile. \\ \hline
 	\end{tabular}
 \end{table}
 \begin{table}
@@ -228,12 +239,12 @@ Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are
 		\hline
 		& Name & Description \\
 		\hline
-		1  & pDP\_Dealer               &  \\ \hline
-		2  & pDP\_Draw\_FaceDown\_Pile &  \\ \hline
-		3  & pDP\_Draw\_FaceUp\_Pile   &  \\ \hline
-		4  & pDP\_Move\_Init           &  \\ \hline
-		5  & pDP\_Move\_Out            &  \\ \hline
-		6  & pDP\_Turn                 &  \\ \hline
+		1  & pDP\_Dealer               & Holds the initial tokens which will become cards. \\ \hline
+		2  & pDP\_Draw\_FaceDown\_Pile & Holds the face-down cards. These are not visible to the player. \\ \hline
+		3  & pDP\_Draw\_FaceUp\_Pile   & Holde the face-up cards. Only the top card is visible to the player. \\ \hline
+		4  & pDP\_Move\_Init           & Holds initial tokens used for generating move-commands. \\ \hline
+		5  & pDP\_Move\_Out            & Buffer for move-commands.  \\ \hline
+		6  & pDP\_Turn                 & Buffer for turn-commands. \\ \hline
 	\end{tabular}
 \end{table}
 \subsection{Foundation Pile Module}
@@ -242,6 +253,8 @@ Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are
 		\includegraphics[width=\textwidth]{images/foundationPile}
 		\caption{Foundation Pile Module}
 	\end{center}
+
+bla bla bla
 \end{figure}
 
 \begin{table}

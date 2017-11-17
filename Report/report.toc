@@ -3,26 +3,25 @@
 \contentsline {author}{ }{1}
 \contentsline {section}{\numberline {1}Introduction}{3}
 \contentsline {subsection}{\numberline {1.1}Solitaire Rules}{3}
-\contentsline {subsection}{\numberline {1.2}Abbreviations}{3}
-\contentsline {section}{\numberline {2}Method and Design}{6}
-\contentsline {subsection}{\numberline {2.1}Naming Policy}{6}
-\contentsline {subsection}{\numberline {2.2}Overall Design}{6}
-\contentsline {subsection}{\numberline {2.3}Draw Pile Module}{6}
-\contentsline {subsection}{\numberline {2.4}Foundation Pile Module}{12}
-\contentsline {subsection}{\numberline {2.5}Tableau Pile Module}{12}
-\contentsline {subsection}{\numberline {2.6}Module Connector Module}{12}
-\contentsline {subsection}{\numberline {2.7}Player Module}{12}
-\contentsline {subsection}{\numberline {2.8}Player Bot Module}{12}
-\contentsline {section}{\numberline {3}Implementation}{12}
-\contentsline {subsection}{\numberline {3.1}\ac {gui}}{12}
-\contentsline {subsection}{\numberline {3.2}Algorithms}{12}
-\contentsline {subsubsection}{Atomicity}{12}
+\contentsline {section}{\numberline {2}Method and Design}{4}
+\contentsline {subsection}{\numberline {2.1}Naming Policy}{4}
+\contentsline {subsection}{\numberline {2.2}Overall Design}{4}
+\contentsline {subsection}{\numberline {2.3}Draw Pile Module}{4}
+\contentsline {subsection}{\numberline {2.4}Foundation Pile Module}{9}
+\contentsline {subsection}{\numberline {2.5}Tableau Pile Module}{9}
+\contentsline {subsection}{\numberline {2.6}Module Connector Module}{9}
+\contentsline {subsection}{\numberline {2.7}Player Module}{9}
+\contentsline {subsection}{\numberline {2.8}Player Bot Module}{9}
+\contentsline {section}{\numberline {3}Implementation}{9}
+\contentsline {subsection}{\numberline {3.1}\ac {gui}}{9}
+\contentsline {subsection}{\numberline {3.2}Algorithms}{9}
+\contentsline {subsubsection}{Atomicity}{9}
 \contentsline {subsection}{\numberline {3.3}Commands}{12}
-\contentsline {subsection}{\numberline {3.4}Initial Dealing}{13}
-\contentsline {subsection}{\numberline {3.5}Resources}{13}
-\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{13}
-\contentsline {subsection}{\numberline {3.7}Scoring}{13}
-\contentsline {subsection}{\numberline {3.8}Possible improvments}{13}
+\contentsline {subsection}{\numberline {3.4}Initial Dealing}{12}
+\contentsline {subsection}{\numberline {3.5}Resources}{12}
+\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{12}
+\contentsline {subsection}{\numberline {3.7}Scoring}{12}
+\contentsline {subsection}{\numberline {3.8}Possible improvments}{12}
 \contentsline {section}{\numberline {4}Testing, Analysis and Results}{13}
 \contentsline {subsection}{\numberline {4.1}Algorithms}{13}
 \contentsline {subsubsection}{Atomicity}{13}
