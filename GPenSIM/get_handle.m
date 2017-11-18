@@ -1,5 +1,5 @@
 function [value] = get_handle(Handle, PropertyName)
-    % Extend Matlab SET command to first check if GUI is enabled.
+    % Extend Matlab GET command to first check if GUI is enabled.
     % GET(H,'PropertyName')
     global global_info;
     if global_info.GUI_ENABLED,

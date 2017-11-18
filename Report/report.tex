@@ -119,64 +119,7 @@ By doing this it is possible to reduce the number of files required without over
 
 With this approach it is no longer possible to hard-code the names of the related transitions and places, so two additional functions; \verb!get_tableau_from_transname! and \verb!get_suit_from_transname! were developed. These functions take the name of the transition as input, and then return the unique identifier for which module it belongs to. The actual code is pretty simple, and parts of \verb!get_suit_from_transname! is shown in listing \ref{lst:get_suit_from_transname}. The reasoning behind not using the Matlab command \verb!contains! is simply that it is not supported in older versions.
 \lstinputlisting[style=matlabcode,caption=get\_suit\_from\_transname.m lines 7-17,label=lst:get_suit_from_transname,firstline=7,lastline=17]{\GPenSIM/get_suit_from_transname.m}
-%\begin{table}
-%	\caption{Places}
-%	\begin{tabular}{|l|l|l|l|}
-%		\hline
-%		 & Name & Module & Usage \\
-%		\hline
-
-%		21 & tMC\_DP\_Move\_Siphon    &  &  \\ \hline
-%		22 & tMC\_FP\_Move\_Siphon    &  &  \\ \hline
-%		23 & tMC\_Out\_Buffer\_Siphon &  &  \\ \hline
-%		24 & tMC\_TP\_Move\_Siphon    &  &  \\ \hline
-%		25 & tMC\_TP\_Turn\_Siphon    &  &  \\ \hline
-%		26 & tPBe\_DP\_Move           &  &  \\ \hline
-%		27 & tPBe\_DP\_Turn           &  &  \\ \hline
-%		28 & tPBe\_FP\_Move           &  &  \\ \hline
-%		29 & tPBe\_TP\_Move           &  &  \\ \hline
-%		30 & tPBe\_TP\_Turn           &  &  \\ \hline
-%		31 & tPBi\_Gen                &  &  \\ \hline
-%		32 & tPBi\_Siphon             &  &  \\ \hline
-%		33 & tPe\_DP\_Move            &  &  \\ \hline
-%		34 & tPe\_DP\_Turn            &  &  \\ \hline
-%		35 & tPe\_FP\_Clubs\_Move     &  &  \\ \hline
-%		36 & tPe\_FP\_Diamonds\_Move  &  &  \\ \hline
-%		37 & tPe\_FP\_Hearts\_Move    &  &  \\ \hline
-%		38 & tPe\_FP\_Spades\_Move    &  &  \\ \hline
-%		39 & tPe\_TP\_1\_Move         &  &  \\ \hline
-%		40 & tPe\_TP\_1\_Turn         &  &  \\ \hline
-%		41 & tPe\_TP\_2\_Move         &  &  \\ \hline
-%		42 & tPe\_TP\_2\_Turn         &  &  \\ \hline
-%		43 & tPe\_TP\_3\_Move         &  &  \\ \hline
-%		44 & tPe\_TP\_3\_Turn         &  &  \\ \hline
-%		45 & tPe\_TP\_4\_Move         &  &  \\ \hline
-%		46 & tPe\_TP\_4\_Turn         &  &  \\ \hline
-%		47 & tPe\_TP\_5\_Move         &  &  \\ \hline
-%		48 & tPe\_TP\_5\_Turn         &  &  \\ \hline
-%		49 & tPe\_TP\_6\_Move         &  &  \\ \hline
-%		50 & tPe\_TP\_6\_Turn         &  &  \\ \hline
-%		51 & tPe\_TP\_7\_Move         &  &  \\ \hline
-%		52 & tPe\_TP\_7\_Turn         &  &  \\ \hline
-
-%	\end{tabular}
-%\end{table}
-%\begin{table}
-%	\caption{Places used in Draw Pile}
-%	\begin{tabular}{|l|l|l|}
-%		\hline
-%		& Name & Description \\
-%		\hline
-%		15 & pMC\_DP\_Move             &  \\ \hline
-%		16 & pMC\_DP\_Turn             &  \\ \hline
-%		17 & pMC\_FP\_Move             &  \\ \hline
-%		18 & pMC\_Out\_Buffer          &  \\ \hline
-%		19 & pMC\_TP\_Move             &  \\ \hline
-%		20 & pMC\_TP\_Turn             &  \\ \hline
-%		21 & pPB\_Cmd                  &  \\ \hline
-
-%	\end{tabular}
-%\end{table}
+\clearpage
 \subsection{Overall Design}
 
 \begin{figure}
@@ -188,12 +131,6 @@ With this approach it is no longer possible to hard-code the names of the relate
 \end{figure}
 
 
-\begin{figure}
-	\label{fig:full_vertical}
-	 % Left, Bottom, Right, Top
-	\includegraphics[trim=40 100 100 310,angle=90,scale=1.4]{images/overallViewPdf}
-	\caption{The complete model - Without the internal components of the modules.}
-\end{figure}
 The model developed is pretty large, and contains 94 transition and 42 places. It is developed using the modualar approach, and encompasses 6 different modules. Some of the modules are duplicated, with the only difference being the names of the transitions and places.
 \newline
 
@@ -229,23 +166,7 @@ Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are
 Lastly, there is the \verb!tDPe_Out! transition. This is the only external output of the module. When enabled, its pre-processor will take the lastest card arrived at \verb!pDP_Draw_FaceUp_Pile!, but the earliest command arrived at \verb!pDP_Move_Out! when firing. By taking the earliest command arrived in a \ac{fifo} manner, we ensure that the inital dealing will be correct. If we were to take the latest command, we would have to add additional logic such as alternating firing to make certain the ordering of cards would be correct. The code is shown in lising \ref{lst:tDPe_Out_pre}
 \lstinputlisting[style=matlabcode,caption=tDPe\_Out\_pre.m,label=lst:tDPe_Out_pre]{\GPenSIM/tDPe_Out_pre.m}
 \begin{table}
-	\caption{Transitions used in Draw Pile}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		& Name & Description \\
-		\hline
-		1  & tDPe\_Move               &   External input for the move-\ac{command} \\ \hline
-		2  & tDPe\_Out                &   External output \\ \hline
-		3  & tDPe\_Turn               &   External input for the turn-\ac{command} \\ \hline
-		4  & tDPi\_Dealer             &   Gives every token a color to represent a card in the deck. \\ \hline
-		5  & tDPi\_Enable\_FP\_Trans  &   Used to facilitate the flipping of the face-up pile. \\ \hline
-		6  & tDPi\_Flip\_Pile         &   Moves cards from face-up pile to face-down pile in a \ac{lifo} manner. \\ \hline
-		7  & tDPi\_Move\_Init         &   Generates initial move-commands to facilitate initial dealing of the cards. \\ \hline
-		8  & tDPi\_Turn               &   Moves a card from the face-down pile to the face-up pile. \\ \hline
-	\end{tabular}
-\end{table}
-\begin{table}
-	\caption{Places used in Draw Pile}
+	\caption{Places and transitions used in Draw Pile}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
@@ -256,8 +177,17 @@ Lastly, there is the \verb!tDPe_Out! transition. This is the only external outpu
 		4  & pDP\_Move\_Init           & Holds initial tokens used for generating move-commands. \\ \hline
 		5  & pDP\_Move\_Out            & Buffer for move-commands.  \\ \hline
 		6  & pDP\_Turn                 & Buffer for turn-commands. \\ \hline
+		7  & tDPe\_Move               &   External input for the move-\ac{command} \\ \hline
+		8  & tDPe\_Out                &   External output \\ \hline
+		9  & tDPe\_Turn               &   External input for the turn-\ac{command} \\ \hline
+		10  & tDPi\_Dealer             &   Gives every token a color to represent a card in the deck. \\ \hline
+		11  & tDPi\_Enable\_FP\_Trans  &   Used to facilitate the flipping of the face-up pile. \\ \hline
+		12  & tDPi\_Flip\_Pile         &   Moves cards from face-up pile to face-down pile in a \ac{lifo} manner. \\ \hline
+		13  & tDPi\_Move\_Init         &   Generates initial move-commands to facilitate initial dealing of the cards. \\ \hline
+		14  & tDPi\_Turn               &   Moves a card from the face-down pile to the face-up pile. \\ \hline
 	\end{tabular}
 \end{table}
+\clearpage
 \subsection{Foundation Pile Module}
 \begin{figure}
 	\begin{center}
@@ -280,41 +210,19 @@ The second external-input is \verb!tFPe_Clubs_Move!. Its used for moving cards t
 The only external-output of the {fp} is \verb!tFPe_Clubs_Out!. I
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Out.m lines 4-10,label=lst:pre_tFPe_Out,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Out.m}
 \begin{table}
-	\caption{Transitions used in Foundation Piles}
+	\caption{Places and transitions used in Foundation Pile - Clubs}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		9  & tFPe\_Clubs\_Add         &    \\ \hline
-		10 & tFPe\_Clubs\_Move        &    \\ \hline
-		11 & tFPe\_Clubs\_Out         &    \\ \hline
-		12 & tFPe\_Diamonds\_Add      &    \\ \hline
-		13 & tFPe\_Diamonds\_Move     &    \\ \hline
-		14 & tFPe\_Diamonds\_Out      &    \\ \hline
-		15 & tFPe\_Hearts\_Add        &    \\ \hline
-		16 & tFPe\_Hearts\_Move       &    \\ \hline
-		17 & tFPe\_Hearts\_Out        &    \\ \hline
-		18 & tFPe\_Spades\_Add        &    \\ \hline
-		19 & tFPe\_Spades\_Move       &    \\ \hline
-		20 & tFPe\_Spades\_Out        &    \\ \hline
+		1  & pFP\_Clubs\_Move        &  \\ \hline
+		2  & pFP\_Clubs\_Pile        &  \\ \hline
+		3  & tFPe\_Clubs\_Add        &    \\ \hline
+		4 & tFPe\_Clubs\_Move        &    \\ \hline
+		5 & tFPe\_Clubs\_Out         &    \\ \hline
 	\end{tabular}
 \end{table}
-\begin{table}
-	\caption{Places used in Foundation Piles}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		& Name & Description \\
-		\hline
-		7  & pFP\_Clubs\_Move          &  \\ \hline
-		8  & pFP\_Clubs\_Pile          &  \\ \hline
-		9  & pFP\_Diamonds\_Move       &  \\ \hline
-		10 & pFP\_Diamonds\_Pile       &  \\ \hline
-		11 & pFP\_Hearts\_Move         &  \\ \hline
-		12 & pFP\_Hearts\_Pile         &  \\ \hline
-		13 & pFP\_Spades\_Move         &  \\ \hline
-		14 & pFP\_Spades\_Pile         &  \\ \hline
-	\end{tabular}
-\end{table}
+\clearpage
 \subsection{Tableau Pile Module}
 
 \begin{figure}
@@ -324,90 +232,93 @@ The only external-output of the {fp} is \verb!tFPe_Clubs_Out!. I
 	\end{center}
 \end{figure}
 \begin{table}
-	\caption{Transitions used in Tableau Piles}
+	\caption{Places and transitions used in Tableau Pile - 1}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		53 & tTPe\_1\_Add\_FaceDown   &    \\ \hline
-		54 & tTPe\_1\_Add\_FaceUp     &    \\ \hline
-		55 & tTPe\_1\_Move            &    \\ \hline
-		56 & tTPe\_1\_Out             &    \\ \hline
-		57 & tTPe\_1\_Turn            &    \\ \hline
-		58 & tTPe\_2\_Add\_FaceDown   &    \\ \hline
-		59 & tTPe\_2\_Add\_FaceUp     &    \\ \hline
-		60 & tTPe\_2\_Move            &    \\ \hline
-		61 & tTPe\_2\_Out             &    \\ \hline
-		62 & tTPe\_2\_Turn            &    \\ \hline
-		63 & tTPe\_3\_Add\_FaceDown   &    \\ \hline
-		64 & tTPe\_3\_Add\_FaceUp     &    \\ \hline
-		65 & tTPe\_3\_Move            &    \\ \hline
-		66 & tTPe\_3\_Out             &    \\ \hline
-		67 & tTPe\_3\_Turn            &    \\ \hline
-		68 & tTPe\_4\_Add\_FaceDown   &    \\ \hline
-		69 & tTPe\_4\_Add\_FaceUp     &    \\ \hline
-		70 & tTPe\_4\_Move            &    \\ \hline
-		71 & tTPe\_4\_Out             &    \\ \hline
-		72 & tTPe\_4\_Turn            &    \\ \hline
-		73 & tTPe\_5\_Add\_FaceDown   &    \\ \hline
-		74 & tTPe\_5\_Add\_FaceUp     &    \\ \hline
-		75 & tTPe\_5\_Move            &    \\ \hline
-		76 & tTPe\_5\_Out             &    \\ \hline
-		77 & tTPe\_5\_Turn            &    \\ \hline
-		78 & tTPe\_6\_Add\_FaceDown   &    \\ \hline
-		79 & tTPe\_6\_Add\_FaceUp     &    \\ \hline
-		80 & tTPe\_6\_Move            &    \\ \hline
-		81 & tTPe\_6\_Out             &    \\ \hline
-		82 & tTPe\_6\_Turn            &    \\ \hline
-		83 & tTPe\_7\_Add\_FaceDown   &    \\ \hline
-		84 & tTPe\_7\_Add\_FaceUp     &    \\ \hline
-		85 & tTPe\_7\_Move            &    \\ \hline
-		86 & tTPe\_7\_Out             &    \\ \hline
-		87 & tTPe\_7\_Turn            &    \\ \hline
-		88 & tTPi\_1\_Move\_Multiple  &    \\ \hline
-		89 & tTPi\_2\_Move\_Multiple  &    \\ \hline
-		90 & tTPi\_3\_Move\_Multiple  &    \\ \hline
-		91 & tTPi\_4\_Move\_Multiple  &    \\ \hline
-		92 & tTPi\_5\_Move\_Multiple  &    \\ \hline
-		93 & tTPi\_6\_Move\_Multiple  &    \\ \hline
-		94 & tTPi\_7\_Move\_Multiple  &    \\ \hline
-	\end{tabular}\end{table}
-\begin{table}
-	\caption{Places used in Tableau Piles}
-	\begin{tabular}{|l|l|l|}
-		\hline
-		& Name & Description \\
-		\hline
-		22 & pTP\_1\_FaceDown\_Pile    &  \\ \hline
-		23 & pTP\_1\_FaceUp\_Pile      &  \\ \hline
-		24 & pTP\_1\_Move              &  \\ \hline
-		25 & pTP\_2\_FaceDown\_Pile    &  \\ \hline
-		26 & pTP\_2\_FaceUp\_Pile      &  \\ \hline
-		27 & pTP\_2\_Move              &  \\ \hline
-		28 & pTP\_3\_FaceDown\_Pile    &  \\ \hline
-		29 & pTP\_3\_FaceUp\_Pile      &  \\ \hline
-		30 & pTP\_3\_Move              &  \\ \hline
-		31 & pTP\_4\_FaceDown\_Pile    &  \\ \hline
-		32 & pTP\_4\_FaceUp\_Pile      &  \\ \hline
-		33 & pTP\_4\_Move              &  \\ \hline
-		34 & pTP\_5\_FaceDown\_Pile    &  \\ \hline
-		35 & pTP\_5\_FaceUp\_Pile      &  \\ \hline
-		36 & pTP\_5\_Move              &  \\ \hline
-		37 & pTP\_6\_FaceDown\_Pile    &  \\ \hline
-		38 & pTP\_6\_FaceUp\_Pile      &  \\ \hline
-		39 & pTP\_6\_Move              &  \\ \hline
-		40 & pTP\_7\_FaceDown\_Pile    &  \\ \hline
-		41 & pTP\_7\_FaceUp\_Pile      &  \\ \hline
-		42 & pTP\_7\_Move              &  \\ \hline
+		1 & pTP\_1\_FaceDown\_Pile    &  \\ \hline
+		2 & pTP\_1\_FaceUp\_Pile      &  \\ \hline
+		3 & pTP\_1\_Move              &  \\ \hline
+		4 & tTPe\_1\_Add\_FaceDown   &    \\ \hline
+		5 & tTPe\_1\_Add\_FaceUp     &    \\ \hline
+		6 & tTPe\_1\_Move            &    \\ \hline
+		7 & tTPe\_1\_Out             &    \\ \hline
+		8 & tTPe\_1\_Turn            &    \\ \hline
+		9 & tTPi\_1\_Move\_Multiple  &    \\ \hline
 	\end{tabular}
 \end{table}
+\clearpage
 \subsection{Module Connector Module}
-
+\begin{table}
+	\caption{Places and transitions used in Module Connector}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		& Name & Description \\
+		\hline
+		1 & pMC\_DP\_Move             &  \\ \hline
+		2 & pMC\_DP\_Turn             &  \\ \hline
+		3 & pMC\_FP\_Move             &  \\ \hline
+		4 & pMC\_Out\_Buffer          &  \\ \hline
+		5 & pMC\_TP\_Move             &  \\ \hline
+		6 & pMC\_TP\_Turn             &  \\ \hline
+		7 & tMC\_DP\_Move\_Siphon     &  \\ \hline
+		8 & tMC\_FP\_Move\_Siphon     &  \\ \hline
+		9 & tMC\_Out\_Buffer\_Siphon  &  \\ \hline
+		10 & tMC\_TP\_Move\_Siphon     &  \\ \hline
+		11 & tMC\_TP\_Turn\_Siphon     &  \\ \hline
+	\end{tabular}
+\end{table}
+\clearpage
 \subsection{Player Module}
-
+\begin{table}
+	\caption{Transitions used in Player}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		& Name & Description \\
+		\hline
+		1 & tPe\_DP\_Move            &    \\ \hline
+		2 & tPe\_DP\_Turn            &    \\ \hline
+		3 & tPe\_FP\_Clubs\_Move     &    \\ \hline
+		4 & tPe\_FP\_Diamonds\_Move  &    \\ \hline
+		5 & tPe\_FP\_Hearts\_Move    &    \\ \hline
+		6 & tPe\_FP\_Spades\_Move    &    \\ \hline
+		7 & tPe\_TP\_1\_Move         &    \\ \hline
+		8 & tPe\_TP\_1\_Turn         &    \\ \hline
+		9 & tPe\_TP\_2\_Move         &    \\ \hline
+		10 & tPe\_TP\_2\_Turn         &    \\ \hline
+		11 & tPe\_TP\_3\_Move         &    \\ \hline
+		12 & tPe\_TP\_3\_Turn         &    \\ \hline
+		13 & tPe\_TP\_4\_Move         &    \\ \hline
+		14 & tPe\_TP\_4\_Turn         &    \\ \hline
+		15 & tPe\_TP\_5\_Move         &    \\ \hline
+		16 & tPe\_TP\_5\_Turn         &    \\ \hline
+		17 & tPe\_TP\_6\_Move         &    \\ \hline
+		18 & tPe\_TP\_6\_Turn         &    \\ \hline
+		19 & tPe\_TP\_7\_Move         &    \\ \hline
+		20 & tPe\_TP\_7\_Turn         &    \\ \hline
+	\end{tabular}
+\end{table}
+\clearpage
 \subsection{Player Bot Module}
-
-
+\begin{table}
+	\caption{Places and transitions used in Player Bot}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		& Name & Description \\
+		\hline
+		1 & pPB\_Cmd          &  \\ \hline
+		2 & tPBe\_DP\_Move    &  \\ \hline
+		3 & tPBe\_DP\_Turn    &  \\ \hline
+		4 & tPBe\_FP\_Move    &  \\ \hline
+		5 & tPBe\_TP\_Move    &  \\ \hline
+		6 & tPBe\_TP\_Turn    &  \\ \hline
+		7 & tPBi\_Gen         &  \\ \hline
+		8 & tPBi\_Siphon      &  \\ \hline
+	\end{tabular}
+\end{table}
+*tPBi\_Gen\_Stop is deleted. But code is still there. Make comment on why this is removed*
+\clearpage
 \section{Implementation}
 \label{sec:3_implementation}
 \subsection{\ac{gui}}
@@ -424,7 +335,16 @@ In order to make sure that only validity of the move-commands, the function \ver
 \newline
 
 The input parameter \verb!command! contains the actual command, \verb!destination! contains the unique identifiers of the \ac{fp} or \ac{tp} modules. Valid input for \verb!destination! would be \textit{C, D, H, S, 1, 2, 3, 4, 5, 6 or 7}, and is used to ensure that the command is received by the destined module. Parameter \verb!source! is only used when sending a command, and contains the actual name of the transition which issued the game. This is mainly used to set the variable \verb!global_info.last_command_source! which will be the name of the transition holding the \verb!playerAction! resource. Resources are discussed in more detail in chapter \ref{sec:3_Resources}. Lastly, the parameter \verb!handle_err! holds the GUI-component where error mesasges will be written. Full code for the function can be found in the appendix, at chapter \ref{app:checkCommand_Move.m}.
+\\
 
+Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the function.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/checkCommand_Move}
+		\caption{Flowchart - checkCommand\_Move}
+		\label{fig:checkCommand_Move}
+	\end{center}
+\end{figure}
 \subsection{Initial Dealing}
 \subsection{Resources}
 \label{sec:3_Resources}
@@ -465,8 +385,16 @@ In order to preventdd
 \bibitem{coursematerial} Data Intensive Systems Compendium, Tomasz Wiktorski et al.
 
 \end{thebibliography}
-
+\addtocmark{Appendix}
 \appendix
+\section{Overall design - horizontal view}
+\begin{figure}
+	\label{fig:full_vertical}
+	% Left, Bottom, Right, Top
+	\includegraphics[trim=40 100 100 310,angle=90,scale=1.4]{images/overallViewPdf}
+	\caption{The complete model in horizontal view}
+\end{figure}
+\clearpage
 \section{Matlab code}	
 \subsection{checkCommand\_Move.m}
 \label{app:checkCommand_Move.m}
@@ -500,16 +428,224 @@ In order to preventdd
 \label{app:foundation_pile_spades_pdf.m}
 \lstinputlisting[style=matlabcode]{\GPenSIM/foundation_pile_spades_pdf.m}
 
+\subsection{get\_handle.m}
+\label{app:get_handle.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/get_handle.m}
+
+\subsection{get\_suit\_from\_transname.m}
+\label{app:get_suit_from_transname.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/get_suit_from_transname.m}
+
+\subsection{get\_tableau\_from\_transname.m}
+\label{app:get_tableau_from_transname.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/get_tableau_from_transname.m}
+
+\subsection{main\_simulation\_file.m}
+\label{app:main_simulation_file.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/main_simulation_file.m}
+
+\subsection{module\_connector\_pdf.m}
+\label{app:module_connector_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/module_connector_pdf.m}
+
+\subsection{player\_bot\_pdf.m}
+\label{app:player_bot_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/player_bot_pdf.m}
+
+\subsection{player\_GUI.m}
+\label{app:player_GUI.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/player_GUI.m}
+
+\subsection{player\_pdf.m}
+\label{app:player_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/player_pdf.m}
+
+\subsection{player\_update\_GUI.m}
+\label{app:player_update_GUI.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/player_update_GUI.m}
+
+\subsection{post\_tTPe\_Add\_FaceUp.m}
+\label{app:post_tTPe_Add_FaceUp.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/post_tTPe_Add_FaceUp.m}
+
 \subsection{pre\_tFPe\_Add.m}
 \label{app:pre_tFPe_Add.m}
 \lstinputlisting[style=matlabcode]{\GPenSIM/pre_tFPe_Add.m}
 
 \subsection{pre\_tFPe\_Move.m}
 \label{app:pre_tFPe_Move.m}
-\lstinputlisting[style=matlabcode,]{\GPenSIM/pre_tFPe_Move.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tFPe_Move.m}
 
 \subsection{pre\_tFPe\_Out.m}
 \label{app:pre_tFPe_Out.m}
-\lstinputlisting[style=matlabcode,]{\GPenSIM/pre_tFPe_Out.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tFPe_Out.m}
+
+\subsection{pre\_tPe\_FP\_Move.m}
+\label{app:pre_tPe_FP_Move.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tPe_FP_Move.m}
+
+\subsection{pre\_tPe\_TP\_Move.m}
+\label{app:pre_tPe_TP_Move.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tPe_TP_Move.m}
+
+\subsection{pre\_tPe\_TP\_Turn.m}
+\label{app:pre_tPe_TP_Turn.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tPe_TP_Turn.m}
+
+\subsection{pre\_tTPe\_Add\_FaceDown.m}
+\label{app:pre_tTPe_Add_FaceDown.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPe_Add_FaceDown.m}
+
+\subsection{pre\_tTPe\_Add\_FaceUp.m}
+\label{app:pre_tTPe_Add_FaceUp.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPe_Add_FaceUp.m}
+
+\subsection{pre\_tTPe\_Move.m}
+\label{app:pre_tTPe_Move.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPe_Move.m}
+
+\subsection{pre\_tTPe\_Out.m}
+\label{app:pre_tTPe_Out.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPe_Out.m}
+
+\subsection{pre\_tTPe\_Turn.m}
+\label{app:pre_tTPe_Turn.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPe_Turn.m}
+
+\subsection{pre\_tTPi\_Move\_Multiple.m}
+\label{app:pre_tTPi_Move_Multiple.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/pre_tTPi_Move_Multiple.m}
+
+\subsection{set\_handle.m}
+\label{app:set_handle.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/set_handle.m}
+
+\subsection{splitCommand.m}
+\label{app:splitCommand.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/splitCommand.m}
+
+\subsection{tableau\_pile\_1\_pdf.m}
+\label{app:tableau_pile_1_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_1_pdf.m}
+
+\subsection{tableau\_pile\_2\_pdf.m}
+\label{app:tableau_pile_2_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_2_pdf.m}
+
+\subsection{tableau\_pile\_3\_pdf.m}
+\label{app:tableau_pile_3_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_3_pdf.m}
+
+\subsection{tableau\_pile\_4\_pdf.m}
+\label{app:tableau_pile_4_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_4_pdf.m}
+
+\subsection{tableau\_pile\_5\_pdf.m}
+\label{app:tableau_pile_5_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_5_pdf.m}
+
+\subsection{tableau\_pile\_6\_pdf.m}
+\label{app:tableau_pile_6_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_6_pdf.m}
+
+\subsection{tableau\_pile\_7\_pdf.m}
+\label{app:tableau_pile_7_pdf.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tableau_pile_7_pdf.m}
+
+\subsection{tDPe\_Move\_pre.m}
+\label{app:tDPe_Move_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPe_Move_pre.m}
+
+\subsection{tDPe\_Out\_pre.m}
+\label{app:tDPe_Out_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPe_Out_pre.m}
+
+\subsection{tDPi\_Dealer\_pre.m}
+\label{app:tDPi_Dealer_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Dealer_pre.m}
+
+\subsection{tDPi\_Enable\_FP\_Trans\_post.m}
+\label{app:tDPi_Enable_FP_Trans_post.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Enable_FP_Trans_post.m}
+
+\subsection{tDPi\_Flip\_Pile\_post.m}
+\label{app:tDPi_Flip_Pile_post.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Flip_Pile_post.m}
+
+\subsection{tDPi\_Flip\_Pile\_pre.m}
+\label{app:tDPi_Flip_Pile_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Flip_Pile_pre.m}
+
+\subsection{tDPi\_Move\_Init\_pre.m}
+\label{app:tDPi_Move_Init_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Move_Init_pre.m}
+
+\subsection{tDPi\_Turn\_post.m}
+\label{app:tDPi_Turn_post.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Turn_post.m}
+
+\subsection{tDPi\_Turn\_pre.m}
+\label{app:tDPi_Turn_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Turn_pre.m}
+
+\subsection{tMC\_DP\_Move\_Siphon\_pre.m}
+\label{app:tMC_DP_Move_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_DP_Move_Siphon_pre.m}
+
+\subsection{tMC\_FP\_Move\_Siphon\_pre.m}
+\label{app:tMC_FP_Move_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_FP_Move_Siphon_pre.m}
+
+\subsection{tMC\_Out\_Buffer\_Siphon\_pre.m}
+\label{app:tMC_Out_Buffer_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_Out_Buffer_Siphon_pre.m}
+
+\subsection{tMC\_TP\_Move\_Siphon\_pre.m}
+\label{app:tMC_TP_Move_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Move_Siphon_pre.m}
+
+\subsection{tMC\_TP\_Turn\_Siphon\_pre.m}
+\label{app:tMC_TP_Turn_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Turn_Siphon_pre.m}
+
+\subsection{tPBe\_DP\_Move\_pre.m}
+\label{app:tPBe_DP_Move_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBe_DP_Move_pre.m}
+
+\subsection{tPBe\_DP\_Turn\_pre.m}
+\label{app:tPBe_DP_Turn_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBe_DP_Turn_pre.m}
+
+\subsection{tPBe\_FP\_Move\_pre.m}
+\label{app:tPBe_FP_Move_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBe_FP_Move_pre.m}
+
+\subsection{tPBe\_TP\_Move\_pre.m}
+\label{app:tPBe_TP_Move_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBe_TP_Move_pre.m}
+
+\subsection{tPBe\_TP\_Turn\_pre.m}
+\label{app:tPBe_TP_Turn_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBe_TP_Turn_pre.m}
+
+\subsection{tPBi\_Gen\_pre.m}
+\label{app:tPBi_Gen_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Gen_pre.m}
+
+\subsection{tPBi\_Gen\_Stop\_pre.m}
+\label{app:tPBi_Gen_Stop_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Gen_Stop_pre.m}
+
+\subsection{tPBi\_Siphon\_pre.m}
+\label{app:tPBi_Siphon_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Siphon_pre.m}
+
+\subsection{tPe\_DP\_Move\_pre.m}
+\label{app:tPe_DP_Move_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPe_DP_Move_pre.m}
+
+\subsection{tPe\_DP\_Turn\_pre.m}
+\label{app:tPe_DP_Turn_pre.m}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPe_DP_Turn_pre.m}
 
 \end{document}

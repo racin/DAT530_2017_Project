@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.4)  18 NOV 2017 00:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.4)  18 NOV 2017 15:06
 entering extended mode
 **./report.tex
 (report.tex
@@ -861,7 +861,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (report.toc [2
 
-])
+] [3])
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
@@ -869,17 +869,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write4
 \openout4 = `report.lof'.
 
- (report.lot)
+
+(report.lot)
 \tf@lot=\write5
 \openout5 = `report.lot'.
 
-
-[3] ("E:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+ [4] ("E:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(../GPenSIM/COMMON_PRE.m
+) (../GPenSIM/COMMON_PRE.m
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3.
- ("E:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("E:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
@@ -901,119 +901,109 @@ Overfull \hbox (25.2925pt too wide) in paragraph at lines 120--121
 f [][]\OT1/cmtt/m/n/10 get_suit_from_transname
  []
 
-[4] (../GPenSIM/get_suit_from_transname.m)
+[5] (../GPenSIM/get_suit_from_transname.m) [6]
 
 pdfTeX warning: pdflatex.exe (file ./images/overallViewPdf.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<images/overallViewPdf.pdf, id=23, 597.55246pt x 845.07724pt>
+<images/overallViewPdf.pdf, id=29, 597.55246pt x 845.07724pt>
 File: images/overallViewPdf.pdf Graphic file (type pdf)
 
 <use images/overallViewPdf.pdf>
-Package pdftex.def Info: images/overallViewPdf.pdf used on input line 185.
+Package pdftex.def Info: images/overallViewPdf.pdf used on input line 128.
 (pdftex.def)             Requested size: 127.3268pt x 278.1505pt.
-File: images/overallViewPdf.pdf Graphic file (type pdf)
- <use images/overallViewPdf.pdf>
-Package pdftex.def Info: images/overallViewPdf.pdf used on input line 194.
-(pdftex.def)             Requested size: 457.026pt x 433.53769pt.
 
-Overfull \hbox (259.82657pt too wide) in paragraph at lines 194--195
-[][] 
- []
-
-
-LaTeX Warning: Float too large for page by 113.44533pt on input line 196.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
-[5 <./images/overallViewPdf.pdf>] [6]
-<images/drawPile.png, id=40, 492.8814pt x 332.442pt>
+<images/drawPile.png, id=30, 492.8814pt x 332.442pt>
 File: images/drawPile.png Graphic file (type png)
  <use images/drawPile.png>
-Package pdftex.def Info: images/drawPile.png used on input line 204.
+Package pdftex.def Info: images/drawPile.png used on input line 141.
 (pdftex.def)             Requested size: 347.12354pt x 234.12814pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
+[7
 
-Overfull \hbox (39.29247pt too wide) in paragraph at lines 212--214
+ <./images/overallViewPdf.pdf>]
+Overfull \hbox (39.29247pt too wide) in paragraph at lines 149--151
 \OT1/cmr/m/n/10 will move cards from the pile which rep-re-sents face-down card
 s, [][]\OT1/cmtt/m/n/10 pDP_Draw_FaceDown_Pile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
-[7 <./images/drawPile.png (PNG copy)>]
-Overfull \hbox (1.05827pt too wide) in paragraph at lines 215--217
+
+Overfull \hbox (1.05827pt too wide) in paragraph at lines 152--154
 [][]\OT1/cmtt/m/n/10 global_info.INITIAL_DEAL_MOVE[]\OT1/cmr/m/n/10 . An ex-am-
 ple of a color given is \OT1/cmr/m/it/10 Move:[]TP1:[]DP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
-(../GPenSIM/tDPe_Move_pre.m)
-Overfull \hbox (22.79189pt too wide) in paragraph at lines 221--224
+
+Underfull \vbox (badness 1337) has occurred while \output is active []
+
+ [8 <./images/drawPile.png (PNG copy)>] (../GPenSIM/tDPe_Move_pre.m)
+Overfull \hbox (22.79189pt too wide) in paragraph at lines 158--161
 \OT1/cmr/m/n/10 This is ac-com-plished by the tran-si-tions [][]\OT1/cmtt/m/n/1
 0 tDPi_Flip_Pile []\OT1/cmr/m/n/10 and [][]\OT1/cmtt/m/n/10 tDPi_Enable_DP_Tran
 s[]\OT1/cmr/m/n/10 .
  []
 
 
-Overfull \hbox (62.3344pt too wide) in paragraph at lines 221--224
+Overfull \hbox (62.3344pt too wide) in paragraph at lines 158--161
 \OT1/cmr/m/n/10 file, shown in list-ing 1.4[]. Given that there are ac-tu-ally 
 any to-kens left in [][]\OT1/cmtt/m/n/10 pDP_Draw_FaceUp_Pile
  []
 
-(../GPenSIM/tDPi_Enable_FP_Trans_post.m [8]) (../GPenSIM/tDPi_Flip_Pile_pre.m)
-(../GPenSIM/tDPi_Flip_Pile_post.m) (../GPenSIM/tDPe_Out_pre.m)
-Overfull \hbox (56.6512pt too wide) in paragraph at lines 233--246
+(../GPenSIM/tDPi_Enable_FP_Trans_post.m) (../GPenSIM/tDPi_Flip_Pile_pre.m
+[9]) (../GPenSIM/tDPi_Flip_Pile_post.m) (../GPenSIM/tDPe_Out_pre.m)
+Overfull \hbox (75.7448pt too wide) in paragraph at lines 170--189
 [][] 
  []
 
-
-Overfull \hbox (42.29778pt too wide) in paragraph at lines 249--260
-[][] 
- []
-
-<images/foundationPile.png, id=49, 355.20705pt x 163.69154pt>
+[10] [11] <images/foundationPile.png, id=58, 355.20705pt x 163.69154pt>
 File: images/foundationPile.png Graphic file (type png)
 
 <use images/foundationPile.png>
-Package pdftex.def Info: images/foundationPile.png used on input line 264.
+Package pdftex.def Info: images/foundationPile.png used on input line 194.
 (pdftex.def)             Requested size: 347.12354pt x 159.9745pt.
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
 
-Overfull \hbox (51.61191pt too wide) in paragraph at lines 274--275
+Overfull \hbox (51.61191pt too wide) in paragraph at lines 204--205
 []\OT1/cmr/m/n/10 Given that the col-ors of the to-ken have the cor-rect length
 , the [][]\OT1/cmtt/m/n/10 get_suit_from_transname
  []
 
 
-Overfull \hbox (18.32068pt too wide) in paragraph at lines 274--275
+Overfull \hbox (18.32068pt too wide) in paragraph at lines 204--205
 \OT1/cmr/m/n/10 More in-for-ma-tion about this step can be found in 2.2[]. Last
 ly, the [][]\OT1/cmtt/m/n/10 checkCommand_Move
  []
 
-(../GPenSIM/pre_tFPe_Add.m [10]) (../GPenSIM/pre_tFPe_Move.m
+(../GPenSIM/pre_tFPe_Add.m [12
+
+ <./images/foundationPile.png (PNG copy)>])
+(../GPenSIM/pre_tFPe_Move.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 7.
 
 ("E:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
@@ -1022,92 +1012,162 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
 )
-(../GPenSIM/pre_tFPe_Out.m [11 <./images/foundationPile.png (PNG copy)>])
-<images/tableauPile.png, id=60, 493.6041pt x 240.6591pt>
+(../GPenSIM/pre_tFPe_Out.m) [13]
+<images/tableauPile.png, id=67, 493.6041pt x 240.6591pt>
 File: images/tableauPile.png Graphic file (type png)
 
 <use images/tableauPile.png>
-Package pdftex.def Info: images/tableauPile.png used on input line 322.
+Package pdftex.def Info: images/tableauPile.png used on input line 230.
 (pdftex.def)             Requested size: 347.12354pt x 169.24239pt.
+ [14
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ <./images/tableauPile.png (PNG copy)>]
+[15
 
- [12]
-[13] [14 <./images/tableauPile.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 418--422
+] [16
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 418--422
+]
+Underfull \hbox (badness 10000) in paragraph at lines 329--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 329--333
 
  []
 
 
-Overfull \hbox (16.01318pt too wide) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
+
+ []
+
+
+Overfull \hbox (16.01318pt too wide) in paragraph at lines 337--339
 []\OT1/cmr/m/n/10 con-tains the unique iden-ti-fiers of the []FP or []TP mod-ul
 es. Valid in-put for [][]\OT1/cmtt/m/n/10 destination
  []
 
 
-Overfull \hbox (5.87535pt too wide) in paragraph at lines 426--427
+Overfull \hbox (5.87535pt too wide) in paragraph at lines 337--339
 \OT1/cmr/m/n/10 game. This is mainly used to set the vari-able [][]\OT1/cmtt/m/
 n/10 global_info.last_command_source
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
-[15]
-Overfull \hbox (135.87225pt too wide) in paragraph at lines 442--442
+[17
+
+] <images/checkCommand_Move.png, id=80, 1089.06876pt x 2009.5075pt>
+File: images/checkCommand_Move.png Graphic file (type png)
+
+<use images/checkCommand_Move.png>
+Package pdftex.def Info: images/checkCommand_Move.png used on input line 343.
+(pdftex.def)             Requested size: 347.12354pt x 640.47989pt.
+
+
+LaTeX Warning: Float too large for page by 124.09161pt on input line 347.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
+
+ []
+
+
+Overfull \hbox (135.87225pt too wide) in paragraph at lines 362--362
 []        \OT1/cmtt/m/n/10 if 'to' in email.keys() and 'from' in email.keys() a
 nd 'body_count' in email.keys():[] 
  []
 
-
-Underfull \hbox (badness 6001) in paragraph at lines 464--465
+[18] [19 <./images/checkCommand_Move.png>]
+Underfull \hbox (badness 6001) in paragraph at lines 384--385
 []\OT1/cmr/m/n/9 Kaggle. The En-ron Email Dataset. $\OT1/cmtt/m/n/9 https : / /
  www . kaggle . com / wcukierski /
  []
 
-[16] (../GPenSIM/checkCommand_Move.m [17]) (../GPenSIM/COMMON_POST.m [18])
-(../GPenSIM/COMMON_PRE.m [19]) (../GPenSIM/draw_pile_pdf.m) [20]
+File: images/overallViewPdf.pdf Graphic file (type pdf)
+<use images/overallViewPdf.pdf>
+Package pdftex.def Info: images/overallViewPdf.pdf used on input line 394.
+(pdftex.def)             Requested size: 457.026pt x 433.53769pt.
+
+Overfull \hbox (259.82657pt too wide) in paragraph at lines 394--395
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 113.44533pt on input line 396.
+
+[20] [21] (../GPenSIM/checkCommand_Move.m [22
+
+]) (../GPenSIM/COMMON_POST.m
+[23]) (../GPenSIM/COMMON_PRE.m [24]) (../GPenSIM/draw_pile_pdf.m) [25]
 (../GPenSIM/foundation_pile_clubs_pdf.m)
 (../GPenSIM/foundation_pile_diamonds_pdf.m)
 (../GPenSIM/foundation_pile_hearts_pdf.m)
-(../GPenSIM/foundation_pile_spades_pdf.m [21]) (../GPenSIM/pre_tFPe_Add.m)
-(../GPenSIM/pre_tFPe_Move.m) (../GPenSIM/pre_tFPe_Out.m) [22] (report.aux) ) 
+(../GPenSIM/foundation_pile_spades_pdf.m [26]) (../GPenSIM/get_handle.m)
+(../GPenSIM/get_suit_from_transname.m) (../GPenSIM/get_tableau_from_transname.m
+[27]) (../GPenSIM/main_simulation_file.m [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29])
+(../GPenSIM/module_connector_pdf.m) (../GPenSIM/player_bot_pdf.m [30])
+(../GPenSIM/player_GUI.m [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+(../GPenSIM/player_pdf.m [34]) (../GPenSIM/player_update_GUI.m [35])
+(../GPenSIM/post_tTPe_Add_FaceUp.m) (../GPenSIM/pre_tFPe_Add.m)
+(../GPenSIM/pre_tFPe_Move.m) [36] (../GPenSIM/pre_tFPe_Out.m)
+(../GPenSIM/pre_tPe_FP_Move.m) (../GPenSIM/pre_tPe_TP_Move.m [37])
+(../GPenSIM/pre_tPe_TP_Turn.m) (../GPenSIM/pre_tTPe_Add_FaceDown.m [38])
+(../GPenSIM/pre_tTPe_Add_FaceUp.m) (../GPenSIM/pre_tTPe_Move.m [39])
+(../GPenSIM/pre_tTPe_Out.m) (../GPenSIM/pre_tTPe_Turn.m) [40]
+(../GPenSIM/pre_tTPi_Move_Multiple.m) (../GPenSIM/set_handle.m)
+(../GPenSIM/splitCommand.m) (../GPenSIM/tableau_pile_1_pdf.m [41])
+(../GPenSIM/tableau_pile_2_pdf.m) (../GPenSIM/tableau_pile_3_pdf.m [42])
+(../GPenSIM/tableau_pile_4_pdf.m) (../GPenSIM/tableau_pile_5_pdf.m [43])
+(../GPenSIM/tableau_pile_6_pdf.m) (../GPenSIM/tableau_pile_7_pdf.m [44])
+(../GPenSIM/tDPe_Move_pre.m) (../GPenSIM/tDPe_Out_pre.m)
+(../GPenSIM/tDPi_Dealer_pre.m) (../GPenSIM/tDPi_Enable_FP_Trans_post.m)
+[45] (../GPenSIM/tDPi_Flip_Pile_post.m) (../GPenSIM/tDPi_Flip_Pile_pre.m)
+(../GPenSIM/tDPi_Move_Init_pre.m) (../GPenSIM/tDPi_Turn_post.m)
+(../GPenSIM/tDPi_Turn_pre.m [46]) (../GPenSIM/tMC_DP_Move_Siphon_pre.m)
+(../GPenSIM/tMC_FP_Move_Siphon_pre.m) (../GPenSIM/tMC_Out_Buffer_Siphon_pre.m)
+(../GPenSIM/tMC_TP_Move_Siphon_pre.m [47]) (../GPenSIM/tMC_TP_Turn_Siphon_pre.m
+) (../GPenSIM/tPBe_DP_Move_pre.m [48]) (../GPenSIM/tPBe_DP_Turn_pre.m)
+(../GPenSIM/tPBe_FP_Move_pre.m [49]) (../GPenSIM/tPBe_TP_Move_pre.m [50])
+(../GPenSIM/tPBe_TP_Turn_pre.m) (../GPenSIM/tPBi_Gen_pre.m [51])
+(../GPenSIM/tPBi_Gen_Stop_pre.m) (../GPenSIM/tPBi_Siphon_pre.m [52])
+(../GPenSIM/tPe_DP_Move_pre.m) (../GPenSIM/tPe_DP_Turn_pre.m) [53] (report.aux)
+ ) 
 Here is how much of TeX's memory you used:
- 16773 strings out of 493323
- 332237 string characters out of 3139066
- 723010 words of memory out of 3000000
- 20107 multiletter control sequences out of 15000+200000
+ 17303 strings out of 493323
+ 345902 string characters out of 3139066
+ 775057 words of memory out of 3000000
+ 20487 multiletter control sequences out of 15000+200000
  537925 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,9n,50p,10345b,1778s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><E:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><E:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
-.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><E:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><E:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><E:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (22 pages, 1313417 bytes).
+<E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><E:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><E:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr9.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+><E:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><E:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><E:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><E:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on report.pdf (53 pages, 1526916 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
+ 240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
