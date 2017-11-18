@@ -135,7 +135,7 @@ The model developed is pretty large, and contains 94 transition and 42 places. I
 \newline
 
 \subsection{Draw Pile Module}
-
+\label{sec:draw_pile}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/drawPile}
@@ -165,6 +165,7 @@ Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are
 
 Lastly, there is the \verb!tDPe_Out! transition. This is the only external output of the module. When enabled, its pre-processor will take the lastest card arrived at \verb!pDP_Draw_FaceUp_Pile!, but the earliest command arrived at \verb!pDP_Move_Out! when firing. By taking the earliest command arrived in a \ac{fifo} manner, we ensure that the inital dealing will be correct. If we were to take the latest command, we would have to add additional logic such as alternating firing to make certain the ordering of cards would be correct. The code is shown in lising \ref{lst:tDPe_Out_pre}
 \lstinputlisting[style=matlabcode,caption=tDPe\_Out\_pre.m,label=lst:tDPe_Out_pre]{\GPenSIM/tDPe_Out_pre.m}
+Interestingly, moving cards out of the \verb!tDPe_Out! transition is a non-reversible action as the module has no external input. So by doing this one could potentially put the game in an unsolvable state.
 \begin{table}
 	\caption{Places and transitions used in Draw Pile}
 	\begin{tabular}{|l|l|l|}
@@ -189,14 +190,15 @@ Lastly, there is the \verb!tDPe_Out! transition. This is the only external outpu
 \end{table}
 \clearpage
 \subsection{Foundation Pile Module}
+The Foundation Pile module is depicted figure \ref{fig:foundation_pile}. It is duplicated four times, once for every suit, clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared between all the suits.
+\newline
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/foundationPile}
 		\caption{Foundation Pile Module}
+		\label{fig:foundation_pile}
 	\end{center}
 \end{figure}
-The Foundation Pile module is duplicated four times, once for every suit, clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared with other suits.
-\newline
 
 This module is inactive during the initial phase, and only becomes interact-able once the normal phase starts. It has two external inputs, the first of which is \verb!tFPe_Clubs_Add!. This transition has a shared pre-processor file, \verb!pre_tFPe_Add!. Listing \ref{lst:pre_tFPe_Add} shows parts of the logic, the full file can be found in \ref{app:pre_tFPe_Add.m}. The pre-processor fetches the token arrived earliest at \verb!pMC_Out_Buffer!. This is an important step, but is not strictly required because of the limitations the resource \verb!playerAction! enforces on the transitions of the Player and Player Bot modules. Still, it makes sense to fetch the earliest token in \ac{fifo} style to make sure that the first moved card reaches its destination first. 
 \newline
@@ -204,33 +206,42 @@ This module is inactive during the initial phase, and only becomes interact-able
 Given that the colors of the token have the correct length, the \verb!get_suit_from_transname! function will be run to determine which \ac{fp} the executing transition belongs to. More information about this step can be found in \ref{sec:2_file_structure}. Lastly, the \verb!checkCommand_Move! function is ran to determine the validity of the command in the context of this particular transition. The \verb!checkCommand_Move! function is quite involved, and is discussed in detail in chapter \ref{sec:3_move_command}.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Add.m lines 5-17,label=lst:pre_tFPe_Add,firstline=5,lastline=17]{\GPenSIM/pre_tFPe_Add.m}
 
-The second external-input is \verb!tFPe_Clubs_Move!. Its used for moving cards to other modules, and works similarly to how movement in handle in the Draw Pile, with the additional caveat that all four Foundation Piles becomes enabled at the time from \verb!pMC_FP_Move!. Due to this its necessary to introduce additional logic to ensure that the issued move-command from the Player or Player Bot modules are meant for this particular module. As with the other modules, the actual validity of the move-command are handles by the \ac{p} and \ac{pb} modules.
+The second external input is \verb!tFPe_Clubs_Move!. Its used for moving cards to other modules, and works similarly to how movement in handle in the Draw Pile, with the additional caveat that all four Foundation Piles becomes enabled at the time from \verb!pMC_FP_Move!. Due to this its necessary to introduce additional logic to ensure that the issued move-command from the Player or Player Bot modules are meant for this particular module. As with the other modules, the actual validity of the move-command are handles by the \ac{p} and \ac{pb} modules.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Move.m lines 4-10,label=lst:pre_tFPe_Move,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Move.m}
 
-The only external-output of the {fp} is \verb!tFPe_Clubs_Out!. I
+The only external output of the {fp} is \verb!tFPe_Clubs_Out!. It works similarly to the output of the Draw Pile, where the pre-processor takes the latest arrived card \verb!pFP_Clubs_Pile! and the earliest arrived command from \verb!pFP_Clubs_Move!. This ensures that the first issued command will be processed first, should there be more than one. The only time there would be more than one command executing concurrently is if neither the Player or the Player Bot modules where enabled, and the command was issued from another module which did not use the \verb!playerAction! resource. Listing \ref{lst:pre_tFPe_Out} shows parts of the code.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Out.m lines 4-10,label=lst:pre_tFPe_Out,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Out.m}
+
+
+Another interesting fact about the Foundation Pile modules is the place \verb!pFP_Clubs_Pile!. Once this place is filled with 13 tokens for all the suits, the game is won, and the simulation ends. There is no check done on the actual color or order of the tokens, as that is done when adding them by the pre-processor of \verb!tFPe_Clubs_Add!. The win condition can be found in \verb!COMMON_POST!. Parts of the code is shown in listing \ref{lst:COMMON_POST}.
+\lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 31-40,label=lst:COMMON_POST,firstline=31,lastline=40]{\GPenSIM/COMMON_POST.m}
 \begin{table}
 	\caption{Places and transitions used in Foundation Pile - Clubs}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		1  & pFP\_Clubs\_Move        &  \\ \hline
-		2  & pFP\_Clubs\_Pile        &  \\ \hline
-		3  & tFPe\_Clubs\_Add        &    \\ \hline
-		4 & tFPe\_Clubs\_Move        &    \\ \hline
-		5 & tFPe\_Clubs\_Out         &    \\ \hline
+		1  & pFP\_Clubs\_Move        &  Buffer for move-\ac{command}s \\ \hline
+		2  & pFP\_Clubs\_Pile        &  Holds the cards which are added to the Foundation Pile.\\ \hline
+		3  & tFPe\_Clubs\_Add        &  External input for adding cards to the Foundation Pile.  \\ \hline
+		4 & tFPe\_Clubs\_Move        &  External input for the move-command. \\ \hline
+		5 & tFPe\_Clubs\_Out         &  External output  \\ \hline
 	\end{tabular}
 \end{table}
 \clearpage
 \subsection{Tableau Pile Module}
-
+The Tableau Pile module is depicted in figure \ref{fig:tableau_pile}. It is duplicated 7 times, once for every pile in the tableau. The main difference between these modules is the names of their respective transitions and names, so the description given for the first pile will count for the other duplicates as well. Another difference is how many cards each pile are dealt during the initial phase. This is discussed in more detail in chapter \ref{sec:3_initial_dealing} and \ref{sec:draw_pile}. All the pre- and post-processor files are shared between all piles.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/tableauPile}
 		\caption{Tableau Pile Module}
+		\label{fig:tableau_pile}
 	\end{center}
 \end{figure}
+
+As with the Draw Pile module, the module encompasses both a face-down and a face-up pile. The inner workings between these two piles is different however, as moving a card from the face-down pile to the face-up pile is an non-reversible action. Doing so could put the game in an unsolvable state, but at the same time if there were no cards in any of the face-down piles the game would be trivial to solve. \\
+
+The only time it's possible to add cards to \verb!pTP_1_FaceDown_Pile! is during the initial phase. During this phase one less than the piles identification number will be added, so that pile one will have zero cards in the face-down pile, whilst pile 7 will have 6. This is discussed in more detail in chapter \ref{sec:3_initial_dealing}. All the piles will have a single card added to \verb!pTP_1_FaceUp_Pile!.  
 \begin{table}
 	\caption{Places and transitions used in Tableau Pile - 1}
 	\begin{tabular}{|l|l|l|}
@@ -323,8 +334,10 @@ The only external-output of the {fp} is \verb!tFPe_Clubs_Out!. I
 \label{sec:3_implementation}
 \subsection{\ac{gui}}
 \label{sec:3_gui}
+\clearpage
 \subsection{Algorithms}
 \subsubsection{Atomicity}
+\clearpage
 \subsection{Commands}
 \subsubsection{Move Command}~\\~\\
 \label{sec:3_move_command}
@@ -345,6 +358,7 @@ Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the functio
 		\label{fig:checkCommand_Move}
 	\end{center}
 \end{figure}
+\clearpage
 \subsection{Initial Dealing}
 \subsection{Resources}
 \label{sec:3_Resources}
@@ -362,11 +376,14 @@ Another improvement would be to refactor the codebase by moving more of the vali
 \end{verbatim}
 
 \section{Testing, Analysis and Results}
+\subsection{Matlab version}
+The project has been developed and tested in versions R2013b and R2017a. Due to using two versions of Matlab it was necessary to only use functionality that is supported in both versions. Examples of this is using \verb!GUIDE! for developing the GUI, and omitting to use the \verb!contains! command.
 \label{sec:3_testing_analysis}
 \subsection{Algorithms}
 \subsubsection{Atomicity}
 In order to preventdd
 \subsection{Initial Dealing}
+\label{sec:3_initial_dealing}
 \subsection{Resources}
 \subsection{Moving Multiple Cards}
 

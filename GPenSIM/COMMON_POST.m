@@ -28,14 +28,16 @@ elseif ismember(transition.name, {'tTPi_1_Move_Multiple', 'tTPi_2_Move_Multiple'
     global_info.TP_Move_Multi_Gen_Tokens = global_info.TP_Move_Multi_Gen_Tokens - 1;
 end;
 
-% Check if game is won. Win condition: 13 tokens on each of the foundation
+% Check if game is won. Win condition: 13 tokens on each of the foundation 
 % piles.
-if(length(tokIDs('pFP_Clubs_Pile')) == 13 && length(tokIDs('pFP_Diamonds_Pile')) == 13 ...
-        && length(tokIDs('pFP_Hearts_Pile')) == 13 && length(tokIDs('pFP_Spades_Pile')) == 13),
+if(length(tokIDs('pFP_Clubs_Pile')) == 13 && ...
+        length(tokIDs('pFP_Diamonds_Pile')) == 13 && ...
+        length(tokIDs('pFP_Hearts_Pile')) == 13 && ...
+        length(tokIDs('pFP_Spades_Pile')) == 13),
     set_handle('GameStatus', 'String', 'GAME WON!');
     disp('GAME WON!');
     global_info.STOP_SIMULATION = 1;
-end;
+end
 
 if global_info.CARDS_DEALT >= global_info.INITIAL_DEAL_MOVE_LENGTH,
     if global_info.GUI_ENABLED,
