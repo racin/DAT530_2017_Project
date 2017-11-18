@@ -5,7 +5,8 @@ fire = 0;
 [tableau, ~, ~, ~, ~, ~] = get_tableau_from_transname(transition.name);
 % Can only add FaceDown cards during the initial dealing.
 if global_info.CARDS_DEALT >= global_info.INITIAL_DEAL_MOVE_LENGTH ...
-    || length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 == str2double(tableau),
+    || length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 ...
+    == str2double(tableau),
     return;
 end;
 moveToken = tokenArrivedEarly('pMC_Out_Buffer',1);

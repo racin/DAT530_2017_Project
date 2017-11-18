@@ -24,10 +24,11 @@
 \contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{24}
 \contentsline {subsection}{\numberline {3.7}Scoring}{24}
 \contentsline {subsection}{\numberline {3.8}Possible improvments}{24}
-\contentsline {section}{\numberline {4}Testing, Analysis and Results}{24}
-\contentsline {subsection}{\numberline {4.1}Matlab version}{24}
-\contentsline {subsection}{\numberline {4.2}Algorithms}{24}
-\contentsline {subsubsection}{\numberline {4.2.1}Atomicity}{24}
+\contentsline {subsection}{\numberline {3.9}Future work}{25}
+\contentsline {section}{\numberline {4}Testing, Analysis and Results}{25}
+\contentsline {subsection}{\numberline {4.1}Matlab version}{25}
+\contentsline {subsection}{\numberline {4.2}Algorithms}{25}
+\contentsline {subsubsection}{\numberline {4.2.1}Atomicity}{25}
 \contentsline {subsection}{\numberline {4.3}Initial Dealing}{25}
 \contentsline {subsection}{\numberline {4.4}Resources}{25}
 \contentsline {subsection}{\numberline {4.5}Moving Multiple Cards}{25}

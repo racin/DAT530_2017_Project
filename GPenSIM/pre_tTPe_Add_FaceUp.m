@@ -7,7 +7,8 @@ fire = 0;
 % Can only add FaceUp cards once the initial dealing is complete.
 isFDFull = length(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))) + 1 ...
     == str2double(tableau);
-isDealingInProgress = global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH;
+isDealingInProgress = global_info.CARDS_DEALT < ...
+    global_info.INITIAL_DEAL_MOVE_LENGTH;
 if isDealingInProgress && ~isFDFull,
     return;
 end;
@@ -40,8 +41,7 @@ if(doCommand && strcmp(cmdDest,strcat('TP',tableau))),
             % 10 Points when moving from Draw Pile to Tableau
             global_info.SCORE = global_info.SCORE + 5;
         elseif ismember(source,global_info.FP_PILES),
-            % Lose 15 points when moving from a Foundation Pile to
-            % Tableau
+            % Lose 15 points when moving from a Foundation Pile to Tableau
             global_info.SCORE = max(global_info.SCORE - 15, 0);
         end;
     end
