@@ -1,17 +1,8 @@
-<<<<<<< Updated upstream
-\contentsline {figure}{\numberline {1}{\ignorespaces The complete model - Without the internal components of the modules.}}{7}
-\contentsline {figure}{\numberline {2}{\ignorespaces Draw Pile Module}}{8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Foundation Pile Module}}{12}
-\contentsline {figure}{\numberline {4}{\ignorespaces Tableau Pile Module}}{15}
-\contentsline {figure}{\numberline {5}{\ignorespaces Player module}}{19}
-\contentsline {figure}{\numberline {6}{\ignorespaces Flowchart - checkCommand\_Move}}{27}
-\contentsline {figure}{\numberline {7}{\ignorespaces The complete model in horizontal view}}{30}
-=======
 \contentsline {figure}{\numberline {1}{\ignorespaces Illustration of card layout in Solitaire}}{6}
 \contentsline {figure}{\numberline {2}{\ignorespaces The complete model - Without the internal components of the modules.}}{8}
 \contentsline {figure}{\numberline {3}{\ignorespaces Draw Pile Module}}{9}
 \contentsline {figure}{\numberline {4}{\ignorespaces Foundation Pile Module}}{13}
 \contentsline {figure}{\numberline {5}{\ignorespaces Tableau Pile Module}}{16}
-\contentsline {figure}{\numberline {6}{\ignorespaces Flowchart - checkCommand\_Move}}{26}
-\contentsline {figure}{\numberline {7}{\ignorespaces The complete model in horizontal view}}{29}
->>>>>>> Stashed changes
+\contentsline {figure}{\numberline {6}{\ignorespaces Player module}}{20}
+\contentsline {figure}{\numberline {7}{\ignorespaces Flowchart - checkCommand\_Move}}{28}
+\contentsline {figure}{\numberline {8}{\ignorespaces The complete model in horizontal view}}{31}

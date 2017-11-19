@@ -1,15 +1,6 @@
-<<<<<<< Updated upstream
-\contentsline {table}{\numberline {1}{\ignorespaces Places and transitions used in Draw Pile}}{11}
-\contentsline {table}{\numberline {2}{\ignorespaces Places and transitions used in Foundation Pile - Clubs}}{14}
-\contentsline {table}{\numberline {3}{\ignorespaces Places and transitions used in Tableau Pile - 1}}{18}
-\contentsline {table}{\numberline {4}{\ignorespaces Transitions used in Player}}{21}
-\contentsline {table}{\numberline {5}{\ignorespaces Places and transitions used in Player Bot}}{22}
-\contentsline {table}{\numberline {6}{\ignorespaces Places and transitions used in Module Connector}}{23}
-=======
 \contentsline {table}{\numberline {1}{\ignorespaces Places and transitions used in Draw Pile}}{12}
 \contentsline {table}{\numberline {2}{\ignorespaces Places and transitions used in Foundation Pile - Clubs}}{15}
 \contentsline {table}{\numberline {3}{\ignorespaces Places and transitions used in Tableau Pile - 1}}{19}
-\contentsline {table}{\numberline {4}{\ignorespaces Places and transitions used in Module Connector}}{20}
-\contentsline {table}{\numberline {5}{\ignorespaces Transitions used in Player}}{21}
-\contentsline {table}{\numberline {6}{\ignorespaces Places and transitions used in Player Bot}}{22}
->>>>>>> Stashed changes
+\contentsline {table}{\numberline {4}{\ignorespaces Transitions used in Player}}{22}
+\contentsline {table}{\numberline {5}{\ignorespaces Places and transitions used in Player Bot}}{23}
+\contentsline {table}{\numberline {6}{\ignorespaces Places and transitions used in Module Connector}}{24}
