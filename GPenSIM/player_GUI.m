@@ -1,28 +1,4 @@
 function varargout = player_GUI(varargin)
-
-% PLAYER_GUI MATLAB code for player_GUI.fig
-%      PLAYER_GUI, by itself, creates a new PLAYER_GUI or raises the existing
-%      singleton*.
-%
-%      H = PLAYER_GUI returns the handle to a new PLAYER_GUI or the handle to
-%      the existing singleton*.
-%
-%      PLAYER_GUI('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in PLAYER_GUI.M with the given input arguments.
-%
-%      PLAYER_GUI('Property','Value',...) creates a new PLAYER_GUI or raises the
-%      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before player_GUI_OpeningFcn gets called.  An
-%      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to player_GUI_OpeningFcn via varargin.
-%
-%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
-%      instance to run (singleton)".
-%
-% See also: GUIDE, GUIDATA, GUIHANDLES
-
-% Edit the above text to modify the response to help player_GUI
-
 % Last Modified by GUIDE v2.5 07-Nov-2017 18:47:57
 
 % Begin initialization code - DO NOT EDIT
@@ -81,7 +57,6 @@ global_info.FP_C_Move_Btn = false;
 global_info.FP_D_Move_Btn = false;
 global_info.FP_H_Move_Btn = false;
 global_info.FP_S_Move_Btn = false;
-global_info.Initial_Deal_Btn = false;
 
 % Update handles structure
 guidata(hObject, handles);

@@ -122,18 +122,37 @@
       </arc>
     </edges>
   </gspn>
-  <measures gspn-name="Draw Pile" name="Measures">
-    <assignments/>
-    <greatspn/>
-    <formulas>
-      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
-    </formulas>
-  </measures>
   <gspn name="Player" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="26.8125" name="copy___textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="HEADER2" vert-pos="0" width="29.0" x="3.5" y="2.6875">Player</text-box>
+      <transition label-y="1.0" name="tPe_DP_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="14.55" y="2.0"/>
+      <transition label-y="1.0" name="tPe_DP_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="20.55" y="2.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_1_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="3.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_1_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="6.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_2_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="9.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_2_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="12.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_3_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="15.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_3_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="18.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_4_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="21.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_4_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="24.0"/>
+      <transition alt-name-fn="PLAIN" label-x="4.0" label-y="0.0" name="tPe_TP_5_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="3.55" y="27.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_6_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="31.55" y="6.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_6_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="31.55" y="9.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_7_Turn" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="31.55" y="12.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_7_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="31.55" y="15.0"/>
+      <transition label-x="-5.0" label-y="0.0" name="tPe_FP_Clubs_Move" nservers-x="0.5" type="EXP" x="31.55" y="18.0"/>
+      <transition label-x="-6.0" label-y="0.0" name="tPe_FP_Diamonds_Move" nservers-x="0.5" type="EXP" x="31.55" y="21.0"/>
+      <transition label-x="-5.5" label-y="0.0" name="tPe_FP_Spades_Move" nservers-x="0.5" type="EXP" x="31.55" y="27.0"/>
+      <transition label-x="-5.5" label-y="0.0" name="tPe_FP_Hearts_Move" nservers-x="0.5" type="EXP" x="31.55" y="24.0"/>
+      <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_5_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="31.55" y="3.0"/>
+    </nodes>
+    <edges/>
+  </gspn>
+  <gspn name="Player Bot" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes/>
     <edges/>
   </gspn>
-  <gspn name="Module Connector" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+  <gspn name="Overall view" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes>
       <place label-x="-5.0" label-y="-1.0" name="pMC_Out_Buffer" x="31.0" y="4.0"/>
       <place label-x="-3.5" label-y="-1.5" name="pMC_DP_Turn" x="6.0" y="16.0"/>
@@ -579,4 +598,11 @@
       </arc>
     </edges>
   </gspn>
+  <measures gspn-name="Draw Pile" name="Measures">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
 </project>
