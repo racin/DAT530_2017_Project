@@ -1,4 +1,4 @@
-function [fire, transition] = tPBi_Siphon_pre(transition)
+function [fire, transition] = tPBi_Destroyer_pre(transition)
 
 % Remove unused commands from pPB_Cmd.
 global global_info;

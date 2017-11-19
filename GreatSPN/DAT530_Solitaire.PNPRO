@@ -149,8 +149,37 @@
     <edges/>
   </gspn>
   <gspn name="Player Bot" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
-    <nodes/>
-    <edges/>
+    <nodes>
+      <place label-x="-0.5" label-y="-1.5" name="pPB_Cmd" x="13.0" y="13.0"/>
+      <transition name="tPBi_Gen" nservers-x="0.5" type="EXP" x="6.55" y="13.0"/>
+      <transition name="tPBe_DP_Turn" nservers-x="0.5" type="EXP" x="25.55" y="3.0"/>
+      <transition name="tPBe_DP_Move" nservers-x="0.5" type="EXP" x="25.55" y="8.0"/>
+      <transition name="tPBe_TP_Turn" nservers-x="0.5" type="EXP" x="25.55" y="13.0"/>
+      <transition name="tPBe_TP_Move" nservers-x="0.5" type="EXP" x="25.55" y="18.0"/>
+      <transition name="tPBe_FP_Move" nservers-x="0.5" type="EXP" x="25.55" y="23.0"/>
+      <transition label-x="-4.0" label-y="-1.0" name="tPBi_Destroyer" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="13.55" y="19.0"/>
+    </nodes>
+    <edges>
+      <arc head="pPB_Cmd" kind="OUTPUT" mult-k="0.7142822265625001" tail="tPBi_Gen"/>
+      <arc head="tPBe_DP_Turn" kind="INPUT" mult-k="1.2155273437499998" tail="pPB_Cmd">
+        <point x="21.5" y="14.0"/>
+        <point x="21.5" y="4.0"/>
+      </arc>
+      <arc head="tPBe_DP_Move" kind="INPUT" mult-k="1.3493164062499998" tail="pPB_Cmd">
+        <point x="21.5" y="14.0"/>
+        <point x="21.5" y="9.0"/>
+      </arc>
+      <arc head="tPBe_TP_Move" kind="INPUT" mult-k="1.3131835937499998" tail="pPB_Cmd">
+        <point x="21.5" y="14.0"/>
+        <point x="21.5" y="19.0"/>
+      </arc>
+      <arc head="tPBe_FP_Move" kind="INPUT" mult-k="1.5690429687499998" tail="pPB_Cmd">
+        <point x="21.5" y="14.0"/>
+        <point x="21.5" y="24.0"/>
+      </arc>
+      <arc head="tPBi_Destroyer" kind="INPUT" tail="pPB_Cmd"/>
+      <arc head="tPBe_TP_Turn" kind="INPUT" tail="pPB_Cmd"/>
+    </edges>
   </gspn>
   <gspn name="Overall view" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes>
@@ -160,11 +189,11 @@
       <place label-x="-3.5" label-y="-1.5" name="pMC_TP_Turn" x="46.0" y="51.0"/>
       <place label-x="-3.5" label-y="-1.5" name="pMC_TP_Move" x="65.0" y="51.0"/>
       <place label-x="-5.0" label-y="-1.0" name="pMC_FP_Move" x="73.0" y="24.0"/>
-      <transition label-x="6.5" label-y="0.0" name="tMC_Out_Buffer_Siphon" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="31.55" y="1.0"/>
-      <transition name="tMC_DP_Move_Siphon" nservers-x="0.5" type="EXP" x="21.55" y="16.0"/>
-      <transition label-x="-1.5" label-y="-2.0" name="tMC_TP_Turn_Siphon" nservers-x="0.5" type="EXP" x="53.55" y="51.0"/>
-      <transition label-x="-0.5" label-y="-2.0" name="tMC_TP_Move_Siphon" nservers-x="0.5" type="EXP" x="71.55" y="51.0"/>
-      <transition name="tMC_FP_Move_Siphon" nservers-x="0.5" type="EXP" x="79.55" y="24.0"/>
+      <transition label-x="7.0" label-y="0.0" name="tMC_Out_Buffer_Destroyer" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="31.55" y="1.0"/>
+      <transition label-x="0.5" name="tMC_DP_Move_Destroyer" nservers-x="0.5" type="EXP" x="21.55" y="16.0"/>
+      <transition label-x="-1.0" name="tMC_TP_Turn_Destroyer" nservers-x="0.5" type="EXP" x="53.55" y="51.0"/>
+      <transition name="tMC_TP_Move_Destroyer" nservers-x="0.5" type="EXP" x="71.55" y="51.0"/>
+      <transition label-x="0.5" name="tMC_FP_Move_Destroyer" nservers-x="0.5" type="EXP" x="79.55" y="24.0"/>
       <text-box bold="true" border-color="#000000" fill-color="none" height="8.875" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" text-size="HEADER2" vert-pos="0" width="16.1875" x="2.3125" y="2.625">Draw Pile</text-box>
       <transition label-y="-1.0" name="tDPe_Turn" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="6.55" y="10.0"/>
       <transition label-y="-1.0" name="tDPe_Move" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="15.55" y="10.0"/>
@@ -256,10 +285,10 @@
       <transition alt-name-fn="PLAIN" label-x="-4.0" label-y="0.0" name="tPe_TP_5_Move" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="33.55" y="58.0"/>
     </nodes>
     <edges>
-      <arc head="tMC_Out_Buffer_Siphon" kind="INPUT" tail="pMC_Out_Buffer"/>
-      <arc head="tMC_DP_Move_Siphon" kind="INPUT" tail="pMC_DP_Move"/>
-      <arc head="tMC_TP_Turn_Siphon" kind="INPUT" tail="pMC_TP_Turn"/>
-      <arc head="tMC_TP_Move_Siphon" kind="INPUT" tail="pMC_TP_Move"/>
+      <arc head="tMC_Out_Buffer_Destroyer" kind="INPUT" tail="pMC_Out_Buffer"/>
+      <arc head="tMC_DP_Move_Destroyer" kind="INPUT" tail="pMC_DP_Move"/>
+      <arc head="tMC_TP_Turn_Destroyer" kind="INPUT" tail="pMC_TP_Turn"/>
+      <arc head="tMC_TP_Move_Destroyer" kind="INPUT" tail="pMC_TP_Move"/>
       <arc head="pMC_Out_Buffer" kind="OUTPUT" tail="tDPe_Out"/>
       <arc head="tDPe_Turn" kind="INPUT" tail="pMC_DP_Turn"/>
       <arc head="tDPe_Move" kind="INPUT" tail="pMC_DP_Move"/>
@@ -275,7 +304,7 @@
       <arc head="pMC_Out_Buffer" kind="OUTPUT" mult-k="1.2116210937499998" tail="tFPe_Spades_Out">
         <point x="101.0" y="5.0"/>
       </arc>
-      <arc head="tMC_FP_Move_Siphon" kind="INPUT" tail="pMC_FP_Move"/>
+      <arc head="tMC_FP_Move_Destroyer" kind="INPUT" tail="pMC_FP_Move"/>
       <arc head="tFPe_Clubs_Move" kind="INPUT" mult-k="2.2719726562499996" tail="pMC_FP_Move">
         <point x="74.0" y="22.0"/>
         <point x="50.0" y="22.0"/>

@@ -45,6 +45,7 @@
 % Nomenclature
 \DeclareAcronym{card}{short = card, long = (In the Petri Net context) A token with a color which represents a card in the deck., class = nomencl}
 \DeclareAcronym{command}{short = command, long = A token with a color which represents a turn or movement command., class = nomencl}
+\DeclareAcronym{destroyer}{short = destroyer, long = A transition which only has inputs. Opposite of generator., class = nomencl}
 
 \newcommand{\GPenSIM}{../GPenSIM}
 \definecolor{matlabcomment}{RGB}{34,139,34}
@@ -180,7 +181,7 @@ During the normal phase, external input is allowed. The first input of the Draw 
 
 The second input, \verb!tDPe_Turn! is used to used to simply move cards from the face-down pile to the face-up pile during the normal phase. An interesting thing about this is that once all the cards are in the face-up pile, the next time one attempts to turn a \ac{card}, all cards should be moved back to the face-down pile in \ac{lifo} style, just as they would if you simply flip the deck of cards around in real-life. 
 \newline
-This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually a siphon, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a siphon, so the \ac{card} would be removed from the game if it fired.
+This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually a \ac{destroyer}, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a \ac{destroyer}, so the \ac{card} would be removed from the game if it fired.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Enable\_FP\_Trans\_post.m,label=lst:tDPi_Enable_FP_Trans_post]{\GPenSIM/tDPi_Enable_FP_Trans_post.m}
 Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived \ac{card} from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards have been successfully turned around.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_pre.m,label=lst:tDPi_Flip_Pile_pre]{\GPenSIM/tDPi_Flip_Pile_pre.m}
@@ -310,7 +311,7 @@ The only external output is \verb!tTPe_1_Out!, which will only fire once enough 
 The Player module is a set of 20 transitions, tightly knit with the \ac{gui} and the Module Connector. This module differs from the \ac{dp}, \ac{fp} and \ac{tp} modules in that the arcs to the Module Connector are done in the Player module rather than in the Module Connector. By doing this, it is possible to toggle this module on/off in the variable \verb!global_info.GUI_ENABLED!.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{images/playerModule}
+		\includegraphics[scale=0.6]{images/playerModule}
 		\caption{Player module}
 		\label{fig:player_module}
 	\end{center}
@@ -322,7 +323,7 @@ In order to make the buttons of the GUI be responsive, it was necessary to intro
 
 As can be seen in listing \ref{lst:tPe_DP_Turn_pre}, to check if a button is pressed is actually a matter of checking whether the global variable corresponding to that button is set. In the listing above, it is accomplished by checking if \verb!global_info.DP_Turn_Btn! is set, and if so set it back to false. A consequence of doing this, is that it's possible to queue up actions, for example by hitting the \ac{dp} Turn-button when the game is in process of moving cards from one pile to another. \\
 
-When issuing a new move command, its destination and possibly amount of cards to be moved is fetched directly from the GUI elements. 
+When issuing a new move command, its destination and possibly amount of cards to be moved is fetched directly from the GUI elements. This is done with the function \verb!get_handle!, which is a simple extension of \verb!get!, with the difference that GUI elements will only be fetched if \verb!global_info.GUI_ENABLED! is set to \verb!true!.
 \begin{table}
 	\caption{Transitions used in Player}
 	\begin{tabular}{|l|l|l|}
@@ -353,43 +354,75 @@ When issuing a new move command, its destination and possibly amount of cards to
 \end{table}
 \clearpage
 \subsection{Player Bot Module}
+As with the Player module, the connections to the Module Connector is done within this module. This makes it possible to toggle this module on/off with the variable \verb!global_info.BOT_ENABLED!. The module is depicted in figure \ref{fig:player_bot_module}. In earlier iterations of the module it also had an additional place before \verb!tPBi_Gen!, an arc going from \verb!tPBi_Gen! to this place and a transition connected to this place. This worked fine, however it was found desirable to be able to toggle the bot on/off when doing testing and/or analysis. Therefore these where removed, and \verb!tPBi_Gen! simply serves as a generator when its conditions in the pre-processor are met.
+\begin{figure}
+	\begin{center}
+		\includegraphics[scale=0.65]{images/playerBotModule}
+		\caption{Player Bot module}
+		\label{fig:player_bot_module}
+	\end{center}
+\end{figure}\\
+In addition to the requirement of \verb!global_info.BOT_ENABLED! must be set to true, the pre-processor of \verb!tPBi_Gen! will check that there are no active actions ongoing, and that the previously executed command has exhausted all its parameters. To check whether there are any actions currently ongoing, the global \verb!PN! structure is checked. In this structure, all resources and their current usage can be found. Since the model only uses a single resource, it's enough to check if the first resource is taken by any transition. Listing \ref{lst:tPBi_Gen_pre} shows how this is done by calling \verb!PN.system resources.instance usage(1,1)!.
+
+\lstinputlisting[style=matlabcode,caption=tPBi\_Gen\_pre.m lines 9-28,label=lst:tPBi_Gen_pre,firstline=9,lastline=28]{\GPenSIM/tPBi_Gen_pre.m}
+The listing above also shows parts of how the module generates the commands. As this project is not really focused on AI programming, the logic for generating commands is very simple and serves more as a proof of concept. The bot possesses no ability to view the state of the game before making a decision about which command is most appropriate, rather it will simply pick a random number between 1 and 100, and select the command according to the distribution found in \verb!global_info.BOT_ACTIONS!. Listing \ref{lst:main_simulation_file} shows the three variables which control the distribution of the bots actions. 
+\lstinputlisting[style=matlabcode,caption=main\_simulation\_file.m lines 19-29,label=lst:main_simulation_file,firstline=19,lastline=29]{\GPenSIM/main_simulation_file.m}
+
+\verb!global_info.BOT_ACTIONS! is a row vector with 4 elements numbered from 1 to 100. The bot has 5 possible commands; \verb!DP_Turn!, \verb!DP_Move!, \verb!FP_Move!, \verb!TP_Turn!, and \verb!TP_Move!. Given a random numbers generated from 1-100, the probability distribution for the commands is as follows; \verb!DP_Turn! between 1 and the first element of the vector, \verb!DP_Turn! between the first and second element, \verb!FP_Move! between the second and third element, \verb!TP_Turn! between the third and fourth element, and \verb!TP_Move! between the forth element and 100.
+\verb!global_info.BOT_ACTIONS_TP_TP! defines how often (on average) the bot will attempt to move a card from a \ac{tp} pile to another \ac{tp} pile versus a \ac{fp} pile. Listing \ref{lst:main_simulation_file} shows this value set to 15, which means that the bot will opt to move to another \ac{tp} pile only 15 percent of the time.\\
+Finally, the \verb!global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE! works in a similar way, as it defines how often the \ac{tp} pile will attempt to move all the cards in the face-up pile versus just a subset of them.\\
+By manipulation these values, the likelihood of solving the game will be drastically altered. Of course having a smarter bot which took actions after considering the game state, and perhaps learned from its mistake would be must better. However, this was outside the scope of this project. Future work is discussed in more detail in chapter \ref{sec3_future_work}.
+\\
+
+Given that the bot continuously generates commands, even though they might be invalid for the current state of the game, I added the \ac{destroyer} \verb!tPBi_Destroyer!. This is transition is not strictly necessary for the model to work, but was still deemed advantageous to keep the number of active tokens in the Petri Net as low as possible. Listing \ref{lst:tPBi_Destroyer_pre} shows parts of the code for the \ac{destroyer}.
+\lstinputlisting[style=matlabcode,caption=tPBi\_Destroyer\_pre.m lines 3-9,label=lst:tPBi_Destroyer_pre,firstline=3,lastline=9]{\GPenSIM/tPBi_Destroyer_pre.m}
+
+
+The external outputs all have pre-processors which will make them fire only if the token in \verb!pPB_Cmd! has the correct color. In addition, some pre-processors have additional logic which makes them exhaust the different movement parameters before attempting a new command. An example of this can be seen in listing \ref{lst:tPBe_DP_Move_pre}, where \verb!global_info.BOT_ACTIONS_NEW_CMD! is set to 1 once there is no more piles to attempt to move to. \verb!global_info.BOT_ACTIONS_NEW_CMD! is also set to 1 in the post-processor, if the command is successfully issued.
+\lstinputlisting[style=matlabcode,caption=tPBe\_DP\_Move\_pre.m lines 16-29,label=lst:tPBe_DP_Move_pre,firstline=16,lastline=29]{\GPenSIM/tPBe_DP_Move_pre.m}
+\lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 24-27,label=lst:COMMON_POST_3,firstline=24,lastline=27]{\GPenSIM/COMMON_POST.m}
 \begin{table}
 	\caption{Places and transitions used in Player Bot}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		1 & pPB\_Cmd          &  \\ \hline
-		2 & tPBe\_DP\_Move    &  \\ \hline
-		3 & tPBe\_DP\_Turn    &  \\ \hline
-		4 & tPBe\_FP\_Move    &  \\ \hline
-		5 & tPBe\_TP\_Move    &  \\ \hline
-		6 & tPBe\_TP\_Turn    &  \\ \hline
-		7 & tPBi\_Gen         &  \\ \hline
-		8 & tPBi\_Siphon      &  \\ \hline
+		1 & pPB\_Cmd          & Holds the next command to be executed. \\ \hline
+		2 & tPBe\_DP\_Move    & Will fetch tokens with color: DP\_Move\\ \hline
+		3 & tPBe\_DP\_Turn    & Will fetch tokens with color: DP\_Turn\\ \hline
+		4 & tPBe\_FP\_Move    & Will fetch tokens with color that contains: FP\_Move \\ \hline
+		5 & tPBe\_TP\_Move    & Will fetch tokens with color that contains: TP\_Move \\ \hline
+		6 & tPBe\_TP\_Turn    & Will fetch tokens with color that contains: TP\_Turn \\ \hline
+		7 & tPBi\_Gen         & Issues new commands once the conditions of the pre-processor are met. \\ \hline
+		8 & tPBi\_Destroyer   & Makes sure at most 1 token is present at \verb!pPB_Cmd! at all times. \\ \hline
 	\end{tabular}
 \end{table}
-*tPBi\_Gen\_Stop is deleted. But code is still there. Make comment on why this is removed*
 \clearpage
 \subsection{Module Connector}
+The module connector is what makes all the different modules communicate. A figure of the module connector can be seen in figure \ref{fig:full_horizontal} or for a full vertical view, in chapter \ref{app:full_vertical} in the appendix.\\
 
+By having all the external inputs and output of every module be only transitions, we achieve a clean-cut interface. This also makes testing each individual modules easier, as the desired colored input can be programmed in the pre-processor during testing. 
+\\
+
+The only pre- og post-processors of the module connector can be found in the \ac{destroyer} transitions. These are not strictly necessary in the current form of the model, as the Player and Player Bot modules do a good job of keep tokens with incorrect colors out. However, it might be a good idea for future work to remove this responsibility from non-essential modules. Listing \ref{lst:tMC_FP_Move_Destroyer_pre} shows the destroyer of \ac{fp} move commands.
+\lstinputlisting[style=matlabcode,caption=tMC\_FP\_Move\_Destroyer\_pre.m,label=lst:tMC_FP_Move_Destroyer_pre]{\GPenSIM/tMC_FP_Move_Destroyer_pre.m}
 \begin{table}
 	\caption{Places and transitions used in Module Connector}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		& Name & Description \\
 		\hline
-		1 & pMC\_DP\_Move             &  \\ \hline
-		2 & pMC\_DP\_Turn             &  \\ \hline
-		3 & pMC\_FP\_Move             &  \\ \hline
-		4 & pMC\_Out\_Buffer          &  \\ \hline
-		5 & pMC\_TP\_Move             &  \\ \hline
-		6 & pMC\_TP\_Turn             &  \\ \hline
-		7 & tMC\_DP\_Move\_Siphon     &  \\ \hline
-		8 & tMC\_FP\_Move\_Siphon     &  \\ \hline
-		9 & tMC\_Out\_Buffer\_Siphon  &  \\ \hline
-		10 & tMC\_TP\_Move\_Siphon     &  \\ \hline
-		11 & tMC\_TP\_Turn\_Siphon     &  \\ \hline
+		1 & pMC\_DP\_Move             & Buffer for \ac{dp} move commands. \\ \hline
+		2 & pMC\_DP\_Turn             & Buffer for \ac{dp} turn commands. \\ \hline
+		3 & pMC\_FP\_Move             & Buffer for \ac{fp} move commands. \\ \hline
+		4 & pMC\_Out\_Buffer          & Outgoing buffer for all modules. \\ \hline
+		5 & pMC\_TP\_Move             & Buffer for \ac{tp} move commands. \\ \hline
+		6 & pMC\_TP\_Turn             & Buffer for \ac{tp} turn commands. \\ \hline
+		7 & tMC\_DP\_Move\_Destroyer     &  Destroyer for \ac{dp} move commands. \\ \hline
+		8 & tMC\_FP\_Move\_Destroyer     &  Destroyer for \ac{fp} move commands.\\ \hline
+		9 & tMC\_Out\_Buffer\_Destroyer  &  Destroyer the outgoing buffer.\\ \hline
+		10 & tMC\_TP\_Move\_Destroyer     &  Destroyer for \ac{tp} move commands.\\ \hline
+		11 & tMC\_TP\_Turn\_Destroyer     &  Destroyer for \ac{tp} turn commands.\\ \hline
 	\end{tabular}
 \end{table}
 \clearpage
@@ -428,7 +461,7 @@ Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the functio
 \subsection{Moving Multiple Cards}
 \subsection{Scoring}
 \subsection{Possible improvments}
-A major drawback of the siphon \verb!tMC_Out_Buffer_Siphon! is that if it fires, the card will actually be removed from the game, and the game becomes unsolvable. This transition will fire if the move-command of the token has an invalid destination. Due to how the Player and Player Bot modules are set up, this will never happen as they will check the validity of the move command before actually issuing the command. Still, I think it would be an improvement add an additional transition to the Draw Pile module which would accept cards from \verb!tMC_Out_Buffer_Siphon!, instead of totally discarding them.
+A major drawback of the destroyer \verb!tMC_Out_Buffer_Destroyer! is that if it fires, the card will actually be removed from the game, and the game becomes unsolvable. This transition will fire if the move-command of the token has an invalid destination. Due to how the Player and Player Bot modules are set up, this will never happen as they will check the validity of the move command before actually issuing the command. Still, I think it would be an improvement add an additional transition to the Draw Pile module which would accept cards from \verb!tMC_Out_Buffer_Destroyer!, instead of totally discarding them.
 \newline
 
 Another improvement would be to re-factor the code base by moving more of the validity check of the commands from the Player and Player Bot modules to the destination transitions. The Player Bot modules uses roughly 200 lines of code to always issue valid commands, I think this could be drastically reduced. By doing this it would be easier to create additional modules which could interface with the game, for example a hardware-based module.
@@ -439,14 +472,19 @@ It might also be a slight improvement to combine the Add-face-up and Add-face-do
 Lastly, a performance increase might be gained by reducing the number of transitions in the Player module, or at least introducing a new place and transition. This new place would serve as an input to all of the 20 transitions of the Player module, whilst the new transition would serve as an input the new place. By doing this, the number enabled transitions, and pre-processors which would have to be executed would drastically drop.
 \clearpage
 \subsection{Future work}
-dladl
+\label{sec3_future_work}
+Smarter bot
 \section{Testing, Analysis and Results}
 \subsection{Matlab version}
 The project has been developed and tested in versions R2013a and R2017a. Due to using two versions of Matlab it was necessary to only use functionality that is supported in both versions. Examples of this is using \verb!GUIDE! for developing the GUI, and omitting to use the \verb!contains! command.
-\label{sec:3_testing_analysis}
+\label{sec:4_testing_analysis}
 \subsection{Algorithms}
 \subsubsection{Atomicity}
 In order to preventdd
+\subsection{Structural Invariants}
+\label{sec:4_structural_invariants}
+\subsubsection{Siphons}
+\label{sec:4_siphons}
 \subsection{Initial Dealing}
 \label{sec:3_initial_dealing}
 \subsection{Resources}
@@ -469,7 +507,8 @@ In order to preventdd
 \end{thebibliography}
 \addtocmark{Appendix}
 \appendix
-\section{Overall design - horizontal view}
+\section{Overall design - Vertical view}
+\label{app:full_vertical}
 \begin{figure}
 	% Left, Bottom, Right, Top
 	\includegraphics[trim=40 100 100 310,angle=90,scale=1.4]{images/overallViewPdf}
@@ -670,25 +709,25 @@ In order to preventdd
 \label{app:tDPi_Turn_pre}
 \lstinputlisting[style=matlabcode]{\GPenSIM/tDPi_Turn_pre.m}
 
-\subsection{tMC\_DP\_Move\_Siphon\_pre.m}
-\label{app:tMC_DP_Move_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_DP_Move_Siphon_pre.m}
+\subsection{tMC\_DP\_Move\_Destroyer\_pre.m}
+\label{app:tMC_DP_Move_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_DP_Move_Destroyer_pre.m}
 
-\subsection{tMC\_FP\_Move\_Siphon\_pre.m}
-\label{app:tMC_FP_Move_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_FP_Move_Siphon_pre.m}
+\subsection{tMC\_FP\_Move\_Destroyer\_pre.m}
+\label{app:tMC_FP_Move_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_FP_Move_Destroyer_pre.m}
 
-\subsection{tMC\_Out\_Buffer\_Siphon\_pre.m}
-\label{app:tMC_Out_Buffer_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_Out_Buffer_Siphon_pre.m}
+\subsection{tMC\_Out\_Buffer\_Destroyer\_pre.m}
+\label{app:tMC_Out_Buffer_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_Out_Buffer_Destroyer_pre.m}
 
-\subsection{tMC\_TP\_Move\_Siphon\_pre.m}
-\label{app:tMC_TP_Move_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Move_Siphon_pre.m}
+\subsection{tMC\_TP\_Move\_Destroyer\_pre.m}
+\label{app:tMC_TP_Move_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Move_Destroyer_pre.m}
 
-\subsection{tMC\_TP\_Turn\_Siphon\_pre.m}
-\label{app:tMC_TP_Turn_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Turn_Siphon_pre.m}
+\subsection{tMC\_TP\_Turn\_Destroyer\_pre.m}
+\label{app:tMC_TP_Turn_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tMC_TP_Turn_Destroyer_pre.m}
 
 \subsection{tPBe\_DP\_Move\_pre.m}
 \label{app:tPBe_DP_Move_pre}
@@ -714,13 +753,9 @@ In order to preventdd
 \label{app:tPBi_Gen_pre}
 \lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Gen_pre.m}
 
-\subsection{tPBi\_Gen\_Stop\_pre.m}
-\label{app:tPBi_Gen_Stop_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Gen_Stop_pre.m}
-
-\subsection{tPBi\_Siphon\_pre.m}
-\label{app:tPBi_Siphon_pre}
-\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Siphon_pre.m}
+\subsection{tPBi\_Destroyer\_pre.m}
+\label{app:tPBi_Destroyer_pre}
+\lstinputlisting[style=matlabcode]{\GPenSIM/tPBi_Destroyer_pre.m}
 
 \subsection{tPe\_DP\_Move\_pre.m}
 \label{app:tPe_DP_Move_pre}

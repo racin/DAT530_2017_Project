@@ -23,7 +23,7 @@ end
 % and so on.
 global_info.BOT_ACTIONS = [10, 42, 44, 60];
 % The probability of moving to a tableau pile versus a foundation pile.
-global_info.BOT_ACTIONS_TP_FP = 15;
+global_info.BOT_ACTIONS_TP_FP = 7;
 % The probability that the bot will attempt to move the full stack versus a
 % part of it.
 global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE = 35;

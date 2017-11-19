@@ -1,0 +1,21 @@
+function [png] = tableau_pile_1_pdf() 
+modname = '1';
+png.PN_name = strcat('Tableau Pile -',{' '},modname);
+
+png.set_of_Ps = {'p1','p2','p3'};
+png.set_of_Ts = {'t1','t2','t3', ...
+    't4','t5','t6'}; 
+png.set_of_As = {
+
+    't4','p1',1, ...
+    'p2', 't4', 1, ...
+    'p1', 't5', 1, ...
+    'p3', 't5', 1, ...
+    't6', 'p3', 2, ...
+    'p3', 't6', 1
+    };
+png.set_of_Is = {
+    'p1', 't4', 1
+    };
+	
+	Inputs have arcs removed.
