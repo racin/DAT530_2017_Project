@@ -15,16 +15,13 @@
 \contentsline {subsection}{\numberline {2.9}Module Connector}{29}
 \contentsline {section}{\numberline {3}Implementation}{30}
 \contentsline {subsection}{\numberline {3.1}\ac {gui}}{30}
-\contentsline {subsection}{\numberline {3.2}Algorithms}{34}
-\contentsline {subsubsection}{\numberline {3.2.1}Atomicity}{34}
+\contentsline {subsection}{\numberline {3.2}Simulation settings}{34}
 \contentsline {subsection}{\numberline {3.3}Commands}{35}
 \contentsline {subsubsection}{\numberline {3.3.1}Move Command}{35}
-\contentsline {subsection}{\numberline {3.4}Initial Dealing}{37}
-\contentsline {subsection}{\numberline {3.5}Resources}{37}
-\contentsline {subsection}{\numberline {3.6}Moving Multiple Cards}{37}
-\contentsline {subsection}{\numberline {3.7}Scoring}{37}
-\contentsline {section}{\numberline {4}Testing, Analysis and Results}{38}
-\contentsline {subsection}{\numberline {4.1}Matlab version}{38}
+\contentsline {subsection}{\numberline {3.4}Resources}{37}
+\contentsline {subsection}{\numberline {3.5}Scoring}{37}
+\contentsline {section}{\numberline {4}Testing, Analysis and Results}{37}
+\contentsline {subsection}{\numberline {4.1}Matlab version}{37}
 \contentsline {subsection}{\numberline {4.2}Coverability trees}{38}
 \contentsline {subsubsection}{\numberline {4.2.1}Draw Pile}{38}
 \contentsline {subsubsection}{\numberline {4.2.2}Tableau Pile}{40}
@@ -33,73 +30,74 @@
 \contentsline {subsubsection}{\numberline {4.3.2}Liveness}{41}
 \contentsline {subsection}{\numberline {4.4}Structural Invariants}{41}
 \contentsline {subsubsection}{\numberline {4.4.1}Siphons}{41}
+\contentsline {subsection}{\numberline {4.5}Results}{41}
 \contentsline {section}{\numberline {5}Discussion}{41}
 \contentsline {subsection}{\numberline {5.1}Originality of this work}{41}
-\contentsline {subsection}{\numberline {5.2}Limitations of the project}{41}
+\contentsline {subsection}{\numberline {5.2}Limitations of the project}{42}
 \contentsline {subsection}{\numberline {5.3}Future work}{42}
-\contentsline {subsection}{\numberline {5.4}Learning experience}{42}
+\contentsline {subsection}{\numberline {5.4}Learning experience}{43}
 \contentsline {chapter}{Appendix}{0}
-\contentsline {section}{\numberline {A}Overall design - Vertical view}{43}
-\contentsline {section}{\numberline {B}Matlab code}{45}
-\contentsline {subsection}{\numberline {B.1}checkCommand\_Move.m}{45}
-\contentsline {subsection}{\numberline {B.2}COMMON\_POST.m}{46}
-\contentsline {subsection}{\numberline {B.3}COMMON\_PRE.m}{47}
-\contentsline {subsection}{\numberline {B.4}draw\_pile\_pdf.m}{48}
-\contentsline {subsection}{\numberline {B.5}foundation\_pile\_clubs\_pdf.m}{49}
-\contentsline {subsection}{\numberline {B.6}foundation\_pile\_diamonds\_pdf.m}{49}
-\contentsline {subsection}{\numberline {B.7}foundation\_pile\_hearts\_pdf.m}{49}
-\contentsline {subsection}{\numberline {B.8}foundation\_pile\_spades\_pdf.m}{49}
-\contentsline {subsection}{\numberline {B.9}get\_handle.m}{50}
-\contentsline {subsection}{\numberline {B.10}get\_suit\_from\_transname.m}{50}
-\contentsline {subsection}{\numberline {B.11}get\_tableau\_from\_transname.m}{50}
-\contentsline {subsection}{\numberline {B.12}main\_simulation\_file.m}{51}
-\contentsline {subsection}{\numberline {B.13}module\_connector\_pdf.m}{53}
-\contentsline {subsection}{\numberline {B.14}player\_bot\_pdf.m}{53}
-\contentsline {subsection}{\numberline {B.15}player\_GUI.m}{54}
-\contentsline {subsection}{\numberline {B.16}player\_pdf.m}{57}
-\contentsline {subsection}{\numberline {B.17}player\_update\_GUI.m}{57}
-\contentsline {subsection}{\numberline {B.18}post\_tTPe\_Add\_FaceUp.m}{58}
-\contentsline {subsection}{\numberline {B.19}pre\_tFPe\_Add.m}{58}
-\contentsline {subsection}{\numberline {B.20}pre\_tFPe\_Move.m}{59}
-\contentsline {subsection}{\numberline {B.21}pre\_tFPe\_Out.m}{59}
-\contentsline {subsection}{\numberline {B.22}pre\_tPe\_FP\_Move.m}{59}
-\contentsline {subsection}{\numberline {B.23}pre\_tPe\_TP\_Move.m}{60}
-\contentsline {subsection}{\numberline {B.24}pre\_tPe\_TP\_Turn.m}{60}
-\contentsline {subsection}{\numberline {B.25}pre\_tTPe\_Add\_FaceDown.m}{61}
-\contentsline {subsection}{\numberline {B.26}pre\_tTPe\_Add\_FaceUp.m}{61}
-\contentsline {subsection}{\numberline {B.27}pre\_tTPe\_Move.m}{62}
-\contentsline {subsection}{\numberline {B.28}pre\_tTPe\_Out.m}{62}
-\contentsline {subsection}{\numberline {B.29}pre\_tTPe\_Turn.m}{63}
-\contentsline {subsection}{\numberline {B.30}pre\_tTPi\_Move\_Multiple.m}{63}
-\contentsline {subsection}{\numberline {B.31}set\_handle.m}{63}
-\contentsline {subsection}{\numberline {B.32}splitCommand.m}{63}
-\contentsline {subsection}{\numberline {B.33}tableau\_pile\_1\_pdf.m}{64}
-\contentsline {subsection}{\numberline {B.34}tableau\_pile\_2\_pdf.m}{64}
-\contentsline {subsection}{\numberline {B.35}tableau\_pile\_3\_pdf.m}{65}
-\contentsline {subsection}{\numberline {B.36}tableau\_pile\_4\_pdf.m}{65}
-\contentsline {subsection}{\numberline {B.37}tableau\_pile\_5\_pdf.m}{66}
-\contentsline {subsection}{\numberline {B.38}tableau\_pile\_6\_pdf.m}{66}
-\contentsline {subsection}{\numberline {B.39}tableau\_pile\_7\_pdf.m}{67}
-\contentsline {subsection}{\numberline {B.40}tDPe\_Move\_pre.m}{67}
-\contentsline {subsection}{\numberline {B.41}tDPe\_Out\_pre.m}{67}
-\contentsline {subsection}{\numberline {B.42}tDPi\_Dealer\_pre.m}{68}
-\contentsline {subsection}{\numberline {B.43}tDPi\_Enable\_FP\_Trans\_post.m}{68}
-\contentsline {subsection}{\numberline {B.44}tDPi\_Flip\_Pile\_post.m}{68}
-\contentsline {subsection}{\numberline {B.45}tDPi\_Flip\_Pile\_pre.m}{68}
-\contentsline {subsection}{\numberline {B.46}tDPi\_Move\_Init\_pre.m}{69}
-\contentsline {subsection}{\numberline {B.47}tDPi\_Turn\_post.m}{69}
-\contentsline {subsection}{\numberline {B.48}tDPi\_Turn\_pre.m}{69}
-\contentsline {subsection}{\numberline {B.49}tMC\_DP\_Move\_Destroyer\_pre.m}{69}
-\contentsline {subsection}{\numberline {B.50}tMC\_FP\_Move\_Destroyer\_pre.m}{70}
-\contentsline {subsection}{\numberline {B.51}tMC\_Out\_Buffer\_Destroyer\_pre.m}{70}
-\contentsline {subsection}{\numberline {B.52}tMC\_TP\_Move\_Destroyer\_pre.m}{70}
-\contentsline {subsection}{\numberline {B.53}tMC\_TP\_Turn\_Destroyer\_pre.m}{71}
-\contentsline {subsection}{\numberline {B.54}tPBe\_DP\_Move\_pre.m}{71}
-\contentsline {subsection}{\numberline {B.55}tPBe\_DP\_Turn\_pre.m}{72}
-\contentsline {subsection}{\numberline {B.56}tPBe\_FP\_Move\_pre.m}{72}
-\contentsline {subsection}{\numberline {B.57}tPBe\_TP\_Move\_pre.m}{73}
-\contentsline {subsection}{\numberline {B.58}tPBe\_TP\_Turn\_pre.m}{74}
-\contentsline {subsection}{\numberline {B.59}tPBi\_Gen\_pre.m}{74}
-\contentsline {subsection}{\numberline {B.60}tPBi\_Destroyer\_pre.m}{75}
-\contentsline {subsection}{\numberline {B.61}tPe\_DP\_Move\_pre.m}{75}
-\contentsline {subsection}{\numberline {B.62}tPe\_DP\_Turn\_pre.m}{76}
+\contentsline {section}{\numberline {A}Overall design - Vertical view}{44}
+\contentsline {section}{\numberline {B}Matlab code}{46}
+\contentsline {subsection}{\numberline {B.1}checkCommand\_Move.m}{46}
+\contentsline {subsection}{\numberline {B.2}COMMON\_POST.m}{47}
+\contentsline {subsection}{\numberline {B.3}COMMON\_PRE.m}{48}
+\contentsline {subsection}{\numberline {B.4}draw\_pile\_pdf.m}{49}
+\contentsline {subsection}{\numberline {B.5}foundation\_pile\_clubs\_pdf.m}{50}
+\contentsline {subsection}{\numberline {B.6}foundation\_pile\_diamonds\_pdf.m}{50}
+\contentsline {subsection}{\numberline {B.7}foundation\_pile\_hearts\_pdf.m}{50}
+\contentsline {subsection}{\numberline {B.8}foundation\_pile\_spades\_pdf.m}{50}
+\contentsline {subsection}{\numberline {B.9}get\_handle.m}{51}
+\contentsline {subsection}{\numberline {B.10}get\_suit\_from\_transname.m}{51}
+\contentsline {subsection}{\numberline {B.11}get\_tableau\_from\_transname.m}{51}
+\contentsline {subsection}{\numberline {B.12}main\_simulation\_file.m}{52}
+\contentsline {subsection}{\numberline {B.13}module\_connector\_pdf.m}{54}
+\contentsline {subsection}{\numberline {B.14}player\_bot\_pdf.m}{54}
+\contentsline {subsection}{\numberline {B.15}player\_GUI.m}{55}
+\contentsline {subsection}{\numberline {B.16}player\_pdf.m}{58}
+\contentsline {subsection}{\numberline {B.17}player\_update\_GUI.m}{58}
+\contentsline {subsection}{\numberline {B.18}post\_tTPe\_Add\_FaceUp.m}{59}
+\contentsline {subsection}{\numberline {B.19}pre\_tFPe\_Add.m}{59}
+\contentsline {subsection}{\numberline {B.20}pre\_tFPe\_Move.m}{60}
+\contentsline {subsection}{\numberline {B.21}pre\_tFPe\_Out.m}{60}
+\contentsline {subsection}{\numberline {B.22}pre\_tPe\_FP\_Move.m}{60}
+\contentsline {subsection}{\numberline {B.23}pre\_tPe\_TP\_Move.m}{61}
+\contentsline {subsection}{\numberline {B.24}pre\_tPe\_TP\_Turn.m}{61}
+\contentsline {subsection}{\numberline {B.25}pre\_tTPe\_Add\_FaceDown.m}{62}
+\contentsline {subsection}{\numberline {B.26}pre\_tTPe\_Add\_FaceUp.m}{62}
+\contentsline {subsection}{\numberline {B.27}pre\_tTPe\_Move.m}{63}
+\contentsline {subsection}{\numberline {B.28}pre\_tTPe\_Out.m}{63}
+\contentsline {subsection}{\numberline {B.29}pre\_tTPe\_Turn.m}{64}
+\contentsline {subsection}{\numberline {B.30}pre\_tTPi\_Move\_Multiple.m}{64}
+\contentsline {subsection}{\numberline {B.31}set\_handle.m}{64}
+\contentsline {subsection}{\numberline {B.32}splitCommand.m}{64}
+\contentsline {subsection}{\numberline {B.33}tableau\_pile\_1\_pdf.m}{65}
+\contentsline {subsection}{\numberline {B.34}tableau\_pile\_2\_pdf.m}{65}
+\contentsline {subsection}{\numberline {B.35}tableau\_pile\_3\_pdf.m}{66}
+\contentsline {subsection}{\numberline {B.36}tableau\_pile\_4\_pdf.m}{66}
+\contentsline {subsection}{\numberline {B.37}tableau\_pile\_5\_pdf.m}{67}
+\contentsline {subsection}{\numberline {B.38}tableau\_pile\_6\_pdf.m}{67}
+\contentsline {subsection}{\numberline {B.39}tableau\_pile\_7\_pdf.m}{68}
+\contentsline {subsection}{\numberline {B.40}tDPe\_Move\_pre.m}{68}
+\contentsline {subsection}{\numberline {B.41}tDPe\_Out\_pre.m}{68}
+\contentsline {subsection}{\numberline {B.42}tDPi\_Dealer\_pre.m}{69}
+\contentsline {subsection}{\numberline {B.43}tDPi\_Enable\_FP\_Trans\_post.m}{69}
+\contentsline {subsection}{\numberline {B.44}tDPi\_Flip\_Pile\_post.m}{69}
+\contentsline {subsection}{\numberline {B.45}tDPi\_Flip\_Pile\_pre.m}{69}
+\contentsline {subsection}{\numberline {B.46}tDPi\_Move\_Init\_pre.m}{70}
+\contentsline {subsection}{\numberline {B.47}tDPi\_Turn\_post.m}{70}
+\contentsline {subsection}{\numberline {B.48}tDPi\_Turn\_pre.m}{70}
+\contentsline {subsection}{\numberline {B.49}tMC\_DP\_Move\_Destroyer\_pre.m}{70}
+\contentsline {subsection}{\numberline {B.50}tMC\_FP\_Move\_Destroyer\_pre.m}{71}
+\contentsline {subsection}{\numberline {B.51}tMC\_Out\_Buffer\_Destroyer\_pre.m}{71}
+\contentsline {subsection}{\numberline {B.52}tMC\_TP\_Move\_Destroyer\_pre.m}{71}
+\contentsline {subsection}{\numberline {B.53}tMC\_TP\_Turn\_Destroyer\_pre.m}{72}
+\contentsline {subsection}{\numberline {B.54}tPBe\_DP\_Move\_pre.m}{72}
+\contentsline {subsection}{\numberline {B.55}tPBe\_DP\_Turn\_pre.m}{73}
+\contentsline {subsection}{\numberline {B.56}tPBe\_FP\_Move\_pre.m}{73}
+\contentsline {subsection}{\numberline {B.57}tPBe\_TP\_Move\_pre.m}{74}
+\contentsline {subsection}{\numberline {B.58}tPBe\_TP\_Turn\_pre.m}{75}
+\contentsline {subsection}{\numberline {B.59}tPBi\_Gen\_pre.m}{75}
+\contentsline {subsection}{\numberline {B.60}tPBi\_Destroyer\_pre.m}{76}
+\contentsline {subsection}{\numberline {B.61}tPe\_DP\_Move\_pre.m}{76}
+\contentsline {subsection}{\numberline {B.62}tPe\_DP\_Turn\_pre.m}{77}
