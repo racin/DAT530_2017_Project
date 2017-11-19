@@ -1,4 +1,7 @@
 function [png] = tableau_pile_7_pdf() 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: tableau_pile_7_pdf.m : Tableau Pile - 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 modname = '7';
 png.PN_name = strcat('Tableau Pile -',{' '},modname);
 

@@ -83,7 +83,7 @@
 
 
 \begin{abstract}
-This report describes the final project in DAT530. The topic of the project was chosen to be the game Solitaire. The goal of the project was to model the whole game, and perform analysis on the game strategy. To ease the testing of the model, a fully functional GUI was also developed. This GUI can be used to play a game of solitaire. The report contains description of the developed model, the newly created functions, the GUI, analysis of the model and the results.
+This report describes the final project in DAT530. The topic of the project was chosen to be the game Solitaire. The goal of the project was to model the whole game, and perform analysis on the game strategy. To ease the testing of the model, a fully functional GUI was also developed. This GUI can be used to play a game of Solitaire. The report contains a description of the developed model, the newly created functions, the GUI, analysis of the model and the results.
 
 \end{abstract}
 
@@ -96,9 +96,9 @@ This report describes the final project in DAT530. The topic of the project was 
 \printacronyms[name=Abbreviations,include-classes=abbrev]
 \printacronyms[name=Nomenclature,include-classes=nomencl]
 \section{Introduction}
-This project aims to study the popular card game, Solitaire. Solitaire is usually bundled with most Windows installations, as well as being available for free from several sources. It is also easy to play the game with a physical card deck. A detailed explanation of the games rules can be found in chapter \ref{sec1:solitaire_rules}, Solitaire Rules
+This project aims to study the popular card game, Solitaire. Solitaire is usually bundled with most Windows installations, as well as being available for free from several sources. It is also easy to play the game with a physical card deck. A detailed explanation of the game rules can be found in chapter \ref{sec1:solitaire_rules}, Solitaire Rules.
 \newline
-Since the game utilizes all 52 cards of the deck, the number of possible initial game states is 52!, which is a very high number. A large number of these initial game states can be merged, as they offer no difference in the difficulty to solve. Some of these initial states are unsolvable, but even given a solvable game state, one would often find oneself in an unsolvable game state, due to fact that certain actions in the game are non-reversible,. There has been attempts to find the distribution of solvable and unsolvable initial game states \cite{introduction}. Roughly 79 percent are solvable, however the study also shows that only 43 percent of the games are won by an experienced player.
+Since the game utilizes all 52 cards of the deck, the number of possible initial game states is 52!, which is a very high number. A large number of these initial game states can be merged, as they offer no difference in the difficulty to solve. Some of these initial states are unsolvable, but even given a solvable game state, one would often find oneself in an unsolvable game state, due to fact that certain actions in the game are non-reversible. There have been attempts to find the distribution of solvable and unsolvable initial game states \cite{Jupiter}. Roughly 79 percent are solvable, however the study also shows that only 43 percent of the games are won by an experienced player.
 \newline
 This project contains a complete model of the game, a GUI to play the game, and a basic bot to simulate user actions. 
 
@@ -106,7 +106,7 @@ This project contains a complete model of the game, a GUI to play the game, and 
 \label{sec1:solitaire_rules}
 Klondike, or Solitaire as it has been called in North America, is one of the most popular patience games.
 \newline
- The game became very popular in the 19th century, and the name Klondike is believed to have originated from the prospectors that were mining for gold in the Klondike region in Canada.
+ The game became very popular in the 19th century, and the name Klondike is believed to have originated from the prospectors that were mining for gold in the Klondike region in Canada\cite{introduction}.
  \newline
  
 Solitaire is played with a standard deck of 52 cards and no Jokers.
@@ -119,7 +119,7 @@ The rules of the game will now be described.
  Empty piles can be filled with a King or a pile of cards that starts with a King.
 \newline
  
-The piles are built up by stacking cards of the same suit starting from Ace and finishing with King. The aim of the game is to build up a stack of cards of the same suit. When this is accomplished, the goal is to move this stack to foundation where the Ace of the suit had previously been placed. 
+The foundation piles are built up by stacking cards of the same suit starting from Ace and finishing with King. The goal of the game is to build up a stack of cards of the same suit. When this is accomplished, the game is won. 
 \newline
   
 The remainder of the deck is dealt by turning one card at a time from the draw pile.
@@ -129,7 +129,7 @@ The layout of the piles is illustrated in figure \ref{fig:illuatration_solitaire
 \begin{figure}
 	 % Left, Bottom, Right, Top
 	\includegraphics[trim=150 0 0 0, scale=0.3]{images/TableauPiles}
-	\caption{Illustration of card layout in Solitaire}
+	\caption{Illustration of card layout in Solitaire made with Canva\cite{canva}}
 	\label{fig:illuatration_solitaire}
 \end{figure}
 
@@ -138,22 +138,22 @@ The layout of the piles is illustrated in figure \ref{fig:illuatration_solitaire
 \label{sec:2_method_and_design}
 \subsection{Naming Policy}
 \label{sec:2_naming_policy}
-The names of all transitions and places respects the restriction described in \cite{GPenSIMguide}, which states that only the 10 first characters of the names are significant. Acknowledging this, the first name of an element is always \textbf{t} or \textbf{p}, which means transition or place, respectively. \\
+The names of all transitions and places respect the restriction described in \cite{GPenSIMguide}, which states that only the 10 first characters of the names are significant. Acknowledging this, the first name of an element is always \textbf{t} or \textbf{p}, which means transition or place, respectively. \\
 
-Next, the abbreviated name of the module will follow. The possibilities are \textbf{\ac{dp}, \ac{fp}, \ac{mc}, \ac{p}, \ac{pb},} and \textbf{\ac{tp}}. After this, either an underscore, \textbf{i} or \textbf{e} follow. The letter \textbf{i} means it's an internal transition, and \textbf{e} means it's and external transition. This is significant, as without these letters, the transitions \verb!tTPi_1_Move_Multiple! and \verb!tTPe_1_Move! would have a name collision. After either letter a underscore follows.\\
+Next, the abbreviated name of the module will follow. The possibilities are \textbf{\ac{dp}, \ac{fp}, \ac{mc}, \ac{p}, \ac{pb},} and \textbf{\ac{tp}}. After this, either an underscore, \textbf{i} or \textbf{e} follows. The letter \textbf{i} means it's an internal transition, an \textbf{e} means it's and external transition. This is significant, as without these letters, the transitions \verb!tTPi_1_Move_Multiple! and \verb!tTPe_1_Move! would have a name collision. After either letter an underscore follows.\\
 
-After the first underscore, the unique identifier will follow for the Tableau- and Foundation modules. The valid identifiers for \ac{tp} are \textbf{1, 2, 3, 4, 5, 6, 7}, and for \ac{fp} it is \textbf{Clubs, Diamonds, Hearts, Spades}. After the unique identifier another underscore will follow.\\
+After the first underscore, the unique identifier will follow for the Tableau- and Foundation modules. The valid identifiers for \ac{tp} are \textbf{1, 2, 3, 4, 5, 6, 7}, and for \ac{fp} they are \textbf{Clubs, Diamonds, Hearts, Spades}. After the unique identifier another underscore will follow.\\
 
 Lastly, a short descriptive name for the place or transition is appended.
 \subsection{File structure}
 \label{sec:2_file_structure}
-To reduce the number of files, most of the pre- and post-processor files of the \ac{fp} and \ac{tp} modules have been combined in one single file. An example of this can be shown in listing \ref{lst:COMMON_PRE}, which shows parts of \verb!COMMON_PRE!
+To reduce the number of files, most of the pre- and post-processor files of the \ac{fp} and \ac{tp} modules have been combined in one single file. An example of this can be shown in listing \ref{lst:COMMON_PRE}, which shows parts of \verb!COMMON_PRE!.
 \lstinputlisting[style=matlabcode,caption=COMMON\_PRE.m lines 1-5,label=lst:COMMON_PRE,lastline=5]{\GPenSIM/COMMON_PRE.m}
 
 By doing this it is possible to reduce the number of files required without overloading the \verb!COMMON_PRE! and \verb!COMMON_POST! files. It also makes it much easier to work and maintain the code as the logic is only located in one place, as opposed to four or seven places if each transition had their own file.
 \newline
 
-With this approach it is no longer possible to hard-code the names of the related transitions and places, so two additional functions; \verb!get_tableau_from_transname! and \verb!get_suit_from_transname! were developed. These functions take the name of the transition as input, and then return the unique identifier for which module it belongs to. The actual code is pretty simple, and parts of \verb!get_suit_from_transname! is shown in listing \ref{lst:get_suit_from_transname}. The reasoning behind not using the Matlab command \verb!contains! is simply that it is not supported in older versions.
+With this approach it is no longer possible to hard-code the names of the related transitions and places, so two additional functions; \verb!get_tableau_from_transname! and \verb!get_suit_from_transname! were developed. These functions take the name of the transition as input, and then return the unique identifier for which module it belongs to. The actual code is pretty simple, and parts of \verb!get_suit_from_transname! are shown in listing \ref{lst:get_suit_from_transname}. The reasoning behind not using the Matlab command \verb!contains! is simply that it is not supported in older versions.
 \lstinputlisting[style=matlabcode,caption=get\_suit\_from\_transname.m lines 7-17,label=lst:get_suit_from_transname,firstline=7,lastline=17]{\GPenSIM/get_suit_from_transname.m}
 \clearpage
 \subsection{Overall Design}
@@ -167,7 +167,7 @@ With this approach it is no longer possible to hard-code the names of the relate
 \end{figure}
 
 
-The model is developed using a Colored Petri Net, and relies heavily on colors to represent the different card in the deck, and also to facilitate the communication between the different modules. The whole is quite large, containing 94 transition and 42 places. It is developed using the modular approach, and encompasses 6 different modules. Some of the modules are duplicated, with the only difference being the names of the transitions and places.
+The model is developed using a Colored Petri Net, and relies heavily on colors to represent the different cards in the deck, and also to facilitate the communication between the different modules. The model is quite large, containing 94 transitions and 42 places. It is developed using the modular approach, and encompasses 5 different modules and a module connector. Some of the modules are duplicated, with the only difference being the names of the transitions and places.
 \clearpage
 \subsection{Draw Pile Module}
 \label{sec:draw_pile}
@@ -178,7 +178,7 @@ The model is developed using a Colored Petri Net, and relies heavily on colors t
 		\label{fig:draw_pile}
 	\end{center}
 \end{figure}
-The Draw Pile module is depicted in figure \ref{fig:draw_pile}, and has several key responsibilities, once of which is to do the initial dealing of cards. In order to preserve the correctness of the gameplay, external input is not allowed during this phase. When first running the model, all the initial tokens of \verb!pDP_Dealer! will be sent to \verb!tDPi_Dealer!. This transition will give each token a color which represents a \ac{card} in the deck. Possible colors are initially stored in the cell \verb!global_info.DECK!. If \verb!global_info.RANDOM_DECK! is set, a random permutation of the colors will be given to the tokens. By having \verb!global_info.RANDOM_DECK! set to false, it is possible to run analytics which require that the cards are dealt equally each time.
+The Draw Pile module is depicted in figure \ref{fig:draw_pile}, and has several key responsibilities, one of which is to do the initial dealing of cards. In order to preserve the correctness of the gameplay, external input is not allowed during this phase. When first running the model, all the initial tokens of \verb!pDP_Dealer! will be sent to \verb!tDPi_Dealer!. This transition will give each token a color which represents a \ac{card} in the deck. Possible colors are initially stored in the cell \verb!global_info.DECK!. If \verb!global_info.RANDOM_DECK! is set, a random permutation of the colors will be given to the tokens. By having \verb!global_info.RANDOM_DECK! set to false, it is possible to run analytics which require that the cards are dealt equally each time.
 \newline
 
 After all tokens are given a color, \verb!tDPi_Turn! will be enabled. This transition will move cards from the pile which represents face-down cards, \verb!pDP_Draw_FaceDown_Pile! to the one representing face-up cards, \verb!pDP_Draw_FaceUp_Pile!. This transition will fire as many times as the length of \verb!global_info.INITIAL_DEAL_MOVE!, which is 28 in a normal game. This is not something that would be done if the game where played with physical cards, as they would just be dealt without turning them. In this model however, this is required so that existing logic could be re-used.
@@ -194,7 +194,7 @@ The second input, \verb!tDPe_Turn! is used to used to simply move cards from the
 \newline
 This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually a \ac{destroyer}, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a \ac{destroyer}, so the \ac{card} would be removed from the game if it fired.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Enable\_FP\_Trans\_post.m,label=lst:tDPi_Enable_FP_Trans_post]{\GPenSIM/tDPi_Enable_FP_Trans_post.m}
-Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived \ac{card} from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards have been successfully turned around.
+Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived \ac{card} from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards would be successfully turned around.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_pre.m,label=lst:tDPi_Flip_Pile_pre]{\GPenSIM/tDPi_Flip_Pile_pre.m}
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_post.m,label=lst:tDPi_Flip_Pile_post]{\GPenSIM/tDPi_Flip_Pile_post.m}
 
@@ -209,7 +209,7 @@ Interestingly, moving cards out of the \verb!tDPe_Out! transition is a non-rever
 		\hline
 		1  & pDP\_Dealer               & Holds the initial tokens which will become cards. \\ \hline
 		2  & pDP\_Draw\_FaceDown\_Pile & Holds the face-down cards. These are not visible to the player. \\ \hline
-		3  & pDP\_Draw\_FaceUp\_Pile   & Holde the face-up cards. Only the top card is visible to the player. \\ \hline
+		3  & pDP\_Draw\_FaceUp\_Pile   & Holds the face-up cards. Only the top card is visible to the player. \\ \hline
 		4  & pDP\_Move\_Init           & Holds initial tokens used for generating move-commands. \\ \hline
 		5  & pDP\_Move\_Out            & Buffer for move-commands.  \\ \hline
 		6  & pDP\_Turn                 & Buffer for turn-commands. \\ \hline
@@ -225,7 +225,7 @@ Interestingly, moving cards out of the \verb!tDPe_Out! transition is a non-rever
 \end{table}
 \clearpage
 \subsection{Foundation Pile Module}
-The Foundation Pile module is depicted figure \ref{fig:foundation_pile}. It is duplicated four times, once for every suit, clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared between all the suits.
+The Foundation Pile module is depicted figure \ref{fig:foundation_pile}. It is duplicated four times, once for every suit; clubs, diamonds, hearts, and spades. The only difference between these modules is the names of their respective transitions and names, so the description given for clubs will count for the other duplicates as well. All the pre- and post-processor files are shared between all the suits.
 \newline
 \begin{figure}
 	\begin{center}
@@ -241,10 +241,10 @@ This module is inactive during the initial phase, and only becomes interact-able
 Given that the colors of the token have the correct length, the \verb!get_suit_from_transname! function will be run to determine which \ac{fp} the executing transition belongs to. More information about this step can be found in \ref{sec:2_file_structure}. Lastly, the \verb!checkCommand_Move! function is ran to determine the validity of the command in the context of this particular transition. The \verb!checkCommand_Move! function is quite involved, and is discussed in detail in chapter \ref{sec:3_move_command}.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Add.m lines 5-17,label=lst:pre_tFPe_Add,firstline=5,lastline=17]{\GPenSIM/pre_tFPe_Add.m}
 
-The second external input is \verb!tFPe_Clubs_Move!. Its used for moving cards to other modules, and works similarly to how movement in handle in the Draw Pile, with the additional caveat that all four Foundation Piles becomes enabled at the time from \verb!pMC_FP_Move!. Due to this its necessary to introduce additional logic to ensure that the issued move-command from the Player or Player Bot modules are meant for this particular module. As with the other modules, the actual validity of the move-command are handles by the \ac{p} and \ac{pb} modules.
+The second external input is \verb!tFPe_Clubs_Move!. It is used for moving cards to other modules, and works similarly to how movement is handled in the Draw Pile, with the additional caveat that all four Foundation Piles become enabled at the same time from \verb!pMC_FP_Move!. Due to this it's necessary to introduce additional logic to ensure that the issued move-command from the Player or Player Bot modules are meant for this particular module. As with the other modules, the actual validity of the move-command is handles by the \ac{p} and \ac{pb} modules.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Move.m lines 4-10,label=lst:pre_tFPe_Move,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Move.m}
 
-The only external output of the {fp} is \verb!tFPe_Clubs_Out!. It works similarly to the output of the Draw Pile, where the pre-processor takes the latest arrived card \verb!pFP_Clubs_Pile! and the earliest arrived command from \verb!pFP_Clubs_Move!. This ensures that the first issued command will be processed first, should there be more than one. The only time there would be more than one command executing concurrently is if neither the Player or the Player Bot modules where enabled, and the command was issued from another module which did not use the \verb!playerAction! resource. Listing \ref{lst:pre_tFPe_Out} shows parts of the code.
+The only external output of the {fp} is \verb!tFPe_Clubs_Out!. It works similarly to the output of the Draw Pile, where the pre-processor takes the latest arrived card from \verb!pFP_Clubs_Pile! and the earliest arrived command from \verb!pFP_Clubs_Move!. This ensures that the first issued command will be processed first, should there be more than one. The only time there would be more than one command executing concurrently is if neither the Player or the Player Bot modules where enabled, and the command was issued from another module which did not use the \verb!playerAction! resource. Listing \ref{lst:pre_tFPe_Out} shows parts of the code.
 \lstinputlisting[style=matlabcode,caption=pre\_tFPe\_Out.m lines 4-10,label=lst:pre_tFPe_Out,firstline=4,lastline=10]{\GPenSIM/pre_tFPe_Out.m}
 
 
@@ -265,7 +265,7 @@ Another interesting fact about the Foundation Pile modules is the place \verb!pF
 \end{table}
 \clearpage
 \subsection{Tableau Pile Module}
-The Tableau Pile module is depicted in figure \ref{fig:tableau_pile}. It is duplicated 7 times, once for every pile in the tableau. The main difference between these modules is the names of their respective transitions and names, so the description given for the first pile will count for the other duplicates as well. Another difference is how many cards each pile are dealt during the initial phase. This is discussed in more detail in chapter \ref{sec:draw_pile}. All the pre- and post-processor files are shared between all piles.
+The Tableau Pile module is depicted in figure \ref{fig:tableau_pile}. It is duplicated 7 times, once for every pile in the tableau. The main differences between these modules are the names of their respective transitions and places, so the description given for the first pile will count for the other duplicates as well. Another difference is how many cards each pile is dealt during the initial phase. This is discussed in more detail in chapter \ref{sec:draw_pile} and \ref{sec1:solitaire_rules}. All the pre- and post-processor files are shared between all piles.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/tableauPile}
@@ -274,14 +274,14 @@ The Tableau Pile module is depicted in figure \ref{fig:tableau_pile}. It is dupl
 	\end{center}
 \end{figure}
 
-As with the Draw Pile module, the module encompasses both a face-down and a face-up pile. The inner workings between these two piles is different however, as moving a card from the face-down pile to the face-up pile is an non-reversible action. Doing so could put the game in an unsolvable state, but at the same time if there were no cards in any of the face-down piles the game would be trivial to solve. \\
+As with the Draw Pile module, the module encompasses both a face-down and a face-up pile. The inner workings between these two piles are different however, as moving a card from the face-down pile to the face-up pile is an non-reversible action. Doing so could put the game in an unsolvable state, but at the same time if there were no cards in any of the face-down piles the game would be trivial to solve. \\
 
 The only time it's possible to add cards to \verb!pTP_1_FaceDown_Pile! is during the initial phase. During this phase, one less than the piles identification number will be added, so that pile one will have zero cards in the face-down pile, whilst pile 7 will have 6. All the piles will have a single card added to \verb!pTP_1_FaceUp_Pile!. \\
 
 Once the initial phase is over, the pre-processor of \verb!tTPe_1_Add_FaceDown! will prevent any more firings. This is shown in listing \ref{lst:pre_tTPe_Add_FaceDown}, and is done by simply counting how many cards have been dealt in the variable \verb!global_info.CARDS.DEALT!. The secondary condition in the if statement is used to control the amount of firings during the initial phase.
 \lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Add\_FaceDown.m lines 5-11,label=lst:pre_tTPe_Add_FaceDown,firstline=5,lastline=11]{\GPenSIM/pre_tTPe_Add_FaceDown.m}
 
-Instead, the \verb!tTPe_1_Add_FaceUp! transition will have potential to fire, given that all of its conditions in the pre-processor is fulfilled. Parts of the code for the pre-processor can be found in listing \ref{lst:pre_tTPe_Add_FaceUp}, whilst the whole file is found in \ref{app:pre_tTPe_Add_FaceUp}. The main job of the pre-processor is to check whether the game is still in the initial phase, and if so, how many cards have been added to \verb!pTP_1_FaceDown_Pile!. While the game is in the initial phase, there are no checks on the the suit or rank of the cards being added, but once it enters the normal phase, the pre-processor will rely on the \verb!checkCommand_Move! function to check the validity against the actual Solitaire rules. More information about the \verb!checkCommand_Move! function is found in chapter \ref{sec:3_move_command}. 
+Instead, the \verb!tTPe_1_Add_FaceUp! transition will have potential to fire, given that all of its conditions in the pre-processor are fulfilled. Parts of the code for the pre-processor can be found in listing \ref{lst:pre_tTPe_Add_FaceUp}, whilst the whole file is found in \ref{app:pre_tTPe_Add_FaceUp}. The main job of the pre-processor is to check whether the game is still in the initial phase, and if so, how many cards have been added to \verb!pTP_1_FaceDown_Pile!. While the game is in the initial phase, there are no checks on the the suit or rank of the cards being added, but once it enters the normal phase, the pre-processor will rely on the \verb!checkCommand_Move! function to check the validity against the actual Solitaire rules. More information about the \verb!checkCommand_Move! function is found in chapter \ref{sec:3_move_command}. 
 \lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Add\_FaceUp.m lines 7-31,label=lst:pre_tTPe_Add_FaceUp,firstline=7,lastline=31]{\GPenSIM/pre_tTPe_Add_FaceUp.m}
 
 Both the \verb!tTPe_1_Add_FaceDown! and \verb!tTPe_1_Add_FaceUp! also have post-processors which will increment the variable \verb!global_info.CARDS_DEALT!. The post-processor for \verb!tTPe_1_Add_FaceUp! also decrements the variable \\\verb!global_info.TP_Move_Multiple_Count! which is used when multiple cards are to be moved from the pile. Listing \ref{lst:post_tTPe_Add_FaceUp} shows how the variable is decremented, and once the last card has been received, the \verb!playerAction! resource will be released. Full code for the post-processor can be found in \ref{app:post_tTPe_Add_FaceUp}. More details on moving multiple cards will follow in the next paragraphs.
@@ -297,7 +297,7 @@ The same functionality could be achieved using only one variable, however by usi
 
 \lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 28-34,label=lst:COMMON_POST_2,firstline=28,lastline=34]{\GPenSIM/COMMON_POST.m}
 
-The only external output is \verb!tTPe_1_Out!, which will only fire once enough tokens are generated by \verb!tTPi_1_Move_Multiple!. In order ensure that the correct card is moved, the pre-processor will fetch the \textbf{n}-th latest arrived card. Where \textbf{n} is the number of tokens in \verb!pTP_1_Move!. This is repeated for every token in \verb!pTP_1_Move!. By doing this, correctness is preserved by always moving the highest ranking card first. Listing \ref{lst:pre_tTPe_Out} shows the main logic of the pre-processor, the whole file is found in at \ref{app:pre_tTPe_Out}.
+The only external output is \verb!tTPe_1_Out!, which will only fire once enough tokens are generated by \verb!tTPi_1_Move_Multiple!. In order to ensure that the correct card is moved, the pre-processor will fetch the \textbf{n}-th latest arrived card, where \textbf{n} is the number of tokens in \verb!pTP_1_Move!. This is repeated for every token in \verb!pTP_1_Move!. By doing this, correctness is preserved by always moving the highest ranking card first. Listing \ref{lst:pre_tTPe_Out} shows the main logic of the pre-processor, the whole file is found in at \ref{app:pre_tTPe_Out}.
 \lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Out.m lines 6-19,label=lst:pre_tTPe_Out,firstline=6,lastline=19]{\GPenSIM/pre_tTPe_Out.m}
 
 \begin{table}
@@ -329,7 +329,7 @@ The Player module is a set of 20 transitions, tightly knit with the \ac{gui} and
 \end{figure}\\
 An important aspect of the Player module is the acquisition of the \verb!playerAction! resource in the pre-processor file of every transition. By doing this, the atomicity of each action is preserved, as it's not possible to start a new action before the previous one finishes executing. Resources are discussed in more detail in chapter \ref{sec:3_Resources}.\\
 
-In order to make the buttons of the GUI be responsive, it was necessary to introduce the \verb!pause! command in one of the pre-processors. For this, the \verb!tPe_DP_Turn_pre! pre-processor was chosen. It's a bit unclear what exactly happens when the \verb!pause! command executes, but I suspect Matlab has a seperate event queue for all GUI elements. This queue is likely checked every time the main program execution is halted with \verb!pause!. There might be a more elegant way of doing this, but none was found. Having the \verb!pause! command execute in the pre-processor executes might not be well-suited for real-time simulations as it might introduce bias in the timings. In this project however, this solution worked very well, with no problems or unresponsiveness at all.
+In order to make the buttons of the GUI be responsive, it was necessary to introduce the \verb!pause! command in one of the pre-processors. For this, the \verb!tPe_DP_Turn_pre! pre-processor was chosen. It's a bit unclear what exactly happens when the \verb!pause! command executes, but I suspect Matlab has a seperate event queue for all GUI elements. This queue is likely checked every time the main program execution is halted with \verb!pause!. There might be a more elegant way of doing this, but none was found. Having the \verb!pause! command execute in the pre-processor might not be well-suited for real-time simulations as it might introduce bias in the timings. In this project however, this solution worked very well, with no problems or unresponsiveness at all.
 \lstinputlisting[style=matlabcode,caption=tPe\_DP\_Turn\_pre.m,label=lst:tPe_DP_Turn_pre]{\GPenSIM/tPe_DP_Turn_pre.m}
 
 As can be seen in listing \ref{lst:tPe_DP_Turn_pre}, to check if a button is pressed is actually a matter of checking whether the global variable corresponding to that button is set. In the listing above, it is accomplished by checking if \verb!global_info.DP_Turn_Btn! is set, and if so set it back to false. A consequence of doing this, is that it's possible to queue up actions, for example by hitting the \ac{dp} Turn-button when the game is in process of moving cards from one pile to another. \\
@@ -365,7 +365,7 @@ When issuing a new move command, its destination and possibly amount of cards to
 \end{table}
 \clearpage
 \subsection{Player Bot Module}
-As with the Player module, the connections to the Module Connector is done within this module. This makes it possible to toggle this module on/off with the variable \verb!global_info.BOT_ENABLED!. The module is depicted in figure \ref{fig:player_bot_module}. In earlier iterations of the module it also had an additional place before \verb!tPBi_Gen!, an arc going from \verb!tPBi_Gen! to this place and a transition connected to this place. This worked fine, however it was found desirable to be able to toggle the bot on/off when doing testing and/or analysis. Therefore these where removed, and \verb!tPBi_Gen! simply serves as a generator when its conditions in the pre-processor are met.
+As with the Player module, the connections to the Module Connector are done within this module. This makes it possible to toggle this module on/off with the variable \verb!global_info.BOT_ENABLED!. The module is depicted in figure \ref{fig:player_bot_module}. In earlier iterations of the module it also had an additional place before \verb!tPBi_Gen!, an arc going from \verb!tPBi_Gen! to this place and a transition connected to this place. This worked fine, however it was found desirable to be able to toggle the bot on/off when doing testing and/or analysis. Therefore these where removed, and \verb!tPBi_Gen! simply serves as a generator when its conditions in the pre-processor are met.
 \begin{figure}
 	\begin{center}
 		\includegraphics[scale=0.65]{images/playerBotModule}
@@ -379,13 +379,13 @@ In addition to the requirement of \verb!global_info.BOT_ENABLED! must be set to 
 The listing above also shows parts of how the module generates the commands. As this project is not really focused on AI programming, the logic for generating commands is very simple and serves more as a proof of concept. The bot possesses no ability to view the state of the game before making a decision about which command is most appropriate, rather it will simply pick a random number between 1 and 100, and select the command according to the distribution found in \verb!global_info.BOT_ACTIONS!. Listing \ref{lst:main_simulation_file} shows the three variables which control the distribution of the bots actions. 
 \lstinputlisting[style=matlabcode,caption=main\_simulation\_file.m lines 19-29,label=lst:main_simulation_file,firstline=19,lastline=29]{\GPenSIM/main_simulation_file.m}
 
-\verb!global_info.BOT_ACTIONS! is a row vector with 4 elements numbered from 1 to 100. The bot has 5 possible commands; \verb!DP_Turn!, \verb!DP_Move!, \verb!FP_Move!, \verb!TP_Turn!, and \verb!TP_Move!. Given a random numbers generated from 1-100, the probability distribution for the commands is as follows; \verb!DP_Turn! between 1 and the first element of the vector, \verb!DP_Turn! between the first and second element, \verb!FP_Move! between the second and third element, \verb!TP_Turn! between the third and fourth element, and \verb!TP_Move! between the forth element and 100.
-\verb!global_info.BOT_ACTIONS_TP_TP! defines how often (on average) the bot will attempt to move a card from a \ac{tp} pile to another \ac{tp} pile versus a \ac{fp} pile. Listing \ref{lst:main_simulation_file} shows this value set to 15, which means that the bot will opt to move to another \ac{tp} pile only 15 percent of the time.\\
+\verb!global_info.BOT_ACTIONS! is a row vector with 4 elements numbered from 1 to 100. The bot has 5 possible commands; \verb!DP_Turn!, \verb!DP_Move!, \verb!FP_Move!, \verb!TP_Turn!, and \verb!TP_Move!. Given a random number generated from 1-100, the probability distribution for the commands is as follows; \verb!DP_Turn! between 1 and the first element of the vector, \verb!DP_Turn! between the first and second element, \verb!FP_Move! between the second and third element, \verb!TP_Turn! between the third and fourth element, and \verb!TP_Move! between the forth element and 100.
+\verb!global_info.BOT_ACTIONS_TP_TP! defines how often (on average) the bot will attempt to move a card from a \ac{tp} pile to another \ac{tp} pile versus a \ac{fp} pile. Listing \ref{lst:main_simulation_file} shows this value set to 7, which means that the bot will opt to move to another \ac{tp} pile only 7 percent of the time.\\
 Finally, the \verb!global_info.BOT_ACTIONS_TP_FULL_PARTIAL_MOVE! works in a similar way, as it defines how often the \ac{tp} pile will attempt to move all the cards in the face-up pile versus just a subset of them.\\
-By manipulation these values, the likelihood of solving the game will be drastically altered. Of course having a smarter bot which took actions after considering the game state, and perhaps learned from its mistake would be must better. However, this was outside the scope of this project. Future work is discussed in more detail in chapter \ref{sec5_future_work}.
+By manipulation these values, the likelihood of solving the game will be drastically altered. Of course having a smarter bot which took actions after considering the game state, and perhaps learned from its mistakes would be much better. However, this was outside the scope of this project. Future work is discussed in more detail in chapter \ref{sec5_future_work}.
 \\
 
-Given that the bot continuously generates commands, even though they might be invalid for the current state of the game, I added the \ac{destroyer} \verb!tPBi_Destroyer!. This is transition is not strictly necessary for the model to work, but was still deemed advantageous to keep the number of active tokens in the Petri Net as low as possible. Also it makes \verb!pPB_Cmd! \textbf{safe}. Listing \ref{lst:tPBi_Destroyer_pre} shows parts of the code for the \ac{destroyer}.
+Given that the bot continuously generates commands, even though they might be invalid for the current state of the game, I added the \ac{destroyer} \verb!tPBi_Destroyer!. This transition is not strictly necessary for the model to work, but was still deemed advantageous to keep the number of active tokens in the Petri Net as low as possible. Also it makes \verb!pPB_Cmd! \textbf{safe}. Listing \ref{lst:tPBi_Destroyer_pre} shows parts of the code for the \ac{destroyer}.
 \lstinputlisting[style=matlabcode,caption=tPBi\_Destroyer\_pre.m lines 3-9,label=lst:tPBi_Destroyer_pre,firstline=3,lastline=9]{\GPenSIM/tPBi_Destroyer_pre.m}
 
 
@@ -412,10 +412,10 @@ The external outputs all have pre-processors which will make them fire only if t
 \subsection{Module Connector}
 The module connector is what makes all the different modules communicate. A figure of the module connector can be seen in figure \ref{fig:full_horizontal} or for a full vertical view, in chapter \ref{app:full_vertical} in the appendix.\\
 
-By having all the external inputs and output of every module be only transitions, we achieve a clean-cut interface. This also makes testing each individual modules easier, as the desired colored input can be programmed in the pre-processor during testing. 
+By having all the external inputs and output of every module be only transitions, we achieve a clean-cut interface. This also makes testing each individual module easier, as the desired colored input can be programmed in the pre-processor during testing. 
 \\
 
-The only pre- og post-processors of the module connector can be found in the \ac{destroyer} transitions. These are not strictly necessary in the current form of the model, as the Player and Player Bot modules do a good job of keep tokens with incorrect colors out. However, it might be a good idea for future work to remove this responsibility from non-essential modules. Listing \ref{lst:tMC_FP_Move_Destroyer_pre} shows the destroyer of \ac{fp} move commands.
+The only pre- or post-processors of the module connector can be found in the \ac{destroyer} transitions. These are not strictly necessary in the current form of the model, as the Player and Player Bot modules do a good job of keeping tokens with incorrect colors out. However, it might be a good idea for future work to remove this responsibility from non-essential modules. Listing \ref{lst:tMC_FP_Move_Destroyer_pre} shows the destroyer of \ac{fp} move commands.
 \lstinputlisting[style=matlabcode,caption=tMC\_FP\_Move\_Destroyer\_pre.m,label=lst:tMC_FP_Move_Destroyer_pre]{\GPenSIM/tMC_FP_Move_Destroyer_pre.m}
 \begin{table}
 	\caption{Places and transitions used in Module Connector}
@@ -451,10 +451,10 @@ Sorting and arranging the cards is described using the same concepts that I have
 \end{figure}
 \newline
 
-Each pile is indexed in order to make it easier to simulate moving cards between piles. Cards can be moved between pile by writing the amount of cards to be moved in the "To Pile" box - see Figure \ref{fig:gui_init}.
+Each pile is indexed in order to make it easier to simulate moving cards between piles. Cards can be moved between piles by writing the amount of cards to be moved in the "To Pile" box - see Figure \ref{fig:gui_init}.
 \newline
 Should the "How many?" field be left blank, only one card will be moved.
-There are defined the four suits in the deck of cards:
+Here the four suits are defined:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
@@ -478,7 +478,7 @@ There are four foundation piles corresponding to the fours suits in the deck of 
 		FPS & Foundation Pile Spades \\ \hline
 	\end{tabular}
 \end{center}
-We have also given index names to the seven Tableau Piles:
+I have also given index names to the seven Tableau Piles:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
@@ -498,7 +498,7 @@ Here we can also see how many cards in the Draw Pile are facing up (\#FU), how m
 \newline
 
 In accordance with the game rules that have been described in the introduction, seven of the cards are revealed initially, one on top of each tableau pile. The Draw Pile will contain 24 cards that will be revealed one at a time by clicking "Turn card".
-When an Ace be revealed in the initial position of the dealt cards or by shuffling through the Draw Pile, it can be moved to its corresponding foundation pile (FP\#).
+When an Ace is revealed in the initial position of the dealt cards or by shuffling through the Draw Pile, it can be moved to its corresponding foundation pile (FP\#).
 When the card that is on top of a Tableau pile is moved, the facing down card remaining on top of the pile can be turned. 
 \newline
 We can easily move all cards from one pile to another, as illustrated in figures \ref{fig:TP4full} and \ref{fig:TP6full}.
@@ -529,7 +529,7 @@ In the event that there are no valid moves left, the game becomes unwinnable as 
 \end{figure}
 \newline
 
-In the event a solution is found and the foundation piles are complete, the game ends and the final amount of points displayed as shown in figure \ref{fig:win}.
+In the event that a solution is found and the foundation piles are complete, the game ends and the final amount of points displayed as shown in figure \ref{fig:win}.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/gameWonWScore}
@@ -543,14 +543,15 @@ In the event a solution is found and the foundation piles are complete, the game
 \subsection{Simulation settings}
 The model has a few simulation setting which should be adjusted before running the model. These are shown in listing \ref{lst:main_simulation_file_3}. These are pretty self explanatory, except for \verb!global_info.MAX_LOOP! which determines when the game should end. The number here will reflect for how long a solution to the game will be attempted to be found.
 \lstinputlisting[style=matlabcode,caption=main\_simulation\_file.m lines 5-10,label=lst:main_simulation_file_3,firstline=5,lastline=10]{\GPenSIM/main_simulation_file.m}
+\verb!global_info.DISP_CHANGES! will make the pre-processor display a simple statement every time they fire. This can be used for logging or further analysis.
 \clearpage
 \subsection{Commands}
 \subsubsection{Move Command}~\\~\\
 \label{sec:3_move_command}
-The move command is contains four parts; the command, destination, source and amount. Each part is concatenated together, with colon as a separator. An example of a move command would be: \textit{Move:\ac{tp}1:\ac{tp}5:3}, which means \textit{Move 3 cards from \ac{tp}1 to \ac{tp}5}. If amount is not given, it will assume one card to be moved.
+The move command contains four parts; the command, destination, source and amount. Each part is concatenated, with colon as a separator. An example of a move command would be: \textit{Move:\ac{tp}1:\ac{tp}5:3}, which means \textit{Move 3 cards from \ac{tp}1 to \ac{tp}5}. If amount is not given, it will assume one card is to be moved.
 \newline
 
-In order to make sure that only validity of the move-commands, the function \verb!checkCommand_Move! has been developed. It is used both for validation before sending a command, and validation after receiving a command. The function takes the input parameters; \verb!command!, \verb!destination!, \verb!source!, and \verb!handle_err!. 
+In order to make sure of the validity of the move-commands, the function \verb!checkCommand_Move! has been developed. It is used both for validation before sending a command, and validation after receiving a command. The function takes the input parameters; \verb!command!, \verb!destination!, \verb!source!, and \verb!handle_err!. 
 \newline
 
 The input parameter \verb!command! contains the actual command, \verb!destination! contains the unique identifiers of the \ac{fp} or \ac{tp} modules. Valid input for \verb!destination! would be \textit{C, D, H, S, 1, 2, 3, 4, 5, 6 or 7}, and is used to ensure that the command is received by the destined module. Parameter \verb!source! is only used when sending a command, and contains the actual name of the transition which issued the game. This is mainly used to set the variable \verb!global_info.last_command_source! which will be the name of the transition holding the \verb!playerAction! resource. Resources are discussed in more detail in chapter \ref{sec:3_Resources}. Lastly, the parameter \verb!handle_err! holds the GUI-component where error mesasges will be written. Full code for the function can be found in the appendix, at chapter \ref{app:checkCommand_Move}.
@@ -567,14 +568,14 @@ Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the functio
 \clearpage
 \subsection{Resources}
 \label{sec:3_Resources}
-The only resource used in the model is called \verb!playerAction!. It serve an essential role of the model, which is to preserve the atomicity between the different actions. To explain why this is so important, one can imagine King of Spades is about to be moved to \ac{tp}4, which is empty. Only moments later, the command to move King of Hearts is also issued to be moved to \ac{tp}4. Now, since the second move command was issued before the first card was able to reach \ac{tp}4, it will pass the validity checks, and ultimately putting the game in a completely illegal state.\\
+The only resource used in the model is called \verb!playerAction!. It serves an essential role of the model, which is to preserve the atomicity between the different actions. To explain why this is so important, one can imagine King of Spades is about to be moved to \ac{tp}4, which is empty. Only moments later, the command to move King of Hearts is also issued to be moved to \ac{tp}4. Now, since the second move command was issued before the first card was able to reach \ac{tp}4, it will pass the validity checks, and ultimately put the game in a completely illegal state.\\
 
-The resource is acquired by requesting it every time either the Player or Player Bot attempts to issue a new command. If the resource is given, the name of the transition which owns it is stored in \verb!global_info.last_command_source!. Then the action can execute, knowing that no other action can execute concurrently. Once the actions is complete, the resource is released in the post-processor. Listing \ref{lst:COMMON_POST_4} shows an example of the releasing of the resource.
+The resource is acquired by requesting it every time either the Player or Player Bot attempts to issue a new command. If the resource is given, the name of the transition which owns it is stored in \verb!global_info.last_command_source!. Then the action can execute, knowing that no other action can execute concurrently. Once the action is complete, the resource is released in the post-processor. Listing \ref{lst:COMMON_POST_4} shows an example of the releasing of the resource.
 \lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 16-23,label=lst:COMMON_POST_4,firstline=16,lastline=23]{\GPenSIM/COMMON_POST.m}
 
 It's worth noting that the same functionality could be achieved by simply using a semaphore.
 \subsection{Scoring}
-The standard scoring scheme in the Windows Solitaire game defines the amount of points that are awarded for moving cards between piles and is described as follows:
+The standard scoring scheme in the Windows Solitaire game\cite{wiki} defines the amount of points that are awarded for moving cards between piles and is described as follows:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
@@ -597,7 +598,7 @@ The project has been developed and tested in versions R2013a and R2017a. Due to 
 \subsection{Coverability trees}
 Due to large size of the model, and the amount of initial tokens in the Draw Pile, it was not possible to get a coverability tree for the whole model. By my thinking, it should be possible to by extending the \verb!cotree! function to respect pre- and post-processors. This was outside the scope of the project, so instead I ran the \verb!cotree(pni, 1, 1)! command on the \ac{dp} and \ac{tp} modules.\\
 
-When doing this, I had to remove arcs from the external inputs, as they would just be firing perpetually. Additionally, the names of the places and transitions where too long to be displayed in the graph, so I shortened them beforehand. A table with translates the names is included in each sub-chapter.
+When doing this, I had to remove arcs from the external inputs, as they would just be firing perpetually. Additionally, the names of the places and transitions were too long to be displayed in the graph, so I shortened them beforehand. A table which translates the names is included in each sub-chapter.
 \subsubsection{Draw Pile}~\\
 \begin{center}
 	\begin{figure}
@@ -636,7 +637,7 @@ Figure \ref{fig:cov_tree_draw_pile} shows the coverability tree generated for th
 		\label{fig:cov_tree_tableau_pile}
 	\end{figure}
 \end{center}
-Figure \ref{fig:cov_tree_tableau_pile} shows the coverability tree generated for the Tableau Pile module. It's worth nothing that the model as a whole is k-bounded even though the cycle indicator, \textbf{w} is shown in the coverability tree. The reason for \textbf{w} is shown, is that the \verb!cotree! function does not respect the pre-processor files of the transition.
+Figure \ref{fig:cov_tree_tableau_pile} shows the coverability tree generated for the Tableau Pile module. It's worth noting that the model as a whole is k-bounded even though the cycle indicator, \textbf{w} is shown in the coverability tree. The reason why \textbf{w} is shown, is that the \verb!cotree! function does not respect the pre-processor files of the transition.
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
@@ -663,14 +664,14 @@ The liveness of the model is limited by the siphon, \verb!pDP_Dealer!. Once the 
 I was not able to use the built-in functionality, \verb!siphons()! to find siphons. However by analyzing the model manually, it's easy to see that the siphons of this models are: \verb!pDP_Dealer!, \verb!pTP_1__FaceDown_Pile!, \verb!pTP_2__FaceDown_Pile!, \verb!pTP_3__FaceDown_Pile!, \verb!pTP_4__FaceDown_Pile!, \verb!pTP_5__FaceDown_Pile!, \\\verb!pTP_6__FaceDown_Pile!, \verb!pTP_7__FaceDown_Pile!.
 \subsection{Results}
 \label{sec:4_results}
-There was not much time left to run a lot of simulations to figure out the best strategies. However, 100 games where run with the Player Bot enabled using the settings displayed in listing \ref{lst:main_simulation_file_2}. Out of these, 74 where solves successfully, whilst 26 entered an unwinnable state.
+There was not much time left to run a lot of simulations to figure out the best strategies. However, 100 games where run with the Player Bot enabled using the settings displayed in listing \ref{lst:main_simulation_file_2}. Out of these, 74 were solved successfully, whilst 26 entered an unwinnable state.
 \lstinputlisting[style=matlabcode,caption=main\_simulation\_file.m lines 19-29,label=lst:main_simulation_file_2,firstline=19,lastline=29]{\GPenSIM/main_simulation_file.m}
 \section{Discussion}
 \subsection{Originality of this work}
-I was not able to find any work that resembles this project. What differs this project is that contains a complete model of a game, and also a simple \ac{gui} to go along with it.
+I was not able to find any work that resembles this project. What differs in this project is that it contains a complete model of a game, and also a simple \ac{gui} to go along with it.
 \subsection{Limitations of the project}
 \label{sec5:limitations}
-A major drawback of the destroyer \verb!tMC_Out_Buffer_Destroyer! is that if it fires, the card will actually be removed from the game, and the game becomes unsolvable. This transition will fire if the move-command of the token has an invalid destination. Due to how the Player and Player Bot modules are set up, this will never happen as they will check the validity of the move command before actually issuing the command. Still, I think it would be an improvement add an additional transition to the Draw Pile module which would accept cards from \verb!tMC_Out_Buffer_Destroyer!, instead of totally discarding them.
+A major drawback of the destroyer \verb!tMC_Out_Buffer_Destroyer! is that if it fires, the card will actually be removed from the game, and the game becomes unsolvable. This transition will fire if the move-command of the token has an invalid destination. Due to how the Player and Player Bot modules are set up, this will never happen as they will check the validity of the move command before actually issuing the command. Still, I think it would be an improvement to add an additional transition to the Draw Pile module which would accept cards from \verb!tMC_Out_Buffer_Destroyer!, instead of totally discarding them.
 \newline
 
 Another improvement would be to re-factor the code base by moving more of the validity check of the commands from the Player and Player Bot modules to the destination transitions. The Player Bot modules uses roughly 200 lines of code to always issue valid commands, I think this could be drastically reduced. By doing this it would be easier to create additional modules which could interface with the game, for example a hardware-based module.
@@ -678,7 +679,7 @@ Another improvement would be to re-factor the code base by moving more of the va
 
 It might also be a slight improvement to combine the Add-face-up and Add-face-down transitions of the \ac{tp} modules. By doing this, it would remove the need for the Add-face-down's pre-processor to execute once the initial phase is over. However, doing so for every Tableau Pile would require 7 more transitions and 14 more places. \\
 
-A performance increase might be gained by reducing the number of transitions in the Player module, or at least introducing a new place and transition. This new place would serve as an input to all of the 20 transitions of the Player module, whilst the new transition would serve as an input the new place. By doing this, the number enabled transitions, and pre-processors which would have to be executed would drastically drop.\\
+A performance increase might be gained by reducing the number of transitions in the Player module, or at least introducing a new place and transition. This new place would serve as an input to all of the 20 transitions of the Player module, whilst the new transition would serve as an input the new place. By doing this, the number of enabled transitions, and pre-processors which would have to be executed would drastically drop.\\
 
 Lastly, instead of relying on \verb!global_info.MAX_LOOP! to determine when the game is not solvable, a much better approach would be to start working in a bottom-up fashion to find out specific game states where its no longer solvable. Doing this would greatly reduce the simulation time.
 
@@ -693,13 +694,15 @@ By having the Player Bot module completely separate from the rest of the model, 
 The main difficulty of the project was the tight time constraint. Since I was working alone on this project, this forced me to omit several improvements, which can be seen in \ref{sec5:limitations}. It also reduced the amount of time I had to run analysis on the model, as it took a lot of development and testing to make it work properly.
 \clearpage
 % Keeping this for reference for now %
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 
 \bibitem{GPenSIMguide} Reggie Davidrajuh. GPenSIM: A Tool for Modeling and Simulation of Discrete-Event Systems. 2014
 \bibitem{introduction} Lee, Sloane \& Packard, Gabriel. 100 Best Solitaire Games: 100 Ways to Entertain Yourself with a Deck of Cards.; New York, N. Y.: Cardoza Publishing, 2004., \emph{ISBN: 1-58042-115-6}
 \bibitem{Jupiter} Jupiter Scientific,\url{http://www.jupiterscientific.org/sciinfo/KlondikeSolitaireReport.html}
 \bibitem{joelonsoftware} The Joel on Software Discussion \url{http://discuss.joelonsoftware.com/default.asp?joel.3.446403.10}
 \bibitem{images} Images courtesy of freestock.com.
+\bibitem{canva} Canva, \url{https://www.canva.com/}
+\bibitem{wiki} Klondike (solitaire), \url{https://en.wikipedia.org/wiki/Klondike_(solitaire)}
 
 \end{thebibliography}
 \addtocmark{Appendix}

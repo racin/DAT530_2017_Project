@@ -1,4 +1,7 @@
 function [png] = foundation_pile_spades_pdf() 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: foundation_pile_spades_pdf.m : Foundation Pile - Spades
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 modname = 'Spades';
 png.PN_name = strcat('Foundation Pile -',{' '},modname);
 
