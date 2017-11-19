@@ -102,25 +102,28 @@ This project contains a complete model of the game, a GUI to play the game, and 
 
 \subsection{Solitaire Rules}
 \label{sec1:solitaire_rules}
-Klondike, or Solitaire as it has been called in North America is one of the most popular patience games.
+Klondike, or Solitaire as it has been called in North America, is one of the most popular patience games.
 \newline
- The game became very popular in the 19th century and the name Klondike is believed to have originated from the prospectors that were mining for gold in the Klondike region in Canada, and whom have either created or promoted this game while on their quest. 
+ The game became very popular in the 19th century and the name Klondike is believed to have originated from the prospectors that were mining for gold in the Klondike region in Canada.
  \newline
  
 Solitaire is played with a standard deck of 52 cards and no Jokers.
-We will describe the layout and rules of the game by using terms that are common to the majority of patience games.
+We will describe the layout and rules of the game 
 \newline
 
-Foundations are commonly featured in patience games where the aim is to move all the cards from the board to the foundation piles. Foundation piles are typically built from the foundation card by suit.
-In Solitaire, the four Aces in the deck are the foundation cards with corresponding foundation piles. We build up the piles by stacking cards of the same suit starting from Ace and finishing with King. 
+ At the beginning of the game, the deck is shuffled and the cards are laid out in seven tableau piles from left to right. Each pile contains one additional card compared to the previous one. 
+ There is one upturned card at the beginning of each pile. The first pile to the left contains one card facing up, the second contains one card facing down and one up, the third pile contains two cards facing down and one up, continuing to the seventh pile respectively, which contains six cards facing down and one facing up.
+ Tableau piles can be built down by alternating colors. Partial or complete piles can be moved on top of other piles as long as long as the constraint of alternating card color is respected. 
+ Empty piles can be filled with a King or a pile of cards that starts with a King.
 \newline
-
- At the beginning of the game, the deck is shuffled and the cards are laid out in seven piles from left to right. Each pile contains one additional card compared to the previous one. 
- There is one upturned card at the beginning of each pile. The first pile to the left contains one card facing up, the second contains one card facing down and one up, the third pile contains two cards facing down and one up, and so on to the seventh pile which contains six cards facing down and one facing up.
- card, the second pile contains two cards and so on up to the seventh pile which contains seven cards. These are called tableau piles. 
- Tableau piles can be built down by alternating colors. Partial or complete piles can be moved on top of other piles as long as the 
- We consider the four aces in the deck as foundation cards with corresponding foundation piles. These piles are built up by stacking cards of the same suit starting from ace.
-The tableau piles, foundation piles, turn pile and their layout are illustrated in figure \ref{fig:illuatration_solitaire}.
+ 
+We build up the piles by stacking cards of the same suit starting from Ace and finishing with King. The aim of the game is to build up a stack of cards of the same suit. When this is accomplished, the goal is to move this stack to foundation where the Ace of the suit had previously been placed. 
+\newline
+  
+The remainder of the deck is dealt by turning one card at a time from the draw pile.
+When all the cards from the draw pile have been turned, the draw pile can be reset. 
+ 
+The layout of the piles is illustrated in figure \ref{fig:illuatration_solitaire}.
 \begin{figure}
 	 % Left, Bottom, Right, Top
 	\includegraphics[trim=150 0 0 0, scale=0.3]{images/TableauPiles}
@@ -394,8 +397,63 @@ When issuing a new move command, its destination and possibly amount of cards to
 \end{table}
 \clearpage
 \section{Implementation}
-\label{sec:3_implementation}
+\label{sec:gui_init}
 \subsection{\ac{gui}}
+The interface developed for this project is similar to the interface of the Solitaire game.
+Sorting and arranging the cards is described using the same concepts that we have defined in the Solitaire Rules section.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dealinit}
+		\caption{GUI after inital dealing cards}
+		\label{fig:gui_init}
+	\end{center}
+\end{figure}
+\newline
+
+Each pile is indexed in order to make it easier to simulate moving cards between piles. The interface allows to move cards to a pile by writing the index of the pile that we want to move to in the "To Pile" box - see Figure \ref{fig:gui_init}.
+\newline
+
+Additionally, we can chose the amount of cards to be moved. Should the "How many?" field be left blank, one card will be moved automatically.
+We have defined the four suits in the deck of cards:
+\begin{center}
+	\begin{tabular}{ | l | l | l | }
+		\hline
+		Suit & Cards index name \\ \hline
+		Clubs & C\_A, C\_2, C\_3, C\_4, C\_5, C\_6, C\_7, C\_8, C\_9, C\_X, C\_J, C\_Q, C\_K  \\ \hline
+		Diamonds & D\_A, D\_2, D\_3, D\_4, D\_5, D\_6, D\_7, D\_8, D\_9, D\_X, D\_J, D\_Q, D\_K \\ \hline
+		Hearts & H\_A, H\_2, H\_3, H\_4, H\_5, H\_6, H\_7, H\_8, H\_9, H\_X, H\_J, H\_Q, H\_K  \\ \hline
+		Spades & S\_A,  S\_2, S\_3,  S\_4, S\_5,  S\_6, S\_7,  S\_8, S\_9,  S\_X, S\_J, S\_Q,  S\_K \\ \hline
+	\end{tabular}
+\end{center}
+The Draw Pile does not have an index, as we are not able to move cards back to this pile. 
+The "Turn card" button allows us to shuffle to the next card in the Draw Pile. This action cannot be reversed. 
+There are four foundation piles corresponding the fours suits in the deck of cards:
+\begin{center}
+	\begin{tabular}{ | l | l | l | }
+		\hline
+		Index name & Pile name \\ \hline
+		FPC & Foundation Pile Clubs  \\ \hline
+		FPD & Foundation Pile Diamonds \\ \hline
+		FPH & Foundation Pile Hearts  \\ \hline
+		FPS & Foundation Pile Spades \\ \hline
+	\end{tabular}
+\end{center}
+
+There are also seven Tableau Piles:
+\begin{center}
+	\begin{tabular}{ | l | l | l | }
+		\hline
+		Index name & Pile name \\ \hline
+		TP1 & Foundation Pile 1  \\ \hline
+		TP2 & Foundation Pile 2 \\ \hline
+		TP3 & Foundation Pile 3  \\ \hline
+		TP4 & Foundation Pile 4 \\ \hline
+		TP5 & Foundation Pile 5  \\ \hline
+		TP6 & Foundation Pile 6  \\ \hline
+		TP7 & Foundation Pile 7  \\ \hline
+	\end{tabular}
+\end{center}
+
 \label{sec:3_gui}
 \clearpage
 \subsection{Algorithms}
@@ -416,7 +474,7 @@ The input parameter \verb!command! contains the actual command, \verb!destinatio
 Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the function.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{images/checkCommand_Move}
+		\includegraphics[width=\textwidth]{images/checkcommandmove}
 		\caption{Flowchart - checkCommand\_Move}
 		\label{fig:checkCommand_Move}
 	\end{center}
@@ -427,6 +485,19 @@ Figure \ref{fig:checkCommand_Move} shows a flowchart of the logic in the functio
 \label{sec:3_Resources}
 \subsection{Moving Multiple Cards}
 \subsection{Scoring}
+The standard scoring scheme in the Windows Solitaire game defines the amount of points that are awarded for moving cards between piles and is described as follows:
+\begin{center}
+	\begin{tabular}{ | l | l | l | }
+		\hline
+		Move & Points \\ \hline
+		Draw pile to tableau pile & 5  \\ \hline
+		Draw pile to foundation pile & 10 \\ \hline
+		Tableau pile to foundation pile & 10  \\ \hline
+		Turn over tableau card & 5 \\ \hline
+		Foundation pile to tableau pile & -15 \\ \hline
+		Reset draw pile & -100 (minimum score is 0) \\ \hline
+	\end{tabular}
+\end{center}
 \subsection{Possible improvments}
 A major drawback of the siphon \verb!tMC_Out_Buffer_Siphon! is that if it fires, the card will actually be removed from the game, and the game becomes unsolvable. This transition will fire if the move-command of the token has an invalid destination. Due to how the Player and Player Bot modules are set up, this will never happen as they will check the validity of the move command before actually issuing the command. Still, I think it would be an improvement add an additional transition to the Draw Pile module which would accept cards from \verb!tMC_Out_Buffer_Siphon!, instead of totally discarding them.
 \newline
