@@ -11,7 +11,7 @@ end;
 if global_info.(move_btn) ~= false && playerAction,
     %global_info = setfield(global_info,move_btn,false);
     global_info.(move_btn) = false;
-    dest = get_handle(handle_move_loc,'String');
+    dest = upper(get_handle(handle_move_loc,'String'));
     command = strcat('Move:',dest,':',strcat('FP',suit_abbr));    
     vistoken = tokenArrivedLate(strcat('pFP_',suit,'_Pile'),1);
     if vistoken,

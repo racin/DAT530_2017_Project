@@ -157,7 +157,7 @@ During the normal phase, external input is allowed. The first input of the Draw 
 
 The second input, \verb!tDPe_Turn! is used to used to simply move cards from the face-down pile to the face-up pile during the normal phase. An interesting thing about this is that once all the cards are in the face-up pile, the next time one attempts to turn a \ac{card}, all cards should be moved back to the face-down pile in \ac{lifo} style, just as they would if you simply flip the deck of cards around in real-life. 
 \newline
-This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually an siphon, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a siphon, so the \ac{card} would be removed from the game if it fired.
+This is accomplished by the transitions \verb!tDPi_Flip_Pile! and \verb!tDPi_Enable_DP_Trans!. The \verb!tDPi_Enable_FP_Trans! is actually a siphon, and becomes enabled once \verb!pDP_Draw_FaceDown_Pile! is empty, and there is an active turn action on-going so that \verb!pDP_Turn! has at least one token. The transition has one post-processor file, shown in listing \ref{lst:tDPi_Enable_FP_Trans_post}. Given that there are actually any tokens left in \verb!pDP_Draw_FaceUp_Pile! it will set the global flag, \verb!global_info.DP_Flip_Pile_Running! to \verb!true!, if there are no tokens in the face-up pile, it will simply release the \verb!playerAction! resource. The use of resources is discussed further in chapter \ref{sec:3_Resources}. The reason for not having an arc directly from the face-up pile is due to this transition being a siphon, so the \ac{card} would be removed from the game if it fired.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Enable\_FP\_Trans\_post.m,label=lst:tDPi_Enable_FP_Trans_post]{\GPenSIM/tDPi_Enable_FP_Trans_post.m}
 Once \verb!global_info.DP_Flip_Pile_Running! is set to \verb!true! and there are tokens in \verb!pDP_Draw_FaceUp_Pile!, the transition \verb!tDPi_Flip_Pile! will start firing. The pre-processor file is listed in \ref{lst:tDPi_Flip_Pile_pre}, and will keep selecting the latest arrived \ac{card} from \verb!pDP_Draw_FaceUp_Pile! and fire. In the post-processor file, listed in \ref{lst:tDPi_Flip_Pile_post}, it will check for the length of the face-up pile, once it becomes empty it will set the flag \verb!global_info.DP_Flip_Pile_Running! to \verb!false!, and the cards have been successfully turned around.
 \lstinputlisting[style=matlabcode,caption=tDPi\_Flip\_Pile\_pre.m,label=lst:tDPi_Flip_Pile_pre]{\GPenSIM/tDPi_Flip_Pile_pre.m}
@@ -214,7 +214,7 @@ The only external output of the {fp} is \verb!tFPe_Clubs_Out!. It works similarl
 
 
 Another interesting fact about the Foundation Pile modules is the place \verb!pFP_Clubs_Pile!. Once this place is filled with 13 tokens for all the suits, the game is won, and the simulation ends. There is no check done on the actual color or order of the tokens, as that is done when adding them by the pre-processor of \verb!tFPe_Clubs_Add!. The win condition can be found in \verb!COMMON_POST!. Parts of the code is shown in listing \ref{lst:COMMON_POST}.
-\lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 31-40,label=lst:COMMON_POST,firstline=31,lastline=40]{\GPenSIM/COMMON_POST.m}
+\lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 36-45,label=lst:COMMON_POST,firstline=36,lastline=45]{\GPenSIM/COMMON_POST.m}
 \begin{table}
 	\caption{Places and transitions used in Foundation Pile - Clubs}
 	\begin{tabular}{|l|l|l|}
@@ -246,8 +246,23 @@ The only time it's possible to add cards to \verb!pTP_1_FaceDown_Pile! is during
 Once the initial phase is over, the pre-processor of \verb!tTPe_1_Add_FaceDown! will prevent any more firings. This is shown in listing \ref{lst:pre_tTPe_Add_FaceDown}, and is done by simply counting how many cards have been dealt in the variable \verb!global_info.CARDS.DEALT!. The secondary condition in the if statement is used to control the amount of firings during the initial phase.
 \lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Add\_FaceDown.m lines 5-11,label=lst:pre_tTPe_Add_FaceDown,firstline=5,lastline=11]{\GPenSIM/pre_tTPe_Add_FaceDown.m}
 
-Instead, the \verb!tTPe_1_Add_FaceUp! transition will have potential to fire, given that all of its conditions in the pre-processor is fulfilled. Parts of the code for the pre-processor can be found in listing \ref{lst:pre_tTPe_Add_FaceUp}, whilst the whole file is found in \ref{app:pre_tTPe_Add_FaceUp}. As with the Add-transition of \ac{fp}, it relies on \verb!checkCommand_Move! 
-\lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Add\_FaceUp.m lines 5-11,label=lst:pre_tTPe_Add_FaceUp,firstline=5,lastline=11]{\GPenSIM/pre_tTPe_Add_FaceUp.m}
+Instead, the \verb!tTPe_1_Add_FaceUp! transition will have potential to fire, given that all of its conditions in the pre-processor is fulfilled. Parts of the code for the pre-processor can be found in listing \ref{lst:pre_tTPe_Add_FaceUp}, whilst the whole file is found in \ref{app:pre_tTPe_Add_FaceUp}. The main job of the pre-processor is to check whether the game is still in the initial phase, and if so, how many cards have been added to \verb!pTP_1_FaceDown_Pile!. While the game is in the initial phase, there are no checks on the the suit or rank of the cards being added, but once it enters the normal phase, the pre-processor will rely on the \verb!checkCommand_Move! function to check the validity against the actual Solitaire rules. More information about the \verb!checkCommand_Move! function is found in chapter \ref{sec:3_move_command}. 
+\lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Add\_FaceUp.m lines 7-31,label=lst:pre_tTPe_Add_FaceUp,firstline=7,lastline=31]{\GPenSIM/pre_tTPe_Add_FaceUp.m}
+
+Both the \verb!tTPe_1_Add_FaceDown! and \verb!tTPe_1_Add_FaceUp! also have post-processors which will increment the variable \verb!global_info.CARDS_DEALT!. The post-processor for \verb!tTPe_1_Add_FaceUp! also decrements the variable \\\verb!global_info.TP_Move_Multiple_Count! which is used when multiple cards are to be moved from the pile. Listing \ref{lst:post_tTPe_Add_FaceUp} shows how the variable is decremented, and once the last card has been received, the \verb!playerAction! resource will be released. Full code for the post-processor can be found in \ref{app:post_tTPe_Add_FaceUp}. More details on moving multiple cards will follow in the next paragraphs.
+\lstinputlisting[style=matlabcode,caption=post\_tTPe\_Add\_FaceUp.m lines 5-12,label=lst:post_tTPe_Add_FaceUp,firstline=5,lastline=12]{\GPenSIM/post_tTPe_Add_FaceUp.m}
+
+The module encompasses two external inputs, there first of which is \verb!tTPe_1_Turn!. As can be seen in figure \ref{fig:tableau_pile}, the transition is only enabled if there is at least one token in \verb!pTP_1_FaceDown_Pile! and no tokens in \verb!pTP_1_FaceUp_Pile!. The transitions pre-processor will check that the command in \verb!pMC_TP_Turn! is meant for this particular pile. This is done through extracting the unique identifier using the function \verb!get_tableau_from_transname!. \newline
+
+The next external input is \verb!tTPe_1_Move!, which works similarly to the movement inputs of \ac{dp} and \ac{fp}, but with one big difference; it supports moving multiple cards at a time. This is achieved in conjunction with \verb!tTPi_1_Move_Multiple! using two global variables shown in listing \ref{lst:pre_tTPe_Move}. Note that it is only possible to move multiple cards to other \ac{tp}.
+\lstinputlisting[style=matlabcode,caption=pre\_tTPe\_Move.m lines 11-19,label=lst:pre_tTPe_Move,firstline=11,lastline=19]{\GPenSIM/pre_tTPe_Move.m}
+
+The same functionality could be achieved using only one variable, however by using two we make sure that the \verb!playerAction! resource remains taken until all the cards have reached their destination. When \verb!tTPi_1_Move_Multiple! fire it will take the token in \verb!pTP_1_Move!, and return two new ones, essentially duplicating the token. By doing this one time less than the amount of cards to be moved, we end up with the desired number of tokens in \verb!pTP_1_Move!. Listing \ref{lst:pre_tTPi_Move_Multiple} shows the pre-processor of \verb!tTPi_1_Move_Multiple!, and listing \ref{lst:COMMON_POST_2} shows how \verb!global_info.TP_Move_Multi_Gen_Tokens! is decremented in the \verb!COMMON_POST! file.
+\lstinputlisting[style=matlabcode,caption=pre\_tTPi\_Move\_Multiple.m lines 6-13,label=lst:pre_tTPi_Move_Multiple,firstline=6,lastline=13]{\GPenSIM/pre_tTPi_Move_Multiple.m}
+
+\lstinputlisting[style=matlabcode,caption=COMMON\_POST.m lines 28-34,label=lst:COMMON_POST_2,firstline=28,lastline=34]{\GPenSIM/COMMON_POST.m}
+
+The only external output is \verb!tTPe\_1\_Out!, 
 \begin{table}
 	\caption{Places and transitions used in Tableau Pile - 1}
 	\begin{tabular}{|l|l|l|}
@@ -383,7 +398,7 @@ It might also be a slight improvement to combine the Add-face-up and Add-face-do
 dladl
 \section{Testing, Analysis and Results}
 \subsection{Matlab version}
-The project has been developed and tested in versions R2013b and R2017a. Due to using two versions of Matlab it was necessary to only use functionality that is supported in both versions. Examples of this is using \verb!GUIDE! for developing the GUI, and omitting to use the \verb!contains! command.
+The project has been developed and tested in versions R2013a and R2017a. Due to using two versions of Matlab it was necessary to only use functionality that is supported in both versions. Examples of this is using \verb!GUIDE! for developing the GUI, and omitting to use the \verb!contains! command.
 \label{sec:3_testing_analysis}
 \subsection{Algorithms}
 \subsubsection{Atomicity}

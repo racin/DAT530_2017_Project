@@ -10,7 +10,7 @@ end;
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.DP_Move_Btn ~= false && playerAction,
     global_info.DP_Move_Btn = false;
-    dest = get_handle('DP_Move_Location','String');
+    dest = upper(get_handle('DP_Move_Location','String'));
     command = strcat('Move:',dest,':DP');    
     vistoken = tokenArrivedLate('pDP_Draw_FaceUp_Pile',1);
     if vistoken,

@@ -12,7 +12,6 @@ if(length(moveCmd) >= 4 && strcmp(moveCmd{3},strcat('TP',tableau))),
     amount = str2double(moveCmd{4});
     global_info.TP_Move_Multiple_Count = amount;
     global_info.TP_Move_Multi_Gen_Tokens = amount - 1;
-    global_info.TP_Move_LastCmd = moveColor;
     
     transition.selected_tokens = moveToken;
     fire = 1;

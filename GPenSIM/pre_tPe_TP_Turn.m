@@ -6,7 +6,7 @@ if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
     return;
 end;
 
-[tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount]...
+[tableau, handle_err, ~, turn_btn, ~, ~] ...
     = get_tableau_from_transname(transition.name);
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.(turn_btn) ~= false && playerAction,

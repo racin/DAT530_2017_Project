@@ -4,14 +4,9 @@ global global_info;
 fire = 0;
 moveToken = tokenArrivedLate('pMC_TP_Turn',1);
 [tableau, ~, ~, ~, ~, ~] = get_tableau_from_transname(transition.name);
-moveCmd = get_color('pMC_TP_Turn',moveToken);
+turnCmd = get_color('pMC_TP_Turn',moveToken);
 
-if(length(moveCmd) >= 1 && strcmp(moveCmd{1},strcat('Turn:TP',tableau))),
-    if ~isempty(tokIDs(strcat('pTP_',tableau,'_FaceUp_Pile'))) || ...
-            isempty(tokIDs(strcat('pTP_',tableau,'_FaceDown_Pile'))),
-        return;
-    end;
-    
+if(length(turnCmd) >= 1 && strcmp(turnCmd{1},strcat('Turn:TP',tableau))),
     topCard = tokenArrivedLate(strcat('pTP_',tableau,'_FaceDown_Pile'),1);
     transition.selected_tokens = topCard;
     color = get_color(strcat('pTP_',tableau,'_FaceDown_Pile'), topCard);

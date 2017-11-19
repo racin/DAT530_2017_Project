@@ -9,6 +9,12 @@ global_info.DISP_CHANGES = 1;
 global_info.DELTA_TIME = 1;
 global_info.MAX_LOOP = 15000;
 
+if ~global_info.BOT_ENABLED,
+    global_info.MAX_LOOP = 9999999;
+end
+
+
+
 %%%% GAME SETTINGS %%%%
 % The bot generates a number from 1-100, this is number is used with the
 % array below to determine which action is to be taken. The cutoffs are,
@@ -125,5 +131,7 @@ sim = gpensim(pni);
 
 %prnss(sim);
 prnfinalcolors(sim)
+
+% cotree(pni, 0, 1)
 
 

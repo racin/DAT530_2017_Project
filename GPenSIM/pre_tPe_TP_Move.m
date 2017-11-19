@@ -6,12 +6,12 @@ if global_info.CARDS_DEALT < global_info.INITIAL_DEAL_MOVE_LENGTH,
     return;
 end;
 
-[tableau, handle_err, move_btn, turn_btn, handle_move_loc, handle_move_amount]...
+[tableau, handle_err, move_btn, ~, handle_move_loc, handle_move_amount]...
     = get_tableau_from_transname(transition.name);
 [playerAction] = request(transition.name, {'playerAction', 1});
 if global_info.(move_btn) ~= false && playerAction,
     global_info.(move_btn) = false;
-    dest = get_handle(handle_move_loc,'String');
+    dest = upper(get_handle(handle_move_loc,'String'));
     
     % Is amount numeric and equal or less that current cards in FaceUp?
     if ismember(dest, global_info.FP_PILES),
