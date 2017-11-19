@@ -101,15 +101,33 @@ Since the game utilizes all 52 cards of the deck, the number of possible initial
 This project contains a complete model of the game, a GUI to play the game, and a basic bot to simulate user actions. 
 
 \subsection{Solitaire Rules}
-Patience games are assumed to have originated in Germany or Scandinavia in the 18th century. Klondike, or Solitaire as it has been called in North America is one of the most popular in this family of games.
+\label{sec1:solitaire_rules}
+Klondike, or Solitaire as it has been called in North America is one of the most popular patience games.
 \newline
-
  The game became very popular in the 19th century and the name Klondike is believed to have originated from the prospectors that were mining for gold in the Klondike region in Canada, and whom have either created or promoted this game while on their quest. 
+ \newline
+ 
 Solitaire is played with a standard deck of 52 cards and no Jokers.
+We will describe the layout and rules of the game by using terms that are common to the majority of patience games.
 \newline
 
- The deck is shuffled and the cards are laid out in seven piles from left to right. There is one upturned card at the beginning of each pile. The first pile to the left contains one card, the second pile contains two cards and so on up to the seventh pile which contains seven cards. There is one upturned card on each pile - the first and left-most pile is comprised therefore only of the upturned card. 
-The piles are illustrated in figure...
+Foundations are commonly featured in patience games where the aim is to move all the cards from the board to the foundation piles. Foundation piles are typically built from the foundation card by suit.
+In Solitaire, the four Aces in the deck are the foundation cards with corresponding foundation piles. We build up the piles by stacking cards of the same suit starting from Ace and finishing with King. 
+\newline
+
+ At the beginning of the game, the deck is shuffled and the cards are laid out in seven piles from left to right. Each pile contains one additional card compared to the previous one. 
+ There is one upturned card at the beginning of each pile. The first pile to the left contains one card facing up, the second contains one card facing down and one up, the third pile contains two cards facing down and one up, and so on to the seventh pile which contains six cards facing down and one facing up.
+ card, the second pile contains two cards and so on up to the seventh pile which contains seven cards. These are called tableau piles. 
+ Tableau piles can be built down by alternating colors. Partial or complete piles can be moved on top of other piles as long as the 
+ We consider the four aces in the deck as foundation cards with corresponding foundation piles. These piles are built up by stacking cards of the same suit starting from ace.
+The tableau piles, foundation piles, turn pile and their layout are illustrated in figure \ref{fig:illuatration_solitaire}.
+\begin{figure}
+	 % Left, Bottom, Right, Top
+	\includegraphics[trim=150 0 0 0, scale=0.3]{images/TableauPiles}
+	\caption{Illustration of card layout in Solitaire}
+	\label{fig:illuatration_solitaire}
+\end{figure}
+
 
 \section{Method and Design}
 \label{sec:2_method_and_design}
@@ -128,11 +146,11 @@ With this approach it is no longer possible to hard-code the names of the relate
 \subsection{Overall Design}
 
 \begin{figure}
-	\label{fig:full_horizontal}
 	\begin{center} % Left, Bottom, Right, Top
 		\includegraphics[trim=250 260 230 330,scale=1.1]{images/overallViewPdf}
+		\caption{The complete model - Without the internal components of the modules.}
+		\label{fig:full_horizontal}
 	\end{center}
-	\caption{The complete model - Without the internal components of the modules.}
 \end{figure}
 
 
@@ -453,10 +471,10 @@ In order to preventdd
 \appendix
 \section{Overall design - horizontal view}
 \begin{figure}
-	\label{fig:full_vertical}
 	% Left, Bottom, Right, Top
 	\includegraphics[trim=40 100 100 310,angle=90,scale=1.4]{images/overallViewPdf}
 	\caption{The complete model in horizontal view}
+	\label{fig:full_vertical}
 \end{figure}
 \clearpage
 \section{Matlab code}	
