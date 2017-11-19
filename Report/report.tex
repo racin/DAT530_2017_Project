@@ -83,7 +83,7 @@
 
 
 \begin{abstract}
-This project is such and such... +++
+This report describes the final project in DAT530. The topic of the project was chosen to be the game Solitaire. The goal of the project was to model the whole game, and perform analysis on the game strategy. To ease the testing of the model, a fully functional GUI was also developed. This GUI can be used to play a game of solitaire. The report contains description of the developed model, the newly created functions, the GUI, analysis of the model and the results.
 
 \end{abstract}
 
@@ -661,10 +661,7 @@ The liveness of the model is limited by the siphon, \verb!pDP_Dealer!. Once the 
 \label{sec:4_structural_invariants}
 \subsubsection{Siphons}~\\
 \label{sec:4_siphons}
-I was not able to use the built-in functionality, \verb!siphons()! to find siphons.
-\subsubsection{Transition invariants}~\\
-\label{sec:4_t_invariants}
-I was not able to use the built-in functionality, \verb!tinvariants()! to find T-invariants.
+I was not able to use the built-in functionality, \verb!siphons()! to find siphons. However by analyzing the model manually, it's easy to see that the siphons of this models are: \verb!pDP_Dealer!, \verb!pTP_1__FaceDown_Pile!, \verb!pTP_2__FaceDown_Pile!, \verb!pTP_3__FaceDown_Pile!, \verb!pTP_4__FaceDown_Pile!, \verb!pTP_5__FaceDown_Pile!, \\\verb!pTP_6__FaceDown_Pile!, \verb!pTP_7__FaceDown_Pile!.
 \section{Discussion}
 \subsection{Originality of this work}
 I was not able to find any work that resembles this project. What differs this project is that contains a complete model of a game, and also a simple \ac{gui} to go along with it.
