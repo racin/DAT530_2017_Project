@@ -1,6 +1,6 @@
-function [fire, transition] = tMC_Out_Buffer_Siphon_pre(transition)
+function [fire, transition] = tMC_Out_Buffer_Destroyer_pre(transition)
 
-% Siphon for the Out command from all modules. Will first check if the
+% Destroyer for the Out command from all modules. Will first check if the
 % length of the command is correct, and then if the destination is valid.
 
 global global_info;
