@@ -438,15 +438,14 @@ Sorting and arranging the cards is described using the same concepts that we hav
 	\begin{center}
 		\includegraphics[width=\textwidth]{images/dealinit}
 		\caption{GUI after inital dealing cards}
-		\label{fig:gui_init}
+		\label{fig:TP4full}
 	\end{center}
 \end{figure}
 \newline
 
-Each pile is indexed in order to make it easier to simulate moving cards between piles. The interface allows to move cards to a pile by writing the index of the pile that we want to move to in the "To Pile" box - see Figure \ref{fig:gui_init}.
+Each pile is indexed in order to make it easier to simulate moving cards between piles. We can move cards between pile by writing the amount of cards to be moved in the "To Pile" box - see Figure \ref{fig:gui_init}.
 \newline
-
-Additionally, we can chose the amount of cards to be moved. Should the "How many?" field be left blank, one card will be moved automatically.
+Should the "How many?" field be left blank, only one card will be moved.
 We have defined the four suits in the deck of cards:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
@@ -458,9 +457,9 @@ We have defined the four suits in the deck of cards:
 		Spades & S\_A,  S\_2, S\_3,  S\_4, S\_5,  S\_6, S\_7,  S\_8, S\_9,  S\_X, S\_J, S\_Q,  S\_K \\ \hline
 	\end{tabular}
 \end{center}
-The Draw Pile does not have an index, as we are not able to move cards back to this pile. 
-The "Turn card" button allows us to shuffle to the next card in the Draw Pile. This action cannot be reversed. 
-There are four foundation piles corresponding the fours suits in the deck of cards:
+The Index name of the card will show in the "Face Up" field for the Tableau piles, in the "FU Top" field for the Draw pile and "Top" for the foundation piles.
+
+There are four foundation piles corresponding to the fours suits in the deck of cards:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
@@ -471,21 +470,65 @@ There are four foundation piles corresponding the fours suits in the deck of car
 		FPS & Foundation Pile Spades \\ \hline
 	\end{tabular}
 \end{center}
-
-There are also seven Tableau Piles:
+We have also given index names to the seven Tableau Piles:
 \begin{center}
 	\begin{tabular}{ | l | l | l | }
 		\hline
 		Index name & Pile name \\ \hline
-		TP1 & Foundation Pile 1  \\ \hline
-		TP2 & Foundation Pile 2 \\ \hline
-		TP3 & Foundation Pile 3  \\ \hline
-		TP4 & Foundation Pile 4 \\ \hline
-		TP5 & Foundation Pile 5  \\ \hline
-		TP6 & Foundation Pile 6  \\ \hline
-		TP7 & Foundation Pile 7  \\ \hline
+		TP1 & Tableau Pile 1  \\ \hline
+		TP2 & Tableau Pile 2 \\ \hline
+		TP3 & Tableau Pile 3  \\ \hline
+		TP4 & Tableau Pile 4 \\ \hline
+		TP5 & Tableau Pile 5  \\ \hline
+		TP6 & Tableau Pile 6  \\ \hline
+		TP7 & Tableau Pile 7  \\ \hline
 	\end{tabular}
 \end{center}
+The Draw Pile does not have an index, as we are not able to move cards back to this pile. 
+The "Turn card" button allows us to shuffle to the next card in the Draw Pile. This action cannot be reversed. 
+Here we can also see how many cards in the Draw Pile are facing up (\#FU), how many are facing down (\#FD) as well as the index name of the card facing up that is on top.
+\newline
+
+In accordance with the game rules that we have described in the introduction, seven of the cards are revealed initially, one on top of each tableau pile. The Draw Pile will contain 24 cards that will be revealed one at a time by clicking "Turn card".
+When an Ace be revealed in the initial position of the dealt cards or by shuffling through the Draw Pile, it can be moved to its corresponding foundation pile (FP\#).
+When the card that is on top of a Tableau pile is moved, the facing down card remaining on top of the pile can be turned. 
+\newline
+We can easily move all cards from one pile to another, as illustrated in figures \ref{fig:TP4full} and \ref{fig:TP6full}.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/moveMultiple_1}
+		\caption{A suite of 13 cards on Tableau pile 4 (TP4)}
+		\label{fig:TP4full}
+	\end{center}
+\end{figure}
+\begin{figure}
+ 	\begin{center}
+ 		\includegraphics[width=\textwidth]{images/moveMultiple_2}
+ 		\caption{The cards from TP4 are moved to TP6}
+ 		\label{fig:TP6full}
+ 	\end{center}
+ \end{figure}
+\newline
+
+Invalid moves such as moving a card from a different suit on the wrong foundation pile, or attempting to build down a tableau pile with two consecutve cards of the same colour are marked with the error message "Invalid move".
+In the event that there are no valid moves left, the game becomes unwinnable as illustrated in figure \ref{fig:nowin}.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/gameUnwinnable}
+		\caption{There are no valid moves left}
+		\label{fig:nowin}
+	\end{center}
+\end{figure}
+\newline
+
+In the event a solution is found and the foundation piles are complete, the game ends and the final amount of points displayed as shown in figure \ref{fig:win}.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/gameWonWScore}
+		\caption{There are no valid moves left}
+		\label{fig:win}
+	\end{center}
+\end{figure}
 
 \label{sec:3_gui}
 \clearpage
